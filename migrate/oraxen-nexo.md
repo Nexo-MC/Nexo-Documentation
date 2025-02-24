@@ -12,25 +12,25 @@ There might be small oversights leading to minor loss of furniture/custom blocks
 
 {% stepper %}
 {% step %}
-### Put nexo-0.x.jar in `ServerFolder/plugins`
+#### Put nexo-0.x.jar in `ServerFolder/plugins`
 {% endstep %}
 
 {% step %}
-### Ensure you delete/disable oraxen.jar
+#### Ensure you delete/disable oraxen.jar
 
 Keep `plugins/Oraxen` as this is what Nexo will migrate from.\
 Also good to keep it as a backup in-case you need to migrate again in the future.
 {% endstep %}
 
 {% step %}
-### Ensure you make a backup of your worlds
+#### Ensure you make a backup of your worlds
 
 Whilst migration should be flawless, it is still recommended to make a backup of your world-folders before swapping to Nexo\
 There might be small oversights leading to minor loss of furniture/custom blocks
 {% endstep %}
 
 {% step %}
-### Start your server
+#### Start your server
 {% endstep %}
 {% endstepper %}
 

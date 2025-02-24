@@ -14,7 +14,7 @@ A glyph is a textured unicode symbol. It can be used in any place text is render
 
 You first need to create a png texture. For example the heart.png file contained in `default/chat`.
 
-![heart.png](<../.gitbook/assets/heart (1).png>)
+![heart.png](https://github.com/Nexo-MC/Nexo-Documentation/blob/master2/.gitbook/assets/heart%20\(1\).png)
 
 You can then add your section to any yaml file from the glyphs directory.\
 A glyph has a few main properties, `texture`, `ascent`, `height` and `font`\
@@ -72,7 +72,7 @@ bitmaps:
     height: 8
 ```
 
-![](../.gitbook/assets/example\_bitmap.png)
+![](https://github.com/Nexo-MC/Nexo-Documentation/blob/master2/.gitbook/assets/example_bitmap.png)
 
 As you can see, the image shown above has 4 rows and 9 columns.\
 The ascent and height property will be the one used for all glyphs tied to this bitmap.\

@@ -53,6 +53,23 @@ It comes with three modes, `NONE`, `SIMPLE`, `FULL`\
 **FULL** - Obfuscates namespace & filename;\
 `namespace:model/path.json` -> `c491303e-ba1e-4037-a59d-62b5fdfb6bb8:bba2d60b-8e3e-4051-9734-fef92766777f`
 
+### PackSquash-Integration
+
+Nexo allows you to run PackSquash on the resourcepack without manually reuploading the pack.\
+Simply download the latest [PackSquash](https://github.com/ComunidadAylas/PackSquash/releases) build and drop it in `plugins/Nexo/pack/packsquash` .\
+Then drop your **packsquash.toml** in the same directory, an example can be found [here](https://gist.github.com/Boy0000/92149d2704b6086473fccb4d771c42b4).
+
+To enable Nexo's PackSquash-integration simply enable `Pack.generation.use_packsquash` in settings.yml. Then when the pack generates, it will start the PackSquash process. If it suceeds you should see somehting like the below.
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Example of successful PackSquash process</p></figcaption></figure>
+
+If it failed you should see some detailed info about which file and a reason for it.\
+If Nexo's debug-mode is enabled, it will output info about all successful files aswell
+
+{% hint style="info" %}
+Depending on your TOML-configuration & ResourcePack size & complexity, the PackSquash process might take some time. Nexo will cache the output so that if the ResourcePack does not change, the PackSquash process will not need to be ran again
+{% endhint %}
+
 ### PackServer
 
 Nexo has 2 types of ways to upload & dispatch the ResourcePack it generates\

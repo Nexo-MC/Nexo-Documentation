@@ -41,7 +41,7 @@ By default it is set to `NONE`, which will show it as it looks when you open the
 As some other plugins might use ArmorStands and add the furniture to its head, you can set this option to `HEAD` for the same effect.\
 There is also: `FIRSTPERSON_LEFTHAND`, `FIRSTPERSON_RIGHTHAND`, `FIXED`, `GROUND`, `GUI`, `THIRDPERSON_LEFTHAND`, `THIRDPERSON_RIGHTHAND`.\
 All of these will be displayed ingame as shown in BlockBench's Display Tab under the specified type.\
-Look at [Furniture Position](broken-reference) for an example on FIXED (ItemFrame Position)
+Look at [Furniture Position](https://github.com/Nexo-MC/Nexo-Documentation/blob/master2/mechanics/furniture-mechanic/broken-reference/README.md) for an example on FIXED (ItemFrame Position)
 
 ```yaml
 myitem:

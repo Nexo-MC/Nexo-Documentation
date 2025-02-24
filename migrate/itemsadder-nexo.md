@@ -16,29 +16,29 @@ Recommended to use ItemsAdder internal updating process before converting to Nex
 
 {% stepper %}
 {% step %}
-### Put nexo-1.x.jar in your `Server/plugins folder`
+#### Put nexo-1.x.jar in your `Server/plugins folder`
 {% endstep %}
 
 {% step %}
-### Take a backup of all your worlds
+#### Take a backup of all your worlds
 
 Whilst migration should be flawless, it is still recommended to make a backup of your world-folders before swapping to Nexo\
 There might be small oversights leading to minor loss of furniture/custom blocks
 {% endstep %}
 
 {% step %}
-### Remove ItemsAdder & LoneLibs JAR-files
+#### Remove ItemsAdder & LoneLibs JAR-files
 
-Keep `plugins/ItemsAdder`  as this is what Nexo will convert from.\
+Keep `plugins/ItemsAdder` as this is what Nexo will convert from.\
 Also good to keep it as a backup in-case you need to migrate again in the future.
 {% endstep %}
 
 {% step %}
-### Start your server
+#### Start your server
 {% endstep %}
 
 {% step %}
-### Check console for conversion issues and test out items/glyphs
+#### Check console for conversion issues and test out items/glyphs
 {% endstep %}
 {% endstepper %}
 
