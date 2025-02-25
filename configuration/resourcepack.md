@@ -78,6 +78,17 @@ This server is currently hosted in Germany\
 **SELFHOST** - Server-Instance hosted on your machine. Requires you to configure the `public_address` and ensure a given port is open.\
 The API is also set up so that one could extend the `NexoPackServer-Interface` and create ones own.
 
+### Cross-Server/Proxy ResourcePacks
+
+Nexo by default has no support for handling resourcepacks across a velocity/bungee network.\
+This is however not inherently needed, as the player will keep the resourcepack when swapping servers, unless the new server sends a new resourcepack.
+
+Assuming you have a Server A, Server B & Server C:
+
+1. Set Pack.server to NONE for Server B & Server C. That way the player joins Server A and loads the resourcepack. When they then swap to Server B or C, the resourcepack from Server A will not be unloaded. The downside here is that if the player joins Server A from B or C, they will get sent the resourcepack again and load it
+2. Use a plugin like [OneTimePack](https://www.spigotmc.org/resources/onetimepack-avoid-double-sending-the-same-pack-bungeecord-velocity.106749/) on your Velocity/Bungee server. These plugins check the ResourcePack-request and compare them. If the pack is the same it will skip it.\
+   If taking this approach make sure to either disable [obfuscation](resourcepack.md#obfuscation) for your NexoPack, or enable caching and manually copy over the .deobfCacheResourcepack folder to all servers
+
 ### Importing
 
 Nexo lets you import Third-Party ResourcePacks in several ways.\
