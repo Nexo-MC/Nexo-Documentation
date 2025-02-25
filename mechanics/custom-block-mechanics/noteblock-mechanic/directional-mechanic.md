@@ -61,8 +61,6 @@ main_block:
         best_tools:
           - AXE
         silktouch: false
-        loots:
-          - {nexo_item: main_block, probability: 1.0}
 ```
 
 #### LOG-type example:

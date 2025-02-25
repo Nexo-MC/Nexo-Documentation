@@ -20,7 +20,6 @@ rose_plant:
   itemname: "<gradient:#46EEAA:#2CBFC7>Rose Plant"
   material: COOKED_BEEF
   Pack:
-    generate_model: false
     model: custom/plants/rose_stage_1
 
 rose_seed:
@@ -36,8 +35,6 @@ rose_seed:
         next_stage: rose_plant_stage1
       drop:
         silktouch: true
-        loots:
-          - { nexo_item: rose_seed, probability: 1.0 }
   Pack:
     model: custom/plants/rose_stage_1
 ```
@@ -56,8 +53,6 @@ rose_plant_stage1:
         next_stage: rose_plant_stage2
       drop:
         silktouch: true
-        loots:
-          - { nexo_item: weed_seed, probability: 1.0 }
   Pack:
     model: custom/plants/rose_stage_1
 ```
@@ -76,8 +71,6 @@ rose_plant_stage2:
         next_stage: rose_plant_stage3
       drop:
         silktouch: true
-        loots:
-          - { nexo_item: weed_seed, probability: 1.0 }
   Pack:
     model: custom/plants/rose_stage_2
 ```

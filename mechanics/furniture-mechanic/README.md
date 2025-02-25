@@ -28,8 +28,9 @@ myitem:
           - 0,0,0
       drop:
         silktouch: false
-        loots:
-          - { nexo_item: table, probability: 1.0 }
+        # If no loots section is defined, will drop itself
+        #loots:
+        #  - { nexo_item: table, probability: 1.0 }
 ```
 
 ### Furniture-Properties
@@ -336,8 +337,6 @@ Light can also be made toggleable by adding `lights_toggleable: true`, meaning r
 myitem:
   Mechanics:
     furniture:
-      #lights_toggleable: false      # Default is false
-      #lights_model: some_nexo_item  # The NexoItem to show when light is 'on'
       lights:
         #toggleable: false                    # Default is false
         #toggled_model: some_nexo_item        # The NexoItem to show when light is on

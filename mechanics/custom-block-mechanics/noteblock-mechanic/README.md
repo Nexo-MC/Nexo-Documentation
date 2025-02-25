@@ -27,8 +27,7 @@ my_block:
   material: DIAMOND
   Pack:
     parent_model: "block/cube_all"
-    textures:
-      - my_block_texture.png
+    texture: my_block_texture.png
 ```
 
 Each of these parent models take a different amount of textures.\
@@ -50,9 +49,6 @@ Valid custom\_variation is 1..1149
       drop:
         silktouch: false 
         minimal_type: STONE
-        loots:
-          - nexo_item: my_block
-            probability: 1.0
 </code></pre>
 
 ### Custom Sounds
@@ -108,8 +104,6 @@ my_block:
         silktouch: false 
         minimal_type: STONE
         best_tool: PICKAXE
-        loots:
-          - { nexo_item: caveblock, probability: 1.0 }
 ```
 
 ### Limited placing

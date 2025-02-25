@@ -24,8 +24,7 @@ my_block:
   material: PAPER
   Pack:
     parent_model: "block/cube_all"
-    textures:
-      - my_block_texture.png
+    texture: my_block_texture.png
 ```
 
 ### CustomBlock Mechanic configuration

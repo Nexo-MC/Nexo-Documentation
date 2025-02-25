@@ -22,14 +22,13 @@ You can then reference the textures in your item & make Nexo generate the necess
 ```yaml
 my_item:  
   Pack:
-    generate_model: true
     parent_model: "item/handheld"
     textures:
       - example_image1.png #png extension is not needed
       - example_image2.png
 ```
 
-The parent\_model field is required by minecraft. \
+The parent\_model field is required by minecraft.\
 It is mainly used to inherit certain rendering properties of models.\
 Most items will use `item/generated`, but `item/handheld` is often used by tools and weapons.
 
@@ -37,7 +36,6 @@ You can also use an alternative way of declaring textures, especially nice when 
 
 ```yaml
 Pack:
-  generate_model: true
   parent_model: "block/cube"
   textures:
     top: example_image.png
@@ -52,7 +50,6 @@ ALWAYS USE LOWER CASE FOR MODEL AND TEXTURE NAMES. Upper case is n longer suppor
 
 ```yaml
   Pack:
-    generate_model: false
     model: example_model.json #json extension is not mandatory
 ```
 
@@ -78,7 +75,6 @@ The normal structure for model & texture-paths are `namespace:some/path`, which 
 
 ```yaml
   Pack:
-    generate_model: false
     model: example_shield.json #json extension is not mandatory
     blocking_model: example_shield_blocking.json #json extension is not mandatory
 ```
@@ -87,7 +83,6 @@ The normal structure for model & texture-paths are `namespace:some/path`, which 
 
 ```yaml
   Pack:
-    generate_model: false
     model: default/combat_bow
     pulling_models:
       - default/combat_bow_pulling_0
@@ -101,7 +96,6 @@ This also works with pulling\_textures if you only have texture files
 
 ```yml
   Pack:
-    generate_model: false
     model: default/custom_bow
     pulling_models:
       - default/custom_bow_pulling_0
@@ -117,7 +111,6 @@ This also works with charged\_texture & firework\_texture if you only have textu
 
 ```yml
   Pack:
-    generate_model: false
     model: default/fishing_rod
     cast_model: default/fishing_rod_cast
 ```
@@ -128,7 +121,6 @@ This also works with cast\_texture if you only have texture files
 
 ```yml
 Pack:
-  generate_model: false
   model: default/diamond_sword
   damaged_models:
     - default/diamond_sword_damaged1

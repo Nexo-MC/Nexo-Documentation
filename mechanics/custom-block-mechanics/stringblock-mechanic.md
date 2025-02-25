@@ -33,8 +33,7 @@ jasmine_flower:
   material: PAPER
   Pack:
     parent_model: "block/cross"
-    textures:
-      - custom/flowers/jasmine_flower.png # .png extension is not mandatory
+    texture: custom/flowers/jasmine_flower.png # .png extension is not mandatory
 ```
 
 ### StringBlock Mechanic Configuration
@@ -55,8 +54,6 @@ jasmine_flower:
       hardness: 2
       drop:
         silktouch: false
-        loots:
-          - { nexo_item: jasmine_flower, probability: 1.0 }
 ```
 
 ## Minor sub-mechanics

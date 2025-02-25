@@ -26,27 +26,25 @@ coverY: 0
 `damage_resistant` - Specify a damage-type this item is invulnerable to
 
 * If you want to do multiple damage-types, you need a datapack with a new custom tag
-* All available damage-types can be found [here](https://minecraft.wiki/w/Tag#Damage_type_tags)&#x20;
+* All available damage-types can be found [here](https://minecraft.wiki/w/Tag#Damage_type_tags)
 
 `enchantable` - Set the maximum enchantment-cost for this item in an enchanting table\
 `glider` - Allows the player to glide, like with elytra, when equipped\
 `item_model` - The base-model for this item, can replace custom\_model\_data
 
-* References model in `assets/<namespace>/models/item/<model>` -> `item_model: namespace:model`&#x20;
+* References model in `assets/<namespace>/models/item/<model>` -> `item_model: namespace:model`
 
 `tooltip_style` - Style of the items tooltip
 
 * References custom sprite-background at `assets/<namespace>/textures/gui/sprites/tooltip/<id>_background`
 * References custom sprite-frame at `assets/<namespace>/textures/gui/sprites/tooltip/<id>_frame`
-* Can be customized & animated using mcmeta [Wiki](https://minecraft.wiki/w/Resource_pack#Animation#Gui)&#x20;
+* Can be customized & animated using mcmeta [Wiki](https://minecraft.wiki/w/Resource_pack#Animation#Gui)
 
 `use_cooldown` - Applies a cooldown to all matching items when used\
 `use_remainder` - Replaces the item with a remainder item if its stack count has decreased after use\
-`damage_resistant`   - The tag-key for the damage-type\
+`damage_resistant` - The tag-key for the damage-type\
 `repairable` - What item(s) should be allowed in anvils to repair durability\
 `custom_model_data` - Used for all the new formatting for [1.21.4 CMD component](https://minecraft.wiki/w/Data_component_format#custom_model_data)
-
-
 
 Example of all the above properties:
 
@@ -160,26 +158,24 @@ my_item:
 `damage_resistant` - Specify a damage-type this item is invulnerable to
 
 * If you want to do multiple damage-types, you need a datapack with a new custom tag
-* All available damage-types can be found [here](https://minecraft.wiki/w/Tag#Damage_type_tags)&#x20;
+* All available damage-types can be found [here](https://minecraft.wiki/w/Tag#Damage_type_tags)
 
 `enchantable` - Set the maximum enchantment-cost for this item in an enchanting table\
 `glider` - Allows the player to glide, like with elytra, when equipped\
 `item_model` - The base-model for this item, can replace custom\_model\_data
 
-* References model in `assets/<namespace>/models/item/<model>` -> `item_model: namespace:model`&#x20;
+* References model in `assets/<namespace>/models/item/<model>` -> `item_model: namespace:model`
 
 `tooltip_style` - Style of the items tooltip
 
 * References custom sprite-background at `assets/<namespace>/textures/gui/sprites/tooltip/<id>_background`
 * References custom sprite-frame at `assets/<namespace>/textures/gui/sprites/tooltip/<id>_frame`
-* Can be customized & animated using mcmeta [Wiki](https://minecraft.wiki/w/Resource_pack#Animation#Gui)&#x20;
+* Can be customized & animated using mcmeta [Wiki](https://minecraft.wiki/w/Resource_pack#Animation#Gui)
 
 `use_cooldown` - Applies a cooldown to all matching items when used\
 `use_remainder` - Replaces the item with a remainder item if its stack count has decreased after use\
-`damage_resistant`   - The tag-key for the damage-type\
+`damage_resistant` - The tag-key for the damage-type\
 `repairable` - What item(s) should be allowed in anvils to repair durability
-
-
 
 Example of all the above properties:
 
@@ -579,10 +575,8 @@ my_item:
 ```yaml
 my_item:
   Pack:
-    generate_model: true
     parent_model: "custom/items/generated_elite"
-    textures:
-      - custom/items/elite_zombie_walk
+    texture: custom/items/elite_zombie_walk
     custom_model_data: 452
 ```
 
