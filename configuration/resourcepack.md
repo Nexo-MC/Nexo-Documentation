@@ -57,9 +57,19 @@ It comes with three modes, `NONE`, `SIMPLE`, `FULL`\
 
 Nexo allows you to run PackSquash on the resourcepack without manually reuploading the pack.\
 Simply download the latest [PackSquash](https://github.com/ComunidadAylas/PackSquash/releases) build and drop it in `plugins/Nexo/pack/packsquash` .\
-Then drop your **packsquash.toml** in the same directory, an example can be found [here](https://gist.github.com/Boy0000/92149d2704b6086473fccb4d771c42b4).
+Then drop your **packsquash.toml** in the same directory, an example can be found [here](https://gist.github.com/Boy0000/92149d2704b6086473fccb4d771c42b4).\
+If you want it in another location, you can specify a path for the binary & settings
 
-To enable Nexo's PackSquash-integration simply enable `Pack.generation.use_packsquash` in settings.yml. Then when the pack generates, it will start the PackSquash process. If it suceeds you should see somehting like the below.
+```yaml
+Pack:
+ generation:
+    packsquash:
+      enabled: true
+      executable_path: plugins/Nexo/pack/packsquash/packsquash
+      settings_path: plugins/Nexo/pack/packsquash/packsquash.toml
+```
+
+To enable Nexo's PackSquash-integration simply enable `Pack.generation.packsquash.enabled` in settings.yml. Then when the pack generates, it will start the PackSquash process. If it suceeds you should see somehting like the below.
 
 <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Example of successful PackSquash process</p></figcaption></figure>
 
