@@ -86,6 +86,7 @@ Nexo has 2 types of ways to upload & dispatch the ResourcePack it generates\
 **POLYMATH** - A dedicated server hosted by Nexo-Team that your server uploads the pack to\
 This server is currently hosted in Germany\
 **SELFHOST** - Server-Instance hosted on your machine. Requires you to configure the `public_address` and ensure a given port is open.\
+**LOBFILE** - Server hosted by [LobFile](https://lobfile.com/), needs a `api_key`in settings.yml\
 The API is also set up so that one could extend the `NexoPackServer-Interface` and create ones own.
 
 ### Cross-Server/Proxy ResourcePacks
