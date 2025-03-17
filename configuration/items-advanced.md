@@ -32,7 +32,7 @@ coverY: 0
 `glider` - Allows the player to glide, like with elytra, when equipped\
 `item_model` - The base-model for this item, can replace custom\_model\_data
 
-* References model in `assets/<namespace>/models/item/<model>` -> `item_model: namespace:model`
+* References model in `assets/<namespace>/items/<model>` -> `item_model: namespace:model`
 
 `tooltip_style` - Style of the items tooltip
 

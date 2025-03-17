@@ -26,7 +26,7 @@ You can grab copies of items here but cannot give it to other players.
 
 This command will be mainly useful if you want to give an item to another player or when you want to automate the give
 
-#### Usage: `/nexo give <player> <item> <amount>`
+#### Usage: `/nexo give <item> [amount] [player]`
 
 #### Permission: `nexo.command.give`
 
@@ -47,7 +47,7 @@ This command allows you to add new recipes to the configuration directly from th
 
 ## Pack-Command
 
-This command allows you to send the pack to a group of players. \
+This command allows you to send the pack to a group of players.\
 Useful if the automatic sending failed or for testing
 
 #### Usage: `/nexo pack <player>`
@@ -71,7 +71,7 @@ Reloading pack regenerates the resourcepack, and if `Pack.dispatch.send_on_reloa
 #### Usage
 
 ```yaml
-/nexo reload all # Reloads items configuration, Reloads recipes configuration, regenerates the pack and upload it
+/nexo reload # Reloads items configuration, Reloads recipes configuration, regenerates the pack and upload it
 /nexo reload items # Reloads items configuration
 /nexo reload pack # Regenerates resourcepack and upload it
 /nexo reload recipes # Reloads recipes configuration

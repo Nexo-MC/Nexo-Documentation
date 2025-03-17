@@ -34,6 +34,20 @@ Each of these parent models take a different amount of textures.\
 `block/cube_all` takes 1 texture, `block/cube_column` takes 2, `block/cross` takes 1, `block/orientable` takes 3 and `block/orientable_vertical` takes 2.\
 For example, if you want to make a log block using the Directional Block mechanic, you should use `block/cube_column`.
 
+All the vanilla models can be found at [MCAsset](https://mcasset.cloud/1.21.3/assets/minecraft/models/block). Find the one you want to use for your usecase.\
+Recommend using a "texture map" in the config for multi-texture setups.
+
+```yaml
+my_block:
+  itemname: "My block"
+  material: DIAMOND
+  Pack:
+    parent_model: "block/cube_top"
+    textures:
+      side: my_side_texture.png
+      top: my_top_texture.png
+```
+
 ### CustomBlock Mechanic configuration
 
 To use this mechanic you need to tell to Nexo which model to use (to use the generated one, just put the name id of your item).\
