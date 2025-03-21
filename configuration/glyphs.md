@@ -12,11 +12,7 @@ A glyph is a textured unicode symbol. It can be used in any place text is render
 
 ## Configuring a Glyph
 
-You first need to create a png texture. For example the heart.png file contained in `default/chat`.
-
-![heart.png](https://github.com/Nexo-MC/Nexo-Documentation/blob/master2/.gitbook/assets/heart%20\(1\).png)
-
-You can then add your section to any yaml file from the glyphs directory.\
+You can then add your section to any YAML file from the glyphs directory.\
 A glyph has a few main properties, `texture`, `ascent`, `height` and `font`\
 The texture is the path and name of the texture file in the format of `namespace:path`\
 `height` is the scale of your glyph, height must also never be lower than ascent.\
@@ -32,66 +28,58 @@ heart:
   font: namespace:fontname
 ```
 
+### Multi-Bitmap glyphs
+
+If you have a texture consisting of several emotes or a texture larger than the allowed 256x256, you can make it a multi-bitmap.\
+This means you can, tie several unicodes to one image.\
+In your glyph you can specify an amount of rows and columns your glyph needs.\
+This will make nexo assign unicodes based on your needs.
+
+Example for using a 512x512 texture:
+
+{% code lineNumbers="true" fullWidth="true" %}
+```yaml
+myglyph:
+  #texture: required/ui/menu_items
+  #ascent: 37
+  #height: 256
+  rows: 2     # Tells Nexo this glyph should have 2 rows when assigning unicodes/chars
+  columns: 2  # Tells Nexo this glyph should have 2 columns when assigning unicodes/chars
+```
+{% endcode %}
+
+This will make nexo assign 4 unicodes for this glyph, which will be displayed when used.
+
+It should be noted that some cases newlines are not supported. An example is in lore, where it would not correctly align your glyph. A workaround is by using an "range index" in your glyph-tag. Example for using in lore of your NexoItem:
+
+```yaml
+myitem:
+  lore:
+    - "<glyph:myglyph:1..2>"
+    - "<glyph:myglyph:3..4>"
+```
+
+This would correctly align your glyph in lore. In cases where newlines are supported, you dont need to specify such a range. Nexo would by default append that to the text and align it.
+
 ### Custom GUIs
 
-#### With Nexo-glyphs you can create custom textured GUI's and here is an example
+With Nexo-glyphs you can create custom textured GUI's\
+Nexo does not handle the GUI-Inventory itself, only the visual part of it.\
+Simply make a glyph like shown below:
 
 ```yaml
 customshop:
-  texture: custom/default/custom/gui_tienda.png
+  texture: required/ui/menu_items
   #font: minecraft:my_font      # Optional, defaults to minecraft:default
-  ascent: 13
+  ascent: 37
   height: 256
 ```
 
-The textures cannot be higher resolution than 256x256 and name of the texture must be all lowercase without spaces, as with all Resourcepack files.\
-To adjust the horizontal position of your texture/glyph in the inventory, use the shift-tag. `<shift:-8>` for moving 8 pixels back, and `<shift:211>` for moving 211 pixels forward.
-
-### How do I get the unicode for the glyph?
-
-This really is not necessary as Nexo will handle the `<glyph:glyph_id>` tag in any inventory / title.\
-So to add this glyph in any other plugin, just set the title to be `<glyph:glyph_id>`.\
-If you still want the raw unicode, you can find it in your glyphs config.
-
-### Multi-Bitmap glyphs
-
-If you have a png consisting of several emotes, you can make it a multi-bitmap.\
-This means you can, tie several glyphs to one image. This step requires some extra configuration to work however.\
-In fonts.yml there is a section for `bitmaps`.\
-Here you need to specify an `id`, which you will use in your glyph-configs.\
-You also need to specify the path to the texture, as well as how many rows and columns the bitmap has.\
-Below is an example of an entry in `fonts.yml`:
-
-```yaml
-bitmaps:
-  example_bitmap:
-    texture: example/example_bitmap
-    rows: 4
-    columns: 9
-    ascent: 8
-    height: 8
-```
-
-![](https://github.com/Nexo-MC/Nexo-Documentation/blob/master2/.gitbook/assets/example_bitmap.png)
-
-As you can see, the image shown above has 4 rows and 9 columns.\
-The ascent and height property will be the one used for all glyphs tied to this bitmap.\
-Now that you have your bitmap configured, you can link a glyphs to it.\
-In your glyph config, you need to specify the bitmap id, as well as the row and column of the glyph you want to use.\
-Below is an example of a glyph config using the bitmap above.
-
-```yaml
-example_glyph:
-  texture: default/chat/example_glyph
-  bitmap:
-    id: example_bitmap
-    row: 1
-    column: 1
-  #ascent: 8 # Not needed as bitmap specifies it
-  #height: 8 # Not needed as bitmap specifies it
-```
-
-This will link the glyph to the first emoji on the first row in the image above.
+Then in the Inventory-Title you just put `<glyph:glyphid>` and Nexo will handle the rest.\
+This applies to the vast majority of places you would want to use a glyph. If the tag does not work you can use the [PlaceholderAPI Placeholder](glyphs.md#placeholderapi)\
+\
+To adjust the horizontal position of your texture/glyph in the inventory, use the shift-tag.\
+For example;  `shift:-8>` for moving 8 pixels back, and `<shift:211>` for moving 211 pixels forward.
 
 ### Emoji List
 
@@ -125,14 +113,18 @@ If it does not format your glyph in chat, change the `chat-handler` in settings.
 
 ## How to make glyphs tabcomplete?
 
-Simply set `tabcomplete: true` in the chat-section. If not specified, this will default to `false`
+Simply set `tabcomplete: true` in the chat-section. If not specified, this will default to `false`&#x20;
+
+By default tabcompletion will use the raw unicode. This only works for glyphs using the Default-font (used if none is specified). If you want it to use the chat placeholders, you can do so by disabling `unicode_completions` in settings.yml.
 
 ```yaml
-chat:
-  tabcomplete: true
-  placeholders:
-    - "<3"
-  permission: "nexo.emoji.heart"
+myemoji:
+  #font: minecraft:default
+  chat:
+    tabcomplete: true
+    placeholders:
+      - "<3"
+    permission: "nexo.emoji.heart"
 ```
 
 ## PlaceholderAPI
