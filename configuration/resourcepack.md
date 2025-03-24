@@ -71,7 +71,7 @@ Pack:
 
 To enable Nexo's PackSquash-integration simply enable `Pack.generation.packsquash.enabled` in settings.yml. Then when the pack generates, it will start the PackSquash process. If it suceeds you should see somehting like the below.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Example of successful PackSquash process</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption><p>Example of successful PackSquash process</p></figcaption></figure>
 
 If it failed you should see some detailed info about which file and a reason for it.\
 If Nexo's debug-mode is enabled, it will output info about all successful files aswell
