@@ -2,11 +2,15 @@
 hidden: true
 ---
 
-# CustomBlockExpansion
+# 🚪 Carpentry
 
 This is an addon for Nexo that adds several new CustomBlock types.\
 It allows for custom doors, trapdoors, stairs, slabs and transparent blocks.\
 Below will be examples for each of the different types
+
+{% hint style="danger" %}
+**This addon is still not available**
+{% endhint %}
 
 {% hint style="warning" %}
 Note that each of the types are currently limited to only 4 variations.
@@ -15,13 +19,10 @@ Note that each of the types are currently limited to only 4 variations.
 {% hint style="danger" %}
 This addon relies on Waxed Copper Blocks to work.\
 The addon attempts to re-add this logic by marking "Fake Waxed Copper" blocks.\
-If you do not care about letting players wax copper, you can disable this in `plugins/Nexo_CustomBlockExpansion/config.yml` for some performance gain.
-{% endhint %}
-
-{% hint style="danger" %}
+If you do not care about letting players wax copper, you can disable this in `plugins/Carpentry/config.yml` for some performance gain.\
+\
 Care should also be taken to convert your existing world.\
-As of 1.21, trial chambers generate with Waxed Copper blocks, which might cause some unintended issues.\
-Please use the WorldConverter tool below to fix your world
+As of 1.21, trial chambers generate with Waxed Copper blocks, which might cause some unintended issues.
 {% endhint %}
 
 ### Custom Stairs
@@ -31,7 +32,6 @@ custom_stair:
   material: PAPER
   itemname: Custom Stair
   Pack:
-    generate_model: true
     parent_model: block/stairs
     textures:                      # Example if one wants different textures
       bottom: block/reinforced_deepslate_bottom
@@ -52,7 +52,6 @@ custom_slab:
   material: PAPER
   itemname: Custom Slab
   Pack:
-    generate_model: true
     parent_model: block/slab
     textures:
       bottom: block/reinforced_deepslate_bottom
@@ -80,7 +79,6 @@ custom_door:
   material: PAPER
   itemname: Custom Door
   Pack:
-    generate_model: true
     parent_model: item/generated   # This is used for the item when held in hand
     texture: block/oak_door        # The texture to use for the item in hand
   Mechanics:
@@ -98,7 +96,6 @@ custom_door_placed:
   # This is the same as all other block-types use in their Pack section
   # But split apart due to how held door-items work
   Pack:
-    generate_model: true
     parent_model: block/door_bottom_left        # Default parent-model for doors
     textures:
       bottom: block/reinforced_deepslate_bottom
@@ -116,7 +113,6 @@ custom_trapdoor:
   material: PAPER
   itemname: Custom Trapdoor
   Pack:
-    generate_model: true
     parent_model: block/template_orientable_trapdoor_bottom
     textures:
       texture: block/reinforced_deepslate_side
@@ -138,7 +134,6 @@ custom_grate:
   material: PAPER
   itemname: Custom Grate
   Pack:
-    generate_model: true
     parent_model: block/cube_all
     texture: block/reinforced_deepslate_side
   Mechanics:

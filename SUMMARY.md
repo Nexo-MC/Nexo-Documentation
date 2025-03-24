@@ -40,6 +40,10 @@
 * [clickAction Mechanic](mechanics/clickaction-mechanic.md)
 * [Custom Mechanic](mechanics/custom-mechanic.md)
 
+## ➕ Addons
+
+* [🚪 Carpentry](addons/customblockexpansion.md)
+
 ## Compatibility
 
 * [ModelEngine - custom mobs](compatibility/modelengine-custom-mobs.md)
@@ -47,10 +51,6 @@
 * [MythicCrucible](compatibility/crucible.md)
 * [MMoItems](compatibility/mmoitems.md)
 * [EcoItems](compatibility/ecoitems.md)
-
-## ➕ Addons
-
-* [CustomBlockExpansion](addons/customblockexpansion.md)
 
 ## Community Guides
 
