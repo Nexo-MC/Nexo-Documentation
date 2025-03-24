@@ -17,4 +17,4 @@ forest_elytra:
       model: nexo:forest_elytra
 ```
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Forest Elytra included with Nexo</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Forest Elytra included with Nexo</p></figcaption></figure>
