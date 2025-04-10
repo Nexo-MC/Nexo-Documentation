@@ -258,6 +258,20 @@ myitem:
         - 0,0.5,0
 ```
 
+### Beds
+
+Bed-positions can be configured like below. This can be used for both replicating normal beds, or just a furniture to lie down on.\
+It is configured with an offset and properties for if it should skip nights and reset phantoms.\
+A normal bed has both these to true, but you can disable it for say a bench if you want to.
+
+```yaml
+myitem:
+  Mechanics:
+    furniture:
+      beds:
+        - 0,0,0 true true # x,y,z skip-night reset-phantoms
+```
+
 ### Restrict Rotation
 
 You can restrict the amount of rotation-facings a furniture has with `restricted_rotation`.\
