@@ -4,7 +4,7 @@ cover: >-
 coverY: 0
 ---
 
-# Farming Mechanic
+# 🧑‍🌾 Farming Mechanic
 
 ### How does it work?
 

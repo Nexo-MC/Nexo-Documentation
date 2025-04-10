@@ -160,64 +160,6 @@ myitem:
       rotatable: true
 ```
 
-### Hitboxes
-
-Furnitures can have two types of hitboxes, with or without collision.\
-Collision hitboxes are normal barrier-blocks, whilst non-solid ones are interaction-entities.\
-Interaction-entities have no collision, but can be any width and height, unlike barriers which are normal 1x1x1 blocks.Below are examples of how to use both.\
-\
-**Barrier** hitboxes can be formatted at a given offset from the furniture.\
-They also support integer-ranges to shorten repeating lines for larger hitboxes
-
-```yaml
-myitem:
-  Mechanics:
-    furniture:
-      hitbox:
-        barriers:
-          - 0,0,0
-          - 0,0,1
-          - 0,0,2
-          - 1,0,0..2
-```
-
-\
-**Interaction-Entity Hitboxes** takes an **offset, width and height**
-
-```yaml
-myitem:
-  Mechanics:
-    furniture:
-      hitbox:
-        interactions:
-          - 0,0,0 1,1
-          - 1,0,0 1,2.0
-          - -1,0,0 1,2.2
-```
-
-**Shulker-Entity Hitboxes** takes an **offset, scale, length** and **direction**\
-**Offset** only supports full blocks, as shulkers are forcefully put at a full block. Meaning you cannot offset it by 0.5 blocks\
-**Scale** is a single integer and determines the scale of the furniture. You cannot scale only the height, like with Interaction-Entity Hitboxes\
-**Length** determines the extra length of the hitbox, and can be between 1..2\
-**Direction** determines the way the hitbox faces, if not specified, defaults to UP
-
-{% hint style="warning" %}
-This is only available for 1.20.5+ servers\
-Should also be noted that the shulker-entity head will be visible on 1.21.1 & below\
-It will be invisible for 1.21.2 and above as long as [https://bugs.mojang.com/browse/MC-278123](https://bugs.mojang.com/browse/MC-278123) is not fixed
-{% endhint %}
-
-```yaml
-myitem:
-  Mechanics:
-    furniture:
-      hitbox:
-        shulkers:
-          - 0,0,0 1.0 1.0
-          - 1,0,0 1.2 1.5 EAST
-          - -1,0,0 0.8 2.0 UP
-```
-
 ### ModelEngine Furniture
 
 To make use of a ModelEngine model as your furniture, simply add the following to your item's config:
@@ -244,32 +186,6 @@ myitem:
         volume: 1.0
         pitch: 1.0
         permission: "nexo.jukebox.play"
-```
-
-### Seats
-
-Seats can be configured to spawn with a given offset from the base furniture, like below
-
-```yaml
-myitem:
-  Mechanics:
-    furniture:
-      seats:
-        - 0,0.5,0
-```
-
-### Beds
-
-Bed-positions can be configured like below. This can be used for both replicating normal beds, or just a furniture to lie down on.\
-It is configured with an offset and properties for if it should skip nights and reset phantoms.\
-A normal bed has both these to true, but you can disable it for say a bench if you want to.
-
-```yaml
-myitem:
-  Mechanics:
-    furniture:
-      beds:
-        - 0,0,0 true true # x,y,z skip-night reset-phantoms
 ```
 
 ### Restrict Rotation
@@ -340,23 +256,6 @@ myitem:
         title: "<red>My Storage"            # Default: "Storage"
         open_sound: entity.shulker.open     # Default: entity.chest.open
         close_sound: entity.shulker.close   # Default: entity.chest.close
-```
-
-### Light
-
-You can configure your furniture so it emits light. This option corresponds to light intensity and must be between 1 and 15. It takes an **offset** from the base-furniture and a **light-level**\
-Light can also be made toggleable by adding `lights_toggleable: true`, meaning right-clicking the furniture will toggle the light on/off.
-
-```yaml
-myitem:
-  Mechanics:
-    furniture:
-      lights:
-        #toggleable: false                    # Default is false
-        #toggled_model: some_nexo_item        # The NexoItem to show when light is on
-        #toggled_item_model: namespace:model  # The ItemModel to use when light is on  
-        lights:
-          - 0,0,0 15    # x,y,z lightLevel
 ```
 
 ### Waterloggable
