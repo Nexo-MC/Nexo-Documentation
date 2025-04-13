@@ -566,6 +566,18 @@ template_item2:
   material: CLOCK
 ```
 
+### PersistentData
+
+This lets you add custom data into the items PersistentDataContainer. These exist within the `PublicBukkitValues` of the item. Type is the type of data to add. Supported types can be found [here](https://jd.papermc.io/paper/1.21.5/org/bukkit/persistence/PersistentDataType.html#field-summary). Nexo also has some custom DataTypes which can be used, like UUID. These can be found [here](https://hub.jeff-media.com/javadocs/morepersistentdatatypes/)
+
+```yaml
+myitem:
+  PersistentData:
+    - type: STRING
+      key: mynamespace:something
+      value: "Hi this is a string"
+```
+
 ### Itemname
 
 This allows you to change the name displayed of your item without interfering with renamed items.
