@@ -723,4 +723,4 @@ This part has a dedicated page, you can consult it [here](item-appearance.md).
 
 ## Mechanics options
 
-This part has a dedicated page, you can consult it [here](https://github.com/Boy0000/Oraxen-Documentation/blob/2.0/configuration/broken-reference/README.md).
+This part has a dedicated page, you can consult it [here](broken-reference).
