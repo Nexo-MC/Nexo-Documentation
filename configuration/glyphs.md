@@ -37,7 +37,7 @@ This will make nexo assign unicodes based on your needs.
 
 Example for using a 512x512 texture:
 
-{% code lineNumbers="true" fullWidth="true" %}
+{% code lineNumbers="true" fullWidth="false" %}
 ```yaml
 myglyph:
   #texture: required/ui/menu_items
@@ -60,6 +60,27 @@ myitem:
 ```
 
 This would correctly align your glyph in lore. In cases where newlines are supported, you dont need to specify such a range. Nexo would by default append that to the text and align it.
+
+### Reference Glyphs
+
+Reference-glyphs are used when you want to "reference" a part of a Multi-Bitmap Glyph.\
+For example if you have a multi-bitmap glyph with 10 emojis, you can reference a specific one like follows
+
+```yaml
+multi_bitmap:
+  texture: spritesheet
+  rows: 2
+  columns 5
+
+#index is the row and column number
+first_emoji:
+  reference: multi_bitmap
+  index: 1
+...
+tenth_emoji:
+  reference: multi_bitmap
+  index: 10
+```
 
 ### Custom GUIs
 
