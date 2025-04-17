@@ -9,7 +9,7 @@ coverY: 0
 
 ### Components
 
-{% tabs %}
+{% tabs fullWidth="true" %}
 {% tab title="1.21.5" %}
 `tooltip_display` - Sets the Components to hide tooltips from. List of all DataComponents can be found [here](https://minecraft.wiki/w/Data_component_format#List_of_components). Use this instead of ItemFlags
 
@@ -639,7 +639,7 @@ my_item:
 
 ### excludeFromInventory
 
-This option allows you to exclude an item from the nexo inventory. It will no longer be displayed but you can still get it using [nexo give command](../general-usage/commands.md#get-the-items). It is useful for items used in other plugins like inventory icons.
+This option allows you to exclude an item from the nexo inventory. It will no longer be displayed but you can still get it using [nexo give command](../../general-usage/commands.md#get-the-items). It is useful for items used in other plugins like inventory icons.
 
 ```yaml
 my_item:  
@@ -647,8 +647,6 @@ my_item:
 ```
 
 ### unbreakable
-
-This will make your item unbreakable (for real, using minecraft dedicated property).
 
 ```yaml
 my_item:

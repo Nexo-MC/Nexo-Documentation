@@ -36,4 +36,4 @@ sounds:
 ```
 
 There is also `jukebox_playable`which is used to register sounds used in custom music discs\
-Nexo will generate the necessary datapack for this, which you can then reference in [JukeboxPlayable-Component](items-advanced.md#components) of your item
+Nexo will generate the necessary datapack for this, which you can then reference in [JukeboxPlayable-Component](items-advanced/#components) of your item

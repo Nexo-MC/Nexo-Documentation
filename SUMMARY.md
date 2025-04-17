@@ -18,8 +18,8 @@
 
 * [⚙️ Plugin settings](configuration/plugin-settings.md)
 * [ResourcePack](configuration/resourcepack.md)
-* [⚒️ Items](configuration/items-advanced.md)
-* [Item Appearance](configuration/item-appearance.md)
+* [⚒️ Items](configuration/items-advanced/README.md)
+  * [Special Item Appearance](configuration/items-advanced/item-appearance.md)
 * [⛑️ Custom Armors](configuration/custom-armors/README.md)
   * [🪽 Custom Elytras (1.21.2+)](configuration/custom-armors/custom-elytras-1.21.2+.md)
   * [Component Based (1.21.2+)](configuration/custom-armors/components.md)
