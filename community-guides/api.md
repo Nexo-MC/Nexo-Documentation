@@ -79,3 +79,19 @@ MechanicFactory consists of parsing method for global Mechanic properties & link
 \
 **NexoMechanicsRegisteredEvent** - Called when Nexo loads/reloads Mechanics\
 **NexoItemsLoadedEvent** - Called when Nexo finishes loading/reloading NexoItems
+
+### Custom PackServer
+
+If you want a PackServer type that Nexo does not provide, you can make an addon that registers one. Make a class that extends `NexoPackServer` and override the methods you need.\
+To register this with Nexo, you simply call `PackServerRegistry.register(type, packServer)`&#x20;
+
+```kotlin
+class MyPackServer : NexoPackServer {
+    override fun uploadPack(): CompletableFuture<Void>
+    override fun sendPack(player: Player)
+    override fun start()
+    override fun stop()
+    override fun packUrl()
+    override fun packInfo(): ResourcePackInfo?
+}
+```
