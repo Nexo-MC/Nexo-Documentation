@@ -1,4 +1,4 @@
-# 🛋️ Seat Mechanic
+# 🪑 Seat Mechanic
 
 Using the Seat-Mechanic you can add seats to your furniture.\
 Seats are configured like below, with an `x,y,z` offset

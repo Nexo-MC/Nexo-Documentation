@@ -18,7 +18,7 @@
 
 * [⚙️ Plugin settings](configuration/plugin-settings.md)
 * [ResourcePack](configuration/resourcepack.md)
-* [⚒️ Items](configuration/items-advanced/README.md)
+* [⚒️ Items](configuration/items-advanced.md)
   * [Special Item Appearance](configuration/items-advanced/item-appearance.md)
 * [⛑️ Custom Armors](configuration/custom-armors/README.md)
   * [🪽 Custom Elytras (1.21.2+)](configuration/custom-armors/custom-elytras-1.21.2+.md)
@@ -31,7 +31,8 @@
 
 * [🪑 Furniture Mechanic](mechanics/furniture-mechanic/README.md)
   * [🎯 Hitbox](mechanics/furniture-mechanic/hitbox.md)
-  * [🛋️ Seat Mechanic](mechanics/furniture-mechanic/seat-mechanic.md)
+  * [🖇️ Connectable Furniture](mechanics/furniture-mechanic/connectable-furniture.md)
+  * [🪑 Seat Mechanic](mechanics/furniture-mechanic/seat-mechanic.md)
   * [🛏️ Bed Mechanic](mechanics/furniture-mechanic/bed-mechanic.md)
   * [💡 Light Mechanic](mechanics/furniture-mechanic/light-mechanic.md)
   * [🧑‍🌾 Farming Mechanic](mechanics/furniture-mechanic/farming-mechanic.md)

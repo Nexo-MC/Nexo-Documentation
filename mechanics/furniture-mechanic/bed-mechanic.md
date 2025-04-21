@@ -1,3 +1,7 @@
+---
+description: Feature added in Nexo 1.4
+---
+
 # 🛏️ Bed Mechanic
 
 Furniture can also be used as beds. Bed-positions can be configured like below.\

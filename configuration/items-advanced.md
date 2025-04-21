@@ -639,7 +639,7 @@ my_item:
 
 ### excludeFromInventory
 
-This option allows you to exclude an item from the nexo inventory. It will no longer be displayed but you can still get it using [nexo give command](../../general-usage/commands.md#get-the-items). It is useful for items used in other plugins like inventory icons.
+This option allows you to exclude an item from the nexo inventory. It will no longer be displayed but you can still get it using [nexo give command](../general-usage/commands.md#get-the-items). It is useful for items used in other plugins like inventory icons.
 
 ```yaml
 my_item:  
@@ -729,7 +729,7 @@ my_item:
 
 ## Pack options
 
-This part has a dedicated page, you can consult it [here](item-appearance.md).
+This part has a dedicated page, you can consult it [here](items-advanced/item-appearance.md).
 
 ## Mechanics options
 
