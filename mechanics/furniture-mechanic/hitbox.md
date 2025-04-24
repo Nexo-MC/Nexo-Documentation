@@ -55,3 +55,7 @@ myitem:
           - 1,0,0 1.2 1.5 EAST
           - -1,0,0 0.8 2.0 UP
 ```
+
+{% hint style="info" %}
+If you struggle with finding the accurate hitbox-size you want for shulker-hitboxes, you can make them temporarily visible. To do this simply add `true` after the length or direction argument
+{% endhint %}
