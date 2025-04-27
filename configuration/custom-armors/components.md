@@ -1,3 +1,22 @@
+---
+cover: ../../.gitbook/assets/image (2).png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Component Based (1.21.2+)
 
 If using COMPONENT as your custom-armor type, you are not limited in any way, unlike with TRIMS\

@@ -1,3 +1,22 @@
+---
+cover: ../../.gitbook/assets/image (1) (1).png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # 🪽 Custom Elytras (1.21.2+)
 
 This is a sub-feature of using COMPONENT based CustomArmor, letting you make custom textured elytras.\

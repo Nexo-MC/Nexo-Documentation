@@ -48,7 +48,7 @@
 
 ## ➕ Addons
 
-* [🚪 Carpentry](addons/customblockexpansion.md)
+* [🚪 Carpentry](addons/carpentry.md)
 
 ## Compatibility
 

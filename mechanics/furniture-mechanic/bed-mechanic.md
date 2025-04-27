@@ -1,5 +1,21 @@
 ---
 description: Feature added in Nexo 1.4
+cover: ../../.gitbook/assets/huge_2025-04-23_14.33.14.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # 🛏️ Bed Mechanic
@@ -17,4 +33,4 @@ myitem:
         - 0,0,0 true true # x,y,z skip-night reset-phantoms
 ```
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Double-Bed included in Nexo's Default Items</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/huge_2025-04-23_14.33.14.png" alt=""><figcaption><p>Double-Bed included in Nexo's Default Items</p></figcaption></figure>
