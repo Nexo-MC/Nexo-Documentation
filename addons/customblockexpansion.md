@@ -1,28 +1,15 @@
----
-hidden: true
----
-
 # 🚪 Carpentry
 
 This is an addon for Nexo that adds several new CustomBlock types.\
 It allows for custom doors, trapdoors, stairs, slabs and transparent blocks.\
 Below will be examples for each of the different types
 
-{% hint style="danger" %}
-**This addon is still not available**
-{% endhint %}
+[Polymart](https://polymart.org/product/7640/carpentry-nexo-addon) | [MCModels](https://mcmodels.net/products/13997/carpentry)
+
+<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption><p>Default Ashen Oak wood-set included in Carpentry's Default Items</p></figcaption></figure>
 
 {% hint style="warning" %}
 Note that each of the types are currently limited to only 4 variations.
-{% endhint %}
-
-{% hint style="danger" %}
-This addon relies on Waxed Copper Blocks to work.\
-The addon attempts to re-add this logic by marking "Fake Waxed Copper" blocks.\
-If you do not care about letting players wax copper, you can disable this in `plugins/Carpentry/config.yml` for some performance gain.\
-\
-Care should also be taken to convert your existing world.\
-As of 1.21, trial chambers generate with Waxed Copper blocks, which might cause some unintended issues.
 {% endhint %}
 
 ### Custom Stairs
@@ -33,16 +20,15 @@ custom_stair:
   itemname: Custom Stair
   Pack:
     parent_model: block/stairs
-    textures:                      # Example if one wants different textures
-      bottom: block/reinforced_deepslate_bottom
-      side: block/reinforced_deepslate_side
-      top: block/reinforced_deepslate_top
-    #texture: block/diamond_block  # Optional formatting if only using 1 texture
+    texture: nexo:items/carpentry_blocks/ashen_oak_planks
+    #textures:                      # Example if one wants different textures
+    #  bottom: block/reinforced_deepslate_bottom
+    #  side: block/reinforced_deepslate_side
+    #  top: block/reinforced_deepslate_top
   Mechanics:
     custom_block:
       type: STAIR
       custom_variation: 1          # 1-4 are available
-      model: custom_stair          # the itemid of your item, unless you provided a model not textures
 ```
 
 ### Custom Slabs
@@ -53,16 +39,15 @@ custom_slab:
   itemname: Custom Slab
   Pack:
     parent_model: block/slab
-    textures:
-      bottom: block/reinforced_deepslate_bottom
-      side: block/reinforced_deepslate_side
-      top: block/reinforced_deepslate_top
-    #texture: block/diamond_block  # Optional formatting if only using 1 texture
+    texture: nexo:items/carpentry_blocks/ashen_oak_planks
+    #textures:                      # Example if one wants different textures
+    #  bottom: block/reinforced_deepslate_bottom
+    #  side: block/reinforced_deepslate_side
+    #  top: block/reinforced_deepslate_top
   Mechanics:
     custom_block:
       type: SLAB
       custom_variation: 1          # 1-4 are available
-      model: custom_slab          # the itemid of your item, unless you provided a model not textures
 ```
 
 ### Custom Doors
@@ -80,7 +65,8 @@ custom_door:
   itemname: Custom Door
   Pack:
     parent_model: item/generated   # This is used for the item when held in hand
-    texture: block/oak_door        # The texture to use for the item in hand
+    # The texture to use for the item in hand
+    texture: nexo:items/carpentry_blocks/ashen_oak_door_icon
   Mechanics:
     custom_block:
       type: DOOR
@@ -98,8 +84,8 @@ custom_door_placed:
   Pack:
     parent_model: block/door_bottom_left        # Default parent-model for doors
     textures:
-      bottom: block/reinforced_deepslate_bottom
-      top: block/reinforced_deepslate_top
+      bottom: nexo:items/carpentry_blocks/ashen_oak_door_bottom
+      top: nexo:items/carpentry_blocks/ashen_oak_door_top
   # Extra properties to prevent item from being "registered" as a NexoItem
   injectId: false
   excludeFromInventory: true
@@ -114,14 +100,11 @@ custom_trapdoor:
   itemname: Custom Trapdoor
   Pack:
     parent_model: block/template_orientable_trapdoor_bottom
-    textures:
-      texture: block/reinforced_deepslate_side
-    #texture: block/diamond_block  # Optional formatting if only using 1 texture
+    texture: nexo:items/carpentry_blocks/ashen_oak_trapdoor
   Mechanics:
     custom_block:
       type: TRAPDOOR
       custom_variation: 1         # 1-4 are available
-      model: custom_trapdoor      # The itemid of the second config, that generates the block-model
 ```
 
 ### Custom Transparent
@@ -135,10 +118,9 @@ custom_grate:
   itemname: Custom Grate
   Pack:
     parent_model: block/cube_all
-    texture: block/reinforced_deepslate_side
+    texture: nexo:items/carpentry_blocks/ashen_oak_leaves
   Mechanics:
     custom_block:
       type: GRATE
       custom_variation: 1          # 1-4 are available
-      model: custom_grate          # The itemid of the second config, that generates the block-model
 ```
