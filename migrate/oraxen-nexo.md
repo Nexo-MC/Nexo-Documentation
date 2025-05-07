@@ -12,7 +12,7 @@ There might be small oversights leading to minor loss of furniture/custom blocks
 
 {% stepper %}
 {% step %}
-#### Put nexo-0.x.jar in `ServerFolder/plugins`
+#### Put nexo-1.x.jar in `ServerFolder/plugins`
 {% endstep %}
 
 {% step %}
