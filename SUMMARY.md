@@ -42,6 +42,7 @@
     * [Stripped Log Mechanic](mechanics/custom-block-mechanics/noteblock-mechanic/stripped-log-mechanic.md)
     * [Directional Mechanic](mechanics/custom-block-mechanics/noteblock-mechanic/directional-mechanic.md)
   * [🧵 StringBlock Mechanic](mechanics/custom-block-mechanics/stringblock-mechanic.md)
+* [🔱 Custom Trident](mechanics/custom-trident.md)
 * [Other Mechanics](mechanics/all-mechanics.md)
 * [clickAction Mechanic](mechanics/clickaction-mechanic.md)
 * [Custom Mechanic](mechanics/custom-mechanic.md)

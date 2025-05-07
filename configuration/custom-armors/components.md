@@ -1,5 +1,5 @@
 ---
-cover: ../../.gitbook/assets/image (2).png
+cover: ../../.gitbook/assets/image (2) (1).png
 coverY: 0
 layout:
   cover:
@@ -64,4 +64,4 @@ forest_helmet:
 If using a 3D model for your helmet, do not specify Components.equippable.model
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Forest Armor Sets Nexo comes with (Player, Wolf, Horse &#x26; Llama)</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Forest Armor Sets Nexo comes with (Player, Wolf, Horse &#x26; Llama)</p></figcaption></figure>
