@@ -50,6 +50,9 @@
 ## ➕ Addons
 
 * [🚪 Carpentry](addons/carpentry.md)
+* [🧩 Core Shaders](addons/core-shaders/README.md)
+  * [Text Effects by Akis](addons/core-shaders/text-effects-by-akis.md)
+  * [💯 Transparent Scoreboards by Akis](addons/core-shaders/transparent-scoreboards-by-akis.md)
 
 ## Compatibility
 
