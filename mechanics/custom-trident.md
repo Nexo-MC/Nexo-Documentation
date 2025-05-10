@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # 🔱 Custom Trident
 
 Nexo allows you to make custom tridents and trident-projectiles.\
@@ -17,7 +31,7 @@ The Trident-Mechanic is not strictly necessary unless one wants to tweak the pro
 
 `rotation` - Lets you rotate the base yaw/pitch of the projectile
 
-{% embed url="https://cdn.discordapp.com/attachments/743544047733440582/1369352959049072690/2025-05-06_18-25-55.mp4?ex=681c3592&hm=9f0479db76c803dc3101b93dec15889270352d75906ec9fb7b5eae55498d07c7&is=681ae412" %}
+{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FTAoAxayP9PrBtX9UQ5wa%2Fuploads%2FcMJ3GKLdbXDZofLDSj1A%2F2025-05-06_18-25-55_1.mp4?alt=media&token=8d6ffd64-06d1-4340-aa1f-6d10d5d2e84d" %}
 Showcasing Forest Trident
 {% endembed %}
 
