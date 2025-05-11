@@ -64,6 +64,24 @@ Stringblocks also have some additional properties.\
 `random_place` takes a list of strings representing other stringblock-mechanics.\
 This will then place a random one of these when the "parent" is placed
 
+### Tall Plants
+
+Nexo has a `is_tall` - property which makes the STRINGBLOCK take up two spaces, similar to Tall Grass. This requires using a specific parent-model and two separate textures, for the top and bottom block. Nexo also provides a default parent-model for use with this.\
+Below is an example config using two different PNGs
+
+```yaml
+plant:
+  Pack:
+    parent_model: nexo:tall_plant
+    textures:
+      bottom: X
+      top: Y
+  Mechanics:
+    custom_block:
+      type: STRINGBLOCK
+      is_tall: true
+```
+
 ## Sapling
 
 ```yaml
