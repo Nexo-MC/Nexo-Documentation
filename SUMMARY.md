@@ -50,6 +50,8 @@
 ## ➕ Addons
 
 * [🚪 Carpentry](addons/carpentry.md)
+* [🧩 Core Shaders](addons/core-shaders/README.md)
+  * [Text Effects by Akis](addons/core-shaders/text-effects-by-akis.md)
 
 ## Compatibility
 
