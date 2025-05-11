@@ -72,10 +72,10 @@ Below is an example config using two different PNGs
 ```yaml
 plant:
   Pack:
-    parent_model: nexo:tall_plant
+    parent_model: nexo:block/tall_plant
     textures:
-      bottom: X
-      top: Y
+      bottom: bottom_texture
+      top: top_texture
   Mechanics:
     custom_block:
       type: STRINGBLOCK
