@@ -98,6 +98,12 @@ sapling:
         min_light_level: 4
         requires_water_source: false #if you want it to need water
         schematic: schemTest #structure that will put
+        # this also allows you to use a list of schematics:
+        # schematic:
+        # - schem: palmTree1
+        #   chance: 0.5
+        # - schem: palmTree2
+        #   chance: 0.5
         replace_blocks: false
         copy_biomes: false
         copy_entities: false
