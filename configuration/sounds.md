@@ -37,3 +37,19 @@ sounds:
 
 There is also `jukebox_playable`which is used to register sounds used in custom music discs\
 Nexo will generate the necessary datapack for this, which you can then reference in [JukeboxPlayable-Component](items-advanced.md#components) of your item
+
+
+
+#### Replacing sounds
+
+If you wanna replace sounds already in minecraft, you can do so by doing
+
+```yaml
+sounds:
+  - id: block.glass.place # removes vanilla sound
+    sounds: []
+    replace: true
+  - id: block.glass.break # replaces vanilla sound with custom sound
+    sound: nexo:customglasssound
+    replace: true
+```
