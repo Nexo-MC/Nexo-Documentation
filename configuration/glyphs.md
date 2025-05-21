@@ -100,7 +100,7 @@ Then in the Inventory-Title you just put `<glyph:glyphid>` and Nexo will handle 
 This applies to the vast majority of places you would want to use a glyph. If the tag does not work you can use the [PlaceholderAPI Placeholder](glyphs.md#placeholderapi)\
 \
 To adjust the horizontal position of your texture/glyph in the inventory, use the shift-tag.\
-For example; `shift:-8>` for moving 8 pixels back, and `<shift:211>` for moving 211 pixels forward.
+For example; `<shift:-8>` for moving 8 pixels back, and `<shift:211>` for moving 211 pixels forward.
 
 ### Emoji List
 
@@ -169,6 +169,6 @@ If this does not work for whatever reason, you can always use the raw unicode fr
 
 ### How do I use a glyph in name/lore of an item?
 
-Any glyph can be used in name and lore of your item configurations, by using `<glyph:glyphid>`&#x20;
+Any glyph can be used in name and lore of your item configurations, by using `<glyph:glyphid>`
 
 If you need this glyph to be colorable, you can do so by doing `<glyph:glyphid:colorable>` or the short version `<g:glyphid:c>`
