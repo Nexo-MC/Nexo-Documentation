@@ -100,7 +100,7 @@ Then in the Inventory-Title you just put `<glyph:glyphid>` and Nexo will handle 
 This applies to the vast majority of places you would want to use a glyph. If the tag does not work you can use the [PlaceholderAPI Placeholder](glyphs.md#placeholderapi)\
 \
 To adjust the horizontal position of your texture/glyph in the inventory, use the shift-tag.\
-For example;  `shift:-8>` for moving 8 pixels back, and `<shift:211>` for moving 211 pixels forward.
+For example; `shift:-8>` for moving 8 pixels back, and `<shift:211>` for moving 211 pixels forward.
 
 ### Emoji List
 
@@ -134,7 +134,7 @@ If it does not format your glyph in chat, change the `chat-handler` in settings.
 
 ## How to make glyphs tabcomplete?
 
-Simply set `tabcomplete: true` in the chat-section. If not specified, this will default to `false`&#x20;
+Simply set `tabcomplete: true` in the chat-section. If not specified, this will default to `false`
 
 By default tabcompletion will use the raw unicode. This only works for glyphs using the Default-font (used if none is specified). If you want it to use the chat placeholders, you can do so by disabling `unicode_completions` in settings.yml.
 
@@ -153,7 +153,7 @@ myemoji:
 ### What's my glyph placeholder?
 
 The section name is the glyph id. In this example the glyph id is `heart`, the placeholder is `%nexo_glyphid%`, so in this example: `%nexo_heart%`\
-Glyph-ID is the first line in any glyphs config, it is not the texturename or the placeholder.
+Glyph-ID is the first line in any glyphs config, it is not the texturename or the placeholder. you can also do shifts using PAPI by doing `%nexo_shift_-8%` or `%nexo_shift_8%`
 
 ### How do I use this in Prefixes / Luckperms
 
@@ -169,4 +169,6 @@ If this does not work for whatever reason, you can always use the raw unicode fr
 
 ### How do I use a glyph in name/lore of an item?
 
-Any glyph can be used in name and lore of your item configurations, by using `<glyph:glyphid>`
+Any glyph can be used in name and lore of your item configurations, by using `<glyph:glyphid>`&#x20;
+
+If you need this glyph to be colorable, you can do so by doing `<glyph:glyphid:colorable>` or the short version `<g:glyphid:c>`
