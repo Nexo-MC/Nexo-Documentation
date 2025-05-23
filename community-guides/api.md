@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("com.nexomc:nexo:1.1.0")
+    compileOnly("com.nexomc:nexo:<version>") //Nexo 1.X -> 1.X.0
 }
 ```
 
@@ -35,7 +35,7 @@ Nexo is built around an ItemBuilder class that allows you to create items easily
 When the plugin starts it parses the configurations to generate builders for each type of items.\
 Each builder can be used to generate itemstacks.
 
-### NexoItems class:
+## NexoItems class:
 
 #### Get an ItemBuilder from a Nexo-ItemID
 
@@ -51,7 +51,7 @@ You can use to check if an ItemStack is an NexoItem (it will return null if the 
 NexoItems.idFromItem(itemstack);
 ```
 
-### Custom Blocks & Furniture
+## Custom Blocks & Furniture
 
 #### Place a NexoBlock
 
@@ -67,7 +67,7 @@ Place an NexoFurniture at a given location, optionally setting a player for rota
 NexoFurniture.place(itemID, location, @Nullable player)
 ```
 
-### Mechanics:
+## Custom Mechanics
 
 Nexo allows you to add your own mechanics to the plugin, new ones or extending existing ones\
 An example repository can be found [here](https://github.com/Nexo-MC/NexoExampleMechanic), with examples for both Java and Kotlin\
@@ -80,18 +80,48 @@ MechanicFactory consists of parsing method for global Mechanic properties & link
 **NexoMechanicsRegisteredEvent** - Called when Nexo loads/reloads Mechanics\
 **NexoItemsLoadedEvent** - Called when Nexo finishes loading/reloading NexoItems
 
-### Custom PackServer
+## Custom PackServer
 
-If you want a PackServer type that Nexo does not provide, you can make an addon that registers one. Make a class that extends `NexoPackServer` and override the methods you need.\
-To register this with Nexo, you simply call `PackServerRegistry.register(type, packServer)`&#x20;
+If you want a PackServer type that Nexo does not provide, you can make an addon that registers one. Make a class that extends `NexoPackServer` and override the methods you need.
 
+{% tabs %}
+{% tab title="Kotlin" %}
 ```kotlin
 class MyPackServer : NexoPackServer {
     override fun uploadPack(): CompletableFuture<Void>
     override fun sendPack(player: Player)
     override fun start()
     override fun stop()
-    override fun packUrl()
+    override fun packUrl(): String
     override fun packInfo(): ResourcePackInfo?
 }
 ```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+public class PackServer extends NexoPackServer {
+    @Override
+    public CompletableFuture<Void> uploadPack()
+    
+    @Override
+    public void sendPack(Player player)
+    
+    @Override
+    public void start()
+    
+    @Override
+    public void stop()
+    
+    @Override
+    public String packUrl()
+    
+    @Override
+    @Nullable
+    public ResourcePackInfo packInfo()
+}
+```
+{% endtab %}
+{% endtabs %}
+
+To register this with Nexo, you simply call `PackServerRegistry.register(type, packServer)`&#x20;
