@@ -44,7 +44,7 @@
   * [🧵 StringBlock Mechanic](mechanics/custom-block-mechanics/stringblock-mechanic.md)
 * [🔱 Custom Trident](mechanics/custom-trident.md)
 * [Other Mechanics](mechanics/all-mechanics.md)
-* [clickAction Mechanic](mechanics/clickaction-mechanic.md)
+* [ClickAction Mechanic](mechanics/clickaction-mechanic.md)
 * [Custom Mechanic](mechanics/custom-mechanic.md)
 
 ## ➕ Addons
