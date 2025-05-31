@@ -16,7 +16,14 @@ Recommended to use ItemsAdder internal updating process before converting to Nex
 
 {% stepper %}
 {% step %}
-#### Put nexo-1.x.jar in your `Server/plugins folder`
+#### Put Nexo JAR in your `Server/plugins` folder
+{% endstep %}
+
+{% step %}
+### Copy `plugins/ItemsAdder`-> `plugins/Nexo/converter/ItemsAdder`
+
+Nexo will convert the content from this folder and delete it after\
+Any future packs you might get can then be put in here and it will all be converted again
 {% endstep %}
 
 {% step %}
