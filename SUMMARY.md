@@ -61,8 +61,7 @@
 * [ModelEngine - custom mobs](compatibility/modelengine-custom-mobs.md)
 * [MythicMobs - custom mobs](compatibility/mythicmobs-custom-mobs.md)
 * [MythicCrucible](compatibility/crucible.md)
-* [MMoItems](compatibility/mmoitems.md)
-* [EcoItems](compatibility/ecoitems.md)
+* [MMOItems](compatibility/mmoitems.md)
 
 ## Community Guides
 
