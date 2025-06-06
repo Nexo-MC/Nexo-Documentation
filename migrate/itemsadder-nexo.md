@@ -22,6 +22,7 @@ Recommended to use ItemsAdder internal updating process before converting to Nex
 {% step %}
 ### Copy `plugins/ItemsAdder`-> `plugins/Nexo/converter/ItemsAdder`
 
+The `converter`-folder does not exist by default. Simply make the new folder\
 Nexo will convert the content from this folder and delete it after\
 Any future packs you might get can then be put in here and it will all be converted again
 {% endstep %}

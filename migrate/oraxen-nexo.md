@@ -18,6 +18,7 @@ There might be small oversights leading to minor loss of furniture/custom blocks
 {% step %}
 ### Copy `plugins/Oraxen`-> `plugins/Nexo/converter/Oraxen`
 
+The `converter`-folder does not exist by default. Simply make the new folder\
 Nexo will convert the content from this folder and delete it after\
 Any future packs you might get can then be put in here and it will all be converted again
 {% endstep %}
