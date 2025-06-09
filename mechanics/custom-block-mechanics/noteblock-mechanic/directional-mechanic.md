@@ -31,14 +31,16 @@ If the sub-block has a model defined, it will not be rotated, allowing you to us
 
 ```yaml
 main_block:
-  itemname: "<white>Frozen Mushroom Stem"
   material: PAPER
   Pack:
-    model: main_block_model
+    parent_model: block/cube_all
+    texture: main_block
   Mechanics:
     custom_block:
       type: NOTEBLOCK
-      model: mainBlockModel
+      # The model to show when placed, if unspecified the model
+      # specified in Pack or the one Nexo is generating
+      #model: main_block
       custom_variation: 1
       directional:
         # Valid values are LOG, FURNACE and DROPPER
@@ -108,7 +110,6 @@ main_block_north:
   Mechanics:
     custom_block:
       type: NOTEBLOCK
-      model: mainBlockModel
       custom_variation: 1
       directional:
         parent_block: main_block #base block which will give drop
@@ -119,7 +120,6 @@ main_block_south:
   Mechanics:
     custom_block:
       type: NOTEBLOCK
-      model: mainBlockModel
       custom_variation: 2
       directional:
         parent_block: main_block #base block which will give drop
@@ -130,7 +130,6 @@ main_block_west:
   Mechanics:
     custom_block:
       type: NOTEBLOCK
-      model: mainBlockModel
       custom_variation: 3
       directional:
         parent_block: main_block #base block which will give drop
@@ -141,7 +140,6 @@ main_block_east:
   Mechanics:
     custom_block:
       type: NOTEBLOCK
-      model: mainBlockModel
       custom_variation: 4
       directional:
         parent_block: main_block #base block which will give drop
@@ -197,7 +195,8 @@ main_block_up:
   Mechanics:
     custom_block:
       type: NOTEBLOCK
-      model: mainblockmodel_vertical
+      # Another model set to show when block is up or down
+      #model: mainblockmodel_vertical
       custom_variation: 5
       directional:
         parent_block: main_block #base block which will give drop
@@ -208,7 +207,8 @@ main_block_down:
   Mechanics:
     custom_block:
       type: NOTEBLOCK
-      model: mainblockmodel_vertical
+      # Another model set to show when block is up or down
+      #model: mainblockmodel_verticall
       custom_variation: 6
       directional:
         parent_block: main_block #base block which will give drop
