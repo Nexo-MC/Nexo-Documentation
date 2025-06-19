@@ -31,6 +31,8 @@ The Trident-Mechanic is not strictly necessary unless one wants to tweak the pro
 
 `rotation` - Lets you rotate the base yaw/pitch of the projectile
 
+`damage` - The base-damage the Trident will do when hitting an entity, defaults to 8
+
 {% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FTAoAxayP9PrBtX9UQ5wa%2Fuploads%2FcMJ3GKLdbXDZofLDSj1A%2F2025-05-06_18-25-55_1.mp4?alt=media&token=8d6ffd64-06d1-4340-aa1f-6d10d5d2e84d" %}
 Showcasing Forest Trident
 {% endembed %}
