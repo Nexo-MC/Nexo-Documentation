@@ -1,5 +1,5 @@
 ---
-cover: ../../.gitbook/assets/image (1) (1).png
+cover: ../../.gitbook/assets/image (1) (1) (1).png
 coverY: 0
 layout:
   cover:
@@ -30,4 +30,4 @@ myitem:
         - 0,0.5,0
 ```
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Chair &#x26; Couch included in Nexo's Default Items</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Chair &#x26; Couch included in Nexo's Default Items</p></figcaption></figure>

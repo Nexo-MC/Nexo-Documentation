@@ -26,7 +26,7 @@
 * [⛑️ Custom Player Armors](configuration/custom-armors/README.md)
   * [🪽 Custom Elytras (1.21.2+)](configuration/custom-armors/custom-elytras-1.21.2+.md)
   * [Component Based (1.21.2+)](configuration/custom-armors/components.md)
-  * [Trims Based (1.20-1.21.1)](configuration/custom-armors/trims.md)
+  * [Trims Based (1.20+)](configuration/custom-armors/trims.md)
 * [🌀 Glyphs](configuration/glyphs/README.md)
   * [🎞️ Animated Glyphs](configuration/glyphs/animated-glyphs.md)
   * [🖼️ Multi-Bitmap Glyph](configuration/glyphs/multi-bitmap-glyph.md)
