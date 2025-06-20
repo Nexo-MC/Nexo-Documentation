@@ -1,0 +1,23 @@
+# 🐖 Custom Saddles (1.21.5+)
+
+When using COMPONENT type CustomArmor, Nexo allows you to easily create custom saddles for various mobs. The list of supported entities are: **camel, donkey, horse, mule, pig, skeleton\_horse, strider & zombie\_horse**
+
+Similar to all other CustomArmor sections, the pattern is \`mobtype\_saddle\`.
+
+```yaml
+forest_saddle:
+  itemname: Forest Saddle
+  type: SADDLE
+  Pack:
+    texture: nexo:items/forest_armor/forest_saddle_icon
+    CustomArmor:
+      pig_saddle: nexo:items/forest_armor/forest_pig_saddle
+      horse_saddle: nexo:items/forest_armor/forest_horse_saddle
+  Components:
+    equippable:
+      slot: BODY
+      allowed_enity_types: [ PIG, HORSE ]
+```
+
+Here `Pack.CustomArmor.x_saddle` points to where we put the texture for the harness itself, with `Pack.texture` the icon.\
+We also have to set the `allowed_entity_types` in our EquippableComponent for Nexo to properly handle the remaining properties

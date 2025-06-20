@@ -1,10 +1,5 @@
 ---
-cover: ../../.gitbook/assets/image (2) (1).png
-coverY: 0
 layout:
-  cover:
-    visible: true
-    size: full
   title:
     visible: true
   description:
@@ -22,8 +17,6 @@ layout:
 If using COMPONENT as your custom-armor type, you are not limited in any way, unlike with TRIMS\
 It also has the benefit of not needing to be based on an armor-item at all, use PAPER if you want to.\
 Every downside there has been to earlier methods is now gone, no restrictions.
-
-In addition to normal player-armor, COMPONENT method also allows you to make custom Wolf, Horse & Llama sets. The process is same as with below, with the ItemID- & Armor-pattern Texture being `armorname_wolf_armor`_,_ `armorname_horse_armor` & `armorname_llama_armor` instead of `armorname_helmet`.
 
 ## How to configure your armor?
 
