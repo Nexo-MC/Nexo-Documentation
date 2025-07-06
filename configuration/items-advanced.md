@@ -28,7 +28,7 @@ coverY: 0
 `damage_resistant` - Specify a damage-type this item is invulnerable to
 
 * If you want to do multiple damage-types, you need a datapack with a new custom tag
-* All available damage-types can be found [here](https://minecraft.wiki/w/Tag#Damage_type_tags)
+* All available damage-types can be found [here](https://minecraft.wiki/w/Damage_type_tag_\(Java_Edition\))
 
 `enchantable` - Set the maximum enchantment-cost for this item in an enchanting table\
 `glider` - Allows the player to glide, like with elytra, when equipped\
@@ -163,7 +163,7 @@ my_item:
 `damage_resistant` - Specify a damage-type this item is invulnerable to
 
 * If you want to do multiple damage-types, you need a datapack with a new custom tag
-* All available damage-types can be found [here](https://minecraft.wiki/w/Tag#Damage_type_tags)
+* All available damage-types can be found [here](https://minecraft.wiki/w/Damage_type_tag_\(Java_Edition\))
 
 `enchantable` - Set the maximum enchantment-cost for this item in an enchanting table\
 `glider` - Allows the player to glide, like with elytra, when equipped\
@@ -295,7 +295,7 @@ my_item:
 `damage_resistant` - Specify a damage-type this item is invulnerable to
 
 * If you want to do multiple damage-types, you need a datapack with a new custom tag
-* All available damage-types can be found [here](https://minecraft.wiki/w/Tag#Damage_type_tags)
+* All available damage-types can be found [here](https://minecraft.wiki/w/Damage_type_tag_\(Java_Edition\))
 
 `enchantable` - Set the maximum enchantment-cost for this item in an enchanting table\
 `glider` - Allows the player to glide, like with elytra, when equipped\

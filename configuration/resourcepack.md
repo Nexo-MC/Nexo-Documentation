@@ -6,10 +6,9 @@ icon: file-zipper
 
 ### ResourcePack-Structure
 
-The ResourcePack has changed from what some might be used to.\
+The ResourcePack in Nexo follows the vanilla structure but also letting you import and automatically merge full ResourcePacks\
 This is in an effort to make importing third-party ResourcePacks a lot easier.\
-Below is an example of the new structure.\
-For reference; `Oraxen/pack/models` -> `Nexo/pack/assets/minecraft/models`
+Below is an example of the new structure.
 
 {% code title="" %}
 ```
@@ -82,7 +81,7 @@ Depending on your TOML-configuration & ResourcePack size & complexity, the PackS
 
 ### PackServer
 
-Nexo has 2 types of ways to upload & dispatch the ResourcePack it generates\
+Nexo has 3 types of ways to upload & dispatch the ResourcePack it generates\
 **POLYMATH** - A dedicated server hosted by Nexo-Team that your server uploads the pack to\
 This server is currently hosted in Germany\
 **SELFHOST** - Server-Instance hosted on your machine. Requires you to configure the `public_address` and ensure a given port is open.\
