@@ -2,20 +2,6 @@
 description: Feature added in Nexo 1.4
 cover: ../../.gitbook/assets/huge_2025-04-23_14.33.14.png
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: full
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # 🛏️ Bed Mechanic

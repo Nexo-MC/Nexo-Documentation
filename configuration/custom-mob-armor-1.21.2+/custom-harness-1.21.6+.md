@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # 🪢 Custom Harness (1.21.6+)
 
 With the new Happy Ghast entity, there is a new type of Equipment, the Harness.\

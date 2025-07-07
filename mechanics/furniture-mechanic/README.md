@@ -2,20 +2,6 @@
 cover: >-
   https://cdn.discordapp.com/attachments/896841738621177896/966828778028417125/unknown.png
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: full
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # 🪑 Furniture Mechanic

@@ -36,7 +36,11 @@
 ## Mechanics
 
 * [🪑 Furniture Mechanic](mechanics/furniture-mechanic/README.md)
-  * [🎯 Hitbox](mechanics/furniture-mechanic/hitbox.md)
+  * [🎯 Hitbox](mechanics/furniture-mechanic/hitbox/README.md)
+    * [🚧 Barrier Hitbox](mechanics/furniture-mechanic/hitbox/barrier-hitbox.md)
+    * [🔳 Interaction Hitbox](mechanics/furniture-mechanic/hitbox/interaction-hitbox.md)
+    * [📤 Shulker Hitbox](mechanics/furniture-mechanic/hitbox/shulker-hitbox.md)
+    * [👻 Ghast Hitbox](mechanics/furniture-mechanic/hitbox/ghast-hitbox.md)
   * [🖇️ Connectable Furniture](mechanics/furniture-mechanic/connectable-furniture.md)
   * [🪑 Seat Mechanic](mechanics/furniture-mechanic/seat-mechanic.md)
   * [🛏️ Bed Mechanic](mechanics/furniture-mechanic/bed-mechanic.md)
