@@ -10,7 +10,7 @@ forest_wolf_armor:
   Pack:
     texture: nexo:item/nexo_armor/forest_wolf_armor_icon
     CustomArmor:
-      llama_armor: nexo:item/nexo_armor/forest_wolf_armor
+      wolf_armor: nexo:item/nexo_armor/forest_wolf_armor
 forest_llama_armor:
   itemname: "Forest Llama Carpet"
   material: PAPER
@@ -24,5 +24,5 @@ forest_horse_armor:
   Pack:
     texture: nexo:item/nexo_armor/forest_horse_armor_icon
     CustomArmor:
-      llama_armor: nexo:item/nexo_armor/forest_horse_armor
+      horse_armor: nexo:item/nexo_armor/forest_horse_armor
 ```
