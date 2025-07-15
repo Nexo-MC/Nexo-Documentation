@@ -2,6 +2,21 @@
 cover: >-
   https://www.techyon.es/media/news/full-stack-developer-cu%C3%81les-son-las-principales-competencias_1637600851_21.jpg
 coverY: 0
+layout:
+  width: default
+  cover:
+    visible: false
+    size: full
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # API
@@ -18,50 +33,37 @@ dependencies {
 }
 ```
 
-## Add Nexo-support to your plugin
+## JavaDocs
 
-### Repository & Dependency Info
+Nexo has JavaDocs published at [https://jd.nexomc.com](https://jd.nexomc.com/). These will be updated whenever changes to the API are made, which is not too often.
 
-You can find the repository and dependency notice here.
+## Custom Items
+
+Nexo has its own ItemBuilder class which handles building its custom items.\
+The [NexoItems](https://jd.nexomc.com/1.8/com/nexomc/nexo/api/NexoItems.html)-class contains most of the methods you would need to handle items.
+
+```java
+ItemBuilder itemBuilder = NexoItems.itemFromId(itemID);
+ItemStack itemStack = itemBuilder.build();
+String itemId = NexoItems.idFromItem(itemStack);
+```
 
 {% hint style="info" %}
-All methods and better explanations of their functionality and parameters can be found in the actual Classes.\
-Simply open them in your IDE to get a full list of them.
+Nexo loads items in an async task, thus getting them in your plugins onEnable will likely fail\
+You can listen for the NexoItemsLoadedEvent to be sure the items are registered
 {% endhint %}
 
-## Examples of use
+## Custom Blocks
 
-Nexo is built around an ItemBuilder class that allows you to create items easily.\
-When the plugin starts it parses the configurations to generate builders for each type of items.\
-Each builder can be used to generate itemstacks.
-
-## NexoItems class:
-
-#### Get an ItemBuilder from a Nexo-ItemID
-
-```java
-NexoItems.itemFromId(itemID);
-```
-
-#### Get the Nexo-ItemID from an ItemStack
-
-You can use to check if an ItemStack is an NexoItem (it will return null if the Nexo-ItemID doesn't exist)
-
-```java
-NexoItems.idFromItem(itemstack);
-```
-
-## Custom Blocks & Furniture
-
-#### Place a NexoBlock
-
-Place a NexoBlock at a given location
+The [NexoBlocks](https://jd.nexomc.com/1.8/com/nexomc/nexo/api/NexoBlocks.html)-class contains all the methods available for placing, removing and checking for custom blocks in Nexo.
 
 ```java
 NexoBlocks.place(itemID, location)
 ```
 
-Place an NexoFurniture at a given location, optionally setting a player for rotation purposes
+### Furniture
+
+The [NexoFurniture](https://jd.nexomc.com/1.8/com/nexomc/nexo/api/NexoFurniture.html)-class contains all the methods available for placing, removing and checking for furniture in Nexo. In addition to this you can return the [FurnitureMechanic](https://jd.nexomc.com/1.8/com/nexomc/nexo/mechanics/furniture/FurnitureMechanic.html) of the Furniture to get specific properties of it if needed.
 
 ```java
 NexoFurniture.place(itemID, location, @Nullable player)
