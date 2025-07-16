@@ -132,7 +132,7 @@ my_item:
       #model: minecraft:example           Optional, primarily useful for Custom-Armor
       #camera_overlay: minecraft:example  Optional, used by carved_pumpkin etc, example; `assets/minecraft/textures/example.png`
       #equip_sound: item.armor.equip_chain
-      #allowed_entities:                  Optional, defaults to all entities
+      #allowed_entity_types:              Optional, defaults to all entities
       #  - PLAYER
       #  - SKELETON
       #dispensable: true                  Optional, default is true
@@ -264,7 +264,7 @@ my_item:
       #model: minecraft:example           Optional, primarily useful for Custom-Armor
       #camera_overlay: minecraft:example  Optional, used by carved_pumpkin etc, example; `assets/minecraft/textures/example.png`
       #equip_sound: item.armor.equip_chain
-      #allowed_entities:                  Optional, defaults to all entities
+      #allowed_entity_types:              Optional, defaults to all entities
       #  - PLAYER
       #  - SKELETON
       #dispensable: true                  Optional, default is true
@@ -395,7 +395,7 @@ my_item:
       #model: minecraft:example           Optional, primarily useful for Custom-Armor
       #camera_overlay: minecraft:example  Optional, used by carved_pumpkin etc, example; `assets/minecraft/textures/example.png`
       #equip_sound: item.armor.equip_chain
-      #allowed_entities:                  Optional, defaults to all entities
+      #allowed_entity_types:              Optional, defaults to all entities
       #  - PLAYER
       #  - SKELETON
       #dispensable: true                  Optional, default is true
