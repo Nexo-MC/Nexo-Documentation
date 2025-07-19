@@ -29,6 +29,7 @@ paintings:
     asset_id: nexo:my_custom_painting  # This is the path to the PNG, namespace:path
     width: 1     # The width of your painting, in number of blocks it takes up
     height: 1    # The height of your painting, in number of blocks it takes up
+    random_place: true # Will place at random from the vanilla painting items
   nexo:animated_painting:
     author: boy0000
     title: <red>Animated Custom Painting
