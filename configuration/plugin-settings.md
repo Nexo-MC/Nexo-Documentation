@@ -1,5 +1,6 @@
 ---
 description: Various options impacting the plugin in its generality
+hidden: true
 cover: >-
   https://cdn.discordapp.com/attachments/896841738621177896/966825582216237126/unknown.png
 coverY: 0
@@ -22,10 +23,9 @@ Obfuscation works by renaming all models, textures and files into random namespa
 This is to make it very hard for someone to just download and use your pack outside of your server.\
 It comes with three modes, SIMPLE, FULL & NONE\
 \
-There is also an option to cache the obfuscated pack. \
+There is also an option to cache the obfuscated pack.\
 This makes it so unless there are changes, Nexo will not reobfuscate the ResourcePack.\
-This makes it so players do not have to redownload the ResourcePack every time your server starts.\
-
+This makes it so players do not have to redownload the ResourcePack every time your server starts.\\
 
 ```yaml
 Pack:

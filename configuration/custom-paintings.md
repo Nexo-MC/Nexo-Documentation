@@ -67,3 +67,20 @@ For our above example it means we must put the texture inside `assets/nexo/textu
 {% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FTAoAxayP9PrBtX9UQ5wa%2Fuploads%2FNQBDM0CDYHw3xLDuMFvA%2F2025-07-19%2021-41-23.mp4?alt=media&token=84affb23-a6a7-491e-8053-d3bc14efc2f5" %}
 Static Painting & Animated Painting using MCMeta
 {% endembed %}
+
+### NexoItem
+
+When your Custom Painting has been registered, you can make a custom NexoItem which will place the given painting. Below is a basic example
+
+```yaml
+custom_painting:
+  itemname: Custom Painting
+  material: PAINTING
+  Components:
+    painting_variant: nexo:custom_painting
+animated_painting:
+  itemname: Animated Painting
+  material: PAINTING
+  Components:
+    painting_variant: nexo:animated_painting
+```
