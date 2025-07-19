@@ -1,18 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # 🔳 Interaction Hitbox
 
 **Interaction-Entity Hitboxes** takes an **offset, width and height** & have no collision\

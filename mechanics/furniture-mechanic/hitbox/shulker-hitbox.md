@@ -1,18 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # 📤 Shulker Hitbox
 
 **Shulker-Entity Hitboxes** takes an **offset, scale, length** and **direction**\

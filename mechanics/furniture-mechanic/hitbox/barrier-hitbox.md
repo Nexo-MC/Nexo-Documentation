@@ -1,18 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # 🚧 Barrier Hitbox
 
 **Barrier** hitboxes can be formatted at a given offset from the furniture.\

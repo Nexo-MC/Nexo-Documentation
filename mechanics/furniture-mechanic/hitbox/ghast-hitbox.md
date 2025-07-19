@@ -1,18 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # 👻 Ghast Hitbox
 
 **Ghast-Entity Hitboxes** are a feature for 1.21.6+ and allows for a scalable collision entity hitbox.\

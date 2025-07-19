@@ -32,6 +32,7 @@
   * [🖼️ Multi-Bitmap Glyph](configuration/glyphs/multi-bitmap-glyph.md)
   * [🔗 Reference Glyph](configuration/glyphs/reference-glyph.md)
 * [🎵 Sounds](configuration/sounds.md)
+* [🖼️ Custom Paintings](configuration/custom-paintings.md)
 
 ## Mechanics
 
