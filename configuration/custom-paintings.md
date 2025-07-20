@@ -17,6 +17,10 @@ layout:
 
 # 🖼️ Custom Paintings
 
+{% hint style="info" %}
+Nexo only generates the Datapack for 1.21.3+ servers. You can still use Custom Paintings on 1.21.1, but you will need to make the datapack manually.
+{% endhint %}
+
 As of 1.21 you can now make custom paintings via datapacks. Nexo streamlines this process by automating the generation of this datapack based on a `Nexo/paintings.yml` file.
 
 Here is an example of adding a custom painting:
@@ -26,7 +30,7 @@ paintings:
   nexo:custom_painting:
     author: boy0000
     title: <red>Custom Painting
-    asset_id: nexo:my_custom_painting  # This is the path to the PNG, namespace:path
+    asset_id: nexo:custom_painting  # This is the path to the PNG, namespace:path
     width: 1     # The width of your painting, in number of blocks it takes up
     height: 1    # The height of your painting, in number of blocks it takes up
     random_place: true # Will place at random from the vanilla painting items
@@ -38,7 +42,9 @@ paintings:
     height: 1
 ```
 
-Then you simply put the Texture of your painting inside Nexo's ResourcePack where your asset\_id points to. The format is as with everything else `namespace:path` which here points to the path `assets/namespace/textures/painting/path` .
+Then you simply put the Texture of your painting inside Nexo's ResourcePack where your asset\_id points to.\
+All Painting-Textures are in `assets/NAMESPACE/textures/painting/PATH`\
+The config-format is as with everything else `NAMESPACE:PATH`
 
 For our above example it means we must put the texture inside `assets/nexo/textures/painting/custom_painting.png`&#x20;
 
