@@ -12,11 +12,11 @@ There might be small oversights leading to minor loss of furniture/custom blocks
 
 {% stepper %}
 {% step %}
-#### Put Nexo JAR in `ServerFolder/plugins`
+**Put Nexo JAR in `ServerFolder/plugins`**
 {% endstep %}
 
 {% step %}
-### Copy `plugins/Oraxen`-> `plugins/Nexo/converter/Oraxen`
+#### Copy `plugins/Oraxen`-> `plugins/Nexo/converter/Oraxen`
 
 The `converter`-folder does not exist by default. Simply make the new folder\
 Nexo will convert the content from this folder and delete it after\
@@ -24,20 +24,20 @@ Any future packs you might get can then be put in here and it will all be conver
 {% endstep %}
 
 {% step %}
-#### Ensure you remove Oraxen JAR from your plugins folder
+**Ensure you remove Oraxen JAR from your plugins folder**
 
 It is also recommended to go into your `Server/WORLD/datapacks` and remove any leftover packs from Oraxen
 {% endstep %}
 
 {% step %}
-#### Ensure you make a backup of your worlds
+**Ensure you make a backup of your worlds**
 
 Whilst migration should be flawless, it is still recommended to make a backup of your world-folders before swapping to Nexo\
 There might be small oversights leading to minor loss of furniture/custom blocks
 {% endstep %}
 
 {% step %}
-#### Start your server
+**Start your server**
 {% endstep %}
 {% endstepper %}
 

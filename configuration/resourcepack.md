@@ -1,3 +1,7 @@
+---
+icon: file-zipper
+---
+
 # 📂 ResourcePack
 
 ### ResourcePack-Structure

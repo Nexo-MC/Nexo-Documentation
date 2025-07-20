@@ -45,13 +45,13 @@ This means you only need to make one ItemModel JSON file.
 An ItemModel is used to alter the base-model of an Item and is not the same as CustomModelData.\
 An ItemModel will link to a normal Model, below are examples of the two approaches to use in Nexo.
 
-### Connection-State ItemModel
+#### Connection-State ItemModel
 
 This is largely the same as a normal basic ItemModel, but works as a replacement for needing many.\
 It works by selecting a Model based on the "connection-state" on the item.
 
 Here is an example of a ConnectionState ItemModel. It should be fairly self-explanatory.\
-The FurnitureItem displayed to the player has a tag on it specifying the connection-state. \
+The FurnitureItem displayed to the player has a tag on it specifying the connection-state.\
 This in turn tells the client what model to use from this ItemModel.\
 This reduces the amount of ResourcePack files needed & simplifies the NexoItem config aswell.
 
@@ -129,7 +129,7 @@ connectable:
 ```
 {% endcode %}
 
-### Normal ItemModel
+#### Normal ItemModel
 
 This requires you to make a basic ItemModel for each of the connection-states, which looks as follows;
 
@@ -145,7 +145,7 @@ This requires you to make a basic ItemModel for each of the connection-states, w
 {% endcode %}
 
 Now repeat this for all six connection-states, pointing to the different Models and put them in your ResourcePack.\
-Example path being; `Nexo/pack/assets/nexo/items/connectable/connectable.json`&#x20;
+Example path being; `Nexo/pack/assets/nexo/items/connectable/connectable.json`
 
 Then we just need to make the NexoItem config, and point it to the different Connection-State ItemModels it should use.
 

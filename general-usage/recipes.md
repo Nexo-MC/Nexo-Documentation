@@ -14,11 +14,12 @@ Drag your desired items into the crafting slots to create your recipe. Make sure
 
 * SHAPELESS - Allows each ingredient to be put in any slot
 * SHAPED - Requires ingredients to be in a specific shape
-* FURNACE - Recipe for Furnaces
-* BLASTING - Recipe for Blast Furnace
-* SMOKING - Recipe for Smoker
-* STONECUTTING - Recipe for StoneCutter
-* SMITHING - Recipe for Smithing Table - This is added via [NexoAddon](https://nexoaddon.gitbook.io/docs/recipes/smithing-recipe)
+* FURNACE - Recipe for the Furnaces
+* BLASTING - Recipe for the Blast Furnace
+* SMOKING - Recipe for the Smoker
+* STONECUTTING - Recipe for the Stone Cutter
+* BREWING - Recipe for the Brewing Stand
+* SMITHING - Recipe for the Smithing Table - This is added via [NexoAddon](https://nexoaddon.gitbook.io/docs/recipes/smithing-recipe)
 
 ## Examples:
 
@@ -26,7 +27,7 @@ Drag your desired items into the crafting slots to create your recipe. Make sure
 
 `amount` in result specifies how many of said item you should get
 
-`amount` in ingrediets specifies how many slots that item will need
+`amount` in ingredients specifies how many slots that item will need
 
 ```yaml
 grass_block_shapeless:
@@ -92,3 +93,17 @@ stripped_spruce_log:
 ```
 
 <div align="left"><figure><img src="../.gitbook/assets/stonecutting.png" alt=""><figcaption></figcaption></figure></div>
+
+### Brewing
+
+```yaml
+diamond:
+  result:
+    minecraft_type: DIAMOND
+  input:
+    minecraft_type: GLASS_BOTTLE
+  ingredient:
+    nexo_item: rainbow_ingot
+```
+
+<div align="left"><figure><img src="../.gitbook/assets/brewing.png" alt=""><figcaption></figcaption></figure></div>
