@@ -544,26 +544,22 @@ my_item:
 ### ItemTemplate
 
 This allows you to easily copy properties from a template-item onto other items.\
-In the template item:
+In the item you want to copy properties to, simply specify the ItemID\
+It also supports a list of multiple items to merge several into one
 
 ```yml
 template_item:
-  template: true
-  material: DIAMOND_SWORD
-  ...
-```
+  itemname: Template Item
+  material: DIAMOND
 
-In the item you want to copy the properties to:
-
-```yml
 template_item1:
   template: template_item
   itemname: Template Item 1
 
 template_item2:
-  template: template_item
-  itemname: Template Item 2
-  material: CLOCK
+  templates: 
+    - template_item
+    - template_item1
 ```
 
 ### PersistentData
