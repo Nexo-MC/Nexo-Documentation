@@ -499,7 +499,6 @@ jukebox_playable - Lets this item be inserted into a Jukebox and play a given so
 
 {% tab title="1.21.1" %}
 `custom_data` - Defines custom-properties to add to the item\
-&#x20;\
 `max_stack_size` - Sets the maximum slot-size of a NexoItem\
 `enchantment_glint_override` - Sets an override-state for the enchantment glint\
 `fire_resistant` - Sets whether this NexoItem is immune to fire and lava\
