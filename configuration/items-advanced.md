@@ -13,7 +13,9 @@ coverY: 0
 {% tab title="1.21.5" %}
 `tooltip_display` - Sets the Components to hide tooltips from. List of all DataComponents can be found [here](https://minecraft.wiki/w/Data_component_format#List_of_components). Use this instead of ItemFlags
 
-`max_stack_size` - Sets the maximum slot-size of an NexoItem\
+`custom_data` - Defines custom-properties to add to the item\
+&#x20;\
+`max_stack_size` - Sets the maximum slot-size of a NexoItem\
 `enchantment_glint_override` - Sets an override-state for the enchantment glint\
 `durability` - Sets the durability of this NexoItem\
 `hide_tooltip` - Hides all tooltips from the given NexoItemon hover\
@@ -46,6 +48,7 @@ coverY: 0
 `use_remainder` - Replaces the item with a remainder item if its stack count has decreased after use\
 `damage_resistant` - The tag-key for the damage-type\
 `repairable` - What item(s) should be allowed in anvils to repair durability\
+`death_protection` - Protects the player from when equipped on death. Optionally applies effects too\
 `custom_model_data` - Used for all the new formatting for [1.21.4 CMD component](https://minecraft.wiki/w/Data_component_format#custom_model_data)
 
 Example of all the above properties:
@@ -55,6 +58,15 @@ Example of all the above properties:
 my_item:
   itemname: <gradient:#4B36B1:#6699FF>My Item
   Components:
+    custom_data:
+      nexo:string: "Some string"
+      nexo:integer: 2
+      nexi:integer_list: [1, 2, 3]
+      nexo:string_list: ["something", "something else"]
+      nexo:compound:
+        nexo:c_string: "Compound String"
+        nexo:c_integer: 3
+        namespace:boolean: true
     tooltip_display:            # Should be used instead of ItemFlags
       - minecraft:enchantments
       - minecraft:attribute_modifiers
@@ -138,6 +150,23 @@ my_item:
       #dispensable: true                  Optional, default is true
       #swappable: true                    Optional, default is true
       #damage_on_hurt: true               Optional, default is true
+    death_protection:
+      death_effects:                      #Optional, can be empty/set to []
+        APPLY_EFFECTS:
+          mining_fatigue:
+            duration: 10
+            amplifier: 1
+            ambient: false
+            show_icon: true
+            show_particles: true
+            probability: 1.0
+          REMOVE_EFFECTS:
+          - speed
+          CLEAR_ALL_EFFECTS: {}
+          TELEPORT_RANDOMLY:
+            diameter: 16.0
+          PLAY_SOUND:
+            sound: minecraft:ambient.basalt_deltas.additions1
     custom_model_data:                  #In-depth explanation here: https://minecraft.wiki/w/Data_component_format#custom_model_data
       #floats: [ 1f, 2f, ...]            #Optional, same logic as with CMD before
       #colors: [ 1, 123456, [r, g, b]]
@@ -148,7 +177,9 @@ my_item:
 {% endtab %}
 
 {% tab title="1.21.4" %}
-`max_stack_size` - Sets the maximum slot-size of an NexoItem\
+`custom_data` - Defines custom-properties to add to the item\
+&#x20;\
+`max_stack_size` - Sets the maximum slot-size of a NexoItem\
 `enchantment_glint_override` - Sets an override-state for the enchantment glint\
 `durability` - Sets the durability of this NexoItem\
 `hide_tooltip` - Hides all tooltips from the given NexoItemon hover\
@@ -181,6 +212,7 @@ my_item:
 `use_remainder` - Replaces the item with a remainder item if its stack count has decreased after use\
 `damage_resistant` - The tag-key for the damage-type\
 `repairable` - What item(s) should be allowed in anvils to repair durability\
+`death_protection` - Protects the player from when equipped on death. Optionally applies effects too\
 `custom_model_data` - Used for all the new formatting for [1.21.4 CMD component](https://minecraft.wiki/w/Data_component_format#custom_model_data)
 
 Example of all the above properties:
@@ -190,6 +222,15 @@ Example of all the above properties:
 my_item:
   itemname: <gradient:#4B36B1:#6699FF>My Item
   Components:
+    custom_data:
+      nexo:string: "Some string"
+      nexo:integer: 2
+      nexi:integer_list: [1, 2, 3]
+      nexo:string_list: ["something", "something else"]
+      nexo:compound:
+        nexo:c_string: "Compound String"
+        nexo:c_integer: 3
+        namespace:boolean: true
     enchantment_glint_override: false
     durability: 10
     # if the material above isnt a normal tool, but say PAPER
@@ -270,6 +311,23 @@ my_item:
       #dispensable: true                  Optional, default is true
       #swappable: true                    Optional, default is true
       #damage_on_hurt: true               Optional, default is true
+    death_protection:
+      death_effects:                      #Optional, can be empty/set to []
+        APPLY_EFFECTS:
+          mining_fatigue:
+            duration: 10
+            amplifier: 1
+            ambient: false
+            show_icon: true
+            show_particles: true
+            probability: 1.0
+          REMOVE_EFFECTS:
+          - speed
+          CLEAR_ALL_EFFECTS: {}
+          TELEPORT_RANDOMLY:
+            diameter: 16.0
+          PLAY_SOUND:
+            sound: minecraft:ambient.basalt_deltas.additions1
     custom_model_data:                  #In-depth explanation here: https://minecraft.wiki/w/Data_component_format#custom_model_data
       #floats: [ 1f, 2f, ...]            #Optional, same logic as with CMD before
       #colors: [ 1, 123456, [r, g, b]]
@@ -280,7 +338,9 @@ my_item:
 {% endtab %}
 
 {% tab title="1.21.3" %}
-`max_stack_size` - Sets the maximum slot-size of an NexoItem\
+`custom_data` - Defines custom-properties to add to the item\
+&#x20;\
+`max_stack_size` - Sets the maximum slot-size of a NexoItem\
 `enchantment_glint_override` - Sets an override-state for the enchantment glint\
 `durability` - Sets the durability of this NexoItem\
 `hide_tooltip` - Hides all tooltips from the given NexoItemon hover\
@@ -312,7 +372,8 @@ my_item:
 `use_cooldown` - Applies a cooldown to all matching items when used\
 `use_remainder` - Replaces the item with a remainder item if its stack count has decreased after use\
 `damage_resistant` - The tag-key for the damage-type\
-`repairable` - What item(s) should be allowed in anvils to repair durability
+`repairable` - What item(s) should be allowed in anvils to repair durability\
+`death_protection` - Protects the player from when equipped on death. Optionally applies effects too
 
 Example of all the above properties:
 
@@ -321,6 +382,15 @@ Example of all the above properties:
 my_item:
   itemname: <gradient:#4B36B1:#6699FF>My Item
   Components:
+    custom_data:
+      nexo:string: "Some string"
+      nexo:integer: 2
+      nexi:integer_list: [1, 2, 3]
+      nexo:string_list: ["something", "something else"]
+      nexo:compound:
+        nexo:c_string: "Compound String"
+        nexo:c_integer: 3
+        namespace:boolean: true
     enchantment_glint_override: false
     durability: 10
     # if the material above isnt a normal tool, but say PAPER
@@ -401,11 +471,32 @@ my_item:
       #dispensable: true                  Optional, default is true
       #swappable: true                    Optional, default is true
       #damage_on_hurt: true               Optional, default is true
+    death_protection:
+      death_effects:                      #Optional, can be empty/set to []
+        APPLY_EFFECTS:
+          mining_fatigue:
+            duration: 10
+            amplifier: 1
+            ambient: false
+            show_icon: true
+            show_particles: true
+            probability: 1.0
+          REMOVE_EFFECTS:
+          - speed
+          CLEAR_ALL_EFFECTS: {}
+          TELEPORT_RANDOMLY:
+            diameter: 16.0
+          PLAY_SOUND:
+            sound: minecraft:ambient.basalt_deltas.additions1
 ```
 {% endcode %}
 {% endtab %}
 
 {% tab title="1.21.1" %}
+\
+\
+`custom_data` - Defines custom-properties to add to the item\
+&#x20;\
 `max_stack_size` - Sets the maximum slot-size of a NexoItem\
 `enchantment_glint_override` - Sets an override-state for the enchantment glint\
 `fire_resistant` - Sets whether this NexoItem is immune to fire and lava\
@@ -423,6 +514,15 @@ Example of all the above properties:
 my_item:
   itemname: <gradient:#4B36B1:#6699FF>My Item
   Components:
+    custom_data:
+      nexo:string: "Some string"
+      nexo:integer: 2
+      nexi:integer_list: [1, 2, 3]
+      nexo:string_list: ["something", "something else"]
+      nexo:compound:
+        nexo:c_string: "Compound String"
+        nexo:c_integer: 3
+        namespace:boolean: true
     enchantment_glint_override: false
     durability: 10
     # if the material above isnt a normal tool, but say PAPER
