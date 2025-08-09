@@ -14,7 +14,6 @@ coverY: 0
 `tooltip_display` - Sets the Components to hide tooltips from. List of all DataComponents can be found [here](https://minecraft.wiki/w/Data_component_format#List_of_components). Use this instead of ItemFlags
 
 `custom_data` - Defines custom-properties to add to the item\
-&#x20;\
 `max_stack_size` - Sets the maximum slot-size of a NexoItem\
 `enchantment_glint_override` - Sets an override-state for the enchantment glint\
 `durability` - Sets the durability of this NexoItem\
@@ -178,7 +177,6 @@ my_item:
 
 {% tab title="1.21.4" %}
 `custom_data` - Defines custom-properties to add to the item\
-&#x20;\
 `max_stack_size` - Sets the maximum slot-size of a NexoItem\
 `enchantment_glint_override` - Sets an override-state for the enchantment glint\
 `durability` - Sets the durability of this NexoItem\
@@ -339,7 +337,6 @@ my_item:
 
 {% tab title="1.21.3" %}
 `custom_data` - Defines custom-properties to add to the item\
-&#x20;\
 `max_stack_size` - Sets the maximum slot-size of a NexoItem\
 `enchantment_glint_override` - Sets an override-state for the enchantment glint\
 `durability` - Sets the durability of this NexoItem\
@@ -486,22 +483,28 @@ my_item:
           CLEAR_ALL_EFFECTS: {}
           TELEPORT_RANDOMLY:
             diameter: 16.0
-          PLAY_SOUND:
-            sound: minecraft:ambient.basalt_deltas.additions1
+          PLA
+            sound: minecraft:ambient.basalt_deltas.additions1custom_data - Defines custom-properties to add to the item
+ 
+max_stack_size - Sets the maximum slot-size of a NexoItem
+enchantment_glint_override - Sets an override-state for the enchantment glint
+fire_resistant - Sets whether this NexoItem is immune to fire and lava
+durability - Sets the durability of this NexoItem
+hide_tooltip - Hides all tooltips from the given NexoItem on hover
+food - Makes this item consumable with several different properties
+jukebox_playable - Lets this item be inserted into a Jukebox and play a given song
 ```
 {% endcode %}
 {% endtab %}
 
 {% tab title="1.21.1" %}
-\
-\
 `custom_data` - Defines custom-properties to add to the item\
 &#x20;\
 `max_stack_size` - Sets the maximum slot-size of a NexoItem\
 `enchantment_glint_override` - Sets an override-state for the enchantment glint\
 `fire_resistant` - Sets whether this NexoItem is immune to fire and lava\
 `durability` - Sets the durability of this NexoItem\
-`hide_tooltip` - Hides all tooltips from the given NexoItem on hover\
+`hide_tooltip` - Hides all tooltips from the given NexoItemon hover\
 `food` - Makes this item consumable with several different properties\
 `jukebox_playable` - Lets this item be inserted into a Jukebox and play a given song
 
