@@ -713,6 +713,14 @@ This allows you to change the color of an item made of a supported material (e.g
 my_item:
   color: 3, 252, 136 #rgb
 ```
+To change the color of your model, you need to set Tint property.\
+How to set `Tint` property using BlockBench:
+1. Open the model in BlockBench
+2. Open Paint Tab
+3. Select face you want to change color
+4. Right click on the face and check `Tint` box
+
+![img.png](../.gitbook/assets/tint.png)
 
 ### Lore
 
