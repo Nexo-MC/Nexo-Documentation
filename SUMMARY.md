@@ -33,6 +33,10 @@
   * [🔗 Reference Glyph](configuration/glyphs/reference-glyph.md)
 * [🎵 Sounds](configuration/sounds.md)
 * [🖼️ Custom Paintings](configuration/custom-paintings.md)
+* [🗨️ Dialogs](configuration/dialogs/README.md)
+  * [DialogType](configuration/dialogs/dialogtype.md)
+  * [DialogBase](configuration/dialogs/dialogbase.md)
+  * [DialogAction](configuration/dialogs/dialogaction.md)
 
 ## Mechanics
 
