@@ -6,6 +6,6 @@ Nexo is a Minecraft plugin that allows you to create highly customizable custom 
 It also handles Resourcepack generation, uploading and dispatching to players.
 
 {% hint style="info" %}
-Nexo has been tested on Paper & Folia 1.20.4 -> 1.21.7
+Nexo has been tested on Paper & Folia 1.20.4 -> 1.21.8
 {% endhint %}
 
