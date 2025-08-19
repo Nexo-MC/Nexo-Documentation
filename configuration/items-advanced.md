@@ -682,7 +682,7 @@ This allows you to change the name displayed of your item without interfering wi
 
 ```yaml
 my_item:
-  itemname: "<red><bold>Example" #example name
+  itemname: "<red><bold>Example"
 ```
 
 ### Displayname
@@ -692,8 +692,8 @@ This is only useful on 1.20.4, above it will just use Itemname\
 
 ```yaml
 my_item:
-  displayname: "<red><bold>Example" #example name
-  #customname: "<red><bold>Example" #example name
+  displayname: "<red><bold>Example"
+  #customname: "<red><bold>Example"
 ```
 
 ### Material
@@ -709,18 +709,26 @@ my_item:
 
 This allows you to change the color of an item made of a supported material (e.g. leather armor).
 
+{% columns %}
+{% column width="58.333333333333336%" %}
 ```yaml
 my_item:
   color: 3, 252, 136 #rgb
 ```
+
 To change the color of your model, you need to set Tint property.\
 How to set `Tint` property using BlockBench:
-1. Open the model in BlockBench
-2. Open Paint Tab
-3. Select face you want to change color
-4. Right click on the face and check `Tint` box
 
-![img.png](../.gitbook/assets/tint.png)
+* Open the model in BlockBench
+* Open Paint Tab
+* Select face you want to change color
+* Right click on the face and check `Tint` box
+{% endcolumn %}
+
+{% column width="41.666666666666664%" %}
+![](../.gitbook/assets/tint.png)
+{% endcolumn %}
+{% endcolumns %}
 
 ### Lore
 
@@ -742,6 +750,10 @@ This does not prevent enchantments from being applied in the config.\\
 my_item:
   disable_enchanting: true
 ```
+
+{% hint style="warning" %}
+As of 1.21.2+ you should use Enchantable-Component (`Components.enchantable: 0`)
+{% endhint %}
 
 ### excludeFromInventory
 
@@ -839,4 +851,4 @@ This part has a dedicated page, you can consult it [here](items-advanced/item-ap
 
 ## Mechanics options
 
-This part has a dedicated page, you can consult it [here](broken-reference).
+This part has a dedicated page, you can consult it [here](broken-reference/).
