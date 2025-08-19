@@ -51,6 +51,7 @@
   * [🛏️ Bed Mechanic](mechanics/furniture-mechanic/bed-mechanic.md)
   * [💡 Light Mechanic](mechanics/furniture-mechanic/light-mechanic.md)
   * [🧑‍🌾 Farming Mechanic](mechanics/furniture-mechanic/farming-mechanic.md)
+  * [🚪 Door Mechanic](mechanics/furniture-mechanic/door-mechanic.md)
 * [📦 Custom Block Mechanics](mechanics/custom-block-mechanics/README.md)
   * [ChorusBlock Mechanic](mechanics/custom-block-mechanics/chorusblock-mechanic.md)
   * [🎶 NoteBlock Mechanic](mechanics/custom-block-mechanics/noteblock-mechanic/README.md)
