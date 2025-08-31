@@ -7,6 +7,19 @@ coverY: 0
 
 # Special Item Appearance
 
+### Make an invisible item (1.21.4+)
+
+To make an invisible item with Nexo, you can use the Nexo provided ItemModel `nexo:empty`.\
+This will render nothing for that Item no matter where it is used.
+
+Here is a basic config-example for an invisible NexoItem
+
+```yaml
+invisible_item:
+  Components:
+    item_model: nexo:empty
+```
+
 ### Use a different model for Inventory Icon vs Equipped/In-Hand
 
 {% hint style="info" %}
