@@ -69,7 +69,7 @@ forest_trident:
       display_transform: HEAD
 ```
 
-<div><figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Forest Trident with the normal default Model</p></figcaption></figure> <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Forest Trident in the "throwing" model, rotated</p></figcaption></figure></div>
+<div><figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Forest Trident with the normal default Model</p></figcaption></figure> <figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Forest Trident in the "throwing" model, rotated</p></figcaption></figure></div>
 {% endtab %}
 
 {% tab title="NexoItem (1.20.4+)" %}

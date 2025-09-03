@@ -20,6 +20,7 @@
 * [ResourcePack](configuration/resourcepack.md)
 * [⚒️ Items](configuration/items-advanced.md)
   * [Components](configuration/items-advanced/components.md)
+  * [🤖 2D Player Heads](configuration/items-advanced/2d-player-heads.md)
   * [Special Item Appearance](configuration/items-advanced/item-appearance.md)
 * [🐴 Custom Mob Armor (1.21.2+)](configuration/custom-mob-armor-1.21.2+/README.md)
   * [🪢 Custom Harness (1.21.6+)](configuration/custom-mob-armor-1.21.2+/custom-harness-1.21.6+.md)
