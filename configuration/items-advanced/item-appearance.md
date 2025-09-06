@@ -7,7 +7,7 @@ coverY: 0
 
 # Special Item Appearance
 
-### Make an invisible item (1.21.4+)
+### Invisible Item (1.21.4+)
 
 To make an invisible item with Nexo, you can use the Nexo provided ItemModel `nexo:empty`.\
 This will render nothing for that Item no matter where it is used.
@@ -19,6 +19,29 @@ invisible_item:
   Components:
     item_model: nexo:empty
 ```
+
+You can also use this in any other plugin, assuming they allow you to specify the ItemModel of your Item.
+
+### Oversized Items in GUI (1.21.6+)
+
+As of 1.21.6+, Mojang made changes to how items render in the GUI.\
+By default they are no longer allowed to go beyond their 16x16 grid, but added an option called `oversixed_in_gui` to ItemModels to return this behaviour.\
+In Nexo you can use this for your items by following the below example;
+
+```yaml
+oversized_item:
+  material: PAPER
+  Pack:
+    oversized_in_gui: true
+    model: my_oversized_model
+  Components:
+    item_model: nexo:oversized_item
+```
+
+Here we do not use CustomModelData as that would apply to all items using PAPER.\
+If you are not sure what an ItemModel is, think of it as the **base model** of an item.\
+By default all items using the material PAPER will use **minecraft:paper.**\
+By specifying our own ItemModel here, we are changing the base-model of our item, preventing any conflicts or issues, and Nexo can properly mark the config
 
 ### Use a different model for Inventory Icon vs Equipped/In-Hand
 
@@ -66,7 +89,14 @@ myitem:
     item_model: namespace:mymodel
 ```
 
-### Use a blocking json model (for shield)
+***
+
+{% hint style="info" %}
+All the methods below support a `BLANK_texture` or `BLANK_textures` aswell as models if all you have is a PNG\
+For example for a 2D bow with different pulling-stages.
+{% endhint %}
+
+### Blocking Model (Shields)
 
 ```yaml
 myitem:
@@ -75,7 +105,7 @@ myitem:
     blocking_model: example_shield_blocking.json #json extension is not mandatory
 ```
 
-### Use a pulling json model (for bows)
+### Pulling Models (Bows / Crossbow)
 
 ```yaml
 myitem:
@@ -87,9 +117,7 @@ myitem:
       - default/combat_bow_pulling_2
 ```
 
-This also works with pulling\_textures if you only have texture files
-
-### Use charged\_model json model (for Crossbows)
+### Charged Model (Crossbow)
 
 ```yml
 myitem:
@@ -103,9 +131,7 @@ myitem:
     firework_model: default/custom_bow_charged #Optional
 ```
 
-This also works with charged\_texture & firework\_texture if you only have texture files
-
-### Use cast\_model json model (for fishing rods)
+### Cast Model (Fishing Rods)
 
 ```yml
 myitem:
@@ -114,9 +140,7 @@ myitem:
     cast_model: default/fishing_rod_cast
 ```
 
-This also works with cast\_texture if you only have texture files
-
-### Use damaged\_model json model (for different durability levels)
+### Damaged Model (Based on durability)
 
 ```yml
 myitem:
@@ -127,5 +151,3 @@ myitem:
       - default/diamond_sword_damaged2
       - default/diamond_sword_damaged3
 ```
-
-This also works with damaged\_textures if you only have texture files
