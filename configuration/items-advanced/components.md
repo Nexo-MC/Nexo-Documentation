@@ -48,11 +48,15 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Death Protection**](#user-content-fn-20)[^20] - Protects the player from when equipped on death. Optionally applies effects too\
 [**Custom Model Data**](#user-content-fn-21)[^21] - Used for all the new formatting for [1.21.4 CMD component](https://minecraft.wiki/w/Data_component_format#custom_model_data)
 
-[**Tooltip Display**](#user-content-fn-22)[^22] - Sets the Components to hide tooltips from. This should be used instead of ItemFlags
+[**Tooltip Display**](#user-content-fn-22)[^22] - Sets the Components to hide tooltips from. This should be used instead of ItemFlags\
+[**Break Sound**](#user-content-fn-23)[^23] - Set the sound to play when the item loses all its durability\
+[**Weapon**](#user-content-fn-24)[^24] **-** Makes the item act like a weapon\
+[**Blocks Attacks**](#user-content-fn-25)[^25] **-** Makes the item act as a shield & can block attacks\
+[**CanPlaceOn/CanBreak**](#user-content-fn-26)[^26] **-** Defines what this item can break or be placed on in Adventure Mode
 
 **New properties for 1.21.8+:**
 
-[**Painting Variant**](#user-content-fn-23)[^23] **-** Used with the new [custom-paintings.md](../custom-paintings.md "mention") feature to specify which painting to place
+[**Painting Variant**](#user-content-fn-27)[^27] **-** Used with the new [custom-paintings.md](../custom-paintings.md "mention") feature to specify which painting to place
 {% endtab %}
 
 {% tab title="1.21.5" %}
@@ -83,10 +87,10 @@ Each component below has a hover-click to show an example of how to use it, with
 **New properties for 1.21.5+:**
 
 [**Tooltip Display**](#user-content-fn-22)[^22] - Sets the Components to hide tooltips from. This should be used instead of ItemFlags\
-[**Break Sound**](#user-content-fn-24)[^24] - Set the sound to play when the item loses all its durability\
-[**Weapon**](#user-content-fn-25)[^25] **-** Makes the item act like a weapon\
-[**Blocks Attacks**](#user-content-fn-26)[^26] **-** Makes the item act as a shield & can block attacks\
-[**CanPlaceOn/CanBreak**](#user-content-fn-27)[^27] **-** Defines what this item can break or be placed on in Adventure Mode
+[**Break Sound**](#user-content-fn-23)[^23] - Set the sound to play when the item loses all its durability\
+[**Weapon**](#user-content-fn-24)[^24] **-** Makes the item act like a weapon\
+[**Blocks Attacks**](#user-content-fn-25)[^25] **-** Makes the item act as a shield & can block attacks\
+[**CanPlaceOn/CanBreak**](#user-content-fn-26)[^26] **-** Defines what this item can break or be placed on in Adventure Mode
 {% endtab %}
 
 {% tab title="1.21.4" %}
@@ -507,16 +511,10 @@ Each component below has a hover-click to show an example of how to use it, with
 [^23]: ```yaml
     my_item:
       Components:
-        painting_variant: namespace:key
-    ```
-
-[^24]: ```yaml
-    my_item:
-      Components:
         break_sound: namespace:key
     ```
 
-[^25]: ```yaml
+[^24]: ```yaml
     my_item:
       Components:
         weapon:
@@ -524,7 +522,7 @@ Each component below has a hover-click to show an example of how to use it, with
          disable_blocking: 0.0
     ```
 
-[^26]: ```yaml
+[^25]: ```yaml
     my_item:
       Components:
         blocks_attacks:
@@ -550,7 +548,7 @@ Each component below has a hover-click to show an example of how to use it, with
 
     **types** can be specified as a single element or a list, and takes a NamespacedKey for a DamageType or Tag
 
-[^27]: ```yaml
+[^26]: ```yaml
     my_item:
       Components:
         can_place_on/can_break:
@@ -562,6 +560,12 @@ Each component below has a hover-click to show an example of how to use it, with
 
     This supports all block-ids or block-tags.\
     Can either specify a single element or a list of elements
+
+[^27]: ```yaml
+    my_item:
+      Components:
+        painting_variant: namespace:key
+    ```
 
 [^28]: ```yaml
     my_item:
