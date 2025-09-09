@@ -82,7 +82,11 @@ Each component below has a hover-click to show an example of how to use it, with
 
 **New properties for 1.21.5+:**
 
-[**Tooltip Display**](#user-content-fn-22)[^22] - Sets the Components to hide tooltips from. This should be used instead of ItemFlags
+[**Tooltip Display**](#user-content-fn-22)[^22] - Sets the Components to hide tooltips from. This should be used instead of ItemFlags\
+[**Break Sound**](#user-content-fn-24)[^24] - Set the sound to play when the item loses all its durability\
+[**Weapon**](#user-content-fn-25)[^25] **-** Makes the item act like a weapon\
+[**Blocks Attacks**](#user-content-fn-26)[^26] **-** Makes the item act as a shield & can block attacks\
+[**CanPlaceOn/CanBreak**](#user-content-fn-27)[^27] **-** Defines what this item can break or be placed on in Adventure Mode
 {% endtab %}
 
 {% tab title="1.21.4" %}
@@ -95,7 +99,7 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Tool**](#user-content-fn-7)[^7] **-** Makes your item into a tool with configurable behaviour for blocks its breaking
 
 [**Custom Data**](#user-content-fn-8)[^8] **-** Defines custom properties to add to the item\
-[**Jukebox Playable**](#user-content-fn-24)[^24] - Lets this item be inserted into a Jukebox and play a given song
+[**Jukebox Playable**](#user-content-fn-28)[^28] - Lets this item be inserted into a Jukebox and play a given song
 
 [**Consumable**](#user-content-fn-10)[^10] - Makes an item consumable, with bunch of sub-properties\
 [**Equippable**](#user-content-fn-11)[^11] **-** Makes an item equippable, like armor\
@@ -123,7 +127,7 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Tool**](#user-content-fn-7)[^7] **-** Makes your item into a tool with configurable behaviour for blocks its breaking
 
 [**Custom Data**](#user-content-fn-8)[^8] **-** Defines custom properties to add to the item\
-[**Jukebox Playable**](#user-content-fn-24)[^24] - Lets this item be inserted into a Jukebox and play a given song
+[**Jukebox Playable**](#user-content-fn-28)[^28] - Lets this item be inserted into a Jukebox and play a given song
 
 **New properties for 1.21.3+:**
 
@@ -146,13 +150,13 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Fire Resistant**](#user-content-fn-3)[^3] - Sets whether this NexoItem is immune to fire and lava\
 [**Durability**](#user-content-fn-4)[^4] - Sets the durability of this NexoItem\
 [**Hide Tooltip**](#user-content-fn-5)[^5] - Hides all tooltips from the given NexoItem on hover\
-[**Food**](#user-content-fn-25)[^25] - Makes this item consumable with several different properties\
+[**Food**](#user-content-fn-29)[^29] - Makes this item consumable with several different properties\
 [**Tool**](#user-content-fn-7)[^7] **-** Makes your item into a tool with configurable behaviour for blocks its breaking
 
 **New properties for 1.21.1+:**
 
 [**Custom Data**](#user-content-fn-8)[^8] **-** Defines custom properties to add to the item\
-[**Jukebox Playable**](#user-content-fn-24)[^24] - Lets this item be inserted into a Jukebox and play a given song
+[**Jukebox Playable**](#user-content-fn-28)[^28] - Lets this item be inserted into a Jukebox and play a given song
 {% endtab %}
 
 {% tab title="1.20.5" %}
@@ -161,7 +165,7 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Fire Resistant**](#user-content-fn-3)[^3] - Sets whether this NexoItem is immune to fire and lava\
 [**Durability**](#user-content-fn-4)[^4] - Sets the durability of this NexoItem\
 [**Hide Tooltip**](#user-content-fn-5)[^5] - Hides all tooltips from the given NexoItem on hover\
-[**Food**](#user-content-fn-25)[^25] - Makes this item consumable with several different properties\
+[**Food**](#user-content-fn-29)[^29] - Makes this item consumable with several different properties\
 [**Tool**](#user-content-fn-7)[^7] **-** Makes your item into a tool with configurable behaviour for blocks its breaking
 {% endtab %}
 {% endtabs %}
@@ -509,6 +513,59 @@ Each component below has a hover-click to show an example of how to use it, with
 [^24]: ```yaml
     my_item:
       Components:
+        break_sound: namespace:key
+    ```
+
+[^25]: ```yaml
+    my_item:
+      Components:
+        weapon:
+         damage_per_attack: 1
+         disable_blocking: 0.0
+    ```
+
+[^26]: ```yaml
+    my_item:
+      Components:
+        blocks_attacks:
+          block_delay: 0.0
+          disable_cooldown_scale: 1.0
+          block_sound: namespace:key
+          disable_sound: namespace:key
+          bypassed_by: namespace:key
+          item_damage:
+            base: 1.0
+            factor:1.0
+            threshold: 0.0
+          damage_reductions:
+            - base: 1.0
+              factor: 1.0
+              horizontal_blocking: 90.0
+              types: namespace:key
+              #types:
+              #  - namespace:key
+    ```
+
+    **Damage Reductions:**
+
+    **types** can be specified as a single element or a list, and takes a NamespacedKey for a DamageType or Tag
+
+[^27]: ```yaml
+    my_item:
+      Components:
+        can_place_on/can_break:
+          block: stone
+          blocks:
+            - stone
+            - ores
+    ```
+
+    This supports all block-ids or block-tags.\
+    Can either specify a single element or a list of elements
+
+[^28]: ```yaml
+    my_item:
+      Components:
         jukebox_playable:
           show_in_tooltip: true
           song_key: namespace:key
@@ -518,7 +575,7 @@ Each component below has a hover-click to show an example of how to use it, with
     \
     The sound is the key defined in either your sounds.json in your ResourcePack, or in Nexo's sounds.yml&#x20;
 
-[^25]: ```yaml
+[^29]: ```yaml
     my_item:
       Components:
         food:
