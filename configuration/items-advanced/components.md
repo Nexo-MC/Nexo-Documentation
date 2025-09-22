@@ -317,7 +317,7 @@ Each component below has a hover-click to show an example of how to use it, with
       Components:
         equippable:
           slot: HEAD
-          #model: minecraft:example
+          #asset_id: minecraft:example
           #camera_overlay: minecraft:example
           #equip_sound: item.armor.equip_chain
           #allowed_entity_types:
@@ -330,7 +330,7 @@ Each component below has a hover-click to show an example of how to use it, with
 
     [**Minecraft Wiki**](https://minecraft.wiki/w/Data_component_format#equippable)\
     \
-    **Model:**
+    **Asset ID:**
 
     The asset to show for the equipped texture.\
     If using a 3D Model for helmet, do not specify this field

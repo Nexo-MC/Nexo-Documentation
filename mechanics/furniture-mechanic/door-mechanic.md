@@ -24,7 +24,9 @@ You can also specify a few extra options for additional behaviour:
 **open\_sound -** The sound to play when opening the door\
 **close\_sound -** The sound to play when closing the door\
 **open\_properties - T**he same as [Furniture Properties](./#furniture-properties), but only applied in open-state\
-**is\_sliding -** If the door is sliding type or normal type
+**is\_sliding -** If the door is sliding type or normal type\
+**automatic\_close\_delay -** A duration of time before the door will close when opened (1t, 2s, 3m, etc...)\
+**delay\_hitbox\_toggle -** If the swap to non-solid hitbox should be delayed until door is fully opened
 
 There is also a new **delay-property** which defines the "time to open" for the door.\
 If left unspecified, the door immediatly changes state

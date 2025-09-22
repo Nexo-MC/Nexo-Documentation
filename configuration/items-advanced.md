@@ -50,6 +50,28 @@ template_item2:
     - template_item1
 ```
 
+You can also use **Template Placeholder** to simplify configs even further\
+&#xNAN;**\<item\_id> -** Can be used to insert the ID of the item into the relevant part\
+&#xNAN;**\<item\_id\_capitalized> -** Insert the ID in a formatted format; `item_id` -> `Item Id`\
+&#xNAN;**\<lore> -** Insert the lore of the item at a point in the lore of the template
+
+```yaml
+item:
+  template: template_item
+another_item:
+  template: template_item
+  lore:
+    - "some lore"
+template_item:
+  itemname: <item_id_capitalized>
+  Components:
+    item_model: nexo:<item_id>
+  lore:
+    - "template lore 1"
+    - "<lore>"
+    - "template lore 2"
+```
+
 ### PersistentData
 
 This lets you add custom data into the items PersistentDataContainer. These exist within the `PublicBukkitValues` of the item. Type is the type of data to add. Supported types can be found [here](https://jd.papermc.io/paper/1.21.5/org/bukkit/persistence/PersistentDataType.html#field-summary). Nexo also has some custom DataTypes which can be used, like UUID. These can be found [here](https://hub.jeff-media.com/javadocs/morepersistentdatatypes/)

@@ -10,6 +10,9 @@ Recipes can be created directly in the relevant file within the `Nexo/recipes` d
 The RecipeBuilder can be accessed with the command `/nexo recipes builder`.\
 Drag your desired items into the crafting slots to create your recipe. Make sure to set the "output" slot to the item you want to give.
 
+Each Recipe-type has its own folder in `plugins/Nexo/recipes`, meaning you can organize recipes inside each folder into different files, sub-folders, etc.\
+The RecipeBuilder will store recipes inside `plugins/Nexo/recipes/X/X_recipes.yml`, X being the type (shaped, shapeless, etc.)
+
 ### Available Recipe Types:
 
 * SHAPELESS - Allows each ingredient to be put in any slot
@@ -27,8 +30,6 @@ Drag your desired items into the crafting slots to create your recipe. Make sure
 
 `amount` in result specifies how many of said item you should get
 
-`amount` in ingredients specifies how many slots that item will need
-
 ```yaml
 grass_block_shapeless:
   result:
@@ -36,10 +37,8 @@ grass_block_shapeless:
     amount: 2
   ingredients:
     A:
-      amount: 1
       minecraft_type: MOSS_CARPET
     B:
-      amount: 2
       minecraft_type: DIRT
 ```
 
