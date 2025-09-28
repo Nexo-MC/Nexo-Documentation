@@ -36,7 +36,7 @@ forest_helmet:
   Components:
     equippable:
       slot: HEAD
-      model: nexo:forest
+      asset_id: nexo:forest
 ```
 
 {% hint style="warning" %}

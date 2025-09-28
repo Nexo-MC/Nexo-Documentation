@@ -19,7 +19,7 @@ forest_elytra:
   Components:
     equippable:
       slot: CHEST
-      model: nexo:forest_elytra
+      asset_id: nexo:forest_elytra
 ```
 
 <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Forest Elytra included with Nexo</p></figcaption></figure>
