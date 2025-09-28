@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # 📜 Main Changelog
 
 ### **\[General]**

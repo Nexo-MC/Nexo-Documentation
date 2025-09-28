@@ -2,6 +2,7 @@
 
 * [🏠 Home](README.md)
 * [📜 Main Changelog](main-changelog.md)
+* [📜 Version Support](version-support.md)
 * [❓ FAQ](faq.md)
 
 ## General Usage
