@@ -267,4 +267,4 @@ This part has a dedicated page, you can consult it [here](items-advanced/item-ap
 
 ## Mechanics options
 
-This part has a dedicated page, you can consult it [here](broken-reference/).
+Mechanics are custom features in Nexo. You can find more under [Broken link](broken-reference "mention") section
