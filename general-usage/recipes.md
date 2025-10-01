@@ -40,6 +40,8 @@ grass_block_shapeless:
       minecraft_type: MOSS_CARPET
     B:
       minecraft_type: DIRT
+    C:
+      minecraft_type: DIRT
 ```
 
 <div align="left"><figure><img src="../.gitbook/assets/shapeless.png" alt=""><figcaption></figcaption></figure></div>
