@@ -184,8 +184,7 @@ In case you run into a bug or an error, you might be asked to toggle this to pro
 
 ## ℹ️ Nexo Version
 
-This command simply shows you the version of Nexo.
-
+This command simply shows you the version of Nexo.\
 If using devbuilds, we might ask you to give us the full jar-file name.
 
 #### Usage: `/nexo version`
