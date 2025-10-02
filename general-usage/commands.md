@@ -5,7 +5,7 @@ cover: >-
 coverY: 0
 ---
 
-# ⌨️ List of Commands
+# ⌨️ Commands
 
 ## 📋 Getting Started
 
@@ -46,18 +46,17 @@ This command will be useful if you want to remove an item from a player
 
 #### Permission: `nexo.command.take`
 
-
 ## 🎨 Dyeing Items
 
 This command allows you to dye the item in your hand, whether it's a dyeable Nexo item or just a normal dyeable item.
 
-
 #### Usage: `/nexo dye <color>`
 
-{% hint style="info" %} `color` can be dye names (red, green), rgb (`0,255,0` for pure green), or hex (`0xFF0000` or `#00FFFF`) {% endhint %}
+{% hint style="info" %}
+\`color\` can be dye names (red, green), rgb (\`0,255,0\` for pure green), or hex (\`0xFF0000\` or \`#00FFFF\`)
+{% endhint %}
 
 #### Permission: `nexo.command.dye`
-
 
 ## 🔧 Recipe Commands
 
@@ -74,7 +73,6 @@ This command allows you to add new recipes to the configuration directly from th
 
 #### Permission: `nexo.command.recipes`
 
-
 ## 📩 Manual Pack Sending
 
 This command allows you to send the pack to a group of players.\
@@ -83,7 +81,6 @@ Useful if the automatic sending failed or for testing
 #### Usage: `/nexo pack <player>`
 
 #### Permission: `nexo.command.pack`
-
 
 ## ⬆️ Updating Items and Furnitures
 
@@ -99,11 +96,11 @@ Useful if the auto update failed or if you disabled it in settings
 
 #### Permission: `nexo.command.update`
 
-
 ## 🔍 Item Info
 
 This command allows you to print general info about a Nexo Item for debugging.\
 An example of the output:
+
 ```yaml
 ItemID: my_cool_item                 # this is the ID of the item
 CustomModelData: 1000                # the custommodeldata of the item
@@ -115,11 +112,11 @@ Model Name: minecraft:my_cool_item   # the name of the model, in the final pack 
 
 #### Permission: `nexo.command.iteminfo`
 
-
 ## 🔍 Glyph Info
 
 This command allows you to print general info about a Nexo Glyph for debugging.\
 An example of the output:
+
 ```yaml
 GlyphID: required                          # this is the ID of the glyph
 Texture: minecraft:required/exit_icon.png  # the texture path of the glyph
@@ -131,23 +128,23 @@ Unicode: ꐏ                                 # the character used for displaying
 
 #### Permission: `nexo.command.glyphinfo`
 
-
 ## 🟩 Block Info
 
 This command allows you to print general info about a Nexo Block for debugging.\
 An example of the output for a noteblock:
+
 ```yaml
 ItemID: my_cool_block  # this is the ID of the item that the block is tied to
 Intrument: PIANO       # this is the instrument the noteblock uses
 Note: 1                # the note
 Powered: false         # the powered state
 ```
+
 this is different for other block types
 
 #### Usage: `/nexo blockinfo <iteminfo>`
 
 #### Permission: `nexo.command.blockinfo`
-
 
 ## 🙂 Emoji List
 
@@ -156,7 +153,6 @@ This command opens a book with all the emojis (glyphs with `is_emoji: true`).
 #### Usage: `/nexo emojis`
 
 #### Permission: `nexo.command.emojis`
-
 
 ## 🔄 Reload
 
@@ -177,7 +173,6 @@ Reloading pack regenerates the resourcepack, and if `Pack.dispatch.send_on_reloa
 
 #### Permission: `nexo.command.reload`
 
-
 ## 🐛 Debug Mode
 
 This command just toggles the debug-state of Nexo.\
@@ -187,12 +182,20 @@ In case you run into a bug or an error, you might be asked to toggle this to pro
 
 #### Permissions: `nexo.command.debug`
 
-
 ## ℹ️ Nexo Version
 
-This command simply shows you the version of Nexo./
+This command simply shows you the version of Nexo.
+
 If using devbuilds, we might ask you to give us the full jar-file name.
 
 #### Usage: `/nexo version`
 
 #### Permissions: `nexo.command.version`
+
+## ❌ Reset Custom Model data
+
+This command deletes the custom\_model\_data from all of your Nexo Items
+
+#### Usage:  `/nexo reset_custom_model_data`
+
+#### Permissions: `nexo.command.resetcmd`
