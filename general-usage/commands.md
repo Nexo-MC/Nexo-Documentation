@@ -53,7 +53,7 @@ This command allows you to dye the item in your hand, whether it's a dyeable Nex
 #### Usage: `/nexo dye <color>`
 
 {% hint style="info" %}
-\`color\` can be dye names (red, green), rgb (\`0,255,0\` for pure green), or hex (\`0xFF0000\` or \`#00FFFF\`)
+`color` can be dye names (red, green), rgb (`0,255,0` for pure green), or hex (`0xFF0000` or `#00FFFF`)
 {% endhint %}
 
 #### Permission: `nexo.command.dye`
