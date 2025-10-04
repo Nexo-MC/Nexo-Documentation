@@ -2,7 +2,7 @@
 icon: file-zipper
 ---
 
-# 📂 ResourcePack
+# ResourcePack
 
 ### ResourcePack-Structure
 
@@ -40,6 +40,8 @@ This would dynamically merge in any conflicting files, like a paper.json or soun
 Meaning that pack-import instructions on your end now boils down to:\
 Put `my_pack.zip` inside `Nexo/pack/external_packs`
 
+***
+
 ### Obfuscation
 
 Nexo has a built in way to "obfuscate" the content of your resource-pack.\
@@ -51,6 +53,8 @@ It comes with three modes, `NONE`, `SIMPLE`, `FULL`\
 `namespace:model/path.json` -> `namespace:bba2d60b-8e3e-4051-9734-fef92766777f`\
 **FULL** - Obfuscates namespace & filename;\
 `namespace:model/path.json` -> `c491303e-ba1e-4037-a59d-62b5fdfb6bb8:bba2d60b-8e3e-4051-9734-fef92766777f`
+
+***
 
 ### PackSquash-Integration
 
@@ -79,6 +83,8 @@ If Nexo's debug-mode is enabled, it will output info about all successful files 
 Depending on your TOML-configuration & ResourcePack size & complexity, the PackSquash process might take some time. Nexo will cache the output so that if the ResourcePack does not change, the PackSquash process will not need to be ran again
 {% endhint %}
 
+***
+
 ### PackServer
 
 Nexo has 3 types of ways to upload & dispatch the ResourcePack it generates\
@@ -87,6 +93,8 @@ This server is currently hosted in Germany\
 **SELFHOST** - Server-Instance hosted on your machine. Requires you to configure the `public_address` and ensure a given port is open.\
 **LOBFILE** - Server hosted by [LobFile](https://lobfile.com/), needs a `api_key`in settings.yml\
 The API is also set up so that one could extend the `NexoPackServer-Interface` and create ones own.
+
+***
 
 ### Cross-Server/Proxy ResourcePacks
 
@@ -98,6 +106,8 @@ Assuming you have a Server A, Server B & Server C:
 1. Set Pack.server to NONE for Server B & Server C. That way the player joins Server A and loads the resourcepack. When they then swap to Server B or C, the resourcepack from Server A will not be unloaded. The downside here is that if the player joins Server A from B or C, they will get sent the resourcepack again and load it
 2. Use a plugin like [OneTimePack](https://www.spigotmc.org/resources/onetimepack-avoid-double-sending-the-same-pack-bungeecord-velocity.106749/) on your Velocity/Bungee server. These plugins check the ResourcePack-request and compare them. If the pack is the same it will skip it.\
    If taking this approach make sure to either disable [obfuscation](resourcepack.md#obfuscation) for your NexoPack, or enable caching and manually copy over the .deobfCacheResourcepack folder to all servers
+
+***
 
 ### Importing
 

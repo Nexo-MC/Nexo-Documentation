@@ -23,7 +23,7 @@ Below is a detailed list of which server-versions Nexo currently supports.
 
 | Version                      | Status                                                             |
 | ---------------------------- | ------------------------------------------------------------------ |
-| 1.21.9                       | :ballot\_box\_with\_check: [**Supported**](#user-content-fn-1)[^1] |
+| 1.21.9-1.21.10               | :ballot\_box\_with\_check: [**Supported**](#user-content-fn-1)[^1] |
 | 1.21.7-1.21.8                | :white\_check\_mark: [**Supported**](#user-content-fn-2)[^2]       |
 | 1.21.5                       | :white\_check\_mark: **Supported**                                 |
 | 1.21.4                       | :white\_check\_mark: **Supported**                                 |

@@ -1,8 +1,19 @@
 ---
 description: A summary of the most common questions about Nexo
-cover: >-
-  https://cdn.discordapp.com/attachments/896841738621177896/966825489098489856/unknown.png
-coverY: 0
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # ❓ FAQ

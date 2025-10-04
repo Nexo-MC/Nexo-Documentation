@@ -46,6 +46,8 @@ This command will be useful if you want to remove an item from a player
 
 #### Permission: `nexo.command.take`
 
+***
+
 ## 🎨 Dyeing Items
 
 This command allows you to dye the item in your hand, whether it's a dyeable Nexo item or just a normal dyeable item.
@@ -57,6 +59,8 @@ This command allows you to dye the item in your hand, whether it's a dyeable Nex
 {% endhint %}
 
 #### Permission: `nexo.command.dye`
+
+***
 
 ## 🔧 Recipe Commands
 
@@ -73,6 +77,8 @@ This command allows you to add new recipes to the configuration directly from th
 
 #### Permission: `nexo.command.recipes`
 
+***
+
 ## 📩 Manual Pack Sending
 
 This command allows you to send the pack to a group of players.\
@@ -81,6 +87,8 @@ Useful if the automatic sending failed or for testing
 #### Usage: `/nexo pack <player>`
 
 #### Permission: `nexo.command.pack`
+
+***
 
 ## ⬆️ Updating Items and Furnitures
 
@@ -95,6 +103,8 @@ Useful if the auto update failed or if you disabled it in settings
 ```
 
 #### Permission: `nexo.command.update`
+
+***
 
 ## 🔍 Item Info
 
@@ -146,6 +156,8 @@ this is different for other block types
 
 #### Permission: `nexo.command.blockinfo`
 
+***
+
 ## 🙂 Emoji List
 
 This command opens a book with all the emojis (glyphs with `is_emoji: true`).
@@ -153,6 +165,8 @@ This command opens a book with all the emojis (glyphs with `is_emoji: true`).
 #### Usage: `/nexo emojis`
 
 #### Permission: `nexo.command.emojis`
+
+***
 
 ## 🔄 Reload
 
@@ -173,6 +187,8 @@ Reloading pack regenerates the resourcepack, and if `Pack.dispatch.send_on_reloa
 
 #### Permission: `nexo.command.reload`
 
+***
+
 ## 🐛 Debug Mode
 
 This command just toggles the debug-state of Nexo.\
@@ -181,6 +197,8 @@ In case you run into a bug or an error, you might be asked to toggle this to pro
 #### Usage: `/nexo debug`
 
 #### Permissions: `nexo.command.debug`
+
+***
 
 ## ℹ️ Nexo Version
 
@@ -191,10 +209,14 @@ If using devbuilds, we might ask you to give us the full jar-file name.
 
 #### Permissions: `nexo.command.version`
 
+***
+
 ## ❌ Reset Custom Model data
 
-This command deletes the custom\_model\_data from all of your Nexo Items
+This command deletes the custom\_model\_data from all of your Nexo Items.\
+Mainly useful for swapping Nexo to a "ItemModel" based system for 1.21.4+ servers.\
+You can get more info about the difference between ItemModels and CustomModelDatas, and why ItemModels are the recommended choice at [itemmodels-vs.-custommodeldata.md](../configuration/items-advanced/itemmodels-vs.-custommodeldata.md "mention")
 
-#### Usage:  `/nexo reset_custom_model_data`
+#### Usage: `/nexo reset_custom_model_data`
 
 #### Permissions: `nexo.command.resetcmd`

@@ -46,6 +46,8 @@ grass_block_shapeless:
 
 <div align="left"><figure><img src="../.gitbook/assets/shapeless.png" alt=""><figcaption></figcaption></figure></div>
 
+***
+
 ### Shaped
 
 You can also use Minecraft tags and Nexo items in recipes
@@ -68,6 +70,8 @@ forest_axe:
 
 <div align="left"><figure><img src="../.gitbook/assets/shaped.png" alt=""><figcaption></figcaption></figure></div>
 
+***
+
 ### Furnace + Blasting + Smoking
 
 ```yaml
@@ -83,6 +87,8 @@ raw_iron_block_to_iron:
 
 <div align="left"><figure><img src="../.gitbook/assets/smelting.png" alt=""><figcaption></figcaption></figure></div>
 
+***
+
 ### Stonecutting
 
 ```yaml
@@ -94,6 +100,8 @@ stripped_spruce_log:
 ```
 
 <div align="left"><figure><img src="../.gitbook/assets/stonecutting.png" alt=""><figcaption></figcaption></figure></div>
+
+***
 
 ### Brewing
 
