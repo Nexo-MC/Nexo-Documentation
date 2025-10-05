@@ -43,7 +43,7 @@ The item won't be consumed (one\_usage: false).
 
 ## Available events
 
-### CLICK:click\_type:target\_type[^1], DROP[^2], PICKUP[^3], BREAK[^4], EQUIP[^5], UNEQUIP[^6], INV\_CLICK[^7], DEATH[^8]
+### CLICK:click\_type:target\_type[^1], DROP[^2], PICKUP[^3], BREAK[^4], EQUIP[^5], UNEQUIP[^6], INV\_CLICK[^7], DEATH[^8], DROP_ALL[^9]
 
 ## Available conditions
 
@@ -134,3 +134,5 @@ myitem:
 [^7]: Called when a player clicks an item in an inventory.
 
 [^8]: Called when a player dies and would normally drop the given item.
+
+[^9]: Called when a player drops an item and no longer has any similar items in their inventory.
