@@ -46,9 +46,9 @@ Contains two properties, **yes & no**, both which are **DialogActions**
 
 ```yaml
 type: CONFIRM
-yes:
+yesButton:
   ...
-no:
+noButton:
   ...
 ```
 
