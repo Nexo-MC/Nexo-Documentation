@@ -148,6 +148,34 @@ myitem:
         fall_sound: my.custom.fallsound
 ```
 
+### Custom Drops
+
+By default a NexoFurniture will drop itself when broken. This can be changed if you want and customized with several properties.
+
+```yaml
+my_block:
+  Mechanics:
+    furniture:
+      drop:
+        silktouch: false    # If Silktouch will make the block drop itself
+        fortune: false      # If fortune should affect the amount of items dropped
+        minimal_type: null  # Refers to the lowest material, if any, this drop requires
+        best_tool: null     # Refers to the type of tool, if any, this drop requires
+        loots:
+          - nexo_item: my_item
+          - minecraft_type: DIAMOND
+            amount: 1
+          - crucible_item: my_crucible_item
+            amount: 1..2
+          - mmoitem_type: TYPE
+            mmoitem_id: ID
+            probability: 1.0
+```
+
+**minimal\_type -** Refers to a tier of material the drop will require. This can be _WOODEN, STONE, IRON, GOLDEN, DIAMOND_ or _NETHERITE._ This also supports ItemType-Mechanic if it is specified in `mechanics.yml` `tool_types` list. If unspecified it is null, or no specific type required.
+
+**best\_tool -** Refers to the type of tool this drop requires, if any. This can be _AXE, PICKAXE, SWORD, SHOVEL & HOE._ If unspecified it is null, or no specific tool required.
+
 ### Rotatable
 
 To make a furniture rotatable, simply add the following to your item's config.

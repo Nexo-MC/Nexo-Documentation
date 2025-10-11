@@ -3,6 +3,23 @@ description: How to add your own blocks to the game
 cover: >-
   https://cdn.discordapp.com/attachments/896841738621177896/966827878706708560/unknown.png
 coverY: 0
+layout:
+  width: default
+  cover:
+    visible: false
+    size: full
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # 🎶 NoteBlock Mechanic
@@ -50,9 +67,12 @@ my_block:
 
 ### CustomBlock Mechanic configuration
 
-To use this mechanic you need to tell to Nexo which model to use (to use the generated one, just put the name id of your item).\
-You then need to use custom\_variation which is not already used by another block.\
-Valid custom\_variation is 1..1149
+To use this mechanic you need to tell to Nexo which model to use (to use the generated one, just put the name id of your item).
+
+A Custom Block must also be assigned unique _custom\_variation_. This is a number between 1 & 1149.\
+If unspecified, Nexo will automatically set one for you.
+
+Keep in mind this should not be changed after a block is being used. The only think linking a placed block to a given NexoItem is its BlockData, which is defined by this variation
 
 <pre class="language-yaml"><code class="lang-yaml">my_block:
 <strong>  Mechanics:
@@ -119,6 +139,35 @@ my_block:
         minimal_type: STONE
         best_tool: PICKAXE
 ```
+
+### Custom Drops
+
+By default a Nexo CustomBlock will drop itself when mined. This can be changed if you want and customized with several properties.
+
+```yaml
+my_block:
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      drop:
+        silktouch: false    # If Silktouch will make the block drop itself
+        fortune: false      # If fortune should affect the amount of items dropped
+        minimal_type: null  # Refers to the lowest material, if any, this drop requires
+        best_tool: null     # Refers to the type of tool, if any, this drop requires
+        loots:
+          - nexo_item: my_item
+          - minecraft_type: DIAMOND
+            amount: 1
+          - crucible_item: my_crucible_item
+            amount: 1..2
+          - mmoitem_type: TYPE
+            mmoitem_id: ID
+            probability: 1.0
+```
+
+**minimal\_type -** Refers to a tier of material the drop will require. This can be _WOODEN, STONE, IRON, GOLDEN, DIAMOND_ or _NETHERITE._ This also supports ItemType-Mechanic if it is specified in `mechanics.yml` `tool_types` list. If unspecified it is null, or no specific type required.
+
+**best\_tool -** Refers to the type of tool this drop requires, if any. This can be _AXE, PICKAXE, SWORD, SHOVEL & HOE._ If unspecified it is null, or no specific tool required.
 
 ### Limited placing
 
