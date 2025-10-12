@@ -51,6 +51,8 @@ myitem:
         display_transform: NONE
 ```
 
+There is also a `default_properties` in `mechanics.yml` for changing the global default values of properties. These properties are applied first onto every furniture NexoItem, and any changes in the config itself would take priority
+
 #### Tracking Rotation / Billboard
 
 The `tracking_rotation`-property defines whether you want the furniture to "track" the player.\

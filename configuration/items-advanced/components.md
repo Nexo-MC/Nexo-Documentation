@@ -27,7 +27,7 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Max Stack Size**](#user-content-fn-1)[^1] **-** Sets the maximum slot-size for the NexoItem\
 [**Enchantment Glint Override**](#user-content-fn-2)[^2] - Sets an override-state for the enchantment glint\
 [**Fire Resistant**](#user-content-fn-3)[^3] - Sets whether this NexoItem is immune to fire and lava\
-[**Durability**](#user-content-fn-4)[^4] - Sets the durability of this NexoItem\
+[**Max Damage**](#user-content-fn-4)[^4] - Sets the maximum amount of damage the NexoItem can take\
 [**Hide Tooltip**](#user-content-fn-5)[^5] - Hides all tooltips from the given NexoItem on hover\
 [**Food**](#user-content-fn-6)[^6] - Makes this item consumable with several different properties\
 [**Tool**](#user-content-fn-7)[^7] **-** Makes your item into a tool with configurable behaviour for blocks its breaking
@@ -63,7 +63,7 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Max Stack Size**](#user-content-fn-1)[^1] **-** Sets the maximum slot-size for the NexoItem\
 [**Enchantment Glint Override**](#user-content-fn-2)[^2] - Sets an override-state for the enchantment glint\
 [**Fire Resistant**](#user-content-fn-3)[^3] - Sets whether this NexoItem is immune to fire and lava\
-[**Durability**](#user-content-fn-4)[^4] - Sets the durability of this NexoItem\
+[**Max Damage**](#user-content-fn-4)[^4] - Sets the maximum amount of damage the NexoItem can take\
 [**Hide Tooltip**](#user-content-fn-5)[^5] - Hides all tooltips from the given NexoItem on hover\
 [**Food**](#user-content-fn-6)[^6] - Makes this item consumable with several different properties\
 [**Tool**](#user-content-fn-7)[^7] **-** Makes your item into a tool with configurable behaviour for blocks its breaking
@@ -97,7 +97,7 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Max Stack Size**](#user-content-fn-1)[^1] **-** Sets the maximum slot-size for the NexoItem\
 [**Enchantment Glint Override**](#user-content-fn-2)[^2] - Sets an override-state for the enchantment glint\
 [**Fire Resistant**](#user-content-fn-3)[^3] - Sets whether this NexoItem is immune to fire and lava\
-[**Durability**](#user-content-fn-4)[^4] - Sets the durability of this NexoItem\
+[**Max Damage**](#user-content-fn-4)[^4] - Sets the maximum amount of damage the NexoItem can take\
 [**Hide Tooltip**](#user-content-fn-5)[^5] - Hides all tooltips from the given NexoItem on hover\
 [**Food**](#user-content-fn-6)[^6] - Makes this item consumable with several different properties\
 [**Tool**](#user-content-fn-7)[^7] **-** Makes your item into a tool with configurable behaviour for blocks its breaking
@@ -125,7 +125,7 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Max Stack Size**](#user-content-fn-1)[^1] **-** Sets the maximum slot-size for the NexoItem\
 [**Enchantment Glint Override**](#user-content-fn-2)[^2] - Sets an override-state for the enchantment glint\
 [**Fire Resistant**](#user-content-fn-3)[^3] - Sets whether this NexoItem is immune to fire and lava\
-[**Durability**](#user-content-fn-4)[^4] - Sets the durability of this NexoItem\
+[**Max Damage**](#user-content-fn-4)[^4] - Sets the maximum amount of damage the NexoItem can take\
 [**Hide Tooltip**](#user-content-fn-5)[^5] - Hides all tooltips from the given NexoItem on hover\
 [**Food**](#user-content-fn-6)[^6] - Makes this item consumable with several different properties\
 [**Tool**](#user-content-fn-7)[^7] **-** Makes your item into a tool with configurable behaviour for blocks its breaking
@@ -152,7 +152,7 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Max Stack Size**](#user-content-fn-1)[^1] **-** Sets the maximum slot-size for the NexoItem\
 [**Enchantment Glint Override**](#user-content-fn-2)[^2] - Sets an override-state for the enchantment glint\
 [**Fire Resistant**](#user-content-fn-3)[^3] - Sets whether this NexoItem is immune to fire and lava\
-[**Durability**](#user-content-fn-4)[^4] - Sets the durability of this NexoItem\
+[**Max Damage**](#user-content-fn-4)[^4] - Sets the maximum amount of damage the NexoItem can take\
 [**Hide Tooltip**](#user-content-fn-5)[^5] - Hides all tooltips from the given NexoItem on hover\
 [**Food**](#user-content-fn-29)[^29] - Makes this item consumable with several different properties\
 [**Tool**](#user-content-fn-7)[^7] **-** Makes your item into a tool with configurable behaviour for blocks its breaking
@@ -167,7 +167,7 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Max Stack Size**](#user-content-fn-1)[^1] **-** Sets the maximum slot-size for the NexoItem\
 [**Enchantment Glint Override**](#user-content-fn-2)[^2] - Sets an override-state for the enchantment glint\
 [**Fire Resistant**](#user-content-fn-3)[^3] - Sets whether this NexoItem is immune to fire and lava\
-[**Durability**](#user-content-fn-4)[^4] - Sets the durability of this NexoItem\
+[**Durability**](#user-content-fn-30)[^30] - Sets the durability of this NexoItem\
 [**Hide Tooltip**](#user-content-fn-5)[^5] - Hides all tooltips from the given NexoItem on hover\
 [**Food**](#user-content-fn-29)[^29] - Makes this item consumable with several different properties\
 [**Tool**](#user-content-fn-7)[^7] **-** Makes your item into a tool with configurable behaviour for blocks its breaking
@@ -197,10 +197,10 @@ Each component below has a hover-click to show an example of how to use it, with
 [^4]: ```yaml
     my_item:
       Components:
-        durability: 100
+        max_damage: 100
     ```
 
-    Durability can be any value above 0
+    Max Damage/Durability can be any value above 0
 
 [^5]: ```yaml
     my_item:
@@ -606,3 +606,11 @@ Each component below has a hover-click to show an example of how to use it, with
 
     **can\_always\_eat -** Defaults to false if unspecified\
     **eat\_seconds -** Defaults to 1.6 if unspecified
+
+[^30]: ```yaml
+    my_item:
+      Components:
+        durability: 100
+    ```
+
+    Durability can be any value above 0
