@@ -93,20 +93,9 @@ my_item:
   itemname: "<red><bold>Example"
 ```
 
-### Displayname
-
-This is only useful on 1.20.4, above it will just use Itemname\
-`custom_name` will set the displayname/customname if you need to use this legacy feature
-
-```yaml
-my_item:
-  displayname: "<red><bold>Example"
-  #customname: "<red><bold>Example"
-```
-
 ### Material
 
-This allows you to change the item type
+This allows you to change the item type. Defaults to PAPER if unspecified.
 
 ```yaml
 my_item:

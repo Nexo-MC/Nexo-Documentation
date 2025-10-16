@@ -2,10 +2,10 @@
 
 * [🏠 Home](README.md)
 * [📜 Version Support](version-support.md)
-* [❓ FAQ](faq.md)
 
 ## General Usage
 
+* [❓ FAQ](general-usage/faq.md)
 * [⌨️ Commands](general-usage/commands.md)
 * [🧑‍🍳 Recipes](general-usage/recipes.md)
 

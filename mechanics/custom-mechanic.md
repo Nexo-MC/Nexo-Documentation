@@ -43,13 +43,20 @@ The item won't be consumed (one\_usage: false).
 
 ## Available events
 
-### CLICK:click\_type:target\_type[^1], DROP[^2], PICKUP[^3], BREAK[^4], EQUIP[^5], UNEQUIP[^6], INV\_CLICK[^7], DEATH[^8], DROP_ALL[^9]
+### CLICK:click\_type:target\_type[^1], DROP[^2], PICKUP[^3], BREAK[^4], EQUIP[^5], UNEQUIP[^6], INV\_CLICK[^7], DEATH[^8], DROP\_ALL[^9]
 
 ## Available conditions
 
-### HAS\_PERMISSION:the.permission
+### Permission-Condition
 
-**the.permission**: `The permission required by the player using the item`
+```yaml
+myitem:
+  Mechanics:
+    custom:
+      mycustom:
+        conditions:
+          - "HAS_PERMISSION:some.permission"
+```
 
 ## Available actions
 
@@ -65,11 +72,10 @@ myitem:
         event: "CLICK:right:all"
         actions:
           - "[console] minecraft:give <player> minecraft:paper 2"
+          - "[player] minecraft:give <player> minecraft:paper 2"
 ```
 
 ### Message-Action
-
-This action lets you send a Message to the player with a customizable message
 
 ```yaml
 myitem:
@@ -82,8 +88,6 @@ myitem:
 ```
 
 ### ActionBar-Action
-
-This action lets you send an ActionBar to the player with a customizable message
 
 ```yaml
 myitem:

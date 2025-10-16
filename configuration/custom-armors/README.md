@@ -4,7 +4,7 @@ cover: >-
 coverY: 0
 ---
 
-# ⛑️ Custom Armors
+# ⛑️ Custom Player Armors
 
 Just like other items, armor have a texture for when it is held or in your inventory, but also a texture for when a player equips it.\
 Nexo comes with two ways to add custom armor: COMPONENT & TRIMS.\
@@ -14,6 +14,6 @@ TRIMS is designed around the Armor-Trim system added in Minecraft 1.20, and will
 **Component** method is recommended for all servers 1.21.2+ in every scenario.\
 There is no benefit to using Trims or Shader-methods for these servers.
 
-**Armor-Trim** method is recommended if your server is 1.20-1.21.1 and only allows 1.20+ players.\
+**Armor-Trim** method is recommended if your server is 1.21.1 and only allows 1.20+ players.\
 It has the benefit of not breaking with shaders / requiring extra mods to work.\
 It requires the use of CHAINMAIL armor

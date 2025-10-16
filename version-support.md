@@ -29,8 +29,8 @@ Below is a detailed list of which server-versions Nexo currently supports.
 | 1.21.4                       | :white\_check\_mark: **Supported**                           |
 | 1.21.3                       | :white\_check\_mark: **Supported**                           |
 | 1.21.1                       | :white\_check\_mark: **Supported**                           |
-| 1.20.6                       | :warning: [**Unsupported**](#user-content-fn-3)[^3]          |
-| 1.20.4                       | :warning: [**Unsupported**](#user-content-fn-3)[^3]          |
+|                              |                                                              |
+| 1.20.4, 1.20.6               | :warning: [**Unsupported**](#user-content-fn-3)[^3]          |
 |                              |                                                              |
 | 1.20.5, 1.21, 1.21.2, 1.21.6 | :octagonal\_sign: [**Unsupported**](#user-content-fn-4)[^4]  |
 
