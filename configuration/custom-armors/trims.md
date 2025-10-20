@@ -1,4 +1,4 @@
-# Trims Based (1.20-1.21.1)
+# Trims Based (1.20+)
 
 If using trims as your custom-armor type, most things is handled automatically for you.\
 TRIMS method requires using CHAINMAIL as the base-item.
@@ -23,6 +23,9 @@ For the rest of the above set it would be `ruby_chestplate`, `ruby_leggings` and
 
 Make sure your armor-layer files follow the format of **armorname**\_armor\_layer\_1/2.png.\
 In the example below, we would need a **ruby**\_armor\_layer\_1.png & **ruby**\_armor\_layer\_2.png
+
+\
+If you are unsure how to reference a TextureFile in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
 {% endhint %}
 
 ```yaml

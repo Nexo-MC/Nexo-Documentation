@@ -1,9 +1,30 @@
+---
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # 🖼️ Multi-Bitmap Glyph
 
 If you have a texture consisting of several emotes or a texture larger than the allowed 256x256, you can make it a multi-bitmap.\
 This means you can, tie several unicodes to one image.\
 In your glyph you can specify an amount of rows and columns your glyph needs.\
 This will make nexo assign unicodes based on your needs.
+
+{% hint style="info" %}
+If you are unsure how to reference a Texture in a Glyph config[#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+{% endhint %}
 
 Example for using a 512x512 texture:
 

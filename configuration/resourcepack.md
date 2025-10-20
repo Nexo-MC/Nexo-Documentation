@@ -1,8 +1,26 @@
 ---
 icon: file-zipper
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # ResourcePack
+
+{% hint style="info" %}
+If you are unsure how to reference a ResourcePack-file in a config-file [#how-do-i-reference-a-resourcepack-file-in-a-config](../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+{% endhint %}
 
 ### ResourcePack-Structure
 

@@ -12,6 +12,9 @@ For the rest of the above set it would be `forest_chestplate`, `forest_leggings`
 
 Make sure your armor-layer files follow the format of **armorname**\_armor\_layer\_1/2.png.\
 In the example below, we would need a **forest**\_armor\_layer\_1.png & **forest**\_armor\_layer\_2.png
+
+\
+If you are unsure how to reference a TextureFile in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
 {% endhint %}
 
 ```yaml

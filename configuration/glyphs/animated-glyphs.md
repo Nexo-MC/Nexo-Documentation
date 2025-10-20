@@ -1,9 +1,5 @@
 # 🎞️ Animated Glyphs
 
-{% hint style="info" %}
-This is an upcoming feature for Nexo 1.8
-{% endhint %}
-
 With Nexo you can make Animated Glyphs, or GIFs, which you can use to animate GUIs or gif-emotes.\
 It is very simple, Nexo does most of the hard work to convert the GIF-file to a compatible format.
 
@@ -22,6 +18,10 @@ necoflap:
 
 Unlike normal Glyphs, font cannot be customized, as Nexo sets it for you.\
 Texture-property is based on the `gif`-property and can be customized that way
+
+{% hint style="info" %}
+If you are unsure how to reference a Texture in a Glyph config[#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+{% endhint %}
 
 {% hint style="warning" %}
 GIFs rely on Core Shaders and might break on version updates.\

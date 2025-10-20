@@ -9,15 +9,15 @@ The Trident-Mechanic is not strictly necessary unless one wants to tweak the pro
 
 ### Properties
 
-`thrown_item_model` - The ItemModel to show on the Trident-projectile. This only applies to 1.21.4+ servers. If unspecified it will default to `Components.item_model` if specified.
-
-`thrown_item` - Refers to the NexoItem to display for the Projectile. Defaults to the item of this mechanic if unspecified
-
-`display_transform` - Lets you set the Transform the model should use, mainly useful when not using a separate ItemModel
-
-`rotation` - Lets you rotate the base yaw/pitch of the projectile
-
+`thrown_item_model` - The ItemModel to show on the Trident-projectile. This only applies to 1.21.4+ servers. If unspecified it will default to `Components.item_model` if specified.\
+`thrown_item` - Refers to the NexoItem to display for the Projectile. Defaults to the item of this mechanic if unspecified\
+`display_transform` - Lets you set the Transform the model should use, mainly useful when not using a separate ItemModel\
+`rotation` - Lets you rotate the base yaw/pitch of the projectile\
 `damage` - The base-damage the Trident will do when hitting an entity, defaults to 8
+
+{% hint style="info" %}
+If you are unsure how to reference a ResourcePack-File in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+{% endhint %}
 
 {% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FTAoAxayP9PrBtX9UQ5wa%2Fuploads%2FcMJ3GKLdbXDZofLDSj1A%2F2025-05-06_18-25-55_1.mp4?alt=media&token=8d6ffd64-06d1-4340-aa1f-6d10d5d2e84d" %}
 Showcasing Forest Trident

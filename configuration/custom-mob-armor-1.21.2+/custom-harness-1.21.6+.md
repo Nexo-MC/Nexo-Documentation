@@ -20,5 +20,9 @@ forest_harness:
       slot: BODY
 ```
 
+{% hint style="info" %}
+If you are unsure how to reference a TextureFile in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+{% endhint %}
+
 Here `Pack.CustomArmor.harness` points to where we put the texture for the harness itself, with `Pack.texture` the icon.\
 We also have to set the `allowed_entity_types` in our EquippableComponent for Nexo to properly handle the remaining properties

@@ -1,7 +1,24 @@
+---
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # 🎵 Sounds
 
 Nexo allows you to register custom sounds that can be used in `/playsound`or other plugins\
-The most basic of sounds can be configured like below by editing \`plugins/Nexo/sounds.yml\`
+The most basic of sounds can be configured like below by editing `plugins/Nexo/sounds.yml`
 
 ```yaml
 sounds:
@@ -11,6 +28,10 @@ sounds:
     #  - mysound.ogg
     #  - mysound2.ogg
 ```
+
+{% hint style="info" %}
+If you are unsure how to reference a Sound OGG-file in a ConfigFile[#how-do-i-reference-a-resourcepack-file-in-a-config](../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+{% endhint %}
 
 There are also some more properties you can tweak if needed, but for majority of cases, the above default will be enough. A detailed explanation of each property can be found [here](https://minecraft.wiki/w/Sounds.json)
 
@@ -37,8 +58,6 @@ sounds:
 
 There is also `jukebox_playable`which is used to register sounds used in custom music discs\
 Nexo will generate the necessary datapack for this, which you can then reference in [JukeboxPlayable-Component](items-advanced.md#components) of your item
-
-
 
 #### Replacing sounds
 

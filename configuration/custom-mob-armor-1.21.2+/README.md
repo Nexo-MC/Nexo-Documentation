@@ -26,3 +26,7 @@ forest_horse_armor:
     CustomArmor:
       horse_armor: nexo:item/nexo_armor/forest_horse_armor
 ```
+
+{% hint style="info" %}
+If you are unsure how to reference a TextureFile in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+{% endhint %}

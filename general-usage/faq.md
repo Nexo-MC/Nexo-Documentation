@@ -30,3 +30,42 @@ Check out the [resourcepack.md](../configuration/resourcepack.md "mention") page
 Nexo uses NoteBlocks and TripWires for custom blocks, and thus disables all their vanilla behaviour.\
 Noteblock-mechanic does have an option to re-enable this without losing custom blocks, if you go to Nexo/`mechanics.yml`\
 If you do not care about Custom Blocks, you can also just disable the noteblock & stringblock-mechanics in `mechanics.yml`
+
+### How do I reference a ResourcePack file in a config?
+
+Minecraft ResourcePacks follow a defined and consistent structure.\
+ResourcePack files are also split into sub-categories; **sounds, textures, models, fonts, etc..**\
+A full list of it can be found on the [Minecraft Wiki](https://minecraft.wiki/w/Resource_pack#Directory_structure), more info on ResourcePacks in [resourcepack.md](../configuration/resourcepack.md "mention")
+
+The **namespace** is just another way to sort said sub-categories between different usecases.\
+The **filepath** is the remaining path to your file itself
+
+When you then want to make a reference to said file in say a NexoItem, this is how you do it;
+
+{% code title="assets/nexo/textures/item/nexo_defaults/forest_axe.png" %}
+```yaml
+myitem:
+  Pack:
+    # assets/minecraft/models/item/paper.json
+    model: minecraft:item/paper.json
+    # assets/nexo/textures/item/nexo_defaults/forest_axe.png
+    texture: nexo:item/nexo_defaults/forest_axe
+```
+{% endcode %}
+
+Here is an example to reference a given PNG Texture **or** a JSON Model.\
+This is the exact same for sounds, fonts etc. Only difference is the immediate folder after the namespace is not textures
+
+**ItemModels:**\
+&#x20;assets/**NAMESPACE**/items/**PATH/FILE**.json -> `item_model: NAMESPACE:PATH/FILE`
+
+**Models:**\
+assets/**NAMESPACE**/models/**PATH/FILE**.json `model: NAMESPACE:PATH/FILE`
+
+**Textures:**\
+assets/**NAMESPACE**/textures/**PATH/FILE**.png `texture: NAMESPACE:PATH/FILE`
+
+**Sounds:**\
+assets/**NAMESPACE**/sounds/**PATH/FILE**.ogg `sound: NAMESPACE:PATH/FILE`
+
+If your file is inside `assets/minecraft/...` , meaning your namespace is **minecraft**, specifying it in a config is optional. If no namespace is defined, it will assume you mean **minecraft**

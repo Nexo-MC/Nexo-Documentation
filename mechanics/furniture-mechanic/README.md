@@ -32,6 +32,10 @@ myitem:
         #  - { nexo_item: table, probability: 1.0 }
 ```
 
+{% hint style="info" %}
+If you are unsure how to reference a ResourcePack-File in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+{% endhint %}
+
 ### Furniture-Properties
 
 #### Display Transform

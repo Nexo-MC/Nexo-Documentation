@@ -38,6 +38,10 @@ It uses the vanilla TripWire block and therefore will disable all normal behavio
 
 ## How do I create a stringblock?
 
+{% hint style="info" %}
+If you are unsure how to reference a ResourcePack-File in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+{% endhint %}
+
 ### Nexo Resourcepack configuration
 
 Below is an example of how to configure the model/texture to use.\

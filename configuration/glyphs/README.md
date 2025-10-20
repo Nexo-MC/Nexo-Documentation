@@ -37,6 +37,10 @@ heart:
   #  - "<3"
 ```
 
+{% hint style="info" %}
+If you are unsure how to reference a ResourcePack-file in a config-file [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+{% endhint %}
+
 {% hint style="warning" %}
 If your texture is above 256x256 resolution you need to either downscale it or make a [multi-bitmap-glyph.md](multi-bitmap-glyph.md "mention")
 {% endhint %}

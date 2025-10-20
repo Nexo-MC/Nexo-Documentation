@@ -22,4 +22,8 @@ forest_elytra:
       asset_id: nexo:forest_elytra
 ```
 
+{% hint style="info" %}
+If you are unsure how to reference a TextureFile in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+{% endhint %}
+
 <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Forest Elytra included with Nexo</p></figcaption></figure>

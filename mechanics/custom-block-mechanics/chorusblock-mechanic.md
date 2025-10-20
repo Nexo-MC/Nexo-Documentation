@@ -25,6 +25,10 @@ One per `custom_variation`
 
 ### Creating your first block
 
+{% hint style="info" %}
+If you are unsure how to reference a ResourcePack-File in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+{% endhint %}
+
 #### Parent-Model
 
 The Nexo-item root configuration is the same as for any item (you can use any material like a diamond for example) and set an itemname, etc.\
