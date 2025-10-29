@@ -13,6 +13,7 @@ Nexo has a system for planting plants with various stages of growth, an example 
 **delay** the time in ticks that it takes to grow\
 **probability** to grow when the delay is passed\
 **light\_boost** when it has light nearby it grows faster\
+**bone\_meal\_chance** the probability of bonemeal making it grow to next\_stage\
 **next\_stage** you specify the next stage, it has to be an already created Nexo item.
 
 ```yaml

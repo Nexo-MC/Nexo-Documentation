@@ -43,7 +43,11 @@ The item won't be consumed (one\_usage: false).
 
 ## Available events
 
-### CLICK:click\_type:target\_type[^1], DROP[^2], PICKUP[^3], BREAK[^4], EQUIP[^5], UNEQUIP[^6], INV\_CLICK[^7], DEATH[^8], DROP\_ALL[^9]
+### CLICK:click\_type:target\_type[^1],
+
+### INV\_CLICK:click\_type:context\_type[^2]&#x20;
+
+### DROP[^3], PICKUP[^4], BREAK[^5], EQUIP[^6], UNEQUIP[^7], INV\_CLICK[^8], DEATH[^9], DROP\_ALL[^10]
 
 ## Available conditions
 
@@ -120,23 +124,36 @@ myitem:
           - "{source=AMBIENT volume=0.1 pitch=1} [sound] namespace:soundkey"
 ```
 
-[^1]: Called when you click with the item.
+[^1]: Called when you click with the item.\
+    \
+    If either of the below is unspecified, it will default to "all" handling\
+
 
     **mouse\_click\_type**: `[ right, left, all ]`\
     **target\_type**: `[ block, air, all ]`
 
-[^2]: Called when you drop the item.
+[^2]: Called when you click an item in a GUI.\
+    \
+    If either of the below is unspecified, it will default to "all" handling\
 
-[^3]: Called when you pick up the item.
 
-[^4]: Called when a player breaks an item.
+    **click\_type**: `[ right, left, all ]`\
+    **context\_type**:&#x20;
 
-[^5]: Called when a player equips an item.
+    `[ shift, all ]`
 
-[^6]: Called when a player unequips an item.
+[^3]: Called when you drop the item.
 
-[^7]: Called when a player clicks an item in an inventory.
+[^4]: Called when you pick up the item.
 
-[^8]: Called when a player dies and would normally drop the given item.
+[^5]: Called when a player breaks an item.
 
-[^9]: Called when a player drops an item and no longer has any similar items in their inventory.
+[^6]: Called when a player equips an item.
+
+[^7]: Called when a player unequips an item.
+
+[^8]: Called when a player clicks an item in an inventory.
+
+[^9]: Called when a player dies and would normally drop the given item.
+
+[^10]: Called when a player drops an item and no longer has any similar items in their inventory.
