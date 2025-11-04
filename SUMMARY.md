@@ -74,6 +74,7 @@
 
 ## Compatibility
 
+* [PlaceholderAPI](compatibility/placeholderapi.md)
 * [ModelEngine - custom mobs](compatibility/modelengine-custom-mobs.md)
 * [MythicMobs - custom mobs](compatibility/mythicmobs-custom-mobs.md)
 * [MythicCrucible](compatibility/crucible.md)
