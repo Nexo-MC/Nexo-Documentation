@@ -27,7 +27,43 @@ If the sub-block has a model defined, it will not be rotated, allowing you to us
 
 ### Configuration
 
-### Parent-Block example:
+The most basic of configuration setups for a directional blocks is reusing the same model and having it be rotated accordingly. Below is such an example
+
+```yaml
+custom_log:
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: LOG
+```
+
+Nexo will here automatically generate 3 fake dummy-items for each direction and assign a `custom_variation` for each. The config will then look something like this after
+
+```yaml
+custom_log:
+  Mechanics:
+    custom_block:
+      type: NOTEBLOCK
+      directional:
+        type: LOG
+        y_variation: 1
+        x_variation: 2
+        z_variation: 3
+      custom_variation: 1 #This can be the same as y-variation to save 1 block-slot
+```
+
+This applies to the other two types aswell, FURNACE & DROPPER. You can also set a model explicitly for each rotation like shown in DROPPER example. If this is done, Nexo will not apply the standard rotations to it.
+
+{% hint style="info" %}
+This was added in Nexo 1.15+. For older versions of Nexo you will need to use the old-legacy system as shown below
+{% endhint %}
+
+<div data-with-frame="true"><figure><img src="../../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure></div>
+
+### Nexo <1.14 Example:
+
+#### Parent-Block example:
 
 ```yaml
 main_block:
@@ -44,7 +80,7 @@ main_block:
       custom_variation: 1
       directional:
         # Valid values are LOG, FURNACE and DROPPER
-        directional_type: LOG
+        type: LOG
         # LOG
         y_block: main_block_y
         x_block: main_block_x
