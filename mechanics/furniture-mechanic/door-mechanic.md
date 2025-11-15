@@ -54,7 +54,7 @@ large_wooden_door:
         break_sound: block.wood.break
       properties:
         translation: 0,1,0
-        delay: 4
+        delay: 4t
       door:
         open_sound: block.wooden_door.open
         close_sound: block.wooden_door.close
@@ -83,7 +83,7 @@ large_wooden_sliding_door:
         break_sound: block.wood.break
       properties:
         translation: 0,1,0
-        delay: 4
+        delay: 4t
       door:
         is_sliding: true
         open_sound: block.wooden_door.open

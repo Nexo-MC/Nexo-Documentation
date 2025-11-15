@@ -30,7 +30,7 @@ rose_seed:
     furniture:
       item: rose_plant_stage1
       evolution:
-        delay: 10000
+        delay: 10s
         probability: 0.5
         light_boost: true
         next_stage: rose_plant_stage1
@@ -48,7 +48,7 @@ rose_plant_stage1:
   Mechanics:
     furniture:
       evolution:
-        delay: 10000
+        delay: 10s
         probability: 0.5
         light_boost: true
         next_stage: rose_plant_stage2
@@ -66,7 +66,7 @@ rose_plant_stage2:
   Mechanics:
     furniture:
       evolution:
-        delay: 10000
+        delay: 10s
         probability: 0.5
         light_boost: true
         next_stage: rose_plant_stage3
@@ -84,7 +84,7 @@ rose_plant_stage3:
   Mechanics:
     furniture:
       evolution:
-        delay: 100000
+        delay: 10s
         probability: 0.25
         light_boost: true
       drop:

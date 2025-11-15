@@ -52,7 +52,7 @@ sounds:
     jukebox_playable:                        # Optional, Used for registering a custom music-disc sound
       comparator_output: 15                  # Optional, defaults to 15, must be in 1..15
       range: X                               # Optional, If omitted, the sound will have a variable range.
-      length_in_seconds: 2.5
+      duration: 2.5s
       description: Description
 ```
 
