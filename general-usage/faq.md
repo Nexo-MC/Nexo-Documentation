@@ -69,3 +69,17 @@ assets/**NAMESPACE**/textures/**PATH/FILE**.png `texture: NAMESPACE:PATH/FILE`
 assets/**NAMESPACE**/sounds/**PATH/FILE**.ogg `sound: NAMESPACE:PATH/FILE`
 
 If your file is inside `assets/minecraft/...` , meaning your namespace is **minecraft**, specifying it in a config is optional. If no namespace is defined, it will assume you mean **minecraft**
+
+### What is a Duration & how do I use it?
+
+A duration is a dynamic way to specify time in a variety of ways.\
+Normally plugins require you to specify in ticks or seconds only.\
+Nexo allows you to more easily define a length of time with a Duration Format.\
+An example is [sounds.md](../configuration/sounds.md "mention")which has a `duration` inside `jukebox_playable` to set the sound-length.\
+The format for duration is a value + a suffix stamp for the DurationUnit. Some DurationUnits support non-integer values and will automatically format this into the correct values.
+
+`duration: 20t` - 20 ticks\
+`duration: 20ms` - 20 milliseconds\
+`duration: 20.2s` - 20 seconds & 40 ticks\
+`duration: 20.1m`  - 20 minutes and 6 seconds\
+You also have <mark style="color:yellow;">h</mark>ours, <mark style="color:yellow;">d</mark>ays, <mark style="color:yellow;">w</mark>eeks & <mark style="color:yellow;">m</mark>**o**nths\

@@ -199,13 +199,13 @@ This allows you to add custom Potion Effects to your potion. Get the list of ava
 my_item:
   PotionEffects:
     # - type: Get the list here: https://jd.papermc.io/paper/1.21.3/org/bukkit/potion/PotionEffectType.html
-    # - duration: in ticks
+    # - duration: duration of effect (2s, 3t, 4m)
     # - amplifier: potion effects level
     # - ambient: true/false, makes potion effect produce more, translucent, particles.
     # - particles: true/false, whether this effect has particles or not
     # - icon: true/false, whether this effect has an icon or not
     - type: WITHER
-      duration: 200
+      duration: 10s
       amplifier: 2
       ambient: false
       particles: true
@@ -230,7 +230,7 @@ my_item:
 
 ### Enchantments
 
-If you want to enchant your item (even with non vanilla levels like for example sharpness 15), you can do it with this section.
+If you want to enchant your item (even with non vanilla levels like for example sharpness 15), you can do it with this section. This should also support Enchantment Plugins that register enchantments as proper ones, using `namespace:key`
 
 ```yaml
 my_item:
