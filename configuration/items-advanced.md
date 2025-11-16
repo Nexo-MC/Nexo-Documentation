@@ -222,7 +222,7 @@ my_item:
     # - attribute: Get the list here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html
     # - operations: 0 for ADD_NUMBER, 1 for ADD_SCALAR, 2 for MULTIPLY_SCALAR_1;
     # - slot: HAND, OFF_HAND, FEET, LEGS, CHEST or HEAD
-    - attribute: GENERIC_MOVEMENT_SPEED
+    - attribute: MOVEMENT_SPEED
       amount: 0.1 
       operation: 0
       slot: HAND
