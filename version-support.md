@@ -17,9 +17,7 @@ layout:
 
 # 📜 Version Support
 
-Nexo always aims to support the latest releases of Minecraft as soon as possible, always remaining on the cutting edge of available features.
-
-Below is a detailed list of which server-versions Nexo currently supports.
+Nexo aims to support the latest releases of Minecraft as soon as possible. Below is a detailed list of which server-versions Nexo currently supports.
 
 | Version                      | Status                                                       |
 | ---------------------------- | ------------------------------------------------------------ |
