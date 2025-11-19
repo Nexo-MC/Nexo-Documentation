@@ -19,20 +19,23 @@ This step may be repeated for as many Oraxen packs as you would like to add, eve
 {% endstep %}
 
 {% step %}
-**Ensure you remove Oraxen JAR from your plugins folder**
+**Take a backup**
 
-It is also recommended to go into your `Server/WORLD/datapacks` and remove any leftover packs from Oraxen
+It is recommended to make a backup of your server's world folders before swapping to Nexo, as there might be small oversights leading to minor loss of furniture/custom blocks.\
 {% endstep %}
 
 {% step %}
-**Ensure you make a backup of your worlds**
+**Remove Oraxen .jar file**
 
-Whilst migration should be flawless, it is still recommended to make a backup of your world-folders before swapping to Nexo\
-There might be small oversights leading to minor loss of furniture/custom blocks
+Make sure to only delete the jar files - keep the folder `plugins/Oraxen`.\
 {% endstep %}
 
 {% step %}
 **Start your server**
+{% endstep %}
+
+{% step %}
+**Check console for conversion issues. And finally, test that the migration has worked by testing items, glyphs, and anything else that may be on your server!**
 {% endstep %}
 {% endstepper %}
 
