@@ -4,9 +4,8 @@ This article explains how to migrate your ItemsAdder config to Nexo.\
 The process will be mostly automatic, but first follow the steps below.\
 
 {% hint style="danger" %}
-This is a converter for ItemsAdder v4.\
-ItemsAdder v3.x has not been tested yet and might convert with some issues\
-Recommended to use the ItemsAdder internal updating process before converting to Nexo.
+This page covers migrating to Nexo from ItemsAdder v4.\
+If you are on ItemsAdder v3.x, you must update ItemsAdder before migrating to Nexo.
 {% endhint %}
 
 {% stepper %}
