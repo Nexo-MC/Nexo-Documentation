@@ -6,6 +6,9 @@ coverY: 0
 
 # 🪑 Furniture Mechanic
 
+The furniture mechanic is the main way to implement custom furniture using Nexo.\
+Below are an assortment of config file examples to help you in setting up your server.
+
 ## Furniture Mechanic
 
 ```yaml
