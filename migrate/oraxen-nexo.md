@@ -1,13 +1,10 @@
 # ☄️ Oraxen → Nexo
 
-Converting from Oraxen to Nexo has been entirely automated.\
-Simply put your nexo-plugin jar in your plugins folder and start your server\
-Nexo will then copy over all old ResourcePack-content, Items & Glyphs from Oraxen.\
-It will also copy over all settings and mechanics and make necessary changes.
+This page covers the automated process of migrating Oraxen files to Nexo.\
 
 {% hint style="warning" %}
-Whilst migration should be flawless, it is still recommended to make a backup of your world-folders before swapping to Nexo\
-There might be small oversights leading to minor loss of furniture/custom blocks
+Make a backup of your world-folders before swapping to Nexo\
+There might be small oversights leading to minor loss of furniture/custom blocks.
 {% endhint %}
 
 {% stepper %}
