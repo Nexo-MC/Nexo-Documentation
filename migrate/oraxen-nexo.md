@@ -14,7 +14,7 @@ The process will be mostly automatic, but first follow the steps below.\
 
 The `plugins/Nexo/converter/Oraxen` folder does not exist by default, so create the required folders yourself.\
 Also make sure to keep the folder `plugins/Oraxen`, as this will be used later for the conversion process.\
-On server reload, Nexo will migrate the data from the `plugins/Nexo/converter/Oraxen` folder and delete it after.\
+On server reload, Nexo will empty the data from the `plugins/Nexo/converter/Oraxen` folder into a valid Nexo config and remove the folder.\
 This step may be repeated for as many Oraxen packs as you would like to add, even at a future date.
 {% endstep %}
 
