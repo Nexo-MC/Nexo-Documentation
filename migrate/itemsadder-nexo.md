@@ -1,8 +1,7 @@
 # 📦 ItemsAdder → Nexo
 
 This article explains how to migrate your ItemsAdder config to Nexo.\
-The process will require a few manual steps due to the way ItemsAdder works.\
-Nexo will convert all data where possible.
+The process will be mostly automatic, but first follow the steps below.\
 
 {% hint style="danger" %}
 This is a converter for ItemsAdder v4.\
@@ -19,7 +18,7 @@ Recommended to use the ItemsAdder internal updating process before converting to
 #### Copy the contents of `plugins/ItemsAdder` into `plugins/Nexo/converter/ItemsAdder`
 
 The `plugins/Nexo/converter/ItemsAdder` folder does not exist by default, so create the required folders yourself.\
-Also make sure to keep the folder `plugins/ItemsAdder`, as this will be used later  for the conversion process.\
+Also make sure to keep the folder `plugins/ItemsAdder`, as this will be used later for the conversion process.\
 On server reload, Nexo will convert the content from the `plugins/Nexo/converter/ItemsAdder` folder and delete it after.\
 Any future packs you might get can then be put in here and it will all be converted again
 {% endstep %}
@@ -31,7 +30,7 @@ It is recommended to make a backup of your server's world folders before swappin
 {% endstep %}
 
 {% step %}
-**Remove ItemsAdder & LoneLibs JAR-files**
+**Remove ItemsAdder and LoneLibs .jar files**
 
 Make sure to only delete the jar files - keep the folder `plugins/ItemsAdder`.\
 {% endstep %}
@@ -51,6 +50,5 @@ Make sure to only delete the jar files - keep the folder `plugins/ItemsAdder`.\
 
 ### <mark style="color:yellow;">Known issues</mark>
 
-Nexo wont be able to migrate it 100% as there will be some things that is not doable across plugins.\
-The biggest issue most will face is that furniture placed in your world that is not using Display Entities, will not be automatically converted.\
-Nexo will try and convert configs to its format and should mean new furniture placed will look the same.
+Nexo won't be able to migrate everything, as some features are not compatible across both plugins.\
+For example, non-Display Entity furniture placed in your world before conversion will NOT be automatically converted.\
