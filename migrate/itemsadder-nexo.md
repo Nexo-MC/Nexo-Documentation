@@ -1,44 +1,37 @@
 # 📦 ItemsAdder → Nexo
 
-Compared to migrating from Oraxen, ItemsAdder requires a few more manual steps.\
-Nexo automates all it can but due to weird choices in ItemsAdder, some things wont be possible\
-Nexo will convert all items, glyphs/font-images & resourcepacks where possible
-
-{% hint style="warning" %}
-This is unlikely to be a flawless process so do make sure you take backups and try it on a test-server first
-{% endhint %}
+This article explains how to migrate your ItemsAdder config to Nexo.\
+The process will be mostly automatic, but first follow the steps below.
 
 {% hint style="danger" %}
-This is a converter for ItemsAdder v4\
-ItemsAdder v3.x has not been tested yet and might convert with some issues\
-Recommended to use ItemsAdder internal updating process before converting to Nexo
+This page covers migrating to Nexo from ItemsAdder v4.\
+If you are on ItemsAdder v3.x, you must update ItemsAdder before migrating to Nexo.
 {% endhint %}
 
 {% stepper %}
 {% step %}
-**Put Nexo JAR in your `Server/plugins` folder**
+**Put Nexo JAR in your server's `plugins` folder**
 {% endstep %}
 
 {% step %}
-#### Copy `plugins/ItemsAdder`-> `plugins/Nexo/converter/ItemsAdder`
+#### Copy the contents of `plugins/ItemsAdder` into `plugins/Nexo/converter/ItemsAdder`
 
-The `converter`-folder does not exist by default. Simply make the new folder\
-Nexo will convert the content from this folder and delete it after\
-Any future packs you might get can then be put in here and it will all be converted again
+The `plugins/Nexo/converter/ItemsAdder` folder does not exist by default, so create the required folders yourself.\
+Also make sure to keep the folder `plugins/ItemsAdder`, as this will be used later for the conversion process.\
+On server reload, Nexo will empty the data from the `plugins/Nexo/converter/ItemsAdder` folder into a valid Nexo config and remove the folder.\
+This step may be repeated for as many ItemsAdder packs as you would like to add, even at a future date.
 {% endstep %}
 
 {% step %}
-**Take a backup of all your worlds**
+**Take a backup**
 
-Whilst migration should be flawless, it is still recommended to make a backup of your world-folders before swapping to Nexo\
-There might be small oversights leading to minor loss of furniture/custom blocks
+It is recommended to make a backup of your server's world folders before swapping to Nexo, as there might be small oversights leading to minor loss of furniture/custom blocks.\
 {% endstep %}
 
 {% step %}
-**Remove ItemsAdder & LoneLibs JAR-files**
+**Remove ItemsAdder and LoneLibs .jar files**
 
-Keep `plugins/ItemsAdder` as this is what Nexo will convert from.\
-Also good to keep it as a backup in-case you need to migrate again in the future.
+Make sure to only delete the jar files - keep the folder `plugins/ItemsAdder`.\
 {% endstep %}
 
 {% step %}
@@ -46,7 +39,7 @@ Also good to keep it as a backup in-case you need to migrate again in the future
 {% endstep %}
 
 {% step %}
-**Check console for conversion issues and test out items/glyphs**
+**Check console for conversion issues. And finally, test that the migration has worked by testing items, glyphs, and anything else that may be on your server!**
 {% endstep %}
 {% endstepper %}
 
@@ -56,6 +49,5 @@ Also good to keep it as a backup in-case you need to migrate again in the future
 
 ### <mark style="color:yellow;">Known issues</mark>
 
-Nexo wont be able to migrate it 100% as there will be some things that is not doable across plugins.\
-The biggest issue most will face is that furniture placed in your world that is not using Display Entities, will not be automatically converted.\
-Nexo will try and convert configs to its format and should mean new furniture placed will look the same.
+Nexo won't be able to migrate everything, as some features are not compatible across both plugins.\
+For example, non-Display Entity furniture placed in your world before conversion will NOT be automatically converted.\
