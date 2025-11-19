@@ -3,13 +3,14 @@
 This article explains how to migrate your Oraxen config to Nexo.\
 The process will be mostly automatic, but first follow the steps below.\
 
+
 {% stepper %}
 {% step %}
-**Put Nexo JAR in `ServerFolder/plugins`**
+**Put Nexo JAR in your server's `plugins` folder**
 {% endstep %}
 
 {% step %}
-#### Copy `plugins/Oraxen`-> `plugins/Nexo/converter/Oraxen`
+#### Copy the contents of `plugins/Oraxen` into `plugins/Nexo/converter/Oraxen`
 
 The `converter`-folder does not exist by default. Simply make the new folder\
 Nexo will convert the content from this folder and delete it after\
