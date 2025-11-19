@@ -1,11 +1,7 @@
 # ☄️ Oraxen → Nexo
 
-This page covers the automated process of migrating Oraxen files to Nexo.\
-
-{% hint style="warning" %}
-Make a backup of your world-folders before swapping to Nexo\
-There might be small oversights leading to minor loss of furniture/custom blocks.
-{% endhint %}
+This article explains how to migrate your Oraxen config to Nexo.\
+The process will be mostly automatic, but first follow the steps below.\
 
 {% stepper %}
 {% step %}
