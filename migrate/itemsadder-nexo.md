@@ -18,8 +18,8 @@ If you are on ItemsAdder v3.x, you must update ItemsAdder before migrating to Ne
 
 The `plugins/Nexo/converter/ItemsAdder` folder does not exist by default, so create the required folders yourself.\
 Also make sure to keep the folder `plugins/ItemsAdder`, as this will be used later for the conversion process.\
-On server reload, Nexo will convert the content from the `plugins/Nexo/converter/ItemsAdder` folder and delete it after.\
-Any future packs you might get can then be put in here and it will all be converted again
+On server reload, Nexo will empty the data from the `plugins/Nexo/converter/ItemsAdder` folder into a valid Nexo config and remove the folder.\
+This step may be repeated for as many ItemsAdder packs as you would like to add, even at a future date.
 {% endstep %}
 
 {% step %}
