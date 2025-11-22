@@ -25,13 +25,42 @@ Showcasing Forest Trident
 
 {% tabs fullWidth="true" %}
 {% tab title="ItemModel (1.21.4+)" %}
-For 1.21.4+ servers there are two approaches you can take, one being a unified ItemModel\
-Second being a separate one for the thrown and held item.\
+For 1.21.4+ servers there are two approaches you can take, one being manually making the ItemModel, or let Nexo do it for you.
+
+You will need 2 **Models** and 1 **NexoItem-Config** at minimum.
+
+The simplest method is to let Nexo generate the ItemModel for you. For this you will need a NexoItem-Config like shown below;
+
+```yaml
+forest_trident:
+  itemname: Forest Trident
+  material: TRIDENT
+  Pack:
+    model: nexo:item/nexo_tools/forest_trident
+    throwing_model: nexo:item/nexo_tools/forest_trident_throwing
+  Mechanics:
+    trident:
+      display_transform: HEAD
+```
+
+If you want to manually provide the **ItemModel** you will need a simplified config like below;
+
+```yaml
+forest_trident:
+  itemname: Forest Trident
+  material: TRIDENT
+  Components:
+    item_model: nexo:forest_trident
+  Mechanics:
+    trident:
+      display_transform: HEAD
+```
+
 \
 The Forest Trident Nexo comes with uses a unified ItemModel to dictate when to show what model.\
 This is mainly for displaying a different model when held/icon/throwing.\
 Like the normal trident-item, which has a 2d Icon in GUIs, then also held in hand one way when throwing and normal.\
-Below is the example Forest-Trident ItemModel Nexo comes with
+Below is the example Forest-Trident **ItemModel** Nexo comes with:
 
 ```json
 {
@@ -50,24 +79,11 @@ Below is the example Forest-Trident ItemModel Nexo comes with
 }
 ```
 
-This has a different Model based on the condition if the item is being used or not.\
+This has a different **Model** based on the condition if the item is being used or not.\
 This then goes into `assets/nexo/items/forest_trident.json` and is referenced in the NexoItem like below\
-As shown above this then links to two separate normal JSON-Models:\
+As shown above this **ItemModel** then links to two separate normal JSON-**Models**:\
 `assets/nexo/models/item/nexo_tools/forest_trident.json`\
-`assets/nexo/models/item/nexo_tools/forest_trident_throwing.json`&#x20;
-
-The NexoItem-config should then look something like this:
-
-```yaml
-forest_trident:
-  itemname: Forest Trident
-  material: TRIDENT
-  Components:
-    item_model: nexo:forest_trident
-  Mechanics:
-    trident:
-      display_transform: HEAD
-```
+`assets/nexo/models/item/nexo_tools/forest_trident_throwing.json`
 
 <div><figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Forest Trident with the normal default Model</p></figcaption></figure> <figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Forest Trident in the "throwing" model, rotated</p></figcaption></figure></div>
 {% endtab %}
