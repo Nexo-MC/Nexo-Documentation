@@ -29,9 +29,15 @@ backpack:
   Mechanics:
     backpack:
       rows: 4
-      title: "<red>Backpack"                      #Optional, Default: "Backpack"
+      title: "<red>Backpack"                  #Optional, Default: "Backpack"
       open_sound: "entity.shulker.open"       #Optional, Default: "entity.shulker.open"
       close_sound: "entity.shulker.close"     #Optional, Default: "entity.shulker.close"
+      blacklist:                              #Optional, add which items are not allowed
+        nexo_items:
+          - item_id
+          - item_id2
+        materials:
+          - DIAMOND
 ```
 
 ### Misc Mechanic
