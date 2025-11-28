@@ -25,6 +25,13 @@ forest_horse_armor:
     texture: nexo:item/nexo_armor/forest_horse_armor_icon
     CustomArmor:
       horse_armor: nexo:item/nexo_armor/forest_horse_armor
+forest_nautilus_armor:
+  itemname: "Forest Nautilus Armor"
+  material: DIAMOND_NAUTILUS_ARMOR
+  Pack:
+    texture: nexo:item/nexo_armor/forest_nautilus_armor_icon
+    CustomArmor:
+      horse_armor: nexo:item/nexo_armor/forest_nautilus_armor
 ```
 
 {% hint style="info" %}

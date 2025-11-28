@@ -23,6 +23,50 @@ Due to the nature of these they are very version-specific, so there are some dif
 Each component below has a hover-click to show an example of how to use it, with additional info.
 
 {% tabs %}
+{% tab title="1.21.11" %}
+[**Max Stack Size**](#user-content-fn-1)[^1] **-** Sets the maximum slot-size for the NexoItem\
+[**Enchantment Glint Override**](#user-content-fn-2)[^2] - Sets an override-state for the enchantment glint\
+[**Fire Resistant**](#user-content-fn-3)[^3] - Sets whether this NexoItem is immune to fire and lava\
+[**Max Damage**](#user-content-fn-4)[^4] - Sets the maximum amount of damage the NexoItem can take\
+[**Hide Tooltip**](#user-content-fn-5)[^5] - Hides all tooltips from the given NexoItem on hover\
+[**Food**](#user-content-fn-6)[^6] - Makes this item consumable with several different properties\
+[**Tool**](#user-content-fn-7)[^7] **-** Makes your item into a tool with configurable behaviour for blocks its breaking
+
+[**Custom Data**](#user-content-fn-8)[^8] **-** Defines custom properties to add to the item\
+[**Jukebox Playable**](#user-content-fn-9)[^9] - Lets this item be inserted into a Jukebox and play a given song
+
+[**Consumable**](#user-content-fn-10)[^10] - Makes an item consumable, with bunch of sub-properties\
+[**Equippable**](#user-content-fn-11)[^11] **-** Makes an item equippable, like armor\
+[**Damage Resistant**](#user-content-fn-12)[^12] **-** Specify a damage-type this item is invulnerable to\
+[**Enchantable**](#user-content-fn-13)[^13] **-** Set the maximum enchantment-cost for this item\
+[**Glider**](#user-content-fn-14)[^14] **-** Allows the player to glide, like with elytras, when equipped\
+[**Item Model** ](#user-content-fn-15)[^15]- Defines the base model-properties of this item\
+[**Tooltip Style**](#user-content-fn-16)[^16] **-** Used to make custom tooltip-styles for your item\
+[**Use Cooldown**](#user-content-fn-17)[^17] - Applies a cooldown to all matching items when used\
+[U**se Remainder**](#user-content-fn-18)[^18] - Replaces the item with a remainder item if its stack count has decreased after use\
+[**Repairable**](#user-content-fn-19)[^19] - What item(s) should be allowed in anvils to repair durability\
+[**Death Protection**](#user-content-fn-20)[^20] - Protects the player from when equipped on death. Optionally applies effects too\
+[**Custom Model Data**](#user-content-fn-21)[^21] - Used for all the new formatting for [1.21.4 CMD component](https://minecraft.wiki/w/Data_component_format#custom_model_data)
+
+[**Tooltip Display**](#user-content-fn-22)[^22] - Sets the Components to hide tooltips from. This should be used instead of ItemFlags\
+[**Break Sound**](#user-content-fn-23)[^23] - Set the sound to play when the item loses all its durability\
+[**Weapon**](#user-content-fn-24)[^24] **-** Makes the item act like a weapon\
+[**Blocks Attacks**](#user-content-fn-25)[^25] **-** Makes the item act as a shield & can block attacks\
+[**CanPlaceOn/CanBreak**](#user-content-fn-26)[^26] **-** Defines what this item can break or be placed on in Adventure Mode
+
+[**Painting Variant**](#user-content-fn-27)[^27] **-** Used with the new [custom-paintings.md](../custom-paintings.md "mention") feature to specify which painting to place
+
+**New properties for 1.21.11+:**
+
+[**Kinetic Weapon**](#user-content-fn-28)[^28] **-** Enables charge-type attack when using item\
+[**Piercing Weapon**](#user-content-fn-29)[^29] **-** Actions done when weapon pierces target\
+[**Attack Range**](#user-content-fn-30)[^30] **-** The range and hitbox margin of a weapon\
+[**Swing Animation**](#user-content-fn-31)[^31] **-** The Animation to play when swinging item\
+[**Use Effects**](#user-content-fn-32)[^32] **-** Vibration & player movement penalties when continuously using item\
+[**Damage Type**](#user-content-fn-33)[^33] **-** The type of damage the item deals\
+[**Minimum Attack Charge**](#user-content-fn-34)[^34] **-** Minimum attack-indicator value required to attack with item
+{% endtab %}
+
 {% tab title="1.21.8" %}
 [**Max Stack Size**](#user-content-fn-1)[^1] **-** Sets the maximum slot-size for the NexoItem\
 [**Enchantment Glint Override**](#user-content-fn-2)[^2] - Sets an override-state for the enchantment glint\
@@ -56,7 +100,7 @@ Each component below has a hover-click to show an example of how to use it, with
 
 **New properties for 1.21.8+:**
 
-[**Painting Variant**](#user-content-fn-27)[^27] **-** Used with the new [custom-paintings.md](../custom-paintings.md "mention") feature to specify which painting to place
+[**Painting Variant**](#user-content-fn-35)[^35] **-** Used with the new [custom-paintings.md](../custom-paintings.md "mention") feature to specify which painting to place
 {% endtab %}
 
 {% tab title="1.21.5" %}
@@ -103,7 +147,7 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Tool**](#user-content-fn-7)[^7] **-** Makes your item into a tool with configurable behaviour for blocks its breaking
 
 [**Custom Data**](#user-content-fn-8)[^8] **-** Defines custom properties to add to the item\
-[**Jukebox Playable**](#user-content-fn-28)[^28] - Lets this item be inserted into a Jukebox and play a given song
+[**Jukebox Playable**](#user-content-fn-36)[^36] - Lets this item be inserted into a Jukebox and play a given song
 
 [**Consumable**](#user-content-fn-10)[^10] - Makes an item consumable, with bunch of sub-properties\
 [**Equippable**](#user-content-fn-11)[^11] **-** Makes an item equippable, like armor\
@@ -131,7 +175,7 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Tool**](#user-content-fn-7)[^7] **-** Makes your item into a tool with configurable behaviour for blocks its breaking
 
 [**Custom Data**](#user-content-fn-8)[^8] **-** Defines custom properties to add to the item\
-[**Jukebox Playable**](#user-content-fn-28)[^28] - Lets this item be inserted into a Jukebox and play a given song
+[**Jukebox Playable**](#user-content-fn-36)[^36] - Lets this item be inserted into a Jukebox and play a given song
 
 **New properties for 1.21.3+:**
 
@@ -154,22 +198,22 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Fire Resistant**](#user-content-fn-3)[^3] - Sets whether this NexoItem is immune to fire and lava\
 [**Max Damage**](#user-content-fn-4)[^4] - Sets the maximum amount of damage the NexoItem can take\
 [**Hide Tooltip**](#user-content-fn-5)[^5] - Hides all tooltips from the given NexoItem on hover\
-[**Food**](#user-content-fn-29)[^29] - Makes this item consumable with several different properties\
+[**Food**](#user-content-fn-37)[^37] - Makes this item consumable with several different properties\
 [**Tool**](#user-content-fn-7)[^7] **-** Makes your item into a tool with configurable behaviour for blocks its breaking
 
 **New properties for 1.21.1+:**
 
 [**Custom Data**](#user-content-fn-8)[^8] **-** Defines custom properties to add to the item\
-[**Jukebox Playable**](#user-content-fn-28)[^28] - Lets this item be inserted into a Jukebox and play a given song
+[**Jukebox Playable**](#user-content-fn-36)[^36] - Lets this item be inserted into a Jukebox and play a given song
 {% endtab %}
 
 {% tab title="1.20.5" %}
 [**Max Stack Size**](#user-content-fn-1)[^1] **-** Sets the maximum slot-size for the NexoItem\
 [**Enchantment Glint Override**](#user-content-fn-2)[^2] - Sets an override-state for the enchantment glint\
 [**Fire Resistant**](#user-content-fn-3)[^3] - Sets whether this NexoItem is immune to fire and lava\
-[**Durability**](#user-content-fn-30)[^30] - Sets the durability of this NexoItem\
+[**Durability**](#user-content-fn-38)[^38] - Sets the durability of this NexoItem\
 [**Hide Tooltip**](#user-content-fn-5)[^5] - Hides all tooltips from the given NexoItem on hover\
-[**Food**](#user-content-fn-29)[^29] - Makes this item consumable with several different properties\
+[**Food**](#user-content-fn-37)[^37] - Makes this item consumable with several different properties\
 [**Tool**](#user-content-fn-7)[^7] **-** Makes your item into a tool with configurable behaviour for blocks its breaking
 {% endtab %}
 {% endtabs %}
@@ -215,7 +259,7 @@ Each component below has a hover-click to show an example of how to use it, with
           nutrition: 2
           saturation: 2 
           can_always_eat: false
-          
+              
     ```
 
     **can\_always\_eat -** Defaults to false if unspecified\
@@ -282,7 +326,7 @@ Each component below has a hover-click to show an example of how to use it, with
 
     This component lets you mark an item as a "Music Disc". It can then be inserted into a jukebox to play a given sound.\
     \
-    The sound is the key defined in either your sounds.json in your ResourcePack, or in Nexo's sounds.yml&#x20;
+    The sound is the key defined in either your sounds.json in your ResourcePack, or in Nexo's sounds.yml
 
 [^10]: ```yaml
     my_item:
@@ -310,8 +354,6 @@ Each component below has a hover-click to show an example of how to use it, with
               sound: minecraft:ambient.basalt_deltas.additions1
     ```
 
-
-
 [^11]: ```yaml
     my_item:
       Components:
@@ -335,21 +377,15 @@ Each component below has a hover-click to show an example of how to use it, with
     The asset to show for the equipped texture.\
     If using a 3D Model for helmet, do not specify this field
 
-
-
     **Camera Overlay:**
 
     The resource-overlay to show on screen whilst equipped.\
     This field is optional
 
-
-
     **Equip Sound:**
 
     The sound to play when equipped.\
     Defaults to `item.armor.equip_generic`
-
-
 
     **Allowed Entity Types:**
 
@@ -382,7 +418,7 @@ Each component below has a hover-click to show an example of how to use it, with
         glider: true
     ```
 
-    This component is best used together with Equippable&#x20;
+    This component is best used together with Equippable
 
 [^15]: ```yaml
     my_item:
@@ -407,8 +443,6 @@ Each component below has a hover-click to show an example of how to use it, with
     ```
 
     [**Minecraft Wiki**](https://minecraft.wiki/w/Data_component_format#tooltip_style)
-
-
 
     A Tooltip Style refers to a set of textures in your ResourcePack.\
     It is made up of a **background** and **frame** texture, with an optional mcmeta file for each\
@@ -570,6 +604,88 @@ Each component below has a hover-click to show an example of how to use it, with
 [^28]: ```yaml
     my_item:
       Components:
+        kinetic_weapon:
+          contact_cooldown: 10t
+          delay: 0t
+          damage_multiplier: 1.0
+          sound: namespace:key
+          hit_sound: namespace:key
+          dismount_conditions:
+            max_duration: 0t
+            min_speed: 0f
+            min_relative_speed: 0f
+          knockback_conditions:
+            max_duration: 0t
+            min_speed: 0f
+            min_relative_speed: 0f
+          damage_conditions:
+            max_duration: 0t
+            min_speed: 0f
+            min_relative_speed: 0f
+          
+    ```
+
+[^29]: ```yaml
+    my_item:
+      Components:
+        piercing_weapon:
+          sound: namespace:key
+          hit_sound: namespace:key
+          dismounts: false
+          deals_knockback: true
+    ```
+
+[^30]: ```yaml
+    my_item:
+      Components:
+        attack_range:
+          reach: 0..64
+          #min_reach: 0
+          #max_read: 64
+          hitbox_margin: 0.3
+          mob_factor: 1
+    ```
+
+[^31]: ```yaml
+    my_item:
+      Components:
+        swing_animation:
+          type: WHACK
+          duration: 6t
+    ```
+
+    Available animations found [here](https://jd.papermc.io/paper/1.21.11-pre3/io/papermc/paper/datacomponent/item/SwingAnimation.Animation.html)
+
+[^32]: ```yaml
+    my_item:
+      Components:
+        use_effects:
+          can_sprint: false
+          interact_vibrations: true
+          speed_multiplier: 0.2
+    ```
+
+[^33]: ```yaml
+    my_item:
+      Components:
+        damage_type: piercing
+    ```
+
+[^34]: ```yaml
+    my_item:
+      Components:
+        minimum_attack_charge: 1f
+    ```
+
+[^35]: ```yaml
+    my_item:
+      Components:
+        painting_variant: namespace:key
+    ```
+
+[^36]: ```yaml
+    my_item:
+      Components:
         jukebox_playable:
           show_in_tooltip: true
           song_key: namespace:key
@@ -577,9 +693,9 @@ Each component below has a hover-click to show an example of how to use it, with
 
     This component lets you mark an item as a "Music Disc". It can then be inserted into a jukebox to play a given sound.\
     \
-    The sound is the key defined in either your sounds.json in your ResourcePack, or in Nexo's sounds.yml&#x20;
+    The sound is the key defined in either your sounds.json in your ResourcePack, or in Nexo's sounds.yml
 
-[^29]: ```yaml
+[^37]: ```yaml
     my_item:
       Components:
         food:
@@ -607,7 +723,7 @@ Each component below has a hover-click to show an example of how to use it, with
     **can\_always\_eat -** Defaults to false if unspecified\
     **eat\_seconds -** Defaults to 1.6 if unspecified
 
-[^30]: ```yaml
+[^38]: ```yaml
     my_item:
       Components:
         durability: 100

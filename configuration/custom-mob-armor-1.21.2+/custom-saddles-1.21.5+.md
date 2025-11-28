@@ -1,6 +1,6 @@
 # 🐖 Custom Saddles (1.21.5+)
 
-When using COMPONENT type CustomArmor, Nexo allows you to easily create custom saddles for various mobs. The list of supported entities are: **camel, donkey, horse, mule, pig, skeleton\_horse, strider & zombie\_horse**
+When using COMPONENT type CustomArmor, Nexo allows you to easily create custom saddles for various mobs. The list of supported entities are: **camel, donkey, horse, mule, pig, skeleton\_horse, strider, zombie\_horse, nautilus & camel\_husk**
 
 Similar to all other CustomArmor sections, the pattern is \`mobtype\_saddle\`.
 
