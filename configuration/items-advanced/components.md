@@ -43,7 +43,7 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Item Model** ](#user-content-fn-15)[^15]- Defines the base model-properties of this item\
 [**Tooltip Style**](#user-content-fn-16)[^16] **-** Used to make custom tooltip-styles for your item\
 [**Use Cooldown**](#user-content-fn-17)[^17] - Applies a cooldown to all matching items when used\
-[U**se Remainder**](#user-content-fn-18)[^18] - Replaces the item with a remainder item if its stack count has decreased after use\
+[**Use Remainder**](#user-content-fn-18)[^18] - Replaces the item with a remainder item if its stack count has decreased after use\
 [**Repairable**](#user-content-fn-19)[^19] - What item(s) should be allowed in anvils to repair durability\
 [**Death Protection**](#user-content-fn-20)[^20] - Protects the player from when equipped on death. Optionally applies effects too\
 [**Custom Model Data**](#user-content-fn-21)[^21] - Used for all the new formatting for [1.21.4 CMD component](https://minecraft.wiki/w/Data_component_format#custom_model_data)
@@ -87,7 +87,7 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Item Model** ](#user-content-fn-15)[^15]- Defines the base model-properties of this item\
 [**Tooltip Style**](#user-content-fn-16)[^16] **-** Used to make custom tooltip-styles for your item\
 [**Use Cooldown**](#user-content-fn-17)[^17] - Applies a cooldown to all matching items when used\
-[U**se Remainder**](#user-content-fn-18)[^18] - Replaces the item with a remainder item if its stack count has decreased after use\
+[**Use Remainder**](#user-content-fn-18)[^18] - Replaces the item with a remainder item if its stack count has decreased after use\
 [**Repairable**](#user-content-fn-19)[^19] - What item(s) should be allowed in anvils to repair durability\
 [**Death Protection**](#user-content-fn-20)[^20] - Protects the player from when equipped on death. Optionally applies effects too\
 [**Custom Model Data**](#user-content-fn-21)[^21] - Used for all the new formatting for [1.21.4 CMD component](https://minecraft.wiki/w/Data_component_format#custom_model_data)
@@ -123,7 +123,7 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Item Model** ](#user-content-fn-15)[^15]- Defines the base model-properties of this item\
 [**Tooltip Style**](#user-content-fn-16)[^16] **-** Used to make custom tooltip-styles for your item\
 [**Use Cooldown**](#user-content-fn-17)[^17] - Applies a cooldown to all matching items when used\
-[U**se Remainder**](#user-content-fn-18)[^18] - Replaces the item with a remainder item if its stack count has decreased after use\
+[**Use Remainder**](#user-content-fn-18)[^18] - Replaces the item with a remainder item if its stack count has decreased after use\
 [**Repairable**](#user-content-fn-19)[^19] - What item(s) should be allowed in anvils to repair durability\
 [**Death Protection**](#user-content-fn-20)[^20] - Protects the player from when equipped on death. Optionally applies effects too\
 [**Custom Model Data**](#user-content-fn-21)[^21] - Used for all the new formatting for [1.21.4 CMD component](https://minecraft.wiki/w/Data_component_format#custom_model_data)
@@ -157,7 +157,7 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Item Model** ](#user-content-fn-15)[^15]- Defines the base model-properties of this item\
 [**Tooltip Style**](#user-content-fn-16)[^16] **-** Used to make custom tooltip-styles for your item\
 [**Use Cooldown**](#user-content-fn-17)[^17] - Applies a cooldown to all matching items when used\
-[U**se Remainder**](#user-content-fn-18)[^18] - Replaces the item with a remainder item if its stack count has decreased after use\
+[**Use Remainder**](#user-content-fn-18)[^18] - Replaces the item with a remainder item if its stack count has decreased after use\
 [**Repairable**](#user-content-fn-19)[^19] - What item(s) should be allowed in anvils to repair durability\
 [**Death Protection**](#user-content-fn-20)[^20] - Protects the player from when equipped on death. Optionally applies effects too
 
@@ -187,7 +187,7 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Item Model** ](#user-content-fn-15)[^15]- Defines the base model-properties of this item\
 [**Tooltip Style**](#user-content-fn-16)[^16] **-** Used to make custom tooltip-styles for your item\
 [**Use Cooldown**](#user-content-fn-17)[^17] - Applies a cooldown to all matching items when used\
-[U**se Remainder**](#user-content-fn-18)[^18] - Replaces the item with a remainder item if its stack count has decreased after use\
+[**Use Remainder**](#user-content-fn-18)[^18] - Replaces the item with a remainder item if its stack count has decreased after use\
 [**Repairable**](#user-content-fn-19)[^19] - What item(s) should be allowed in anvils to repair durability\
 [**Death Protection**](#user-content-fn-20)[^20] - Protects the player from when equipped on death. Optionally applies effects too
 {% endtab %}
