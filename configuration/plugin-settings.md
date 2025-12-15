@@ -1,6 +1,5 @@
 ---
 description: Various options impacting the plugin in its generality
-hidden: true
 cover: >-
   https://cdn.discordapp.com/attachments/896841738621177896/966825582216237126/unknown.png
 coverY: 0
@@ -110,35 +109,37 @@ Pack:
 
 ## Misc
 
-### hide\_scoreboard\_numbers
+### Hiding Scoreboard & Tablist
 
 This option lets you hide the red scoreboard numbers.
 
 ```yaml
-  hide_scoreboard_numbers: true
+hide_scoreboard_numbers: true
+hide_scoreboard_background: true
 ```
 
-### hide\_scoreboard\_background
-
-This option lets you hide the scoreboard background.
-
-```yaml
-  hide_scoreboard_background: true
-```
-
-### reset\_recipes
-
-```yaml
-reset_recipes: true
-```
-
-This option can causes bug with other recipes plugins. If you notice bugs with a recipes plugin when reloading Nexo, you can disable this option. If you do that, you will have to restart the server to refresh Nexo recipes.
+{% hint style="danger" %}
+This might not work for 1.21.8+ servers due to changes in core shaders by Mojang
+{% endhint %}
 
 ## Nexo Inventory
 
+Nexo has a `inventory.yml` which can be configured to tweak how the NexoInventory works.\
+It lets you change between two types for sorting the inventory, FILE & DIRECTORY.\
+FILE is the default and organized everything into one main-page where each item-config file is shown on the main menu.\
+DIRECTORY organizes the menu into subpages, following the structure you have inside `plugins/Nexo/items`
+
+You can also specify the menu\_layout to tweak the individual buttons irrespective of the type above.\
+This lets you set the slot a button is in, the icon/item to display with it and the title of the sub-page it opens. By default Nexo sorts slots by a-z of filenames & icon defaults to the first item in the config.\
+You specify it like below, with it referencing the path to the item. The path depends on if you use FILE or DIRECTORY.\
+If using FILE, the path is just the `filename`. If using DIRECTORY it is the entire path `folder.filename`&#x20;
+
 ```yaml
 nexo_inventory:
-  main_menu_title: "<shift:-18><glyph:glyphid><shift:-193>"
+  menu_title: <shift:-37><glyph:menu_items_search>
+  search_title: <shift:256>NexoInventory Search<shift:256>
+  style_default_names: true
+  type: FILE
   menu_rows: 6
   menu_layout:
     my_item:
@@ -147,5 +148,13 @@ nexo_inventory:
       title: <main_menu_title>ItemID
 ```
 
-This allows you to configure an icon for every section of the Nexo inventory.\
-You can use Nexo ids or Minecraft materials.
+The NexoInventory also has some other features & buttons which can be customized like below.\
+This can reference a NexoItem or an ItemModel directly from the ResourcePack
+
+```yaml
+next_page_icon: next_page_icon
+previous_page_icon: previous_page_icon
+exit_icon: cancel_icon
+search_icon: nexo:search_icon
+directory_icon: nexo:directory_icon
+```
