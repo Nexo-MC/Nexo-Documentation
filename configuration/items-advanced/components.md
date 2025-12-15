@@ -18,7 +18,7 @@ layout:
 # Components
 
 As of Minecraft 1.20.6, items now use what is called Components, or DataComponents, to specify specific features. This covers anything from consumable items, tool-properties and death protection.\
-Due to the nature of these they are very version-specific, so there are some differences and new additions between Minecraft version changes.
+dddDue to the nature of these they are very version-specific, so there are some differences and new additions between Minecraft version changes.
 
 Each component below has a hover-click to show an example of how to use it, with additional info.
 
@@ -46,25 +46,27 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Use Remainder**](#user-content-fn-18)[^18] - Replaces the item with a remainder item if its stack count has decreased after use\
 [**Repairable**](#user-content-fn-19)[^19] - What item(s) should be allowed in anvils to repair durability\
 [**Death Protection**](#user-content-fn-20)[^20] - Protects the player from when equipped on death. Optionally applies effects too\
-[**Custom Model Data**](#user-content-fn-21)[^21] - Used for all the new formatting for [1.21.4 CMD component](https://minecraft.wiki/w/Data_component_format#custom_model_data)
+[**Player Profile**](#user-content-fn-21)[^21] - Specify profile-properties to show player-skins on item\
+[**Unset Components**](#user-content-fn-22)[^22] - This lets you specify Components Nexo should remove from the item\
+[**Custom Model Data**](#user-content-fn-23)[^23] - Used for all the new formatting for [1.21.4 CMD component](https://minecraft.wiki/w/Data_component_format#custom_model_data)
 
-[**Tooltip Display**](#user-content-fn-22)[^22] - Sets the Components to hide tooltips from. This should be used instead of ItemFlags\
-[**Break Sound**](#user-content-fn-23)[^23] - Set the sound to play when the item loses all its durability\
-[**Weapon**](#user-content-fn-24)[^24] **-** Makes the item act like a weapon\
-[**Blocks Attacks**](#user-content-fn-25)[^25] **-** Makes the item act as a shield & can block attacks\
-[**CanPlaceOn/CanBreak**](#user-content-fn-26)[^26] **-** Defines what this item can break or be placed on in Adventure Mode
+[**Tooltip Display**](#user-content-fn-24)[^24] - Sets the Components to hide tooltips from. This should be used instead of ItemFlags\
+[**Break Sound**](#user-content-fn-25)[^25] - Set the sound to play when the item loses all its durability\
+[**Weapon**](#user-content-fn-26)[^26] **-** Makes the item act like a weapon\
+[**Blocks Attacks**](#user-content-fn-27)[^27] **-** Makes the item act as a shield & can block attacks\
+[**CanPlaceOn/CanBreak**](#user-content-fn-28)[^28] **-** Defines what this item can break or be placed on in Adventure Mode
 
-[**Painting Variant**](#user-content-fn-27)[^27] **-** Used with the new [custom-paintings.md](../custom-paintings.md "mention") feature to specify which painting to place
+[**Painting Variant**](#user-content-fn-29)[^29] **-** Used with the new [custom-paintings.md](../custom-paintings.md "mention") feature to specify which painting to place
 
 **New properties for 1.21.11+:**
 
-[**Kinetic Weapon**](#user-content-fn-28)[^28] **-** Enables charge-type attack when using item\
-[**Piercing Weapon**](#user-content-fn-29)[^29] **-** Actions done when weapon pierces target\
-[**Attack Range**](#user-content-fn-30)[^30] **-** The range and hitbox margin of a weapon\
-[**Swing Animation**](#user-content-fn-31)[^31] **-** The Animation to play when swinging item\
-[**Use Effects**](#user-content-fn-32)[^32] **-** Vibration & player movement penalties when continuously using item\
-[**Damage Type**](#user-content-fn-33)[^33] **-** The type of damage the item deals\
-[**Minimum Attack Charge**](#user-content-fn-34)[^34] **-** Minimum attack-indicator value required to attack with item
+[**Kinetic Weapon**](#user-content-fn-30)[^30] **-** Enables charge-type attack when using item\
+[**Piercing Weapon**](#user-content-fn-31)[^31] **-** Actions done when weapon pierces target\
+[**Attack Range**](#user-content-fn-32)[^32] **-** The range and hitbox margin of a weapon\
+[**Swing Animation**](#user-content-fn-33)[^33] **-** The Animation to play when swinging item\
+[**Use Effects**](#user-content-fn-34)[^34] **-** Vibration & player movement penalties when continuously using item\
+[**Damage Type**](#user-content-fn-35)[^35] **-** The type of damage the item deals\
+[**Minimum Attack Charge**](#user-content-fn-36)[^36] **-** Minimum attack-indicator value required to attack with item
 {% endtab %}
 
 {% tab title="1.21.8" %}
@@ -90,17 +92,19 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Use Remainder**](#user-content-fn-18)[^18] - Replaces the item with a remainder item if its stack count has decreased after use\
 [**Repairable**](#user-content-fn-19)[^19] - What item(s) should be allowed in anvils to repair durability\
 [**Death Protection**](#user-content-fn-20)[^20] - Protects the player from when equipped on death. Optionally applies effects too\
-[**Custom Model Data**](#user-content-fn-21)[^21] - Used for all the new formatting for [1.21.4 CMD component](https://minecraft.wiki/w/Data_component_format#custom_model_data)
+[**Player Profile**](#user-content-fn-21)[^21] - Specify profile-properties to show player-skins on item\
+[**Unset Components**](#user-content-fn-22)[^22] - This lets you specify Components Nexo should remove from the item\
+[**Custom Model Data**](#user-content-fn-23)[^23] - Used for all the new formatting for [1.21.4 CMD component](https://minecraft.wiki/w/Data_component_format#custom_model_data)
 
-[**Tooltip Display**](#user-content-fn-22)[^22] - Sets the Components to hide tooltips from. This should be used instead of ItemFlags\
-[**Break Sound**](#user-content-fn-23)[^23] - Set the sound to play when the item loses all its durability\
-[**Weapon**](#user-content-fn-24)[^24] **-** Makes the item act like a weapon\
-[**Blocks Attacks**](#user-content-fn-25)[^25] **-** Makes the item act as a shield & can block attacks\
-[**CanPlaceOn/CanBreak**](#user-content-fn-26)[^26] **-** Defines what this item can break or be placed on in Adventure Mode
+[**Tooltip Display**](#user-content-fn-24)[^24] - Sets the Components to hide tooltips from. This should be used instead of ItemFlags\
+[**Break Sound**](#user-content-fn-25)[^25] - Set the sound to play when the item loses all its durability\
+[**Weapon**](#user-content-fn-26)[^26] **-** Makes the item act like a weapon\
+[**Blocks Attacks**](#user-content-fn-27)[^27] **-** Makes the item act as a shield & can block attacks\
+[**CanPlaceOn/CanBreak**](#user-content-fn-28)[^28] **-** Defines what this item can break or be placed on in Adventure Mode
 
 **New properties for 1.21.8+:**
 
-[**Painting Variant**](#user-content-fn-35)[^35] **-** Used with the new [custom-paintings.md](../custom-paintings.md "mention") feature to specify which painting to place
+[**Painting Variant**](#user-content-fn-29)[^29] **-** Used with the new [custom-paintings.md](../custom-paintings.md "mention") feature to specify which painting to place
 {% endtab %}
 
 {% tab title="1.21.5" %}
@@ -126,15 +130,17 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Use Remainder**](#user-content-fn-18)[^18] - Replaces the item with a remainder item if its stack count has decreased after use\
 [**Repairable**](#user-content-fn-19)[^19] - What item(s) should be allowed in anvils to repair durability\
 [**Death Protection**](#user-content-fn-20)[^20] - Protects the player from when equipped on death. Optionally applies effects too\
-[**Custom Model Data**](#user-content-fn-21)[^21] - Used for all the new formatting for [1.21.4 CMD component](https://minecraft.wiki/w/Data_component_format#custom_model_data)
+[**Player Profile**](#user-content-fn-21)[^21] - Specify profile-properties to show player-skins on item\
+[**Unset Components**](#user-content-fn-22)[^22] - This lets you specify Components Nexo should remove from the item\
+[**Custom Model Data**](#user-content-fn-23)[^23] - Used for all the new formatting for [1.21.4 CMD component](https://minecraft.wiki/w/Data_component_format#custom_model_data)
 
 **New properties for 1.21.5+:**
 
-[**Tooltip Display**](#user-content-fn-22)[^22] - Sets the Components to hide tooltips from. This should be used instead of ItemFlags\
-[**Break Sound**](#user-content-fn-23)[^23] - Set the sound to play when the item loses all its durability\
-[**Weapon**](#user-content-fn-24)[^24] **-** Makes the item act like a weapon\
-[**Blocks Attacks**](#user-content-fn-25)[^25] **-** Makes the item act as a shield & can block attacks\
-[**CanPlaceOn/CanBreak**](#user-content-fn-26)[^26] **-** Defines what this item can break or be placed on in Adventure Mode
+[**Tooltip Display**](#user-content-fn-24)[^24] - Sets the Components to hide tooltips from. This should be used instead of ItemFlags\
+[**Break Sound**](#user-content-fn-25)[^25] - Set the sound to play when the item loses all its durability\
+[**Weapon**](#user-content-fn-26)[^26] **-** Makes the item act like a weapon\
+[**Blocks Attacks**](#user-content-fn-27)[^27] **-** Makes the item act as a shield & can block attacks\
+[**CanPlaceOn/CanBreak**](#user-content-fn-28)[^28] **-** Defines what this item can break or be placed on in Adventure Mode
 {% endtab %}
 
 {% tab title="1.21.4" %}
@@ -147,7 +153,7 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Tool**](#user-content-fn-7)[^7] **-** Makes your item into a tool with configurable behaviour for blocks its breaking
 
 [**Custom Data**](#user-content-fn-8)[^8] **-** Defines custom properties to add to the item\
-[**Jukebox Playable**](#user-content-fn-36)[^36] - Lets this item be inserted into a Jukebox and play a given song
+[**Jukebox Playable**](#user-content-fn-37)[^37] - Lets this item be inserted into a Jukebox and play a given song
 
 [**Consumable**](#user-content-fn-10)[^10] - Makes an item consumable, with bunch of sub-properties\
 [**Equippable**](#user-content-fn-11)[^11] **-** Makes an item equippable, like armor\
@@ -159,10 +165,12 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Use Cooldown**](#user-content-fn-17)[^17] - Applies a cooldown to all matching items when used\
 [**Use Remainder**](#user-content-fn-18)[^18] - Replaces the item with a remainder item if its stack count has decreased after use\
 [**Repairable**](#user-content-fn-19)[^19] - What item(s) should be allowed in anvils to repair durability\
-[**Death Protection**](#user-content-fn-20)[^20] - Protects the player from when equipped on death. Optionally applies effects too
+[**Death Protection**](#user-content-fn-20)[^20] - Protects the player from when equipped on death. Optionally applies effects too\
+[**Player Profile**](#user-content-fn-21)[^21] - Specify profile-properties to show player-skins on item\
+[**Unset Components**](#user-content-fn-22)[^22] - This lets you specify Components Nexo should remove from the item
 
 **New properties for 1.21.4+:**\
-[**Custom Model Data**](#user-content-fn-21)[^21] - Used for all the new formatting for [1.21.4 CMD component](https://minecraft.wiki/w/Data_component_format#custom_model_data)
+[**Custom Model Data**](#user-content-fn-23)[^23] - Used for all the new formatting for [1.21.4 CMD component](https://minecraft.wiki/w/Data_component_format#custom_model_data)
 {% endtab %}
 
 {% tab title="1.21.3" %}
@@ -175,7 +183,7 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Tool**](#user-content-fn-7)[^7] **-** Makes your item into a tool with configurable behaviour for blocks its breaking
 
 [**Custom Data**](#user-content-fn-8)[^8] **-** Defines custom properties to add to the item\
-[**Jukebox Playable**](#user-content-fn-36)[^36] - Lets this item be inserted into a Jukebox and play a given song
+[**Jukebox Playable**](#user-content-fn-37)[^37] - Lets this item be inserted into a Jukebox and play a given song
 
 **New properties for 1.21.3+:**
 
@@ -189,7 +197,9 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Use Cooldown**](#user-content-fn-17)[^17] - Applies a cooldown to all matching items when used\
 [**Use Remainder**](#user-content-fn-18)[^18] - Replaces the item with a remainder item if its stack count has decreased after use\
 [**Repairable**](#user-content-fn-19)[^19] - What item(s) should be allowed in anvils to repair durability\
-[**Death Protection**](#user-content-fn-20)[^20] - Protects the player from when equipped on death. Optionally applies effects too
+[**Death Protection**](#user-content-fn-20)[^20] - Protects the player from when equipped on death. Optionally applies effects too\
+[**Player Profile**](#user-content-fn-21)[^21] - Specify profile-properties to show player-skins on item\
+[**Unset Components**](#user-content-fn-22)[^22] - This lets you specify Components Nexo should remove from the item
 {% endtab %}
 
 {% tab title="1.21.1" %}
@@ -198,23 +208,13 @@ Each component below has a hover-click to show an example of how to use it, with
 [**Fire Resistant**](#user-content-fn-3)[^3] - Sets whether this NexoItem is immune to fire and lava\
 [**Max Damage**](#user-content-fn-4)[^4] - Sets the maximum amount of damage the NexoItem can take\
 [**Hide Tooltip**](#user-content-fn-5)[^5] - Hides all tooltips from the given NexoItem on hover\
-[**Food**](#user-content-fn-37)[^37] - Makes this item consumable with several different properties\
+[**Food**](#user-content-fn-38)[^38] - Makes this item consumable with several different properties\
 [**Tool**](#user-content-fn-7)[^7] **-** Makes your item into a tool with configurable behaviour for blocks its breaking
 
 **New properties for 1.21.1+:**
 
 [**Custom Data**](#user-content-fn-8)[^8] **-** Defines custom properties to add to the item\
-[**Jukebox Playable**](#user-content-fn-36)[^36] - Lets this item be inserted into a Jukebox and play a given song
-{% endtab %}
-
-{% tab title="1.20.5" %}
-[**Max Stack Size**](#user-content-fn-1)[^1] **-** Sets the maximum slot-size for the NexoItem\
-[**Enchantment Glint Override**](#user-content-fn-2)[^2] - Sets an override-state for the enchantment glint\
-[**Fire Resistant**](#user-content-fn-3)[^3] - Sets whether this NexoItem is immune to fire and lava\
-[**Durability**](#user-content-fn-38)[^38] - Sets the durability of this NexoItem\
-[**Hide Tooltip**](#user-content-fn-5)[^5] - Hides all tooltips from the given NexoItem on hover\
-[**Food**](#user-content-fn-37)[^37] - Makes this item consumable with several different properties\
-[**Tool**](#user-content-fn-7)[^7] **-** Makes your item into a tool with configurable behaviour for blocks its breaking
+[**Jukebox Playable**](#user-content-fn-37)[^37] - Lets this item be inserted into a Jukebox and play a given song
 {% endtab %}
 {% endtabs %}
 
@@ -259,7 +259,7 @@ Each component below has a hover-click to show an example of how to use it, with
           nutrition: 2
           saturation: 2 
           can_always_eat: false
-              
+                  
     ```
 
     **can\_always\_eat -** Defaults to false if unspecified\
@@ -517,6 +517,35 @@ Each component below has a hover-click to show an example of how to use it, with
     ```
 
 [^21]: ```yaml
+    myitem:
+      material: PLAYER_HEAD
+      Components:
+        profile:
+          name: boy0000
+          uuid: 1234
+          properties:
+            name: name
+            value: value
+            signature: signature
+    ```
+
+    The component can be applied to any item, but only has a visible effect for those with PLAYER\_HEAD material.
+
+
+
+    In the profile component itself, you have to specify either **name, uuid** or **properties,** not all.\
+    Properties is mostly for referencing skins from databases etc which might not be entirely linked to a player anymore.\
+    In properties, name and value are required, but signature is optional
+
+[^22]: ```yaml
+    myitem:
+      material: DIAMOND_PICKAXE
+      Components:
+        unset_components:
+          - minecraft:tool
+    ```
+
+[^23]: ```yaml
     my_item:
       Components:
         custom_model_data:
@@ -528,7 +557,7 @@ Each component below has a hover-click to show an example of how to use it, with
 
     [**Minecraft Wiki**](https://minecraft.wiki/w/Data_component_format#custom_model_data)
 
-[^22]: ```
+[^24]: ```
     my_item:
       Components:
         tooltip_display:
@@ -542,13 +571,13 @@ Each component below has a hover-click to show an example of how to use it, with
     \
     If `hide_tooltip`-component is set to true, this is ignored
 
-[^23]: ```yaml
+[^25]: ```yaml
     my_item:
       Components:
         break_sound: namespace:key
     ```
 
-[^24]: ```yaml
+[^26]: ```yaml
     my_item:
       Components:
         weapon:
@@ -556,7 +585,7 @@ Each component below has a hover-click to show an example of how to use it, with
          disable_blocking: 0.0
     ```
 
-[^25]: ```yaml
+[^27]: ```yaml
     my_item:
       Components:
         blocks_attacks:
@@ -582,7 +611,7 @@ Each component below has a hover-click to show an example of how to use it, with
 
     **types** can be specified as a single element or a list, and takes a NamespacedKey for a DamageType or Tag
 
-[^26]: ```yaml
+[^28]: ```yaml
     my_item:
       Components:
         can_place_on/can_break:
@@ -595,13 +624,13 @@ Each component below has a hover-click to show an example of how to use it, with
     This supports all block-ids or block-tags.\
     Can either specify a single element or a list of elements
 
-[^27]: ```yaml
+[^29]: ```yaml
     my_item:
       Components:
         painting_variant: namespace:key
     ```
 
-[^28]: ```yaml
+[^30]: ```yaml
     my_item:
       Components:
         kinetic_weapon:
@@ -622,10 +651,10 @@ Each component below has a hover-click to show an example of how to use it, with
             max_duration: 0t
             min_speed: 0f
             min_relative_speed: 0f
-          
+              
     ```
 
-[^29]: ```yaml
+[^31]: ```yaml
     my_item:
       Components:
         piercing_weapon:
@@ -635,7 +664,7 @@ Each component below has a hover-click to show an example of how to use it, with
           deals_knockback: true
     ```
 
-[^30]: ```yaml
+[^32]: ```yaml
     my_item:
       Components:
         attack_range:
@@ -646,7 +675,7 @@ Each component below has a hover-click to show an example of how to use it, with
           mob_factor: 1
     ```
 
-[^31]: ```yaml
+[^33]: ```yaml
     my_item:
       Components:
         swing_animation:
@@ -656,7 +685,7 @@ Each component below has a hover-click to show an example of how to use it, with
 
     Available animations found [here](https://jd.papermc.io/paper/1.21.11-pre3/io/papermc/paper/datacomponent/item/SwingAnimation.Animation.html)
 
-[^32]: ```yaml
+[^34]: ```yaml
     my_item:
       Components:
         use_effects:
@@ -665,25 +694,19 @@ Each component below has a hover-click to show an example of how to use it, with
           speed_multiplier: 0.2
     ```
 
-[^33]: ```yaml
+[^35]: ```yaml
     my_item:
       Components:
         damage_type: piercing
     ```
 
-[^34]: ```yaml
+[^36]: ```yaml
     my_item:
       Components:
         minimum_attack_charge: 1f
     ```
 
-[^35]: ```yaml
-    my_item:
-      Components:
-        painting_variant: namespace:key
-    ```
-
-[^36]: ```yaml
+[^37]: ```yaml
     my_item:
       Components:
         jukebox_playable:
@@ -695,7 +718,7 @@ Each component below has a hover-click to show an example of how to use it, with
     \
     The sound is the key defined in either your sounds.json in your ResourcePack, or in Nexo's sounds.yml
 
-[^37]: ```yaml
+[^38]: ```yaml
     my_item:
       Components:
         food:
@@ -722,11 +745,3 @@ Each component below has a hover-click to show an example of how to use it, with
 
     **can\_always\_eat -** Defaults to false if unspecified\
     **eat\_seconds -** Defaults to 1.6 if unspecified
-
-[^38]: ```yaml
-    my_item:
-      Components:
-        durability: 100
-    ```
-
-    Durability can be any value above 0

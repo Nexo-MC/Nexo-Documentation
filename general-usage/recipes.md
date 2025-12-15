@@ -24,11 +24,16 @@ The RecipeBuilder will store recipes inside `plugins/Nexo/recipes/X/X_recipes.ym
 * BREWING - Recipe for the Brewing Stand
 * SMITHING - Recipe for the Smithing Table - This is added via [NexoAddon](https://nexoaddon.gitbook.io/docs/recipes/smithing-recipe)
 
-## Examples:
+### Disabling Recipes
+
+There is also a new file for disabling recipes in `Nexo/recipes/disabled_recipes.yml` .\
+In this file, simply add the Recipe-Key, `minecraft:vanilla_recipe` , and Nexo will disable it.
+
+## Recipe-Type Examples:
 
 ### Shapeless
 
-`amount` in result specifies how many of said item you should get
+`amount` in result specifies how many of said item you should get. It is not available for ingredients.
 
 ```yaml
 grass_block_shapeless:

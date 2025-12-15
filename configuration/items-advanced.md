@@ -84,6 +84,8 @@ myitem:
       value: "Hi this is a string"
 ```
 
+There is also a CustomData [components.md](items-advanced/components.md "mention") if setting things outside of the normal PublicBukkitValues-entry for the item is wanted
+
 ### Itemname
 
 This allows you to change the name displayed of your item without interfering with renamed items.
@@ -107,7 +109,7 @@ my_item:
 This allows you to change the color of an item made of a supported material (e.g. leather armor).
 
 {% columns %}
-{% column width="58.333333333333336%" %}
+{% column %}
 ```yaml
 my_item:
   color: 3, 252, 136 #rgb
@@ -122,7 +124,7 @@ How to set `Tint` property using BlockBench:
 * Right click on the face and check `Tint` box
 {% endcolumn %}
 
-{% column width="41.666666666666664%" %}
+{% column %}
 ![](../.gitbook/assets/tint.png)
 {% endcolumn %}
 {% endcolumns %}
@@ -256,4 +258,4 @@ This part has a dedicated page, you can consult it [here](items-advanced/item-ap
 
 ## Mechanics options
 
-Mechanics are custom features in Nexo. You can find more under [Broken link](broken-reference "mention") section
+Mechanics are custom features in Nexo. You can find more under [broken-reference](broken-reference/ "mention") section

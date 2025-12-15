@@ -15,6 +15,12 @@ coverY: 0
 Nexo configuration is mainly divided into 3, items, resourcepack & glyphs.\
 These folders contain the majority of custom configurations you need.
 
+## Formatting
+
+Nexo has some settings for toggling its handling of various packets. Most of these are for transforming Glyph-Tags in packets that handle text or Items.\
+Some of these can in some cases cause desync or other issues for some servers.\
+These can be toggled of in such cases without much downside.
+
 ## ResourcePack
 
 ### Obfuscation
