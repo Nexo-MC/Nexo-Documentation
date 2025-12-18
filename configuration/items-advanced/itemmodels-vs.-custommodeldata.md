@@ -39,16 +39,15 @@ Now we can change the base ItemModel itself, and not rely on overriding the vani
 For servers which only support 1.21.4+ clients, this is the ideal way to handle it.\
 It will cause no conflicts, open up for more customizability and stability, and is the intended way to do custom models.
 
-### How do iI start using custom ItemModels?
+### How do I start using custom ItemModels?
 
 Nexo makes the process of swapping away from CustomModelData to ItemModels very easy.\
 1\. Ensure you take a backup of your `Nexo/items` - folder\
 2\. Go into `Nexo/settings.yml` and set `Pack.generation.prefer_item_models: true`\
 3\. Go into your server and run the command `/nexo reset_custom_model_data`\
-4\. Run the command `/nexo reload`&#x20;
+4\. Run the command `/nexo reload`
 
-And that is it, your NexoItems should now all be swapped to their own custom ItemModel\
-
+And that is it, your NexoItems should now all be swapped to their own custom ItemModel\\
 
 ```yaml
 myitem:
@@ -63,4 +62,3 @@ This ItemModel can be used on any item with any material in any plugin (that sup
 ### When should I not use a custom ItemModel?
 
 The only real time you should not use a custom ItemModel over CustomModelData is if your server tries to support clients older than 1.21.4. There is also some downsides when you have plugins which are still to allow such new features, and rely exclusively on CustomModelData for its features
-

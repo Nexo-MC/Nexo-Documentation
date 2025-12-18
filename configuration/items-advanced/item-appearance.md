@@ -3,6 +3,23 @@ description: How to customize your item appearance?
 cover: >-
   https://cdn.discordapp.com/attachments/896841738621177896/966824489490976798/unknown.png
 coverY: 0
+layout:
+  width: default
+  cover:
+    visible: false
+    size: full
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Special Item Appearance
@@ -25,7 +42,7 @@ You can also use this in any other plugin, assuming they allow you to specify th
 ### Oversized Items in GUI (1.21.6+)
 
 As of 1.21.6+, Mojang made changes to how items render in the GUI.\
-By default they are no longer allowed to go beyond their 16x16 grid, but added an option called `oversixed_in_gui` to ItemModels to return this behaviour.\
+By default they are no longer allowed to go beyond their 16x16 grid, but added an option called `oversized_in_gui` to ItemModels to return this behaviour.\
 In Nexo you can use this for your items by following the below example;
 
 ```yaml
