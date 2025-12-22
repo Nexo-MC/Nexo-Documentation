@@ -132,6 +132,6 @@ Assuming you have a Server A, Server B & Server C:
 ## 📥 Importing
 
 Nexo lets you import Third-Party ResourcePacks in several ways.\
-The recommended one is shown above, by adding a directory or .zip to \`plugins/Nexo/pack/external\_packs\`\
+The recommended one is shown above, by adding a directory or .zip to `plugins/Nexo/pack/external\_packs`\
 There is also `Plugin.import.from_location` in settings.yml, letting you specify a directory/zip relative to your plugins folder\
 There is also `Plugin.import.from_url` in settings.yml, letting you specify any url that Nexo will download a directory/zip from and include
