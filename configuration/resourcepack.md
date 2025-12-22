@@ -16,13 +16,15 @@ layout:
     visible: true
 ---
 
-# ResourcePack
+# 📦 ResourcePack
 
 {% hint style="info" %}
 If you are unsure how to reference a ResourcePack-file in a config-file [#how-do-i-reference-a-resourcepack-file-in-a-config](../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
 {% endhint %}
 
-### ResourcePack-Structure
+***
+
+## 🗂️ ResourcePack-Structure
 
 The ResourcePack in Nexo follows the vanilla structure but also letting you import and automatically merge full ResourcePacks\
 This is in an effort to make importing third-party ResourcePacks a lot easier.\
@@ -60,7 +62,7 @@ Put `my_pack.zip` inside `Nexo/pack/external_packs`
 
 ***
 
-### Obfuscation
+## 🎭 Obfuscation
 
 Nexo has a built in way to "obfuscate" the content of your resource-pack.\
 This is done by randomizing all file-names in an attempt to make it very hard and annoying to try and take stuff from it for pirates.\
@@ -74,7 +76,7 @@ It comes with three modes, `NONE`, `SIMPLE`, `FULL`\
 
 ***
 
-### PackSquash-Integration
+## 📦 PackSquash-Integration
 
 Nexo allows you to run PackSquash on the resourcepack without manually reuploading the pack.\
 Simply download the latest [PackSquash](https://github.com/ComunidadAylas/PackSquash/releases) build and drop it in `plugins/Nexo/pack/packsquash` .\
@@ -103,7 +105,7 @@ Depending on your TOML-configuration & ResourcePack size & complexity, the PackS
 
 ***
 
-### PackServer
+## 🌐 PackServer
 
 Nexo has 3 types of ways to upload & dispatch the ResourcePack it generates\
 **POLYMATH** - A dedicated server hosted by Nexo-Team that your server uploads the pack to\
@@ -114,7 +116,7 @@ The API is also set up so that one could extend the `NexoPackServer-Interface` a
 
 ***
 
-### Cross-Server/Proxy ResourcePacks
+## 🔗 Cross-Server/Proxy ResourcePacks
 
 Nexo by default has no support for handling resourcepacks across a velocity/bungee network.\
 This is however not inherently needed, as the player will keep the resourcepack when swapping servers, unless the new server sends a new resourcepack.
@@ -127,7 +129,7 @@ Assuming you have a Server A, Server B & Server C:
 
 ***
 
-### Importing
+## 📥 Importing
 
 Nexo lets you import Third-Party ResourcePacks in several ways.\
 The recommended one is shown above, by adding a directory or .zip to \`plugins/Nexo/pack/external\_packs\`\
