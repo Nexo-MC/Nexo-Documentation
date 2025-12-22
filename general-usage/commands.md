@@ -46,13 +46,13 @@ This command will be useful if you want to remove an item from a player
 
 #### Permission: `nexo.command.take`
 
-### :printer:Dump Item
+### :printer: Dump Item
 
 This command is useful for debugging a NexoItem or held item to find the Data & Components on it
 
 #### Usage: `/nexo dumpitem <itemid>`
 
-#### Usage: `/nexo take [player(s)]`
+#### Permission: `nexo.command.dumpitem`
 
 ***
 
