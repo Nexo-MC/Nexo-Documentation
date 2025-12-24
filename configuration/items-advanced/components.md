@@ -18,7 +18,7 @@ layout:
 # Components
 
 As of Minecraft 1.20.6, items now use what is called Components, or DataComponents, to specify specific features. This covers anything from consumable items, tool-properties and death protection.\
-dddDue to the nature of these they are very version-specific, so there are some differences and new additions between Minecraft version changes.
+Due to the nature of these they are very version-specific, so there are some differences and new additions between Minecraft version changes.
 
 Each component below has a hover-click to show an example of how to use it, with additional info.
 
