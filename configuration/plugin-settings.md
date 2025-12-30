@@ -9,8 +9,6 @@ coverY: 0
 
 ## Item configurations
 
-### Overview of Nexo-Configurations?
-
 Nexo configuration is mainly divided into 3, items, resourcepack & glyphs.\
 These folders contain the majority of custom configurations you need.
 

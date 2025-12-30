@@ -4,7 +4,7 @@ cover: >-
   https://cdn.discordapp.com/attachments/896841738621177896/966824489490976798/unknown.png
 coverY: 0
 layout:
-  width: default
+  width: wide
   cover:
     visible: false
     size: full
@@ -43,17 +43,22 @@ You can also use this in any other plugin, assuming they allow you to specify th
 
 As of 1.21.6+, Mojang made changes to how items render in the GUI.\
 By default they are no longer allowed to go beyond their 16x16 grid, but added an option called `oversized_in_gui` to ItemModels to return this behaviour.\
+This works best when using ItemModels ([itemmodels-vs.-custommodeldata.md](itemmodels-vs.-custommodeldata.md "mention")).\
 In Nexo you can use this for your items by following the below example;
 
 ```yaml
-oversized_item:
+my_oversized_item:
   material: PAPER
   Pack:
     oversized_in_gui: true
     model: my_oversized_model
   Components:
-    item_model: nexo:oversized_item
+    item_model: nexo:my_oversized_item
 ```
+
+{% hint style="info" %}
+In Nexo 1.17+ there is `Pack.generation.force_oversized_in_gui` which can be used to change the default state of every item if you dont want to specify it for individual items
+{% endhint %}
 
 Here we do not use CustomModelData as that would apply to all items using PAPER.\
 If you are not sure what an ItemModel is, think of it as the **base model** of an item.\

@@ -57,7 +57,7 @@ myitem:
     item_model: nexo:mymodel
 ```
 
-This ItemModel can be used on any item with any material in any plugin (that supports ItemModels) and will never conflict
+This ItemModel can be used on any item with any material in any plugin (that supports ItemModels) and will never conflict. Nexo will by default not set `Components.item_model`  in the config. It will by default use `nexo:item_id` but you can set it to something else manually if you want to.
 
 ### When should I not use a custom ItemModel?
 

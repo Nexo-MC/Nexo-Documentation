@@ -29,7 +29,9 @@ For 1.21.4+ servers there are two approaches you can take, one being manually ma
 
 You will need 2 **Models** and 1 **NexoItem-Config** at minimum.
 
-The simplest method is to let Nexo generate the ItemModel for you. For this you will need a NexoItem-Config like shown below;
+#### Simple Method
+
+The simplest method is to let Nexo generate the **ItemModel** for you. For this you will need a NexoItem-Config like shown below. This specified a model & throwing\_model in Pack, which Nexo will use when making the ItemModel. The throwing\_model is usually the same as the model, but flipped in hand in programs like BlockBench
 
 ```yaml
 forest_trident:
@@ -42,6 +44,8 @@ forest_trident:
     trident:
       display_transform: HEAD
 ```
+
+#### Manual Method
 
 If you want to manually provide the **ItemModel** you will need a simplified config like below;
 
@@ -88,7 +92,7 @@ As shown above this **ItemModel** then links to two separate normal JSON-**Model
 <div><figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Forest Trident with the normal default Model</p></figcaption></figure> <figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Forest Trident in the "throwing" model, rotated</p></figcaption></figure></div>
 {% endtab %}
 
-{% tab title="NexoItem (1.20.4+)" %}
+{% tab title="NexoItem (1.21.1+)" %}
 ```yaml
 forest_trident:
   itemname: Forest Trident
