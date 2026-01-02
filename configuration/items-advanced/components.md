@@ -17,6 +17,16 @@ layout:
 
 # Components
 
+Available animations found [here](https://jd.papermc.io/paper/1.21.11-pre3/io/papermc/paper/datacomponent/item/SwingAnimation.Animation.html)
+
+```yaml
+my_item:
+  Components:
+    swing_animation:
+      type: WHACK
+      duration: 6t
+```
+
 As of Minecraft 1.20.6, items now use what is called Components, or DataComponents, to specify specific features. This covers anything from consumable items, tool-properties and death protection.\
 Due to the nature of these they are very version-specific, so there are some differences and new additions between Minecraft version changes.
 
@@ -259,7 +269,7 @@ Each component below has a hover-click to show an example of how to use it, with
           nutrition: 2
           saturation: 2 
           can_always_eat: false
-                  
+                      
     ```
 
     **can\_always\_eat -** Defaults to false if unspecified\
@@ -531,8 +541,6 @@ Each component below has a hover-click to show an example of how to use it, with
 
     The component can be applied to any item, but only has a visible effect for those with PLAYER\_HEAD material.
 
-
-
     In the profile component itself, you have to specify either **name, uuid** or **properties,** not all.\
     Properties is mostly for referencing skins from databases etc which might not be entirely linked to a player anymore.\
     In properties, name and value are required, but signature is optional
@@ -651,7 +659,7 @@ Each component below has a hover-click to show an example of how to use it, with
             max_duration: 0t
             min_speed: 0f
             min_relative_speed: 0f
-              
+                  
     ```
 
 [^31]: ```yaml
@@ -683,7 +691,7 @@ Each component below has a hover-click to show an example of how to use it, with
           duration: 6t
     ```
 
-    Available animations found [here](https://jd.papermc.io/paper/1.21.11-pre3/io/papermc/paper/datacomponent/item/SwingAnimation.Animation.html)
+    Available animations found [here](https://jd.papermc.io/paper/io/papermc/paper/datacomponent/item/SwingAnimation.html)
 
 [^34]: ```yaml
     my_item:
