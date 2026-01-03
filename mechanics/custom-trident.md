@@ -13,7 +13,24 @@ The Trident-Mechanic is not strictly necessary unless one wants to tweak the pro
 `thrown_item` - Refers to the NexoItem to display for the Projectile. Defaults to the item of this mechanic if unspecified\
 `display_transform` - Lets you set the Transform the model should use, mainly useful when not using a separate ItemModel\
 `rotation` - Lets you rotate the base yaw/pitch of the projectile\
-`damage` - The base-damage the Trident will do when hitting an entity, defaults to 8
+`damage` - The base-damage the Trident will do when hitting an entity, defaults to 8\
+`sounds` - The sounds the Trident should make, defaults to replicating vanilla.
+
+#### Trident Sounds
+
+```yaml
+forest_trident:
+  Mechanics:
+    trident:
+      sounds:
+        throw: my.throw.sound
+        hit: # Optional format for specifying volume and/or pitch
+          sound: my.hit.sound
+          volume: 1.1
+          pitch: 1.0 # Optional, defaults to 1.0
+        #hit_ground: my.hit_ground.sound
+        ##return: my.return.sound
+```
 
 {% hint style="info" %}
 If you are unsure how to reference a ResourcePack-File in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
