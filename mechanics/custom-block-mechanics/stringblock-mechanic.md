@@ -134,7 +134,7 @@ You can also add some randomness to the growth, or just increase the delay betwe
 Go into `mechanics.yml` and under stringblock-mechanic, adjust `sapling_growth_check_delay`\
 This is in ticks, so 20 = 1 second.
 
-For your sapling to work and grow make sure you have created a ``schematics`` folder in Nexo and copy all your schems from FAWE into the schmatics folder. 
+For your sapling to work and grow make sure you have created a ``schematics`` folder in Nexo and copy all your schems from FAWE into the schematics folder. 
 If this is not done, your sapling will not work at all.
 
 
