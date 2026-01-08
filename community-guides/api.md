@@ -38,6 +38,62 @@ Nexo loads items in an async task, thus getting them in your plugins onEnable wi
 You can listen for the NexoItemsLoadedEvent to be sure the items are registered
 {% endhint %}
 
+#### Modifying how Nexo updates a NexoItem
+
+Nexo will update any NexoItem on several actions to ensure its data is up-to-date.\
+If your plugin should override any property on the Item which Nexo resets, follow the steps below.
+
+You need to register an UpdateCallback which lets you run logic on any item Nexo updates.\
+This should be registered during NexoItemsLoadedEvent as shown below;
+
+{% tabs fullWidth="true" %}
+{% tab title="Kotlin" %}
+{% code fullWidth="true" %}
+```kotlin
+@EventHandler
+fun NexoItemsLoadedEvent.onLoaded() {
+    NexoItems.registerUpdateCallback(Key.key("namespace:key"), object : UpdateCallback {
+        override fun preUpdate(itemStack: ItemStack): ItemStack? {
+            // return null to skip updating
+            return null;
+        }
+        
+        override fun postUpdate(itemStack: ItemStack): ItemStack {
+            // Apply changes after Nexo finishes updating the item
+            return itemStack;
+        }
+    }
+}
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+@EventHandler
+public void onItemsLoaded(NexoItemsLoadedEvent event) {
+    NexoItems.registerUpdateCallback(
+        Key.key("namespace", "key"), new UpdateCallback() {
+
+            @Override
+            public ItemStack preUpdate(ItemStack itemStack) {
+                // return null to skip updating
+                return null;
+            }
+
+            @Override
+            public ItemStack postUpdate(ItemStack itemStack) {
+                // Apply changes after Nexo finishes updating the item
+                return itemStack;
+            }
+        }
+    );
+}
+
+```
+{% endtab %}
+{% endtabs %}
+
 ## Custom Blocks
 
 The [NexoBlocks](https://jd.nexomc.com/1.8/com/nexomc/nexo/api/NexoBlocks.html)-class contains all the methods available for placing, removing and checking for custom blocks in Nexo.
@@ -111,4 +167,4 @@ public class PackServer extends NexoPackServer {
 {% endtab %}
 {% endtabs %}
 
-To register this with Nexo, you simply call `PackServerRegistry.register(type, packServer)`&#x20;
+To register this with Nexo, you simply call `PackServerRegistry.register(type, packServer)`
