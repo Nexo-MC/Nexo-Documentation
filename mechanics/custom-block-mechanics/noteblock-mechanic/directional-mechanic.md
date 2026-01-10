@@ -2,15 +2,35 @@
 cover: >-
   https://cdn.discordapp.com/attachments/896841738621177896/966827878706708560/unknown.png
 coverY: 0
+layout:
+  width: wide
+  cover:
+    visible: false
+    size: full
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Directional Mechanic
 
-### What is this?
-
 This mechanic allows you to place blocks and have them change their texture depending on the direction in which they are placed, like for example logs.\
-There are 3 types of directional blocks: `LOG`, `FURNACE` and `DROPPER`.\
-`LOG` takes up 3 custom block variations, `FURNACE` takes 4 and `DROPPER` takes 6.
+There are 4 types of directional blocks: **LOG, BARREL, FURNACE & DROPPER**
+
+**LOG** is made up of 3 Custom Block variations, to mimic behaviour of a vanilla log\
+**BARREL** is made up of 6 Custom Block variations. It s used for when you need a block to be rotatable in all 6 directions (north, west, south, east, up & down)
+
+**FURNACE** is made up of 4 Custom Block variations. It is for when you want a block that rotates to face the player with a front in the 4 horizontal directions (north, south, east, west)\
+**DROPPER** is made up of 6 Custom Block variations. It is for the same purpose as **Furnace** but with support for up & down facings as well.
 
 {% hint style="info" %}
 Every sub-block can have a `model` property, which Nexo will use to determine what to display.\
