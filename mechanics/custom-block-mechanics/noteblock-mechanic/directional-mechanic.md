@@ -3,7 +3,7 @@ cover: >-
   https://cdn.discordapp.com/attachments/896841738621177896/966827878706708560/unknown.png
 coverY: 0
 layout:
-  width: wide
+  width: default
   cover:
     visible: false
     size: full
@@ -73,7 +73,7 @@ custom_log:
       custom_variation: 1 #This can be the same as y-variation to save 1 block-slot
 ```
 
-This applies to the other two types aswell, FURNACE & DROPPER. You can also set a model explicitly for each rotation like shown in DROPPER example. If this is done, Nexo will not apply the standard rotations to it.
+This applies to the three other types aswell; BARREL, FURNACE & DROPPER. You can also set a model explicitly for each rotation like shown in DROPPER example. If this is done, Nexo will not apply the standard rotations to it.
 
 {% hint style="info" %}
 This was added in Nexo 1.15+. For older versions of Nexo you will need to use the old-legacy system as shown below
