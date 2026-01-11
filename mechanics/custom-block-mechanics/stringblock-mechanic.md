@@ -36,7 +36,7 @@ All variations after 64 will have a smaller hitbox than those before.
 This is a type of CustomBlock best aimed at plants, rocks and other foliage.\
 It uses the vanilla TripWire block and therefore will disable all normal behaviour TripWires might have.
 
-## How do I create a stringblock?
+## How do I create a StringBlock?
 
 {% hint style="info" %}
 If you are unsure how to reference a ResourcePack-File in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
@@ -77,13 +77,63 @@ jasmine_flower:
         silktouch: false
 ```
 
-## Minor sub-mechanics
+## Sub-Properties
 
-Stringblocks also have some additional properties.\
-`placeable_on_water`allows you to place it on water like Lilypads\
-`is_tall` makes the customblock have a double hitbox, much like Tall Grass\
-`random_place` takes a list of strings representing other stringblock-mechanics.\
-This will then place a random one of these when the "parent" is placed
+### Placeable On Water
+
+`placeable_on_water` lets you make a stringblock only placeable when placed on water.\
+This aims to mimic how Lilypads work in vanilla. Defaults to false
+
+```yaml
+placeable_on_water:
+  Mechanics:
+    custom_block:
+      type: STRINGBLOCK
+      placeable_on_water: true
+```
+
+***
+
+### Requires Supporting
+
+`requires_supporting` will make the block "unstable" and make it break when the block beneath it is broken. Defaults to false
+
+```yaml
+placeable_on_water:
+  Mechanics:
+    custom_block:
+      type: STRINGBLOCK
+      requires_supporting: true
+```
+
+### Random Place
+
+This takes a list of strings representing other stringblock-mechanics.\
+It will then select a random one to place when placing this item.
+
+```yaml
+random_place:
+  Mechaincs:
+    custom_block:
+      type: STRINGBLOCK
+      custom_variation: 1
+      random_place:
+        - random_place
+        - random_place2
+        - random_place3
+random_place2:
+ Mechanics:
+   custom_block:
+     type: STRINGBLOCK
+     custom_variation: 2
+random_place3:
+ Mechanics:
+   custom_block:
+     type: STRINGBLOCK
+     custom_variation: 3
+```
+
+***
 
 ### Tall Plants
 
@@ -101,9 +151,12 @@ plant:
     custom_block:
       type: STRINGBLOCK
       is_tall: true
+      
 ```
 
-## Sapling
+***
+
+### Sapling
 
 ```yaml
 sapling:
@@ -134,11 +187,11 @@ You can also add some randomness to the growth, or just increase the delay betwe
 Go into `mechanics.yml` and under stringblock-mechanic, adjust `sapling_growth_check_delay`\
 This is in ticks, so 20 = 1 second.
 
-For your sapling to work and grow make sure you have created a ``schematics`` folder in Nexo and copy all your schems from FAWE into the schematics folder. 
-If this is not done, your sapling will not work at all.
+For your sapling to work and grow make sure you have created a `schematics` folder in Nexo and copy all your schems from FAWE into the schematics folder. If this is not done, your sapling will not work at all.
 
+***
 
-## BlockLocker
+### BlockLocker
 
 You can use this to allow protection via [BlockLocker](https://www.spigotmc.org/resources/blocklocker.3268/)\
 Valid protectionTypes are CONTAINER, DOOR, ATTACHABLE
