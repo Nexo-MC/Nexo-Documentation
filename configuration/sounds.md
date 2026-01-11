@@ -30,7 +30,7 @@ sounds:
 ```
 
 {% hint style="info" %}
-If you are unsure how to reference a Sound OGG-file in a ConfigFile[#how-do-i-reference-a-resourcepack-file-in-a-config](../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+If you are unsure how to reference a Sound OGG-file in a ConfigFile[#how-do-i-reference-a-resourcepack-file-in-a-config](../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
 {% endhint %}
 
 There are also some more properties you can tweak if needed, but for majority of cases, the above default will be enough. A detailed explanation of each property can be found [here](https://minecraft.wiki/w/Sounds.json)

@@ -39,7 +39,7 @@ It uses the vanilla TripWire block and therefore will disable all normal behavio
 ## How do I create a StringBlock?
 
 {% hint style="info" %}
-If you are unsure how to reference a ResourcePack-File in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+If you are unsure how to reference a ResourcePack-File in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
 {% endhint %}
 
 ### Nexo Resourcepack configuration

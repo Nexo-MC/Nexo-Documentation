@@ -25,7 +25,7 @@ Make sure your armor-layer files follow the format of **armorname**\_armor\_laye
 In the example below, we would need a **ruby**\_armor\_layer\_1.png & **ruby**\_armor\_layer\_2.png
 
 \
-If you are unsure how to reference a TextureFile in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+If you are unsure how to reference a TextureFile in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
 {% endhint %}
 
 ```yaml

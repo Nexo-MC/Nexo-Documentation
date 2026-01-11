@@ -33,7 +33,7 @@ forest_trident:
 ```
 
 {% hint style="info" %}
-If you are unsure how to reference a ResourcePack-File in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+If you are unsure how to reference a ResourcePack-File in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
 {% endhint %}
 
 {% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FTAoAxayP9PrBtX9UQ5wa%2Fuploads%2FcMJ3GKLdbXDZofLDSj1A%2F2025-05-06_18-25-55_1.mp4?alt=media&token=8d6ffd64-06d1-4340-aa1f-6d10d5d2e84d" %}

@@ -223,7 +223,7 @@ If using devbuilds, we might ask you to give us the full jar-file name.
 
 This command deletes the custom\_model\_data from all of your Nexo Items.\
 Mainly useful for swapping Nexo to a "ItemModel" based system for 1.21.4+ servers.\
-You can get more info about the difference between ItemModels and CustomModelDatas, and why ItemModels are the recommended choice at [itemmodels-vs.-custommodeldata.md](../configuration/items-advanced/itemmodels-vs.-custommodeldata.md "mention")
+You can get more info about the difference between ItemModels and CustomModelDatas, and why ItemModels are the recommended choice at [itemmodels-vs.-custommodeldata.md](faq/itemmodels-vs.-custommodeldata.md "mention")
 
 #### Usage: `/nexo reset_custom_model_data`
 

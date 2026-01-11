@@ -5,7 +5,8 @@
 
 ## General Usage
 
-* [❓ FAQ](general-usage/faq.md)
+* [❓ FAQ](general-usage/faq/README.md)
+  * [ItemModels vs. CustomModelData](general-usage/faq/itemmodels-vs.-custommodeldata.md)
 * [⌨️ Commands](general-usage/commands.md)
 * [🧑‍🍳 Recipes](general-usage/recipes.md)
 
@@ -20,7 +21,6 @@
 * [ResourcePack](configuration/resourcepack.md)
 * [⚒️ Items](configuration/items-advanced.md)
   * [Components](configuration/items-advanced/components.md)
-  * [ItemModels vs. CustomModelData](configuration/items-advanced/itemmodels-vs.-custommodeldata.md)
   * [🤖 2D Player Heads](configuration/items-advanced/2d-player-heads.md)
   * [Special Item Appearance](configuration/items-advanced/item-appearance.md)
 * [🐴 Custom Mob Armor (1.21.2+)](configuration/custom-mob-armor-1.21.2+/README.md)
@@ -36,6 +36,7 @@
   * [🔗 Reference Glyph](configuration/glyphs/reference-glyph.md)
 * [🎵 Sounds](configuration/sounds.md)
 * [🖼️ Custom Paintings](configuration/custom-paintings.md)
+* [💿 Custom Music Discs](configuration/custom-music-discs.md)
 * [🗨️ Dialogs](configuration/dialogs/README.md)
   * [DialogType](configuration/dialogs/dialogtype.md)
   * [DialogBase](configuration/dialogs/dialogbase.md)

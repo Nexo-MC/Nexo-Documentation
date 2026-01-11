@@ -6,7 +6,7 @@ coverY: 0
 # 🪽 Custom Elytras (1.21.2+)
 
 This is a sub-feature of using COMPONENT based CustomArmor, letting you make custom textured elytras.\
-The pattern for adding it is exactly the same as explained in [CustomArmor](components.md)-section, with some slight differences. The Equippable-Component model-property is suffixed with \_elytra, and the itemid follows the scheme `armorname_elytra`&#x20;
+The pattern for adding it is exactly the same as explained in [CustomArmor](components.md)-section, with some slight differences. The Equippable-Component model-property is suffixed with \_elytra, and the itemid follows the scheme `armorname_elytra`
 
 Here is a config example:
 
@@ -23,7 +23,7 @@ forest_elytra:
 ```
 
 {% hint style="info" %}
-If you are unsure how to reference a TextureFile in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+If you are unsure how to reference a TextureFile in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Forest Elytra included with Nexo</p></figcaption></figure>

@@ -38,7 +38,7 @@ heart:
 ```
 
 {% hint style="info" %}
-If you are unsure how to reference a ResourcePack-file in a config-file [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+If you are unsure how to reference a ResourcePack-file in a config-file [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
 {% endhint %}
 
 {% hint style="warning" %}
@@ -50,18 +50,17 @@ If your texture is above 256x256 resolution you need to either downscale it or m
 Nexo implements a custom MiniMessage tag for each glyph, which lets you use it more or less anywhere\
 You can use \<glyph:glyphid> and it will display your glyph, naturally replace glyphid with your Glyphs ID. Above this would be `heart`\
 This tag can then be used in tablists, scoreboards, titles, chat prefixes via LuckPerms or otherwise.\
-It is advised to use the Glyph-Tag over raw unicodes whenever possible\
-
+It is advised to use the Glyph-Tag over raw unicodes whenever possible\\
 
 The Glyph-tag also have some optional arguments you can pass.\
 For [multi-bitmap-glyph.md](multi-bitmap-glyph.md "mention")'s you can specify the index to display.\
 For example if you make a 2x2 Glyph, you can do `<glyph:heart:2>` or `<glyph:heart:2..3>` to display only those parts of the Glyph.
 
-If you want your Glyph to be colorable, you can do `<glyph:heart:colorable>` or `<glyph:heart:c>` \
+If you want your Glyph to be colorable, you can do `<glyph:heart:colorable>` or `<glyph:heart:c>`\
 This will make your Glyph accept any previous color that might apply, and not force it to white or normal
 
 As of 1.21.4 there is also a new "shadow-color" tag, letting you change the color and alpha-value of the Glyphs-shadow\
-You can use this by using the argument shadow, or s, like this; `<glyph:heart:shadow:#AARRGGBB>`&#x20;
+You can use this by using the argument shadow, or s, like this; `<glyph:heart:shadow:#AARRGGBB>`
 
 All these arguments can be combined, letting you specify a specific Bitmap-Index, make it colorable and change the shadow
 
@@ -122,6 +121,6 @@ myemoji:
 ### What's my glyph placeholder?
 
 The section name is the glyph id. In this example the glyph id is `heart`, the placeholder is `%nexo_glyphid%`, so in this example: `%nexo_heart%`\
-Glyph-ID is the first line in any glyphs config, it is not the texturename or the placeholder. you can also do shifts using PAPI by doing `%nexo_shift_-8%` or `%nexo_shift_8%`&#x20;
+Glyph-ID is the first line in any glyphs config, it is not the texturename or the placeholder. you can also do shifts using PAPI by doing `%nexo_shift_-8%` or `%nexo_shift_8%`
 
 Do note if the font of a Glyph isnt `minecraft:default` this will just default to using a Glyph-Tag, not unicodes

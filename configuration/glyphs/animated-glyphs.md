@@ -20,7 +20,7 @@ Unlike normal Glyphs, font cannot be customized, as Nexo sets it for you.\
 Texture-property is based on the `gif`-property and can be customized that way
 
 {% hint style="info" %}
-If you are unsure how to reference a Texture in a Glyph config[#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+If you are unsure how to reference a Texture in a Glyph config[#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
 {% endhint %}
 
 {% hint style="warning" %}

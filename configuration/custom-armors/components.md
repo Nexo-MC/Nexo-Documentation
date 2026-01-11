@@ -14,7 +14,7 @@ Make sure your armor-layer files follow the format of **armorname**\_armor\_laye
 In the example below, we would need a **forest**\_armor\_layer\_1.png & **forest**\_armor\_layer\_2.png
 
 \
-If you are unsure how to reference a TextureFile in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+If you are unsure how to reference a TextureFile in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
 {% endhint %}
 
 ```yaml
@@ -43,7 +43,7 @@ forest_helmet:
 ```
 
 {% hint style="warning" %}
-If using a 3D model for your helmet, do not specify Components.equippable.asset_id
+If using a 3D model for your helmet, do not specify Components.equippable.asset\_id
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Forest Armor Sets Nexo comes with (Player, Wolf, Horse &#x26; Llama)</p></figcaption></figure>

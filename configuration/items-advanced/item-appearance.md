@@ -43,7 +43,7 @@ You can also use this in any other plugin, assuming they allow you to specify th
 
 As of 1.21.6+, Mojang made changes to how items render in the GUI.\
 By default they are no longer allowed to go beyond their 16x16 grid, but added an option called `oversized_in_gui` to ItemModels to return this behaviour.\
-This works best when using ItemModels ([itemmodels-vs.-custommodeldata.md](itemmodels-vs.-custommodeldata.md "mention")).\
+This works best when using ItemModels ([itemmodels-vs.-custommodeldata.md](../../general-usage/faq/itemmodels-vs.-custommodeldata.md "mention")).\
 In Nexo you can use this for your items by following the below example;
 
 ```yaml

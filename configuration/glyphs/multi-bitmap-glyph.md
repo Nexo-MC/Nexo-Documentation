@@ -23,7 +23,7 @@ In your glyph you can specify an amount of rows and columns your glyph needs.\
 This will make nexo assign unicodes based on your needs.
 
 {% hint style="info" %}
-If you are unsure how to reference a Texture in a Glyph config[#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq.md#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+If you are unsure how to reference a Texture in a Glyph config[#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
 {% endhint %}
 
 Example for using a 512x512 texture:
