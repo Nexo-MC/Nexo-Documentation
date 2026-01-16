@@ -118,13 +118,26 @@ All the methods below support a `BLANK_texture` or `BLANK_textures` aswell as mo
 For example for a 2D bow with different pulling-stages.
 {% endhint %}
 
+### Dyeable Items
+
+```yaml
+myitem:
+  Pack:
+    model: example
+    dyeable_model: example_dyeable
+    #texture: example
+    #dyeable_texture: example_dyeable
+```
+
 ### Blocking Model (Shields)
 
 ```yaml
 myitem:
   Pack:
-    model: example_shield.json #json extension is not mandatory
-    blocking_model: example_shield_blocking.json #json extension is not mandatory
+    model: example_shield
+    blocking_model: example_shield_blocking
+    #texture: example_shield
+    #blocking_texture: example_shield_blocking
 ```
 
 ### Pulling Models (Bows / Crossbow)
@@ -160,6 +173,8 @@ myitem:
   Pack:
     model: default/fishing_rod
     cast_model: default/fishing_rod_cast
+    #texture: default/fishing_rod
+    #cast_texture: default/fishing_rod_cast
 ```
 
 ### Damaged Model (Based on durability)
@@ -172,4 +187,16 @@ myitem:
       - default/diamond_sword_damaged1
       - default/diamond_sword_damaged2
       - default/diamond_sword_damaged3
+```
+
+### Composite Models
+
+```yaml
+myitem:
+  Pack:
+    model: default/diamond_sword
+    composite_models:
+      - default/background
+      - default/item
+      - default/overlay
 ```
