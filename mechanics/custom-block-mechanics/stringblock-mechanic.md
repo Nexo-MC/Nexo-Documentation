@@ -211,7 +211,7 @@ stackable:
         - model: block/carrots_stage3
 ```
 
-<figure><img src="../../.gitbook/assets/output.gif" alt=""><figcaption></figcaption></figure>
+{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FTAoAxayP9PrBtX9UQ5wa%2Fuploads%2FLF3sBKNIAHWhqnPAtzxZ%2Foutput.mp4?alt=media&token=382dfe8a-1cd5-4fbb-b50d-ab8224048f7a" %}
 
 ***
 
