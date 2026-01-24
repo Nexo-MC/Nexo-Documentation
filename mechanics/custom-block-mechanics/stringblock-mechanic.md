@@ -191,6 +191,30 @@ For your sapling to work and grow make sure you have created a `schematics` fold
 
 ***
 
+### Stackable
+
+This lets you make a block which can be stacked, much like Pink Petals. This will alter the model shown and the drop amount given when it is broken. Below is an example using carrots.\
+If you only have Textures and not Models, you will need to either make them or make dummy NexoItems that then generates this Model for you.
+
+```yaml
+stackable:
+  material: PAPER
+  Pack:
+    model: item/carrot
+  Mechanics:
+    custom_block:
+      type: STRINGBLOCK
+      model: block/carrots_stage0
+      stackable:
+        - model: block/carrots_stage1
+        - model: block/carrots_stage2
+        - model: block/carrots_stage3
+```
+
+<figure><img src="../../.gitbook/assets/output.gif" alt=""><figcaption></figcaption></figure>
+
+***
+
 ### BlockLocker
 
 You can use this to allow protection via [BlockLocker](https://www.spigotmc.org/resources/blocklocker.3268/)\
