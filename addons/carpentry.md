@@ -131,3 +131,58 @@ custom_grate:
       type: GRATE
       custom_variation: 1          # 1-4 are available
 ```
+
+{% hint style="warning" %}
+The BlockTypes below here require a 1.21.10+ server
+{% endhint %}
+
+### Custom Chain
+
+This type allows for custom chains, like iron or copper ones.\
+The config is very basic and only requires you to have a Texture for it
+
+```yaml
+custom_chain:
+  material: PAPER
+  itemname: Custom Chain
+  Pack:
+    parent_model: block/template_chain
+    texture: my_texture/path
+  Mechanics:
+    custom_block:
+      type: CHAIN
+```
+
+### Custom Lantern
+
+This type allows for custom chains, like copper & normal ones.\
+The config is very basic and only requires you to have a Texture for it
+
+```yaml
+custom_lantern:
+  material: PAPER
+  itemname: Custom Lantern
+  Pack:
+    parent_model: block/template_lantern
+    texture: my_texture/path
+  Mechanics:
+    custom_block:
+      type: LANTERN
+```
+
+### Custom Bars
+
+This type allows for custom bars, like iron bars in vanilla.\
+The config is very basic and only requires you to have a Texture for it
+
+```yaml
+custom_bars:
+  material: PAPER
+  itemname: Custom Bars
+  Pack:
+    parent_model: block/template_bars
+    texture: my_texture/path
+  Mechanics:
+    custom_block:
+      type: BARS
+```
