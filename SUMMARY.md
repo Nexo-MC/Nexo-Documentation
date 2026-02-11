@@ -7,6 +7,7 @@
 
 * [❓ FAQ](general-usage/faq/README.md)
   * [ItemModels vs. CustomModelData](general-usage/faq/itemmodels-vs.-custommodeldata.md)
+* [📺 Video Tutorials](general-usage/video-tutorials.md)
 * [⌨️ Commands](general-usage/commands.md)
 * [🧑‍🍳 Recipes](general-usage/recipes.md)
 
