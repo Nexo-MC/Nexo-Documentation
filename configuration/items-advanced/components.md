@@ -1,31 +1,4 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # Components
-
-Available animations found [here](https://jd.papermc.io/paper/1.21.11-pre3/io/papermc/paper/datacomponent/item/SwingAnimation.Animation.html)
-
-```yaml
-my_item:
-  Components:
-    swing_animation:
-      type: WHACK
-      duration: 6t
-```
 
 As of Minecraft 1.20.6, items now use what is called Components, or DataComponents, to specify specific features. This covers anything from consumable items, tool-properties and death protection.\
 Due to the nature of these they are very version-specific, so there are some differences and new additions between Minecraft version changes.
