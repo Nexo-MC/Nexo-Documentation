@@ -2,23 +2,6 @@
 cover: >-
   https://cdn.discordapp.com/attachments/896841738621177896/966824770651967498/unknown.png
 coverY: 0
-layout:
-  width: default
-  cover:
-    visible: true
-    size: full
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # ⚒️ Items
@@ -86,7 +69,7 @@ myitem:
 
 There is also a CustomData [components.md](items-advanced/components.md "mention") if setting things outside of the normal PublicBukkitValues-entry for the item is wanted
 
-### Itemname
+### Item Name
 
 This allows you to change the name displayed of your item without interfering with renamed items.
 
@@ -103,6 +86,62 @@ This allows you to change the item type. Defaults to PAPER if unspecified.
 my_item:
   material: WOODEN_SWORD
 ```
+
+### AttributeModifiers
+
+This allows you to add minecraft attributes to your item. They are very powerful and allow you to make an item that adds hearts, increases the player's speed, etc.
+
+{% tabs %}
+{% tab title="1.21.6+" %}
+```yaml
+my_item:
+  AttributeModifiers:
+    - attribute: MOVEMENT_SPEED
+      amount: 0.1 
+      operation: ADD_NUMBER
+      slot: MAINHAND
+      display:
+        type: override
+        text: "Value: <red>0.1"
+```
+
+List of Attributes can be found [here](https://jd.papermc.io/paper/1.21.11/org/bukkit/attribute/Attribute.html)\
+List of Operations can be found [here](https://jd.papermc.io/paper/1.21.11/org/bukkit/attribute/AttributeModifier.Operation.html)\
+List of Slots can be found [here](https://jd.papermc.io/paper/1.21.11/org/bukkit/inventory/EquipmentSlotGroup.html)
+
+The types of AttributeDisplay are; **default, hidden & override**\
+Of these only **override** has an additional field, text, which is the new text to show
+{% endtab %}
+
+{% tab title="1.21.2+" %}
+```yaml
+my_item:
+  AttributeModifiers:
+    - attribute: MOVEMENT_SPEED
+      amount: 0.1 
+      operation: ADD_NUMBER
+      slot: MAINHAND
+```
+
+List of Attributes can be found [here](https://jd.papermc.io/paper/1.21.11/org/bukkit/attribute/Attribute.html)\
+List of Operations can be found [here](https://jd.papermc.io/paper/1.21.11/org/bukkit/attribute/AttributeModifier.Operation.html)\
+List of Slots can be found [here](https://jd.papermc.io/paper/1.21.11/org/bukkit/inventory/EquipmentSlotGroup.html)
+{% endtab %}
+
+{% tab title="1.21.1" %}
+```yaml
+my_item:
+  AttributeModifiers:
+    # - attribute: Get the list here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html
+    # - operations: 0 for ADD_NUMBER, 1 for ADD_SCALAR, 2 for MULTIPLY_SCALAR_1;
+    # - slot: HAND, OFF_HAND, FEET, LEGS, CHEST or HEAD
+    - attribute: MOVEMENT_SPEED
+      amount: 0.1 
+      operation: 0
+      slot: HAND
+```
+{% endtab %}
+{% endtabs %}
 
 ### Color
 
@@ -212,22 +251,6 @@ my_item:
       ambient: false
       particles: true
       icon: true
-```
-
-### AttributeModifiers
-
-This allows you to add minecraft attributes to your item. They are very powerful and allow you to make an item that adds hearts, increases the player's speed, etc. Get the list of available attributes [here](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html).
-
-```yaml
-my_item:
-  AttributeModifiers:
-    # - attribute: Get the list here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html
-    # - operations: 0 for ADD_NUMBER, 1 for ADD_SCALAR, 2 for MULTIPLY_SCALAR_1;
-    # - slot: HAND, OFF_HAND, FEET, LEGS, CHEST or HEAD
-    - attribute: MOVEMENT_SPEED
-      amount: 0.1 
-      operation: 0
-      slot: HAND
 ```
 
 ### Enchantments
