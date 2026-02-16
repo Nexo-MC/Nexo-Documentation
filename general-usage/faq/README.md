@@ -1,19 +1,5 @@
 ---
 description: A summary of the most common questions about Nexo
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # ❓ FAQ

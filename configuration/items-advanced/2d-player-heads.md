@@ -1,23 +1,6 @@
 ---
 cover: ../../.gitbook/assets/image.png
 coverY: 0
-layout:
-  width: wide
-  cover:
-    visible: true
-    size: full
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # 🤖 2D Player Heads

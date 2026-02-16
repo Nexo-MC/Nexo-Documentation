@@ -3,23 +3,6 @@ description: How to customize your item appearance?
 cover: >-
   https://cdn.discordapp.com/attachments/896841738621177896/966824489490976798/unknown.png
 coverY: 0
-layout:
-  width: wide
-  cover:
-    visible: false
-    size: full
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Special Item Appearance

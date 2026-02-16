@@ -1,20 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # 📜 Version Support
 
 Nexo aims to support the latest releases of Minecraft as soon as possible. Below is a detailed list of which server-versions Nexo currently supports.

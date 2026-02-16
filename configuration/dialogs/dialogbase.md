@@ -1,20 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # DialogBase
 
 Dialogs have a base which contains the content of the Dialog.\
@@ -23,10 +6,10 @@ Below are the propeties you can use
 **title -** The title of the Dialog, is always visible on the screen\
 **externalTitle** - Name used for buttons that link to this Dialog, defaults to title\
 **canCloseWithEscape** - If the Dialog can be dismissed with Escape Key\
-**afterAction** - Operation performed on the dialog after click or submit actions. \
-&#x20; \* **NONE -** Keeps the current dialog screen open\
-&#x20; \* **CLOSE (Default) -** Close and return to the previous non-dialog screen (if any)\
-&#x20; \* **WAIT\_FOR\_RESPONSE -** Replaces the current screen with a "Waiting for Response"\
+**afterAction** - Operation performed on the dialog after click or submit actions.\
+\* **NONE -** Keeps the current dialog screen open\
+\* **CLOSE (Default) -** Close and return to the previous non-dialog screen (if any)\
+\* **WAIT\_FOR\_RESPONSE -** Replaces the current screen with a "Waiting for Response"\
 **bodies** - List of DialogBodies to add to the Dialog Screen\
 **inputs** - List of DialogInputs to add to the Dialog Screen
 

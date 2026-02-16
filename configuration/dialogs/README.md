@@ -1,20 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # 🗨️ Dialogs
 
 Nexo simplifies the process of adding new Dialogs to your server.\
@@ -94,4 +77,3 @@ base:
           display: "Second Option"
           initial: false
 ```
-

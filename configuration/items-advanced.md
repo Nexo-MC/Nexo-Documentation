@@ -55,6 +55,10 @@ template_item:
     - "template lore 2"
 ```
 
+### ItemModel Builder
+
+This lets you generate an ItemModel for your NexoItem without needing to provide the ResourcePack file. You can directly reference all you need right in the config. More detailed info can be found at [#itemmodel-builder](items-advanced.md#itemmodel-builder "mention")
+
 ### PersistentData
 
 This lets you add custom data into the items PersistentDataContainer. These exist within the `PublicBukkitValues` of the item. Type is the type of data to add. Supported types can be found [here](https://jd.papermc.io/paper/1.21.5/org/bukkit/persistence/PersistentDataType.html#field-summary). Nexo also has some custom DataTypes which can be used, like UUID. These can be found [here](https://hub.jeff-media.com/javadocs/morepersistentdatatypes/)

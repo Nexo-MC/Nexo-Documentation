@@ -1,20 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # 🖼️ Multi-Bitmap Glyph
 
 If you have a texture consisting of several emotes or a texture larger than the allowed 256x256, you can make it a multi-bitmap.\
