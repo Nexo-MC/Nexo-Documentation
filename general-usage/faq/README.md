@@ -62,6 +62,14 @@ assets/**NAMESPACE**/sounds/**PATH/FILE**.ogg `sound: NAMESPACE:PATH/FILE`
 
 If your file is inside `assets/minecraft/...` , meaning your namespace is **minecraft**, specifying it in a config is optional. If no namespace is defined, it will assume you mean **minecraft**
 
+### Why can't I hear Stone/Wood sounds?
+
+Nexo replaces these sounds with empty ones in order to correctly play Custom Block sounds.\
+Nexo will however, play a clone of the vanilla sound whenever the sound would normally play.\
+Majority of the time when you cannot hear these sounds, is when you have a ResourcePack sent by Nexo, but you are on a server without Nexo. Like a Velocity/Bungee network where Server A has Nexo, but Server B does not.
+
+The fastest fix is to disable `custom_block_sounds` in `mechanics.yml` for CustomBlock & Furniture.
+
 ### What is a Duration & how do I use it?
 
 A duration is a dynamic way to specify time in a variety of ways.\
