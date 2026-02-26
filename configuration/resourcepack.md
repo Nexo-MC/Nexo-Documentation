@@ -42,7 +42,7 @@ Below is an example of the new structure.
 {% endcode %}
 
 Goal is to let users merge resourcepacks in via either ZIPs or directories, outside of the normal assets folder.\
-This would dynamically merge in any conflicting files, like a paper.json or sounds.json, instead of migrating it to oraxen-configs to be generated.\
+This would dynamically merge in any conflicting files, like a paper.json or sounds.json, instead of migrating it to Nexo-configs to be generated.\
 Meaning that pack-import instructions on your end now boils down to:\
 Put `my_pack.zip` inside `Nexo/pack/external_packs`
 
