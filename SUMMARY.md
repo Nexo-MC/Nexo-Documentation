@@ -84,6 +84,7 @@
 ## Compatibility
 
 * [PlaceholderAPI](compatibility/placeholderapi.md)
+* [Nexo Creative Inventory](compatibility/nexo-creative-inventory.md)
 * [ModelEngine - custom mobs](compatibility/modelengine-custom-mobs.md)
 * [MythicMobs - custom mobs](compatibility/mythicmobs-custom-mobs.md)
 * [MythicCrucible](compatibility/crucible.md)
