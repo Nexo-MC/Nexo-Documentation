@@ -106,7 +106,7 @@ As shown above this **ItemModel** then links to two separate normal JSON-**Model
 `assets/nexo/models/item/nexo_tools/forest_trident.json`\
 `assets/nexo/models/item/nexo_tools/forest_trident_throwing.json`
 
-<div><figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Forest Trident with the normal default Model</p></figcaption></figure> <figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Forest Trident in the "throwing" model, rotated</p></figcaption></figure></div>
+<div><figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Forest Trident with the normal default Model</p></figcaption></figure> <figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Forest Trident in the "throwing" model, rotated</p></figcaption></figure></div>
 {% endtab %}
 
 {% tab title="NexoItem (1.21.1+)" %}

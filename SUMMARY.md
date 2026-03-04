@@ -53,6 +53,7 @@
 ## Mechanics
 
 * [🪑 Furniture Mechanic](mechanics/furniture-mechanic/README.md)
+  * [Text-Entities](mechanics/furniture-mechanic/text-entities.md)
   * [🎯 Hitbox](mechanics/furniture-mechanic/hitbox/README.md)
     * [🚧 Barrier Hitbox](mechanics/furniture-mechanic/hitbox/barrier-hitbox.md)
     * [🔳 Interaction Hitbox](mechanics/furniture-mechanic/hitbox/interaction-hitbox.md)

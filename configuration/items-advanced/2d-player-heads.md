@@ -1,5 +1,5 @@
 ---
-cover: ../../.gitbook/assets/image.png
+cover: ../../.gitbook/assets/image (1).png
 coverY: 0
 ---
 
@@ -26,4 +26,4 @@ It comes with a premade Nexo-setup, making it easy to add, but all it contains i
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>1x1 &#x26; 2x2 PlayerHeads for Boy0000 &#x26; Sixsoul (NexoAssets)</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>1x1 &#x26; 2x2 PlayerHeads for Boy0000 &#x26; Sixsoul (NexoAssets)</p></figcaption></figure>
