@@ -16,13 +16,13 @@ It comes with a premade Nexo-setup, making it easy to add, but all it contains i
 
 {% code title="1x1 PlayerHead:" overflow="wrap" %}
 ```json
-/minecraft:give player_head[item_model:"nexo:2d_player_head",profile={"name":"boy0000"}]
+/minecraft:give <player> player_head[item_model="nexo:2d_player_head",profile={"name":"boy0000"}]
 ```
 {% endcode %}
 
 {% code title="2x2 PlayerHead" overflow="wrap" %}
 ```json
-/minecraft:give player_head[item_model:"nexo:2d_player_head_large",profile={"name":"boy0000"}]
+/minecraft:give <player> player_head[item_model="nexo:2d_player_head_large",profile={"name":"boy0000"}]
 ```
 {% endcode %}
 
