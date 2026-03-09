@@ -14,7 +14,7 @@ In short, navigate to `plugins/Nexo/sounds.yml` and add a basic entry for your s
 ```yaml
 sounds:
   - id: namespace:my.sound    # This is a key which will be used in the NexoItem
-    file: namespace:my/sound  # This references your OGG file and where you put it
+    sound: namespace:my/sound  # This references your OGG file and where you put it
     stream: true              # Optional, defaults to false. Enable for long sounds
     jukebox_playable:
       comparator_output: 15   # Optional, defaults to 15, must be in 1..15
