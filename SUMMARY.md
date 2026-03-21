@@ -53,12 +53,12 @@
 ## Mechanics
 
 * [🪑 Furniture Mechanic](mechanics/furniture-mechanic/README.md)
-  * [Text-Entities](mechanics/furniture-mechanic/text-entities.md)
   * [🎯 Hitbox](mechanics/furniture-mechanic/hitbox/README.md)
     * [🚧 Barrier Hitbox](mechanics/furniture-mechanic/hitbox/barrier-hitbox.md)
     * [🔳 Interaction Hitbox](mechanics/furniture-mechanic/hitbox/interaction-hitbox.md)
     * [📤 Shulker Hitbox](mechanics/furniture-mechanic/hitbox/shulker-hitbox.md)
     * [👻 Ghast Hitbox](mechanics/furniture-mechanic/hitbox/ghast-hitbox.md)
+  * [Text-Entities](mechanics/furniture-mechanic/text-entities.md)
   * [🖇️ Connectable Furniture](mechanics/furniture-mechanic/connectable-furniture.md)
   * [🪑 Seat Mechanic](mechanics/furniture-mechanic/seat-mechanic.md)
   * [🛏️ Bed Mechanic](mechanics/furniture-mechanic/bed-mechanic.md)
@@ -72,20 +72,21 @@
     * [Directional Mechanic](mechanics/custom-block-mechanics/noteblock-mechanic/directional-mechanic.md)
   * [🧵 StringBlock Mechanic](mechanics/custom-block-mechanics/stringblock-mechanic.md)
 * [🔱 Custom Trident](mechanics/custom-trident.md)
-* [Other Mechanics](mechanics/all-mechanics.md)
-* [ClickAction Mechanic](mechanics/clickaction-mechanic.md)
+* [🖱️ ClickAction Mechanic](mechanics/clickaction-mechanic.md)
 * [Custom Mechanic](mechanics/custom-mechanic.md)
+* [Other Mechanics](mechanics/all-mechanics.md)
 
 ## ➕ Addons
 
 * [🚪 Carpentry](addons/carpentry.md)
 * [🧩 Core Shaders](addons/core-shaders/README.md)
   * [Text Effects by Akis](addons/core-shaders/text-effects-by-akis.md)
+* [Nexo Creative Inventory](addons/nexo-creative-inventory.md)
 
 ## Compatibility
 
+* [🛑 Anti-Cheat Plugins](compatibility/anti-cheat-plugins.md)
 * [PlaceholderAPI](compatibility/placeholderapi.md)
-* [Nexo Creative Inventory](compatibility/nexo-creative-inventory.md)
 * [ModelEngine - custom mobs](compatibility/modelengine-custom-mobs.md)
 * [MythicMobs - custom mobs](compatibility/mythicmobs-custom-mobs.md)
 * [MythicCrucible](compatibility/crucible.md)

@@ -7,7 +7,7 @@ cover: >-
 coverY: 0
 ---
 
-# ClickAction Mechanic
+# 🖱️ ClickAction Mechanic
 
 To get started, create a basic [Custom Block](custom-block-mechanics/noteblock-mechanic/) or [Furniture](furniture-mechanic/).
 
