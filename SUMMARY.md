@@ -19,7 +19,8 @@
 ## Configuration
 
 * [⚙️ Plugin settings](configuration/plugin-settings.md)
-* [ResourcePack](configuration/resourcepack.md)
+* [ResourcePack](configuration/resourcepack/README.md)
+  * [MultiPack Feature](configuration/resourcepack/multipack-feature.md)
 * [⚒️ Items](configuration/items-advanced.md)
   * [ItemModel Builder](configuration/items-advanced/itemmodel-builder/README.md)
     * [Reference ItemModel](configuration/items-advanced/itemmodel-builder/reference-itemmodel.md)

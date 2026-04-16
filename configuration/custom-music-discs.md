@@ -7,7 +7,7 @@ You will need one valid OGG file, for your sound & a NexoItem referencing it.
 
 To begin you will need to register your sound. This is essentially what [sounds.md](sounds.md "mention")explains.\
 All Sound-OGG files go into the **sounds-folder** in the ResourcePack.\
-If unsure how ResourcePacks work & how to structure files, read through [resourcepack.md](resourcepack.md "mention") & [#how-do-i-reference-a-resourcepack-file-in-a-config](../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+If unsure how ResourcePacks work & how to structure files, read through [resourcepack](resourcepack/ "mention") & [#how-do-i-reference-a-resourcepack-file-in-a-config](../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
 
 In short, navigate to `plugins/Nexo/sounds.yml` and add a basic entry for your sound
 

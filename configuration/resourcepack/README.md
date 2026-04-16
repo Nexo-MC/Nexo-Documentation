@@ -5,7 +5,7 @@ icon: file-zipper
 # ResourcePack
 
 {% hint style="info" %}
-If you are unsure how to reference a ResourcePack-file in a config-file [#how-do-i-reference-a-resourcepack-file-in-a-config](../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+If you are unsure how to reference a ResourcePack-file in a config-file [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
 {% endhint %}
 
 ***
@@ -80,7 +80,7 @@ Pack:
 
 To enable Nexo's PackSquash-integration simply enable `Pack.generation.packsquash.enabled` in settings.yml. Then when the pack generates, it will start the PackSquash process. If it suceeds you should see somehting like the below.
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption><p>Example of successful PackSquash process</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Example of successful PackSquash process</p></figcaption></figure>
 
 If it failed you should see some detailed info about which file and a reason for it.\
 If Nexo's debug-mode is enabled, it will output info about all successful files aswell
@@ -111,7 +111,7 @@ Assuming you have a Server A, Server B & Server C:
 
 1. Set `Pack.server` to NONE for Server B & Server C. That way the player joins Server A and loads the resourcepack. When they then swap to Server B or C, the resourcepack from Server A will not be unloaded. The downside here is that if the player joins Server A from B or C, they will get sent the resourcepack again and load it
 2. Use a plugin like [OneTimePack](https://www.spigotmc.org/resources/onetimepack-avoid-double-sending-the-same-pack-bungeecord-velocity.106749/) on your Velocity/Bungee server. These plugins check the ResourcePack-request and compare them. If the pack is the same it will skip it.\
-   If taking this approach make sure to either disable [obfuscation](resourcepack.md#obfuscation) for your NexoPack, or enable caching and manually copy over the .deobfCacheResourcepack folder to all servers
+   If taking this approach make sure to either disable [obfuscation](./#obfuscation) for your NexoPack, or enable caching and manually copy over the .deobfCacheResourcepack folder to all servers
 
 ***
 
