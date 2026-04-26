@@ -179,7 +179,7 @@ base_item:
   nexo_item: my_item_id
 ```
 
-**Item model** | An ItemModelBuilder, refer to [#itemmodel-builder/README.md](../items-advanced/itemmodel-builder/README.md "mention") for details. Can be used to create simple custom items without needing to set up a full Nexo item.
+**Item model** | An ItemModelBuilder, refer to [#itemmodel-builder/README.md](../items/itemmodel-builder/README.md "mention") for details. Can be used to create simple custom items without needing to set up a full Nexo item.
 
 ```yaml
 base_item:

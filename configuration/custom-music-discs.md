@@ -27,7 +27,7 @@ Now make sure you put the OGG file in the right spot. Above we have referenced `
 
 ### Making the Custom Music Disc NexoItem
 
-Now that the sound is all done we just need to make a very basic NexoItem that references the ID of our sound above. There is a slight difference in how the Jukebox Playable-Component is written depending on your server-version. [components.md](items-advanced/components.md "mention") will show you the one for your server.
+Now that the sound is all done we just need to make a very basic NexoItem that references the ID of our sound above. There is a slight difference in how the Jukebox Playable-Component is written depending on your server-version. [components.md](items/components.md "mention") will show you the one for your server.
 
 For setting a custom texture/model on your NexoItem, you can define it under the Pack section.
 

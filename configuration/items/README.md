@@ -10,7 +10,7 @@ coverY: 0
 
 As of Minecraft 1.20.6, items now use what is called Components, or DataComponents, to specify specific features. This covers anything from consumable items, tool-properties and death protection.
 
-You can see a complete list here: [#components](items-advanced.md#components "mention")
+You can see a complete list here: [#components](components.md "mention")
 
 ### ItemTemplate
 
@@ -57,11 +57,13 @@ template_item:
 
 ### ItemModel Builder
 
-This lets you generate an ItemModel for your NexoItem without needing to provide the ResourcePack file. You can directly reference all you need right in the config. More detailed info can be found at [#itemmodel-builder](items-advanced.md#itemmodel-builder "mention")
+This lets you generate an ItemModel for your NexoItem without needing to provide the ResourcePack file. You can directly reference all you need right in the config. More detailed info can be found at [#itemmodel-builder](items/README.md#itemmodel-builder "mention")
 
 ### PersistentData
 
-This lets you add custom data into the items PersistentDataContainer. These exist within the `PublicBukkitValues` of the item. Type is the type of data to add. Supported types can be found [here](https://jd.papermc.io/paper/1.21.5/org/bukkit/persistence/PersistentDataType.html#field-summary). Nexo also has some custom DataTypes which can be used, like UUID. These can be found [here](https://hub.jeff-media.com/javadocs/morepersistentdatatypes/)
+This lets you add custom data into the items PersistentDataContainer. These exist within the `PublicBukkitValues` of the item.\
+Type is the type of data to add. Supported types can be found [here](https://jd.papermc.io/paper/26.1.2/org/bukkit/persistence/PersistentDataType.html#field-detail).\
+Nexo also has some custom DataTypes which can be used, like UUID. These can be found [here](https://github.com/mfnalex/MorePersistentDataTypes#list-of-all-data-types)
 
 ```yaml
 myitem:
@@ -71,7 +73,7 @@ myitem:
       value: "Hi this is a string"
 ```
 
-There is also a CustomData [components.md](items-advanced/components.md "mention") if setting things outside of the normal PublicBukkitValues-entry for the item is wanted
+There is also a CustomData [components.md](components.md "mention") if setting things outside of the normal PublicBukkitValues-entry for the item is wanted
 
 ### Item Name
 
@@ -168,7 +170,7 @@ How to set `Tint` property using BlockBench:
 {% endcolumn %}
 
 {% column %}
-![](../.gitbook/assets/tint.png)
+![](../../.gitbook/assets/tint.png)
 {% endcolumn %}
 {% endcolumns %}
 
@@ -199,7 +201,7 @@ As of 1.21.2+ you should use Enchantable-Component (`Components.enchantable: 0`)
 
 ### excludeFromInventory
 
-This option allows you to exclude an item from the nexo inventory. It will no longer be displayed but you can still get it using [nexo give command](../general-usage/commands.md#get-the-items). It is useful for items used in other plugins like inventory icons.
+This option allows you to exclude an item from the nexo inventory. It will no longer be displayed but you can still get it using [nexo give command](../../general-usage/commands.md#get-the-items). It is useful for items used in other plugins like inventory icons.
 
 ```yaml
 my_item:  
@@ -216,7 +218,7 @@ my_item:
 ### ItemFlags
 
 {% hint style="warning" %}
-As of 1.21.5+ this should be switched with `Components.tooltip_display` [#components](items-advanced.md#components "mention")
+As of 1.21.5+ this should be switched with `Components.tooltip_display` [#components](items/README.md#components "mention")
 {% endhint %}
 
 This allows you to set ItemFlags to an item, get the list of available flags [here](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/ItemFlag.html).
@@ -235,7 +237,7 @@ my_item:
 ### PotionEffects
 
 {% hint style="warning" %}
-This should be swapped with Consumable Component [components.md](items-advanced/components.md "mention") for 1.21.4+
+This should be swapped with Consumable Component [components.md](components.md "mention") for 1.21.4+
 {% endhint %}
 
 This allows you to add custom Potion Effects to your potion. Get the list of available effects [here](https://jd.papermc.io/paper/1.21.3/org/bukkit/potion/PotionEffectType.html).
@@ -281,7 +283,7 @@ my_item:
 
 ## Pack options
 
-This part has a dedicated page, you can consult it [here](items-advanced/item-appearance.md).
+This part has a dedicated page, you can consult it [here](item-appearance.md).
 
 ## Mechanics options
 

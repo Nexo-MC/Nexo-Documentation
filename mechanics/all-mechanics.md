@@ -43,7 +43,7 @@ backpack:
 ### Misc Mechanic
 
 {% hint style="warning" %}
-On 1.20.5+ use the new [FireResistant-Component](../configuration/items-advanced.md) instead of **burns\_in\_x**
+On 1.20.5+ use the new [FireResistant-Component](../configuration/items/README.md) instead of **burns\_in\_x**
 {% endhint %}
 
 This mechanic has a bunch of small changes you can make to your item.\
