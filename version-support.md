@@ -3,8 +3,8 @@
 Nexo aims to support the latest releases of Minecraft as soon as possible. Below is a detailed list of which server-versions Nexo currently supports.
 
 | Version                      | Status                                                       |
-| ---------------------------- | ------------------------------------------------------------ |
-| 26.1.1                       | :white\_check\_mark: [**Supported**](#user-content-fn-1)[^1] |
+|------------------------------| ------------------------------------------------------------ |
+| 26.1-26.1.2                  | :white\_check\_mark: [**Supported**](#user-content-fn-1)[^1] |
 | 1.21.11                      | :white\_check\_mark: [**Supported**](#user-content-fn-2)[^2] |
 | 1.21.9-1.21.10               | :white\_check\_mark: [**Supported**](#user-content-fn-3)[^3] |
 | 1.21.7-1.21.8                | :white\_check\_mark: [**Supported**](#user-content-fn-4)[^4] |
