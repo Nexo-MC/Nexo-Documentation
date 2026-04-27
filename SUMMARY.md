@@ -83,6 +83,7 @@
 * [🧩 Core Shaders](addons/core-shaders/README.md)
   * [Text Effects by Akis](addons/core-shaders/text-effects-by-akis.md)
 * [Nexo Creative Inventory](addons/nexo-creative-inventory.md)
+* [NexoProxy](addons/nexo-proxy.md)
 
 ## Compatibility
 

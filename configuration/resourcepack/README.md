@@ -93,25 +93,81 @@ Depending on your TOML-configuration & ResourcePack size & complexity, the PackS
 
 ## 🌐 PackServer
 
-Nexo has 3 types of ways to upload & dispatch the ResourcePack it generates\
-**POLYMATH** - A dedicated server hosted by Nexo-Team that your server uploads the pack to\
-This server is currently hosted in Germany\
-**SELFHOST** - Server-Instance hosted on your machine. Requires you to configure the `public_address` and ensure a given port is open.\
-**LOBFILE** - Server hosted by [LobFile](https://lobfile.com/), needs a `api_key` in settings.yml\
-The API is also set up so that one could extend the `NexoPackServer-Interface` and create ones own.
+Nexo supports several ways to upload & dispatch the ResourcePack it generates.\
+Set the type via `Pack.server.type` in `settings.yml`.
+
+### NONE
+
+Does not send any ResourcePack to players. Use this on backend servers that should not dispatch a pack.
+
+### POLYMATH
+
+A dedicated upload server hosted by the Nexo team (Germany). The pack is uploaded and served automatically.
+
+```yaml
+Pack:
+  server:
+    type: POLYMATH
+    polymath:
+      server: atlas.nexomc.com
+      secret: nexomc
+```
+
+### SELFHOST
+
+Hosts the ResourcePack directly from your server machine. Requires an open port and a reachable public address.
+
+```yaml
+Pack:
+  server:
+    type: SELFHOST
+    selfhost:
+      port: 8082
+      public_address: "http://your.ip.or.domain"
+      dispatch_threads: 10
+```
+
+### LOBFILE
+
+Uploads the pack to [LobFile](https://lobfile.com/). Requires an API key.
+
+```yaml
+Pack:
+  server:
+    type: LOBFILE
+    lobfile:
+      api_key: YOUR-API-KEY
+```
+
+### S3
+
+Uploads the pack to any S3-compatible object storage (AWS S3, Cloudflare R2, Hetzner Object Storage, etc.).
+
+```yaml
+Pack:
+  server:
+    type: S3
+    s3:
+      public_url: "https://fsn1.your-objectstorage.com"
+      endpoint_url: "https://fsn1.your-objectstorage.com"
+      region: eu-central-1
+      bucket: nexo-storage
+      access_key: ACCESS
+      secret_key: SECRET
+      url_expiration: 7d
+      path_style: false
+      chunked_encoding: true
+```
+
+### Custom PackServer
+
+The `NexoPackServer` interface can be implemented by third-party plugins and registered via `PackServerRegistry`, allowing you to add your own upload/dispatch logic.
 
 ***
 
 ## 🔗 Cross-Server/Proxy ResourcePacks
 
-Nexo by default has no support for handling resourcepacks across a velocity/bungee network.\
-This is however not inherently needed, as the player will keep the resourcepack when swapping servers, unless the new server sends a new resourcepack.
-
-Assuming you have a Server A, Server B & Server C:
-
-1. Set `Pack.server` to NONE for Server B & Server C. That way the player joins Server A and loads the resourcepack. When they then swap to Server B or C, the resourcepack from Server A will not be unloaded. The downside here is that if the player joins Server A from B or C, they will get sent the resourcepack again and load it
-2. Use a plugin like [OneTimePack](https://www.spigotmc.org/resources/onetimepack-avoid-double-sending-the-same-pack-bungeecord-velocity.106749/) on your Velocity/Bungee server. These plugins check the ResourcePack-request and compare them. If the pack is the same it will skip it.\
-   If taking this approach make sure to either disable [obfuscation](./#obfuscation) for your NexoPack, or enable caching and manually copy over the .deobfCacheResourcepack folder to all servers
+For proxy networks (Velocity/BungeeCord), use [NexoProxy](../../addons/nexo-proxy.md) — a Velocity plugin that blocks duplicate ResourcePack sends when players switch between backend servers.
 
 ***
 
