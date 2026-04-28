@@ -92,7 +92,7 @@
 * [ModelEngine - custom mobs](compatibility/modelengine-custom-mobs.md)
 * [MythicMobs - custom mobs](compatibility/mythicmobs-custom-mobs.md)
 * [MythicCrucible](compatibility/crucible.md)
-* [MMOItems](compatibility/mmoitems/README.md)
+* [MMOItems](compatibility/mmoitems.md)
 
 ## Community Guides
 
