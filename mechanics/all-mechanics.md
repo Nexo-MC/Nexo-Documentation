@@ -144,68 +144,6 @@ myitem:
 This mechanic allows you to customize events, conditions and actions.\
 Since it is a quite rspecial mechanic, it has its [dedicated tutorial page](custom-mechanic.md).
 
-## Combat
-
-### Thor
-
-Have you ever dreamed of being able to throw lightning bolts? This is for you.
-
-```yaml
-myitem:
- Mechanics:
-   thor:
-    lightning_bolts_amount: 5
-    random_location_variation: 1.5
-    delay: 20000 # in milliseconds (20000ms = 20s)
-```
-
-* **lightning\_bolts\_amount**: how many lightning bolts will be spawned?
-* **random\_location\_variation**: the random variation range between bolts (in blocks)
-* **delay**: delay between usage in milliseconds (1000ms = 1s)
-
-### Lifesteal
-
-Want to steal hearts to your opponents when you hit them?
-
-```yaml
-myitem:
-  Mechanics:
-    lifesteal:
-      amount: 2 # the amount of 1/2 hearts that you'll steal to your opponents
-```
-
-### EnergyBlast
-
-EnergyBlast is a very cool mechanic that creates a cone of particles to attack entities.
-
-```yaml
-myitem:
-  Mechanics:
-    energyblast:
-      delay: 20000
-      length: 5
-      damage: 10.0
-      particle:
-        type: REDSTONE #Only REDSTONE particle can change size and color.
-        size: 1
-        color:
-          red: 0
-          green: 255
-          blue: 255
-```
-
-### Witherskull
-
-Send wither skulls when right clicking!
-
-```yaml
-myitem:
-  Mechanics:
-    witherskull:
-      charged: false # a charged skull can break blocks
-      delay: 3000 # in milliseconds (3000ms = 3s)
-```
-
 ## Farming
 
 ### Harvesting
