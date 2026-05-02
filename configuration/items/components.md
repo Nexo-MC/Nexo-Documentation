@@ -317,7 +317,7 @@ Each component below has a hover-click to show an example of how to use it, with
         consumable:
           sound: minecraft:entity.generic.eat     # Optional, default is entity.generic.eat
           consume_particles: true                 # Optional, default is true
-          consume_seconds: 1.6s                   # Optional, default is 1.6s
+          consume_duration: 1.6s                   # Optional, default is 1.6s
           animation: EAT                          # Optional, default is EAT
           effects:
             APPLY_EFFECTS:
