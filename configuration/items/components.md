@@ -317,12 +317,12 @@ Each component below has a hover-click to show an example of how to use it, with
         consumable:
           sound: minecraft:entity.generic.eat     # Optional, default is entity.generic.eat
           consume_particles: true                 # Optional, default is true
-          consume_seconds: 1.6                    # Optional, default is 1.6
+          consume_seconds: 1.6s                   # Optional, default is 1.6s
           animation: EAT                          # Optional, default is EAT
           effects:
             APPLY_EFFECTS:
               mining_fatigue:
-                duration: 10
+                duration: 10t
                 amplifier: 1
                 ambient: false
                 show_icon: true
@@ -440,14 +440,14 @@ Each component below has a hover-click to show an example of how to use it, with
     my_item:
       Components:
         use_cooldown:
-          seconds: 1.2
+          duration: 1.2s
           group: nexo:example
     ```
 
     This component triggers the cooldown feature for this Item, similar to using an Ender Pearl in vanilla.\
     \
-    **Seconds:**\
-    The time in seconds the cooldown should last. Defaults to 1.0\
+    **Duration:**\
+    The time the cooldown should last. Defaults to 1.0s\
     \
     **Group (Optional):**\
     This can be used to apply the cooldown on all instances of an item & even other items with the same group
@@ -484,7 +484,7 @@ Each component below has a hover-click to show an example of how to use it, with
           death_effects:                      #Optional, can be empty/set to []
             APPLY_EFFECTS:
               mining_fatigue:
-                duration: 10
+                duration: 10t
                 amplifier: 1
                 ambient: false
                 show_icon: true
@@ -570,7 +570,7 @@ Each component below has a hover-click to show an example of how to use it, with
     my_item:
       Components:
         blocks_attacks:
-          block_delay: 0.0
+          block_delay: 0.0s
           disable_cooldown_scale: 1.0
           block_sound: namespace:key
           disable_sound: namespace:key
@@ -716,7 +716,7 @@ Each component below has a hover-click to show an example of how to use it, with
             nexo_item: itemid
           effects:
             mining_fatigue:
-              duration: 10
+              duration: 10t
               amplifier: 1
               ambient: false
               show_icon: true

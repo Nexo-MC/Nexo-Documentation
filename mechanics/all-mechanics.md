@@ -95,7 +95,7 @@ myitem:
   Mechanics:
     armor_effects:
       night_vision: # the potion effect type
-        duration: 10
+        duration: 10t
         amplifier: 0
         ambient: true # Makes potion effect produce more, translucent, particles.
         particles: true # whether this effect has particles or not
