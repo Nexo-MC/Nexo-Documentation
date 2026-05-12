@@ -6,6 +6,7 @@ icon: text-size
 
 {% hint style="warning" %}
 * **Uses the `rendertype_text`  shader meaning some plugins will not work with it (e.g. MythicHud)**
+* This might not work on newer versions, an alternative can be found [here](https://modrinth.com/resourcepack/thesalts-text-effects)
 {% endhint %}
 
 ## Text Effects Shader
