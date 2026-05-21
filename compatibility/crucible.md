@@ -38,9 +38,9 @@ myitemid:
             amount: 1..3 #Optional
 ```
 
-### MMOItems in Nexo-Recipes
+### MythicCrucible in Nexo-Recipes
 
-You can also make a recipe in Nexo that takes an Crucible Item as an ingredient or as the result.\
+You can also make a recipe in Nexo that takes a Crucible Item as an ingredient or as the result.\
 Like with drops, you just need to specify the `crucible_item`\
 Below is an example of a shaped recipe using a CrucibleItem. Using the RecipeBuilders ingame should also do this for you if the item you use is an CrucibleItem
 
