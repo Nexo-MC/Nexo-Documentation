@@ -25,7 +25,7 @@ Nexo has JavaDocs published at [https://jd.nexomc.com](https://jd.nexomc.com/). 
 ## Custom Items
 
 Nexo has its own ItemBuilder class which handles building its custom items.\
-The [NexoItems](https://jd.nexomc.com/1.8/com/nexomc/nexo/api/NexoItems.html)-class contains most of the methods you would need to handle items.
+The [NexoItems](https://jd.nexomc.com/latest/com/nexomc/nexo/api/NexoItems.html)-class contains most of the methods you would need to handle items.
 
 ```java
 ItemBuilder itemBuilder = NexoItems.itemFromId(itemID);
@@ -55,14 +55,14 @@ fun NexoItemsLoadedEvent.onLoaded() {
     NexoItems.registerUpdateCallback(Key.key("namespace:key"), object : UpdateCallback {
         override fun preUpdate(itemStack: ItemStack): ItemStack? {
             // return null to skip updating
-            return null;
+            return null
         }
         
-        override fun postUpdate(itemStack: ItemStack): ItemStack {
+        override fun postUpdate(itemId: String, itemStack: ItemStack, preUpdateItemStack: ItemStack): ItemStack {
             // Apply changes after Nexo finishes updating the item
-            return itemStack;
+            return itemStack
         }
-    }
+    })
 }
 ```
 {% endcode %}
@@ -82,7 +82,7 @@ public void onItemsLoaded(NexoItemsLoadedEvent event) {
             }
 
             @Override
-            public ItemStack postUpdate(ItemStack itemStack) {
+            public ItemStack postUpdate(String itemId, ItemStack itemStack, ItemStack preUpdateItemStack) {
                 // Apply changes after Nexo finishes updating the item
                 return itemStack;
             }
@@ -96,7 +96,7 @@ public void onItemsLoaded(NexoItemsLoadedEvent event) {
 
 ## Custom Blocks
 
-The [NexoBlocks](https://jd.nexomc.com/1.8/com/nexomc/nexo/api/NexoBlocks.html)-class contains all the methods available for placing, removing and checking for custom blocks in Nexo.
+The [NexoBlocks](https://jd.nexomc.com/latest/com/nexomc/nexo/api/NexoBlocks.html)-class contains all the methods available for placing, removing and checking for custom blocks in Nexo.
 
 ```java
 NexoBlocks.place(itemID, location)
@@ -104,7 +104,7 @@ NexoBlocks.place(itemID, location)
 
 ### Furniture
 
-The [NexoFurniture](https://jd.nexomc.com/1.8/com/nexomc/nexo/api/NexoFurniture.html)-class contains all the methods available for placing, removing and checking for furniture in Nexo. In addition to this you can return the [FurnitureMechanic](https://jd.nexomc.com/1.8/com/nexomc/nexo/mechanics/furniture/FurnitureMechanic.html) of the Furniture to get specific properties of it if needed.
+The [NexoFurniture](https://jd.nexomc.com/latest/com/nexomc/nexo/api/NexoFurniture.html)-class contains all the methods available for placing, removing and checking for furniture in Nexo. In addition to this you can return the [FurnitureMechanic](https://jd.nexomc.com/latest/com/nexomc/nexo/mechanics/furniture/FurnitureMechanic.html) of the Furniture to get specific properties of it if needed.
 
 ```java
 NexoFurniture.place(itemID, location, @Nullable player)
