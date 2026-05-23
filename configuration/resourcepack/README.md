@@ -167,7 +167,7 @@ The `NexoPackServer` interface can be implemented by third-party plugins and reg
 
 ## 🔗 Cross-Server/Proxy ResourcePacks
 
-For proxy networks (Velocity/BungeeCord), use [NexoProxy](../../addons/nexo-proxy.md) — a Velocity plugin that blocks duplicate ResourcePack sends when players switch between backend servers.
+For Velocity proxy networks, use [NexoProxy](../../addons/nexo-proxy.md) — a Velocity plugin that blocks duplicate ResourcePack sends when players switch between backend servers.
 
 ***
 
