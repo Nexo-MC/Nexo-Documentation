@@ -2,7 +2,7 @@
 
 COMPONENT is the recommended way to add custom armor on 1.21.2+ servers. It has **none** of the restrictions older methods had:
 
-* The base item can be **any material** — `PAPER`, an armor item, anything.
+* The base item can be **any material** - `PAPER`, an armor item, anything.
 * No datapack and no server restarts are required.
 * It does not conflict with shaders or require extra client mods.
 
@@ -21,7 +21,7 @@ For an armor set named **`forest`**:
 | Leggings   | `forest_leggings`    |
 | Boots      | `forest_boots`       |
 
-You only need **two** texture files for the whole set — the worn-armor layers:
+You only need **two** texture files for the whole set - the worn-armor layers:
 
 | File                          | Covers                        |
 | ----------------------------- | ----------------------------- |
@@ -43,7 +43,7 @@ Each piece is a normal NexoItem. The only armor-specific part is the worn textur
 ```yaml
 forest_helmet:
   displayname: "<gradient:#3FA34D:#1E6E2D>Forest Helmet"
-  material: PAPER    # Can be any material — armor item or otherwise
+  material: PAPER    # Can be any material - armor item or otherwise
   Pack:
     # Pack.texture is the icon shown in the inventory / when held.
     texture: nexo:item/nexo_armors/forest_helmet
@@ -61,7 +61,7 @@ Repeat this for `forest_chestplate`, `forest_leggings` and `forest_boots`, chang
 
 For the worn armor to render, the item needs an `equippable` component pointing at the set's asset. **Nexo assigns this automatically** based on the item ID, so in most cases you don't need to write it yourself.
 
-The asset id always follows the pattern `nexo:armorname`. If you want to set it manually — for example to control the equip `slot` explicitly — it looks like this:
+The asset id always follows the pattern `nexo:armorname`. If you want to set it manually - for example to control the equip `slot` explicitly - it looks like this:
 
 ```yaml
 forest_helmet:

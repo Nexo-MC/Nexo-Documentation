@@ -39,7 +39,7 @@ custom_sword:
             model: namespace:custom_sword
           on_false:
             type: empty
-    # A Fallback ItemModel so we dont need to define all the other display-contexts manually
+    # A Fallback ItemModel so we don't need to define all the other display-contexts manually
     fallback:
       type: model
       model: namespace:custom_sword

@@ -67,7 +67,7 @@ plushie:
   itemname: Plushie
   material: PAPER
   ItemModel:
-    ## Composite ItemModels stack Models ontop of eachother
+    ## Composite ItemModels stack Models on top of each other
     type: composite
     models:
       - type: model

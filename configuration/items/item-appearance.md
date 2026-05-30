@@ -11,16 +11,16 @@ coverY: 0
 
 Everything under `Pack` controls what your item _looks like_. Before the special cases below, there are two foundational ways to give an item its appearance:
 
-* **`Pack.texture`** — point at a single **PNG**. Nexo generates a flat, sprite-style model for you (the same look as a vanilla `paper` or `apple`). This is all you need for most items.
-* **`Pack.model`** — point at a **JSON model** (e.g. one exported from BlockBench). Use this when you want real 3D geometry, or any look that a flat sprite can't produce.
+* **`Pack.texture`** - point at a single **PNG**. Nexo generates a flat, sprite-style model for you (the same look as a vanilla `paper` or `apple`). This is all you need for most items.
+* **`Pack.model`** - point at a **JSON model** (e.g. one exported from BlockBench). Use this when you want real 3D geometry, or any look that a flat sprite can't produce.
 
-Use **one or the other** — `texture` for a flat icon, `model` for a custom model. You don't need both.
+Use **one or the other** - `texture` for a flat icon, `model` for a custom model. You don't need both.
 
 {% hint style="info" %}
 Not sure how the `nexo:item/...` reference maps to a file on disk? See [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention"). In short: `nexo:item/ruby` → `assets/nexo/textures/item/ruby.png` for a texture, and `assets/nexo/models/item/ruby.json` for a model.
 {% endhint %}
 
-### Simple — a 2D texture only
+### Simple - a 2D texture only
 
 This is the simplest possible custom item: a single PNG shown as a flat icon, both in the inventory and in-hand.
 
@@ -39,13 +39,13 @@ ruby:
 └── 📑 ruby.png
 ```
 
-That's it — Nexo automatically builds a generated model around `ruby.png`, so no `.json` model file is needed.
+That's it - Nexo automatically builds a generated model around `ruby.png`, so no `.json` model file is needed.
 
 {% hint style="info" %}
 `material: PAPER` is recommended. Nexo assigns the item its own ItemModel, so it never collides with other items sharing the same material. See [itemmodels-vs.-custommodeldata.md](../../general-usage/faq/itemmodels-vs.-custommodeldata.md "mention").
 {% endhint %}
 
-Need more than one stacked sprite (e.g. a base layer plus an overlay)? `texture` also accepts a **list** — each entry becomes a layer (`layer0`, `layer1`, …), drawn bottom to top:
+Need more than one stacked sprite (e.g. a base layer plus an overlay)? `texture` also accepts a **list** - each entry becomes a layer (`layer0`, `layer1`, ...), drawn bottom to top:
 
 ```yaml
 ruby:
@@ -56,7 +56,7 @@ ruby:
       - nexo:item/ruby_shine  # layer1 (drawn on top)
 ```
 
-### Advanced — a 3D model
+### Advanced - a 3D model
 
 When a flat sprite isn't enough, design a model in [BlockBench](https://www.blockbench.net/) and reference its exported `.json` with `Pack.model`. The item then renders with full 3D geometry wherever it's shown.
 
@@ -68,7 +68,7 @@ ruby_chalice:
     model: nexo:item/ruby_chalice
 ```
 
-**File layout** — the model JSON goes under `models`, and any PNGs it uses go under `textures`:
+**File layout** - the model JSON goes under `models`, and any PNGs it uses go under `textures`:
 
 ```
 📁 Nexo/pack/assets/nexo
@@ -83,7 +83,7 @@ ruby_chalice:
 1. Build your model in BlockBench and paint/assign its texture.
 2. Export it as a **Java Block/Item model** (`File → Export → Java Block/Item Model`).
 3. Drop the `.json` into `assets/nexo/models/...` and its texture(s) into `assets/nexo/textures/...`.
-4. Make sure the texture paths **inside** the `.json` match where you placed the PNGs — a mismatch here is the usual cause of a purple-and-black (missing texture) model.
+4. Make sure the texture paths **inside** the `.json` match where you placed the PNGs - a mismatch here is the usual cause of a purple-and-black (missing texture) model.
 5. Reference the model with `Pack.model` as shown above.
 
 {% hint style="info" %}

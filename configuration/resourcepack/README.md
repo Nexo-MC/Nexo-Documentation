@@ -78,12 +78,12 @@ Pack:
       settings_path: plugins/Nexo/pack/packsquash/packsquash.toml
 ```
 
-To enable Nexo's PackSquash-integration simply enable `Pack.generation.packsquash.enabled` in settings.yml. Then when the pack generates, it will start the PackSquash process. If it suceeds you should see somehting like the below.
+To enable Nexo's PackSquash-integration simply enable `Pack.generation.packsquash.enabled` in settings.yml. Then when the pack generates, it will start the PackSquash process. If it succeeds you should see something like the below.
 
 <figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Example of successful PackSquash process</p></figcaption></figure>
 
 If it failed you should see some detailed info about which file and a reason for it.\
-If Nexo's debug-mode is enabled, it will output info about all successful files aswell
+If Nexo's debug-mode is enabled, it will output info about all successful files as well
 
 {% hint style="info" %}
 Depending on your TOML-configuration & ResourcePack size & complexity, the PackSquash process might take some time. Nexo will cache the output so that if the ResourcePack does not change, the PackSquash process will not need to be ran again
@@ -167,7 +167,7 @@ The `NexoPackServer` interface can be implemented by third-party plugins and reg
 
 ## 🔗 Cross-Server/Proxy ResourcePacks
 
-For Velocity proxy networks, use [NexoProxy](../../addons/nexo-proxy.md) — a Velocity plugin that blocks duplicate ResourcePack sends when players switch between backend servers.
+For Velocity proxy networks, use [NexoProxy](../../addons/nexo-proxy.md) - a Velocity plugin that blocks duplicate ResourcePack sends when players switch between backend servers.
 
 ***
 

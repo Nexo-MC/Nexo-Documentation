@@ -53,7 +53,7 @@ It works by selecting a Model based on the "connection-state" on the item.
 Here is an example of a ConnectionState ItemModel. It should be fairly self-explanatory.\
 The FurnitureItem displayed to the player has a tag on it specifying the connection-state.\
 This in turn tells the client what model to use from this ItemModel.\
-This reduces the amount of ResourcePack files needed & simplifies the NexoItem config aswell.
+This reduces the amount of ResourcePack files needed & simplifies the NexoItem config as well.
 
 This ItemModel should be put in for-example; `Nexo/pack/assets/nexo/items/connectable/connectable.json`
 

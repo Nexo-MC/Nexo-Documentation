@@ -6,7 +6,7 @@ In your glyph you can specify an amount of rows and columns your glyph needs.\
 This will make nexo assign unicodes based on your needs.
 
 {% hint style="info" %}
-If you are unsure how to reference a Texture in a Glyph config[#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+If you are unsure how to reference a Texture in a Glyph config, see [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
 {% endhint %}
 
 Example for using a 512x512 texture:
@@ -24,7 +24,7 @@ myglyph:
 
 This will make nexo assign 4 unicodes for this glyph, which will be displayed when used.
 
-It should be noted that some cases newlines are not supported. An example is in lore, where it would not correctly align your glyph. A workaround is by using an "range index" in your glyph-tag. Example for using in lore of your NexoItem:
+It should be noted that in some cases newlines are not supported. An example is in lore, where it would not correctly align your glyph. A workaround is using a "range index" in your glyph-tag. Example for using in lore of your NexoItem:
 
 ```yaml
 myitem:
@@ -33,4 +33,4 @@ myitem:
     - "<glyph:myglyph:3..4>"
 ```
 
-This would correctly align your glyph in lore. In cases where newlines are supported, you dont need to specify such a range. Nexo would by default append that to the text and align it.
+This would correctly align your glyph in lore. In cases where newlines are supported, you don't need to specify such a range. Nexo would by default append that to the text and align it.

@@ -1,6 +1,6 @@
 # Trims Based (1.20+)
 
-TRIMS is the method for servers on **1.20–1.21.1**, where the COMPONENT method isn't available yet. With TRIMS, Nexo handles most of the work for you, but there are two important constraints:
+TRIMS is a legacy method for servers on **1.20-1.21.1**, where the COMPONENT method isn't available yet. With TRIMS, Nexo handles most of the work for you, but there are two important constraints:
 
 * Every piece must use a **`CHAINMAIL_*`** base item (`CHAINMAIL_HELMET`, `CHAINMAIL_CHESTPLATE`, etc.).
 * Nexo generates a **datapack** from your configured armor sets, so the server needs a full restart whenever you add or remove a set.
@@ -8,7 +8,7 @@ TRIMS is the method for servers on **1.20–1.21.1**, where the COMPONENT method
 Make sure `armor_type` is set to `TRIMS` in `Nexo/settings.yml` (see the [overview](README.md#choosing-the-method)).
 
 {% hint style="danger" %}
-**First-time setup / after switching to `TRIMS`** — because the datapack only loads on startup, you need three steps:
+**First-time setup / after switching to `TRIMS`** - because the datapack only loads on startup, you need three steps:
 
 1. **Start** your server so the datapack is generated.
 2. **Stop** your server.
@@ -30,7 +30,7 @@ For an armor set named **`ruby`**:
 | Leggings   | `ruby_leggings`      | `CHAINMAIL_LEGGINGS`   |
 | Boots      | `ruby_boots`         | `CHAINMAIL_BOOTS`      |
 
-You only need **two** texture files for the whole set — the worn-armor layers:
+You only need **two** texture files for the whole set - the worn-armor layers:
 
 | File                        | Covers                       |
 | --------------------------- | ---------------------------- |

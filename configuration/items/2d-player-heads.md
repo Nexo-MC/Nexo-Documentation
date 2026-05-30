@@ -9,7 +9,7 @@ coverY: 0
 As this is a very popular feature there are conflicts when several plugins use the Player-Head resourcepack files.
 
 With the Pack here from [NexoAssets](https://mcmodels.net/products/14834/2d-player-heads) you can easily create 2D Player-Heads.\
-It uses ItemModels, hence only supports **1.21.4+**, but wont conflict with any other ResourcePack
+It uses ItemModels, hence only supports **1.21.4+**, but won't conflict with any other ResourcePack
 
 It comes with a premade Nexo-setup, making it easy to add, but all it contains is a ResourcePack added as a Nexo ExternalPack.\
 **Example command for getting the items:**

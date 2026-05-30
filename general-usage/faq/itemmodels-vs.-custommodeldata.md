@@ -15,7 +15,7 @@ By default an item using PAPER as its material will use the vanilla ItemModel **
 When an item uses CustomModelData it then adds a custom entry into this vanilla ItemModel that says;\
 "When an item with this ItemModel has the CustomModelData X, show this Model".
 
-This is the ways custom items have been done ever since it was introduced, as there was no better way.\
+This is the way custom items have been done ever since it was introduced, as there was no better way.\
 It works fine in most cases but can cause some issues and conflicts when merging a lot of files together.
 
 Now we can change the base ItemModel itself, and not rely on overriding the vanilla one.\
@@ -44,4 +44,4 @@ This ItemModel can be used on any item with any material in any plugin (that sup
 
 ### When should I not use a custom ItemModel?
 
-The only real time you should not use a custom ItemModel over CustomModelData is if your server tries to support clients older than 1.21.4. There is also some downsides when you have plugins which are still to allow such new features, and rely exclusively on CustomModelData for its features
+The only real time you should not use a custom ItemModel over CustomModelData is if your server tries to support clients older than 1.21.4. There are also some downsides if you use plugins that don't yet support these newer features and rely exclusively on CustomModelData.

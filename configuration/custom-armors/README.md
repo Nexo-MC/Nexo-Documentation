@@ -13,12 +13,11 @@ Nexo can generate both for you. There are two methods to choose from:
 | Method        | Versions     | Base item        | Notes                                                                |
 | ------------- | ------------ | ---------------- | ------------------------------------------------------------------- |
 | **COMPONENT** | 1.21.2+      | Any material     | The recommended method. No restrictions, no datapack, no shaders.   |
-| **TRIMS**     | 1.20–1.21.1  | `CHAINMAIL_*`    | For older servers only. Requires a generated datapack + restarts.   |
+| **TRIMS**     | Legacy       | `CHAINMAIL_*`    | Older method. Requires a generated datapack + restarts.             |
 
 ## Which method should I use?
 
-* **Running 1.21.2 or newer?** Use [**COMPONENT**](components.md). There is no reason to use TRIMS or shader-based methods on these versions — COMPONENT has no downsides and is simpler to set up.
-* **Running 1.21.1 and only allowing 1.20+ players?** [**TRIMS**](trims.md) is a good fit. It does not break when other shaders are present and needs no extra client mods, but it must use `CHAINMAIL` armor as the base item.
+Nexo runs on 1.21.4+, so **[COMPONENT](components.md) is the method to use** - it has no downsides, works with any base material, and is simpler to set up. [TRIMS](trims.md) only exists for legacy setups and must use `CHAINMAIL` armor as the base item.
 
 ## Choosing the method
 

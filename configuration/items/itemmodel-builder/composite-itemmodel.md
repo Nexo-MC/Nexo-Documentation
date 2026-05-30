@@ -19,8 +19,8 @@ layout:
 
 # Composite ItemModel
 
-A **Composite ItemModel**, is a list of ItemModels that should be layered over eachother.\
-Recommend to check the [Minecraft Wiki](https://minecraft.wiki/w/Items_model_definition#composite) for an always up-to-date list.
+A **Composite ItemModel** is a list of ItemModels that should be layered over each other.\
+We recommend checking the [Minecraft Wiki](https://minecraft.wiki/w/Items_model_definition#composite) for an always up-to-date list.
 
 Below is an example for showing an Item with a Model background
 

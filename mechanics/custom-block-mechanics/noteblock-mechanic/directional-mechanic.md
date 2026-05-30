@@ -10,7 +10,7 @@ This mechanic allows you to place blocks and have them change their texture depe
 There are 4 types of directional blocks: **LOG, BARREL, FURNACE & DROPPER**
 
 **LOG** is made up of 3 Custom Block variations, to mimic behaviour of a vanilla log\
-**BARREL** is made up of 6 Custom Block variations. It s used for when you need a block to be rotatable in all 6 directions (north, west, south, east, up & down)
+**BARREL** is made up of 6 Custom Block variations. It is used for when you need a block to be rotatable in all 6 directions (north, west, south, east, up & down)
 
 **FURNACE** is made up of 4 Custom Block variations. It is for when you want a block that rotates to face the player with a front in the 4 horizontal directions (north, south, east, west)\
 **DROPPER** is made up of 6 Custom Block variations. It is for the same purpose as **Furnace** but with support for up & down facings as well.
@@ -56,6 +56,6 @@ custom_log:
       custom_variation: 1 #This can be the same as y-variation to save 1 block-slot
 ```
 
-This applies to the three other types aswell; BARREL, FURNACE & DROPPER.\
+This applies to the three other types as well; BARREL, FURNACE & DROPPER.\
 You can also set a model explicitly for each rotation like shown in DROPPER example.\
 If this is done, Nexo will not apply the standard rotations to it.

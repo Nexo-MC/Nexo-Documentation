@@ -18,10 +18,10 @@ The texture is the path and name of the texture file in the format of `namespace
 `height` is the scale of your glyph, height must also never be lower than ascent.\
 `ascent` is the vertical offset of your glyph, and must be equal or lower than height.\
 `font` is the font you want to use. If unspecified, it will use the Default Font in settings.yml at `Glyphs.default_font`\
-Unless you need the Glyph for the Escape Menu, as this place only supports the `minecraft:default` font, to use a custom font to limit conflicts & unintended uses\
+Using a custom font (rather than `minecraft:default`) is recommended to limit conflicts and unintended uses. The one exception is Glyphs meant for the Escape/Pause Menu, which only supports the `minecraft:default` font.\
 \
-You can also set a `permission` towards your Glyph to limit who can use it.\
-If unspecified, Nexo will use the default permission defined in settings.yml at `Glyphs.default_permission` . You can specify `<glyph_id>` or `<glyph_placeholder`> which Nexo will then replace for you
+You can also set a `permission` on your Glyph to limit who can use it.\
+If unspecified, Nexo will use the default permission defined in settings.yml at `Glyphs.default_permission`. You can use the placeholders `<glyph_id>` or `<glyph_placeholder>` in that permission, which Nexo will then replace for you
 
 Glyphs can also have `placeholders` which can be used to make more chat-friendly use-cases\
 This is defined as a list of strings and will let players use shorthands for a given Glyph
@@ -123,4 +123,4 @@ myemoji:
 The section name is the glyph id. In this example the glyph id is `heart`, the placeholder is `%nexo_glyphid%`, so in this example: `%nexo_heart%`\
 Glyph-ID is the first line in any glyphs config, it is not the texturename or the placeholder. you can also do shifts using PAPI by doing `%nexo_shift_-8%` or `%nexo_shift_8%`
 
-Do note if the font of a Glyph isnt `minecraft:default` this will just default to using a Glyph-Tag, not unicodes
+Do note if the font of a Glyph isn't `minecraft:default` this will just default to using a Glyph-Tag, not unicodes

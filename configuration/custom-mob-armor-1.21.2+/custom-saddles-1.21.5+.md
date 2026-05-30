@@ -16,7 +16,7 @@ forest_saddle:
   Components:
     equippable:
       slot: BODY
-      allowed_enity_types: [ PIG, HORSE ]
+      allowed_entity_types: [ PIG, HORSE ]
 ```
 
 {% hint style="info" %}

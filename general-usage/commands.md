@@ -9,7 +9,7 @@ coverY: 0
 
 ## 📋 Getting Started
 
-All the nexo-commands can be found under `/nexo` or it's aliases `/n` `/nx`
+All the nexo-commands can be found under `/nexo` or its aliases `/n` `/nx`
 
 ## 🎁 Getting/Removing items
 
@@ -77,10 +77,10 @@ This command allows you to add new recipes to the configuration directly from th
 #### Usage:
 
 ```yaml
-/nexo recipe builder <type>    # Start building a new recipe
-/nexo recipe save <name>       # Save your recipe
-/nexo recipe show all          # See all your recipes
-/nexo recipe show <recipe>     # Check a specific recipe
+/nexo recipes builder <type>    # Start building a new recipe
+/nexo recipes save <name>       # Save your recipe
+/nexo recipes show all          # See all your recipes
+/nexo recipes show <recipe>     # Check a specific recipe
 ```
 
 #### Permission: `nexo.command.recipes`
@@ -153,14 +153,14 @@ An example of the output for a noteblock:
 
 ```yaml
 ItemID: my_cool_block  # this is the ID of the item that the block is tied to
-Intrument: PIANO       # this is the instrument the noteblock uses
+Instrument: PIANO      # this is the instrument the noteblock uses
 Note: 1                # the note
 Powered: false         # the powered state
 ```
 
 this is different for other block types
 
-#### Usage: `/nexo blockinfo <iteminfo>`
+#### Usage: `/nexo blockinfo <itemid>`
 
 #### Permission: `nexo.command.blockinfo`
 
