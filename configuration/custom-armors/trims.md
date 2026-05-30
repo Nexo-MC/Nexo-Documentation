@@ -1,32 +1,51 @@
 # Trims Based (1.20+)
 
-If using trims as your custom-armor type, most things is handled automatically for you.\
-TRIMS method requires using CHAINMAIL as the base-item.
+TRIMS is the method for servers on **1.20–1.21.1**, where the COMPONENT method isn't available yet. With TRIMS, Nexo handles most of the work for you, but there are two important constraints:
 
-\
-Nexo then generates a datapack based on your configured custom armors.\
-Due to it requiring a datapack, the server needs to do a full restart any time you add/remove an armor-set.
+* Every piece must use a **`CHAINMAIL_*`** base item (`CHAINMAIL_HELMET`, `CHAINMAIL_CHESTPLATE`, etc.).
+* Nexo generates a **datapack** from your configured armor sets, so the server needs a full restart whenever you add or remove a set.
+
+Make sure `armor_type` is set to `TRIMS` in `Nexo/settings.yml` (see the [overview](README.md#choosing-the-method)).
 
 {% hint style="danger" %}
-After changing `CustomArmor.armor_type` to `TRIMS` you need to:
+**First-time setup / after switching to `TRIMS`** — because the datapack only loads on startup, you need three steps:
 
-1. Start your server to let datapack be generated
-2. Stop your server
-3. Start it again to enable the previously generated datapack
+1. **Start** your server so the datapack is generated.
+2. **Stop** your server.
+3. **Start** it again so the freshly generated datapack is loaded.
+
+Skipping the second start is the most common reason trims armor "doesn't work" right after switching.
 {% endhint %}
 
-## How to configure your armor?
+## Naming convention (read this first)
+
+As with the COMPONENT method, Nexo links your items and textures together **by name**. Pick one `armorname` (e.g. `ruby`) and reuse it everywhere.
+
+For an armor set named **`ruby`**:
+
+| Piece      | Item ID (config key) | Base material          |
+| ---------- | -------------------- | ---------------------- |
+| Helmet     | `ruby_helmet`        | `CHAINMAIL_HELMET`     |
+| Chestplate | `ruby_chestplate`    | `CHAINMAIL_CHESTPLATE` |
+| Leggings   | `ruby_leggings`      | `CHAINMAIL_LEGGINGS`   |
+| Boots      | `ruby_boots`         | `CHAINMAIL_BOOTS`      |
+
+You only need **two** texture files for the whole set — the worn-armor layers:
+
+| File                        | Covers                       |
+| --------------------------- | ---------------------------- |
+| `ruby_armor_layer_1.png`    | Helmet, chestplate and boots |
+| `ruby_armor_layer_2.png`    | Leggings                     |
+
+{% hint style="warning" %}
+The split is fixed by Minecraft: `layer_1` draws the helmet, chestplate and boots, while `layer_2` draws the leggings.
+{% endhint %}
 
 {% hint style="info" %}
-Make sure that the itemID of your NexoItem follows the pattern `armorname_armortype`.\
-For the rest of the above set it would be `ruby_chestplate`, `ruby_leggings` and `ruby_boots`.
-
-Make sure your armor-layer files follow the format of **armorname**\_armor\_layer\_1/2.png.\
-In the example below, we would need a **ruby**\_armor\_layer\_1.png & **ruby**\_armor\_layer\_2.png
-
-\
-If you are unsure how to reference a TextureFile in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+If you are unsure how to reference a texture file in a NexoItem config, see [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention").
 {% endhint %}
+
+## Configuring an armor piece
 
 ```yaml
 ruby_helmet:
@@ -34,18 +53,23 @@ ruby_helmet:
   material: CHAINMAIL_HELMET
   Pack:
     parent_model: "item/generated"
-    # Optional, if not specified, Nexo searches for any texture
-    # with the filename armorname_armor_layer_X.png
+    # Pack.texture is the icon shown in the inventory / when held.
+    texture: default/armors/ruby_helmet
+    # Optional: only needed if your layer files do NOT follow the
+    # `armorname_armor_layer_X.png` naming. If omitted, Nexo searches
+    # for ruby_armor_layer_1.png and ruby_armor_layer_2.png itself.
     #CustomArmor:
     #  layer1: default/armors/ruby_armor_layer_1.png
     #  layer2: default/armors/ruby_armor_layer_2.png
-    texture: default/armors/ruby_helmet
 ```
 
-A trim-pattern is also necessary for the armor to display correctly.\
-Nexo will automatically assign it if it has not been manually specified.\
-You can optionally manually assign the `trim_pattern` if you want to.\
-The value should be `nexo:armorname`, so in our example;
+Repeat this for `ruby_chestplate`, `ruby_leggings` and `ruby_boots` with their matching `CHAINMAIL_*` material.
+
+## The trim pattern
+
+For the worn armor to render, each piece needs a `trim_pattern`. **Nexo assigns this automatically** based on the item ID, so you usually don't need to set it.
+
+The trim pattern always follows the pattern `nexo:armorname`. To set it manually:
 
 ```yaml
 ruby_helmet:
