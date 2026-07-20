@@ -1,7 +1,7 @@
-# Component Based (1.21.2+)
+# Component Based
 
-If using COMPONENT as your custom-armor type, you are not limited in any way, unlike with TRIMS\
-It also has the benefit of not needing to be based on an armor-item at all, use PAPER if you want to.\
+If using COMPONENT as your custom-armor type, you are not limited in any way, unlike TRIMS\
+It also has the benefit of not needing to be based on an armor-item, use PAPER if you want to.\
 Every downside there has been to earlier methods is now gone, no restrictions.
 
 ## How to configure your armor?

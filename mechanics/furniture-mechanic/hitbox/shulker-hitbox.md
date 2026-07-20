@@ -6,22 +6,16 @@
 **Length** determines the extra length of the hitbox, and can be between 1..2\
 **Direction** determines the way the hitbox faces, if not specified, defaults to UP
 
-{% hint style="warning" %}
-This is only available for 1.20.5+ servers\
-Should also be noted that the shulker-entity head will be visible on 1.21.1 & below\
-It will be invisible for 1.21.2 and above as long as [https://bugs.mojang.com/browse/MC-278123](https://bugs.mojang.com/browse/MC-278123) is not fixed
-{% endhint %}
-
 ```yaml
 myitem:
   Mechanics:
     furniture:
       hitbox:
-        shulkers:
-        # - offset scale length direction visible
-          - 0,0,0 1.0 1.0
-          - 1,0,0 1.2 1.5 EAST
-          - -1,0,0 0.8 2.0 UP
+        shulker: 0,0,0 1.0 1.0  #offset scale length direction visible
+        #shulkers:
+        #  - 0,0,0 1.0 1.0
+        #  - 1,0,0 1.2 1.5 EAST
+        #  - -1,0,0 0.8 2.0 UP
 ```
 
 {% hint style="info" %}

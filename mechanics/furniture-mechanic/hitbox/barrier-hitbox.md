@@ -8,9 +8,10 @@ myitem:
   Mechanics:
     furniture:
       hitbox:
-        barriers:
-          - 0,0,0
-          - 0,0,1
-          - 0,0,2
-          - 1,0,0..2
+        barrier: 0,0,0
+        #barriers:
+        #  - 0,0,0
+        #  - 0,0,1
+        #  - 0,0,2
+        #  - 1,0,0..2
 ```

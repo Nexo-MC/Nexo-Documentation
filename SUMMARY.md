@@ -32,12 +32,12 @@
   * [Components](configuration/items/components.md)
   * [🤖 2D Player Heads](configuration/items/2d-player-heads.md)
   * [Special Item Appearance](configuration/items/item-appearance.md)
-* [🐴 Custom Mob Armor (1.21.2+)](configuration/custom-mob-armor-1.21.2+/README.md)
+* [🐴 Custom Mob Armor](configuration/custom-mob-armor-1.21.2+/README.md)
   * [🪢 Custom Harness (1.21.6+)](configuration/custom-mob-armor-1.21.2+/custom-harness-1.21.6+.md)
   * [🐖 Custom Saddles (1.21.5+)](configuration/custom-mob-armor-1.21.2+/custom-saddles-1.21.5+.md)
 * [⛑️ Custom Player Armors](configuration/custom-armors/README.md)
-  * [🪽 Custom Elytras (1.21.2+)](configuration/custom-armors/custom-elytras-1.21.2+.md)
-  * [Component Based (1.21.2+)](configuration/custom-armors/components.md)
+  * [🪽 Custom Elytras](configuration/custom-armors/custom-elytras-1.21.2+.md)
+  * [Component Based](configuration/custom-armors/components.md)
   * [Trims Based (1.20+)](configuration/custom-armors/trims.md)
 * [🌀 Glyphs](configuration/glyphs/README.md)
   * [🎞️ Animated Glyphs](configuration/glyphs/animated-glyphs.md)
@@ -80,10 +80,10 @@
 ## ➕ Addons
 
 * [🚪 Carpentry](addons/carpentry.md)
+* [NexoProxy](addons/nexo-proxy.md)
 * [🧩 Core Shaders](addons/core-shaders/README.md)
   * [Text Effects by Akis](addons/core-shaders/text-effects-by-akis.md)
 * [Nexo Creative Inventory](addons/nexo-creative-inventory.md)
-* [NexoProxy](addons/nexo-proxy.md)
 
 ## Compatibility
 

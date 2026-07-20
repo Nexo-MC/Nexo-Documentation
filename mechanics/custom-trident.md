@@ -9,9 +9,11 @@ The Trident-Mechanic is not strictly necessary unless one wants to tweak the pro
 
 ### Properties
 
-`thrown_item_model` - The ItemModel to show on the Trident-projectile. This only applies to 1.21.4+ servers. If unspecified it will default to `Components.item_model` if specified.\
-`thrown_item` - Refers to the NexoItem to display for the Projectile. Defaults to the item of this mechanic if unspecified\
-`display_transform` - Lets you set the Transform the model should use, mainly useful when not using a separate ItemModel\
+`thrown_item_model` - The ItemModel to show on the Trident-projectile.\
+<sub>Unspecified defaults to</sub> <sub></sub><sub>`Components.item_model`</sub> <sub></sub><sub>if specified.</sub>\
+`thrown_item` - Refers to the NexoItem to display for the Projectile.\
+<sub>Defaults to the item of this mechanic if unspecified</sub>\
+`display_transform` - Lets you set the Transform the model should use\
 `rotation` - Lets you rotate the base yaw/pitch of the projectile\
 `damage` - The base-damage the Trident will do when hitting an entity, defaults to 8\
 `sounds` - The sounds the Trident should make, defaults to replicating vanilla.
@@ -33,7 +35,8 @@ forest_trident:
 ```
 
 {% hint style="info" %}
-If you are unsure how to reference a ResourcePack-File in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+If you are unsure how to reference a ResourcePack-File in a NexoItem config;\
+[#how-do-i-reference-a-resourcepack-file-in-a-config](../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
 {% endhint %}
 
 {% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FTAoAxayP9PrBtX9UQ5wa%2Fuploads%2FcMJ3GKLdbXDZofLDSj1A%2F2025-05-06_18-25-55_1.mp4?alt=media&token=8d6ffd64-06d1-4340-aa1f-6d10d5d2e84d" %}
@@ -46,7 +49,7 @@ For 1.21.4+ servers there are two approaches you can take, one being manually ma
 
 You will need 2 **Models** and 1 **NexoItem-Config** at minimum.
 
-#### Simple Method
+**Simple Method**
 
 The simplest method is to let Nexo generate the **ItemModel** for you. For this you will need a NexoItem-Config like shown below. This specified a model & throwing\_model in Pack, which Nexo will use when making the ItemModel. The throwing\_model is usually the same as the model, but flipped in hand in programs like BlockBench
 
@@ -62,7 +65,7 @@ forest_trident:
       display_transform: HEAD
 ```
 
-#### Manual Method
+**Manual Method**
 
 If you want to manually provide the **ItemModel** you will need a simplified config like below;
 

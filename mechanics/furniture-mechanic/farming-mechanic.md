@@ -10,7 +10,7 @@ coverY: 0
 
 Nexo has a system for planting plants with various stages of growth, an example of how to configure it.
 
-**delay** the time in ticks that it takes to grow\
+**delay** the duration that it takes to grow (10s, 2m, ...)\
 **probability** to grow when the delay is passed\
 **light\_boost** when it has light nearby it grows faster\
 **bone\_meal\_chance** the probability of bonemeal making it grow to next\_stage\

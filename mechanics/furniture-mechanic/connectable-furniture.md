@@ -1,7 +1,28 @@
 ---
-description: Feature introduced in Nexo 1.5
 cover: ../../.gitbook/assets/image (11).png
 coverY: 0
+layout:
+  width: default
+  cover:
+    visible: true
+    size: full
+    mask: none
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # 🖇️ Connectable Furniture
@@ -23,31 +44,23 @@ Above you can see an example of all of these. They are used to decide when to di
 
 There are a few different ways to add this mechanic to your furniture-item, **ITEM\_MODEL** & **ITEM** type.
 
-**ITEM\_MODEL** is only available for 1.21.2+ servers but is the recommended approach.\
-This also allows for two different approaches when making the furniture.\
-First using a "BlockState ItemModel" approach. This is the recommended as it limits the amount of files needed in your ResourcePack\
+**ITEM\_MODEL** is the recommended approach as it allows for two different approaches when making the furniture. First using a "BlockState ItemModel" approach.\
+This is the recommended as it limits the amount of files needed in your ResourcePack\
 \
-**ITEM** is an approach mainly intended for 1.20.4 -> 1.21.1 servers.\
-This relies on NexoItems to define the model used for a connection-variation.\
+**ITEM** relies on NexoItems to define the model used for a connection-variation.\
 The end product is the same but compared to ITEM\_MODEL, this approach requires an additional 5 NexoItems, cluttering config-files.
 
 {% tabs fullWidth="true" %}
-{% tab title="ITEM_MODEL (1.21.2+)" %}
-ITEM\_MODEL works by directly setting the ItemModel to use on the furniture, instead of going through a NexoItem.\
+{% tab title="ITEM_MODEL (Connection-State)" %}
+**ITEM\_MODEL** works by directly setting the ItemModel to use on the furniture, instead of going through a NexoItem.\
 This requires that you provide the necessary ItemModels, but they are very easy to make.\
 Nexo does not generate these ItemModels for you.
 
-There is also two approaches you can take to this, Connection-State ItemModel and normal, basic ItemModels.
 
-BlockState ItemModel works by making an ItemModel that shows a different Model based on a property on the item\
-This means you only need to make one ItemModel JSON file.
 
-An ItemModel is used to alter the base-model of an Item and is not the same as CustomModelData.\
-An ItemModel will link to a normal Model, below are examples of the two approaches to use in Nexo.
+**Connection-State ItemModel**
 
-#### Connection-State ItemModel
-
-This is largely the same as a normal basic ItemModel, but works as a replacement for needing many.\
+This is largely the same as a normal basic ItemModel, but with one unified ItemModel\
 It works by selecting a Model based on the "connection-state" on the item.
 
 Here is an example of a ConnectionState ItemModel. It should be fairly self-explanatory.\
@@ -55,7 +68,58 @@ The FurnitureItem displayed to the player has a tag on it specifying the connect
 This in turn tells the client what model to use from this ItemModel.\
 This reduces the amount of ResourcePack files needed & simplifies the NexoItem config aswell.
 
-This ItemModel should be put in for-example; `Nexo/pack/assets/nexo/items/connectable/connectable.json`
+This can either be made directly in the config using [itemmodel-builder](../../configuration/items/itemmodel-builder/ "mention"), or making the ItemModel file directly
+
+Here is the NexoItem-config utilizing this ConnectionState-ItemModel.\
+We do not need to specify any of the sub-properties.\
+It will simply use the ItemModel we specify in Components section.
+
+{% code title="connectable_furniture.yml" %}
+```yaml
+connectable:
+  itemname: Connectable
+  Components:
+    item_model: nexo:connectable/connectable
+  ## Below can be used to let Nexo generate the ItemModel file for you
+  #ItemModel:
+  #  type: select
+  #  property: block_state
+  #  block_state_property: connectable
+  #  cases:
+  #    - when: straight
+  #      model:
+  #        type: model
+  #        model: nexo:item/nexo_furniture/connectable/connectable_straight
+  #    - when: left
+  #      model:
+  #        type: model
+  #        model: nexo:item/nexo_furniture/connectable/connectable_left
+  #    - when: right
+  #      model:
+  #        type: model
+  #        model: nexo:item/nexo_furniture/connectable/connectable_right
+  #    - when: inner
+  #      model:
+  #        type: model
+  #        model: nexo:item/nexo_furniture/connectable/connectable_inner
+  #    - when: outer
+  #      model:
+  #        type: model
+  #        model: nexo:item/nexo_furniture/connectable/connectable_outer
+  Mechanics:
+    furniture:
+      connectable:
+        type: ITEM_MODEL
+      hitbox:
+        barriers:
+        - 0,0,0
+```
+{% endcode %}
+
+If you do not wish to use [itemmodel-builder](../../configuration/items/itemmodel-builder/ "mention"), you can manually make the file like below.
+
+This ItemModel should be put in for-example;\
+`Nexo/pack/assets/nexo/items/connectable/connectable.json`
 
 {% code title="connectable.json" lineNumbers="true" fullWidth="true" %}
 ```json
@@ -109,27 +173,13 @@ This ItemModel should be put in for-example; `Nexo/pack/assets/nexo/items/connec
 }
 ```
 {% endcode %}
+{% endtab %}
 
-Here is the NexoItem-config utilizing this ConnectionState-ItemModel. We do not need to specify any of the sub-properties.\
-It will simply use the ItemModel we specify in Components section.
+{% tab title="ITEM_MODEL (Normal ItemModels)" %}
+**ITEM\_MODEL** works by directly setting the ItemModel to use on the furniture, instead of going through a NexoItem.\
+This requires that you provide the necessary ItemModels, but they are very easy to make.
 
-{% code title="connectable_furniture.yml" %}
-```yaml
-connectable:
-  itemname: Connectable
-  Components:
-    item_model: nexo:connectable/connectable
-  Mechanics:
-    furniture:
-      connectable:
-        type: ITEM_MODEL
-      hitbox:
-        barriers:
-        - 0,0,0
-```
-{% endcode %}
-
-#### Normal ItemModel
+**Normal ItemModel**
 
 This requires you to make a basic ItemModel for each of the connection-states, which looks as follows;
 

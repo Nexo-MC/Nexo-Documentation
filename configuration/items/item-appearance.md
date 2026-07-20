@@ -1,5 +1,4 @@
 ---
-description: How to customize your item appearance?
 cover: >-
   https://cdn.discordapp.com/attachments/896841738621177896/966824489490976798/unknown.png
 coverY: 0
@@ -7,7 +6,7 @@ coverY: 0
 
 # Special Item Appearance
 
-### Invisible Item (1.21.4+)
+### Invisible Item
 
 To make an invisible item with Nexo, you can use the Nexo provided ItemModel `nexo:empty`.\
 This will render nothing for that Item no matter where it is used.
@@ -49,10 +48,6 @@ By default all items using the material PAPER will use **minecraft:paper.**\
 By specifying our own ItemModel here, we are changing the base-model of our item, preventing any conflicts or issues, and Nexo can properly mark the config
 
 ### Use a different model for Inventory Icon vs Equipped/In-Hand
-
-{% hint style="info" %}
-This is for 1.21.2+ servers & clients only
-{% endhint %}
 
 If you want to say have an item with a 2D icon in the inventory but when worn on head or held in your hand, it uses a 3D model or another 2D icon, you can do so by following the below
 
@@ -97,7 +92,7 @@ myitem:
 ***
 
 {% hint style="info" %}
-All the methods below support a `BLANK_texture` or `BLANK_textures` aswell as models if all you have is a PNG\
+All the methods below support a `BLANK_texture(s)`  as well as models if all you have is a PNG\
 For example for a 2D bow with different pulling-stages.
 {% endhint %}
 
@@ -133,6 +128,11 @@ myitem:
       - default/combat_bow_pulling_0
       - default/combat_bow_pulling_1
       - default/combat_bow_pulling_2
+    #texture: default/combat_bow
+    #pulling_textures:
+    #  - default/combat_bow_pulling_0
+    #  - default/combat_bow_pulling_1
+    #  - default/combat_bow_pulling_2
 ```
 
 ### Charged Model (Crossbow)
@@ -147,6 +147,13 @@ myitem:
       - default/custom_bow_pulling_2
     charged_model: default/custom_bow_pulling_2
     firework_model: default/custom_bow_charged #Optional
+    #texture: default/combat_bow
+    #pulling_textures:
+    #  - default/combat_bow_pulling_0
+    #  - default/combat_bow_pulling_1
+    #  - default/combat_bow_pulling_2
+    #charged_texture: default/custom_bow_pulling_2
+    #firework_texture: default/custom_bow_charged #Optional
 ```
 
 ### Cast Model (Fishing Rods)

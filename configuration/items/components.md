@@ -6,7 +6,7 @@ Due to the nature of these they are very version-specific, so there are some dif
 Each component below has a hover-click to show an example of how to use it, with additional info.
 
 {% tabs %}
-{% tab title="1.21.11" %}
+{% tab title="1.21.11+" %}
 [**Max Stack Size**](#user-content-fn-1)[^1] **-** Sets the maximum slot-size for the NexoItem\
 [**Enchantment Glint Override**](#user-content-fn-2)[^2] - Sets an override-state for the enchantment glint\
 [**Fire Resistant**](#user-content-fn-3)[^3] - Sets whether this NexoItem is immune to fire and lava\
@@ -242,7 +242,7 @@ Each component below has a hover-click to show an example of how to use it, with
           nutrition: 2
           saturation: 2 
           can_always_eat: false
-                      
+                          
     ```
 
     **can\_always\_eat -** Defaults to false if unspecified\
@@ -632,7 +632,7 @@ Each component below has a hover-click to show an example of how to use it, with
             max_duration: 0t
             min_speed: 0f
             min_relative_speed: 0f
-                  
+                      
     ```
 
 [^31]: ```yaml

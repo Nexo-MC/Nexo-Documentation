@@ -16,13 +16,14 @@ layout:
     visible: true
   tags:
     visible: true
+  actions:
+    visible: true
 ---
 
 # Text-Entities
 
-Nexo allows you to attach Text-Entities to placed furniture to display text, [glyphs](../../configuration/glyphs/ "mention") or anything else.\
-You can use one, or several, all depending on what you need.\
-They have a bunch of properties, most similar to [#furniture-properties](./#furniture-properties "mention"), with some unique ones like;
+Nexo allows you to attach Text-Entities to furniture to display text, [glyphs](../../configuration/glyphs/ "mention") or anything else.\
+You can use one, or several, all depending on what you need. They have a bunch of properties, most similar to [#furniture-properties](./#furniture-properties "mention"), with some unique ones like;
 
 `text` - The text to display for this Text-Entity. Can be a single line or a list of strings\
 `offset` - The offset for which this entity should exist from the base-furniture\

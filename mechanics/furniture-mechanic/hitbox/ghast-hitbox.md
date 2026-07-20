@@ -14,9 +14,9 @@ myitem:
   Mechanics:
     furniture:
       hitbox:
-        ghasts:
-        # - offset scale rotation visible
-          - 0,0,0 0.25
-          - 0,1,0 0.25 45
-          - 0,2,0 0.25 true
+        ghast: 0,0,0 0.25  #offset scale rotation visible
+        #ghasts:
+        #  - 0,0,0 0.25
+        #  - 0,1,0 0.25 45
+        #  - 0,2,0 0.25 true
 ```

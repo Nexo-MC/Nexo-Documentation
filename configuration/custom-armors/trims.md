@@ -1,5 +1,9 @@
 # Trims Based (1.20+)
 
+{% hint style="warning" %}
+As of Nexo 1.25+, this is deprecated and will be removed in the future. Use [components.md](components.md "mention")
+{% endhint %}
+
 If using trims as your custom-armor type, most things is handled automatically for you.\
 TRIMS method requires using CHAINMAIL as the base-item.
 

@@ -9,14 +9,15 @@ This is an addon for Nexo that adds several new CustomBlock types.\
 It allows for custom doors, trapdoors, stairs, slabs and transparent blocks.\
 Below will be examples for each of the different types
 
-[Polymart](https://polymart.org/product/7640/carpentry-nexo-addon) | [MCModels](https://mcmodels.net/products/13997/carpentry)
+<p align="center"><a href="https://voxel.shop/product/7640/carpentry-nexo-addon">Voxel Shop</a> | <a href="https://mcmodels.net/products/13997/carpentry">MCModels</a> | <a href="https://nexomc.com/products/carpentry">NexoMC</a></p>
 
 <figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption><p>Default Ashen Oak wood-set included in Carpentry's Default Items</p></figcaption></figure>
 
 {% hint style="warning" %}
 Note that each of the types are currently limited to only 4 variations.
 
-If you are unsure how to reference a ResourcePack-File in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+If you are unsure how to reference a ResourcePack-File in a NexoItem config;\
+[#how-do-i-reference-a-resourcepack-file-in-a-config](../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
 {% endhint %}
 
 ### Custom Stairs

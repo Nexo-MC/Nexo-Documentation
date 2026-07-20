@@ -12,8 +12,10 @@ Seats are configured like below, with an `x,y,z` offset
 myitem:
   Mechanics:
     furniture:
-      seats:
-        - 0,0.5,0
+      seat: 0,0.5,0
+      #seats:
+      #  - 0,0.5,0
+      #  - 1,0.5,0
 ```
 
 <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Chair &#x26; Couch included in Nexo's Default Items</p></figcaption></figure>

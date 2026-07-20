@@ -15,8 +15,10 @@ A normal bed has both these to true, but you can disable it for say a bench if y
 myitem:
   Mechanics:
     furniture:
-      beds:
-        - 0,0,0 true true # x,y,z skip-night reset-phantoms
+      bed: 0,0,0 true true # x,y,z skip-night reset-phantoms
+      #beds:
+      #  - 0,0,0 true true
+      #  - 0,0,1 true true
 ```
 
 <figure><img src="../../.gitbook/assets/huge_2025-04-23_14.33.14.png" alt=""><figcaption><p>Double-Bed included in Nexo's Default Items</p></figcaption></figure>
