@@ -16,6 +16,18 @@
 * [☄️ Oraxen → Nexo](migrate/oraxen-nexo.md)
 * [📦 ItemsAdder → Nexo](migrate/itemsadder-nexo.md)
 
+## ➕ Addons
+
+* [🪨 Scaffolding](addons/scaffolding/README.md)
+  * [ScaffoldingExtension](addons/scaffolding/scaffoldingextension.md)
+  * [🖥️ Custom GUIs & HUDs](addons/scaffolding/custom-guis-and-huds.md)
+  * [🙂 Emotes & Glyphs](addons/scaffolding/emotes-and-glyphs.md)
+* [🚪 Carpentry](addons/carpentry.md)
+* [NexoProxy](addons/nexo-proxy.md)
+* [🧩 Core Shaders](addons/core-shaders/README.md)
+  * [Text Effects by Akis](addons/core-shaders/text-effects-by-akis.md)
+* [Nexo Creative Inventory](addons/nexo-creative-inventory.md)
+
 ## Configuration
 
 * [⚙️ Plugin settings](configuration/plugin-settings.md)
@@ -76,14 +88,6 @@
 * [🖱️ ClickAction Mechanic](mechanics/clickaction-mechanic.md)
 * [Custom Mechanic](mechanics/custom-mechanic.md)
 * [Other Mechanics](mechanics/all-mechanics.md)
-
-## ➕ Addons
-
-* [🚪 Carpentry](addons/carpentry.md)
-* [NexoProxy](addons/nexo-proxy.md)
-* [🧩 Core Shaders](addons/core-shaders/README.md)
-  * [Text Effects by Akis](addons/core-shaders/text-effects-by-akis.md)
-* [Nexo Creative Inventory](addons/nexo-creative-inventory.md)
 
 ## Compatibility
 
