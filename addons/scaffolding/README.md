@@ -46,12 +46,12 @@ Scaffolding can't reach the proxy's Geyser folder, so it leaves the files in `pl
 2. Start the backend so Scaffolding converts once. The output lands in `plugins/Scaffolding/output/`.
 3. Copy that output into the proxy's `Geyser-Velocity/` folders (below), then **restart the proxy** and reconnect.
 
-| From `plugins/Scaffolding/output/` | To the proxy's `Geyser-Velocity/` folder    |
-| ---------------------------------- | ------------------------------------------- |
-| `*.mcpack`                         | `packs/`                                    |
-| `geyser_mappings/*.json`           | `custom_mappings/`                          |
-| `furniture_mappings/*.yml`         | `extensions/scaffoldingextension/mappings/` |
-| `meg/models.json`                  | `extensions/scaffoldingextension/meg/`      |
+| From `plugins/Scaffolding/output/` | To the proxy's `Geyser-Velocity/` folder      |
+| ---------------------------------- | --------------------------------------------- |
+| `*.mcpack`                         | `packs/`                                      |
+| `geyser_mappings/*.json`           | `custom_mappings/`                            |
+| `furniture_mappings/*.yml`         | `extensions/scaffoldingextension/mappings/`   |
+| `meg/models.json`                  | `extensions/scaffoldingextension/modelengine/`|
 
 {% hint style="success" %}
 If the proxy and backend share a filesystem, symlink the two folders so the copy is automatic.\
