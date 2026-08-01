@@ -73,6 +73,8 @@
     * [👻 Ghast Hitbox](mechanics/furniture-mechanic/hitbox/ghast-hitbox.md)
   * [Text-Entities](mechanics/furniture-mechanic/text-entities.md)
   * [🖇️ Connectable Furniture](mechanics/furniture-mechanic/connectable-furniture.md)
+  * [🔀 Furniture States](mechanics/furniture-mechanic/furniture-states.md)
+  * [🧭 Furniture Placements](mechanics/furniture-mechanic/furniture-placements.md)
   * [🪑 Seat Mechanic](mechanics/furniture-mechanic/seat-mechanic.md)
   * [🛏️ Bed Mechanic](mechanics/furniture-mechanic/bed-mechanic.md)
   * [💡 Light Mechanic](mechanics/furniture-mechanic/light-mechanic.md)
