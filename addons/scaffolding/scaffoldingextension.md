@@ -3,16 +3,10 @@
 **Furniture** and **ModelEngine** models are not drawn by the resource pack alone. Geyser does not render either on Bedrock by default, so Scaffolding ships a companion Geyser extension, the **ScaffoldingExtension**, that recreates them.
 
 It is a Geyser-Extension (not as a plugin) and is built against the Geyser `2.11.0` API.\
-Install it by dropping `ScaffoldingExtension.jar` into Geyser's `extensions/` folder and restarting. Scaffolding generates the mapping files it reads and deploys them automatically when Geyser is on the same server. On Velocity, copy them into the proxy's `extensions/scaffoldingextension/` folder (see Setup).
+Install it by dropping `ScaffoldingExtension.jar` into Geyser's `extensions/` folder and restarting. Scaffolding generates the mapping files it reads and deploys them automatically: directly into Geyser's folders when Geyser runs on the same server, and over the sync transport when Geyser sits on a **proxy or runs standalone** (see Setup).
 
 {% hint style="warning" %}
 Without the ScaffoldingExtension, items, blocks, armor and glyphs still convert and show, but **furniture and ModelEngine models will not render** for Bedrock players.
-{% endhint %}
-
-{% hint style="danger" %}
-**Known issue on Geyser-Velocity** On a **Geyser-Velocity** setup the extension currently has known issues where **mobs (ModelEngine) and furniture may not render correctly**.\
-A **Geyser-Spigot** setup (Geyser on the same Paper server) is **not affected**. \
-If you rely on furniture or ModelEngine on Bedrock, prefer Geyser-Spigot for now.
 {% endhint %}
 
 ### NexoFurniture
@@ -30,8 +24,8 @@ Geyser does not render display entities on Bedrock, so without the extension fur
 [ModelEngine](https://www.mythiccraft.io/) gives mobs custom models and animations.\
 On Bedrock these are recreated by the extension, working together with the plugin:
 
-* **Plugin side** tracks each active MEG model whose blueprint was converted, and mirrors its state to Bedrock viewers over a plugin-message channel: spawn and despawn on range, current animation, bone visibility, scale and hurt-tint. It never sends positions.
-* **Extension side** spawns one model entity per tracked model, rendered as its custom Bedrock entity, and makes it follow the base mob. Because it follows the mob, only state has to be sent.
+* **Plugin side** tracks each active MEG model whose blueprint was converted, and mirrors its state to Bedrock viewers over a plugin-message channel: spawn and despawn on range, position and look, current animation, bone visibility, scale, hurt-tint and the model's hitbox.
+* **Extension side** spawns one model entity per tracked model, rendered as its custom Bedrock entity, and applies that streamed state. ModelEngine hides the base mob from clients, so the position is streamed rather than followed.
 
 A single mob can carry several models, each tracked independently.
 

@@ -16,7 +16,7 @@ Scaffolding is in **early access**. It has had thorough testing and covers the l
 
 <summary>Requirements (click to expand)</summary>
 
-<table><thead><tr><th width="229.666748046875">Plugin</th><th width="126.6666259765625">Needed</th><th>Notes</th></tr></thead><tbody><tr><td><a href="https://nexomc.com">Nexo</a> <strong>1.26+</strong></td><td>Required</td><td>Scaffolding is a Nexo addon and reads the pack Nexo builds.</td></tr><tr><td><a href="https://geysermc.org/">Geyser</a> <code>2.11.0-SNAPSHOT</code> +</td><td>Required</td><td>Older Geyser builds lack the mapping and extension features Scaffolding relies on.</td></tr><tr><td><a href="https://geysermc.org/">Floodgate</a></td><td>Optional</td><td>Detects Bedrock players so their outgoing text is remapped to the Bedrock-safe glyph codepoints.</td></tr><tr><td><strong>ScaffoldingExtension</strong></td><td>Optional</td><td>Ships with Scaffolding. Required for <strong>NexoFurniture and/or ModelEngine</strong>.</td></tr></tbody></table>
+<table><thead><tr><th width="229.666748046875">Plugin</th><th width="126.6666259765625">Needed</th><th>Notes</th></tr></thead><tbody><tr><td><a href="https://nexomc.com">Nexo</a> <strong>1.26+</strong></td><td>Required</td><td>Scaffolding is a Nexo addon and reads the pack Nexo builds.</td></tr><tr><td><a href="https://geysermc.org/">Geyser</a> <code>2.11.0-SNAPSHOT</code> +</td><td>Required</td><td>Older Geyser builds lack the mapping and extension features Scaffolding relies on.</td></tr><tr><td><a href="https://geysermc.org/">Floodgate</a></td><td>Optional</td><td>Detects Bedrock players so their outgoing text is remapped to the Bedrock-safe glyph codepoints.</td></tr><tr><td><strong>ScaffoldingExtension</strong></td><td>Optional</td><td>Ships with Scaffolding. Required for <strong>NexoFurniture and/or ModelEngine</strong>, and for Geyser on a <strong>proxy or standalone</strong> (it receives the synced output).</td></tr></tbody></table>
 
 Your server also needs outbound internet access.\
 Scaffolding uploads the pack to a hosted converter service and unpacks the result, so the game server never does the heavy conversion itself.
@@ -38,25 +38,40 @@ Nexo, Scaffolding and Geyser all run on one Paper server.
 That is it, nothing to configure in the common case.
 {% endtab %}
 
-{% tab title="Velocity (Geyser-Velocity)" %}
-Here Geyser runs on the Velocity proxy, while Nexo and Scaffolding run on the backend Paper server.\
-Scaffolding can't reach the proxy's Geyser folder, so it leaves the files in `plugins/Scaffolding/output/` to copy across.
+{% tab title="Velocity / BungeeCord (Geyser on the proxy)" %}
+Here Geyser runs on the proxy, while Nexo and Scaffolding run on a backend Paper server.\
+Scaffolding syncs its output to the proxy's Geyser **automatically** - no copying files across.
 
-1. Install Nexo and Scaffolding on the **backend Paper server**, and Geyser on the **Velocity proxy**.
-2. Start the backend so Scaffolding converts once. The output lands in `plugins/Scaffolding/output/`.
-3. Copy that output into the proxy's `Geyser-Velocity/` folders (below), then **restart the proxy** and reconnect.
+1. Install Nexo and Scaffolding on the **backend Paper server**, and Geyser on the **proxy**.
+2. Drop `ScaffoldingExtension.jar` into the proxy Geyser's `extensions/` folder (e.g. `plugins/Geyser-Velocity/extensions/`). It receives the synced output.
+3. Start everything. After a conversion, Scaffolding hands the output to Geyser over the **players' own Minecraft connection** - no ports to open, no shared folders needed.
+4. **Restart the proxy once** so Geyser loads the new mappings, and have Bedrock players reconnect.
 
-| From `plugins/Scaffolding/output/` | To the proxy's `Geyser-Velocity/` folder      |
-| ---------------------------------- | --------------------------------------------- |
-| `*.mcpack`                         | `packs/`                                      |
-| `geyser_mappings/*.json`           | `custom_mappings/`                            |
-| `furniture_mappings/*.yml`         | `extensions/scaffoldingextension/mappings/`   |
-| `meg/models.json`                  | `extensions/scaffoldingextension/modelengine/`|
+{% hint style="info" %}
+The default transport needs a **Bedrock player online** to carry the data. If nobody is on when a conversion finishes, the next Bedrock player to join delivers it.\
+`/scf sync` re-sends the last output on demand, and `/scf status` shows whether the proxy's Geyser is up to date.
+{% endhint %}
 
 {% hint style="success" %}
-If the proxy and backend share a filesystem, symlink the two folders so the copy is automatic.\
-Scaffolding only deploys on its own when Geyser is a plugin on the same server.
+**Sharing a filesystem?** (same machine, Docker volume, network mount)\
+Set `sync.type: FOLDER` in both the plugin's and the extension's `config.yml`, and point `sync.folder` on both sides at the same folder. Output then applies within seconds, with no player needed to carry it.
 {% endhint %}
+
+{% hint style="warning" %}
+Run Nexo and Scaffolding on **one** server behind the proxy. The proxy's Geyser serves that one server's converted content.
+{% endhint %}
+{% endtab %}
+
+{% tab title="Geyser-Standalone" %}
+Geyser-Standalone runs as its own program and joins your server the way a Java player would.\
+The setup is the same as on a proxy:
+
+1. Install Nexo and Scaffolding on the **Paper server**, and run **Geyser-Standalone** wherever suits you - the same machine or a different one.
+2. Drop `ScaffoldingExtension.jar` into the standalone Geyser's `extensions/` folder.
+3. Start everything. The output syncs over Geyser's connection to your server, so this works across machines with no extra ports.
+4. **Restart the standalone Geyser once** so it loads the new mappings, and have Bedrock players reconnect.
+
+The same notes as the proxy tab apply: a Bedrock player carries the data (the next one to join picks it up), `/scf sync` re-sends the last output, and `sync.type: FOLDER` is available when both sides can reach one folder.
 {% endtab %}
 {% endtabs %}
 
@@ -115,9 +130,9 @@ See [#scaffoldingextension](./#scaffoldingextension "mention") for install detai
 
 ### Configuration
 
-Defaults work for almost everyone, and config fount at  `plugins/Scaffolding/config.yml` .
+Defaults work for almost everyone, and the config is found at  `plugins/Scaffolding/config.yml` .
 
-<table><thead><tr><th width="198.333251953125">Setting</th><th width="97">Default</th><th>Purpose</th></tr></thead><tbody><tr><td><code>autoConvert</code></td><td><code>true</code></td><td>Convert and deploy automatically whenever Nexo rebuilds its pack.</td></tr><tr><td><code>iconSize</code></td><td><code>x64</code></td><td>Resolution of the rendered inventory icons. One of <code>x16</code>, <code>x32</code>, <code>x64</code> or <code>x128</code>.</td></tr><tr><td><code>compression</code></td><td><code>BALANCED</code></td><td>Texture encode tradeoff: <code>FAST</code> (biggest pack), <code>BALANCED</code>, or <code>MAX</code> (smallest, slowest).</td></tr><tr><td><code>cacheSize</code></td><td><code>10</code></td><td>How many past conversions to keep on disk so flipping settings is served from cache. <code>0</code> disables.</td></tr><tr><td><code>supportAnimatedItems</code></td><td><code>false</code></td><td>Split the pack into sub-packs plus an optional animated overlay players can opt out of, so a change re-sends only the affected part.</td></tr><tr><td><p><code>vanillaBackground.</code></p><p><code>convertOverrides</code></p></td><td><code>true</code></td><td>Also convert reskins of vanilla items and containers with no Nexo config. Turn off if you do not reskin vanilla content and want a smaller pack.</td></tr><tr><td><p><code>vanillaBackground.</code></p><p><code>hideBackground</code></p></td><td><code>true</code></td><td>Hide Bedrock's own window background behind converted vanilla GUI reskins, so nothing vanilla peeks out. Turn off to keep the gray panel drawn behind the art.</td></tr><tr><td><code>invertedCubeHalo</code></td><td><code>true</code></td><td>Render inside-out halo/glow shells the way Java shows them. Off removes the halo.</td></tr><tr><td><code>weaponUsePoses</code></td><td><code>false</code></td><td>Give custom shields and bows the vanilla in-use pose (block, bow draw). May drift on very different client versions.</td></tr><tr><td><code>converter.channel</code></td><td><code>STABLE</code></td><td>Which hosted converter to use: <code>STABLE</code> (production) or <code>DEV</code> (test builds). Ignored when a URL is set.</td></tr><tr><td><code>converter.timeout</code></td><td><code>10m</code></td><td>How long to wait for a conversion before giving up. Accepts <code>30s</code>, <code>10m</code>, <code>1h</code>.</td></tr></tbody></table>
+<table><thead><tr><th width="198.333251953125">Setting</th><th width="97">Default</th><th>Purpose</th></tr></thead><tbody><tr><td><code>autoConvert</code></td><td><code>true</code></td><td>Convert and deploy automatically whenever Nexo rebuilds its pack.</td></tr><tr><td><code>iconSize</code></td><td><code>x64</code></td><td>Resolution of the rendered inventory icons. One of <code>x16</code>, <code>x32</code>, <code>x64</code> or <code>x128</code>.</td></tr><tr><td><code>compression</code></td><td><code>BALANCED</code></td><td>Texture encode tradeoff: <code>FAST</code> (biggest pack), <code>BALANCED</code>, or <code>MAX</code> (smallest, slowest).</td></tr><tr><td><code>cacheSize</code></td><td><code>10</code></td><td>How many past conversions to keep on disk so flipping settings is served from cache. <code>0</code> disables.</td></tr><tr><td><code>supportAnimatedItems</code></td><td><code>true</code></td><td>Animate animated models and textures. Off renders them static, for a smaller pack.</td></tr><tr><td><code>splitPacks</code></td><td><code>false</code></td><td>Ship the output as one pack per content type instead of a single mcpack, so a change re-sends only the affected part. Animated items then become their own pack players can opt out of (needs the ScaffoldingExtension).</td></tr><tr><td><p><code>vanillaBackground.</code></p><p><code>convertOverrides</code></p></td><td><code>true</code></td><td>Also convert reskins of vanilla items and containers with no Nexo config. Turn off if you do not reskin vanilla content and want a smaller pack.</td></tr><tr><td><p><code>vanillaBackground.</code></p><p><code>hideBackground</code></p></td><td><code>true</code></td><td>Hide Bedrock's own window background behind converted vanilla GUI reskins, so nothing vanilla peeks out. Turn off to keep the gray panel drawn behind the art.</td></tr><tr><td><code>invertedCubeHalo</code></td><td><code>true</code></td><td>Render inside-out halo/glow shells the way Java shows them. Off removes the halo.</td></tr><tr><td><code>weaponUsePoses</code></td><td><code>false</code></td><td>Give custom shields and bows the vanilla in-use pose (block, bow draw). May drift on very different client versions.</td></tr><tr><td><code>glyphFilter</code></td><td><code>SHARP</code></td><td>How glyph art is shrunk to the size Bedrock bakes it at: <code>SHARP</code> (hard edges on cutout art), <code>AREA</code> (smooth average) or <code>NEAREST</code> (crispest, drops thin details).</td></tr><tr><td><code>soundQuality</code></td><td><code>original</code></td><td>How ogg sounds ship: <code>original</code> (untouched), <code>compressed</code> or <code>compressed_mono</code> (also downmixed). Needs ffmpeg on the converter host; a sound is only kept when it got smaller.</td></tr><tr><td><code>extraItemModels</code></td><td>—</td><td>Base item(s) for <code>item_model</code> ids no Nexo item claims (dummy models, items other plugins give out). Quote the model id; a model shared by several base items takes a list.</td></tr><tr><td><code>sync.type</code></td><td><code>PLUGIN_MESSAGE</code></td><td>How output reaches a remote Geyser (proxy or standalone, see Setup): <code>PLUGIN_MESSAGE</code> (over the players' connection, no ports), <code>FOLDER</code> (a shared folder), or <code>OFF</code>.</td></tr><tr><td><code>sync.folder</code></td><td>—</td><td><code>FOLDER</code> only: a folder both this server and Geyser can reach. Absolute, or relative to the server folder.</td></tr><tr><td><code>sync.serverId</code></td><td>—</td><td>The name this server reports to the remote Geyser when syncing. Blank = the server folder's name.</td></tr><tr><td><code>converter.channel</code></td><td><code>STABLE</code></td><td>Which hosted converter to use: <code>STABLE</code> (production) or <code>DEV</code> (test builds). Ignored when a URL is set.</td></tr><tr><td><code>converter.jar</code></td><td>—</td><td>Path to a converter jar on this machine: conversions then run locally, and nothing is uploaded. For self-hosters.</td></tr><tr><td><code>converter.timeout</code></td><td><code>10m</code></td><td>How long to wait for a conversion before giving up. Accepts <code>30s</code>, <code>10m</code>, <code>1h</code>.</td></tr></tbody></table>
 
 Two optional files sit next to it, both generated for you and only needed for fine-tuning:
 
@@ -130,4 +145,4 @@ Two optional files sit next to it, both generated for you and only needed for fi
 
 The base command is `/scaffolding` (aliases `/scaffold`, `/scf`).
 
-<table><thead><tr><th width="302.333251953125">Command</th><th>What it does</th></tr></thead><tbody><tr><td><code>/scf help</code></td><td>List the available commands.</td></tr><tr><td><code>/scf reload &#x3C;-f></code></td><td>Reconvert the current Nexo pack and redeploy to Geyser (<code>rl</code> also works). Add <code>-f</code> to force new conversion, even when setup is the same</td></tr><tr><td><code>/scf status</code></td><td>Show the converter service, the last output pack, and check the service is reachable.</td></tr><tr><td><code>/scf gui list</code></td><td>List the GUI overlays configured in <code>gui.yml</code>.</td></tr><tr><td><code>/scf gui import &#x3C;glyph> [screen]</code></td><td>Add a glyph to <code>gui.yml</code> as an overlay and reconvert (screen defaults to <code>container</code>).</td></tr><tr><td><code>/scf cache list</code> / <code>clear</code></td><td>Inspect or clear the on-disk conversion cache.</td></tr></tbody></table>
+<table><thead><tr><th width="302.333251953125">Command</th><th>What it does</th></tr></thead><tbody><tr><td><code>/scf help</code></td><td>List the available commands.</td></tr><tr><td><code>/scf reload &#x3C;-f></code></td><td>Reconvert the current Nexo pack and redeploy to Geyser (<code>rl</code> also works). Add <code>-f</code> to force new conversion, even when setup is the same</td></tr><tr><td><code>/scf status</code></td><td>Show the converter service, the last output pack, the sync target, and check that both are reachable.</td></tr><tr><td><code>/scf sync</code></td><td>Send the last converted output to the remote Geyser again (see <code>sync.type</code>). Useful after wiping or moving the proxy's Geyser folders.</td></tr><tr><td><code>/scf gui list</code></td><td>List the GUI overlays configured in <code>gui.yml</code>.</td></tr><tr><td><code>/scf gui import &#x3C;glyph> [screen]</code></td><td>Add a glyph to <code>gui.yml</code> as an overlay and reconvert (screen defaults to <code>container</code>).</td></tr><tr><td><code>/scf cache list</code> / <code>clear</code></td><td>Inspect or clear the on-disk conversion cache.</td></tr></tbody></table>
