@@ -4,6 +4,10 @@ Nexo glyphs and emotes convert automatically, so they show up in chat, names and
 
 The one thing worth knowing is that Bedrock sizes glyphs differently, which can make some icons look blurry. This page explains why and how to fix it.
 
+### Glyphs not working under Geyser-Velocity/Geyser-Standalone
+
+When using Geyser-Velocity or Geyser-Standalone, it is required to have a properly configured [Floodgate](https://geysermc.org/wiki/floodgate/setup?platform=proxy-servers) setup. It is also required on all your backend servers together with the Scaffolding plugin,
+
 ### Why some glyphs look blurry
 
 On Java, the size a glyph shows at and the size of its image file are two separate things.\
