@@ -75,6 +75,7 @@
   * [🖇️ Connectable Furniture](mechanics/furniture-mechanic/connectable-furniture.md)
   * [🔀 Furniture States](mechanics/furniture-mechanic/furniture-states.md)
   * [🧭 Furniture Placements](mechanics/furniture-mechanic/furniture-placements.md)
+  * [🫥 Furniture Culling](mechanics/furniture-mechanic/furniture-culling.md)
   * [🪑 Seat Mechanic](mechanics/furniture-mechanic/seat-mechanic.md)
   * [🛏️ Bed Mechanic](mechanics/furniture-mechanic/bed-mechanic.md)
   * [💡 Light Mechanic](mechanics/furniture-mechanic/light-mechanic.md)

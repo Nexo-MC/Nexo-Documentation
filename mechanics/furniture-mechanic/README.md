@@ -120,18 +120,45 @@ myitem:
         scale: 1,1,1
 ```
 
-`view_range`, `shadow_radius`, `shadow_strength` should be self-explanatory.
+#### Rotation
+
+The `left_rotation` and `right_rotation`-properties rotate the model, applied before and after the scale respectively.\
+Both accept a quaternion as `x,y,z,w`. As a shorthand, a single number can be used instead, which is treated as a yaw for `left_rotation` and a pitch for `right_rotation`.
+
+```yaml
+myitem:
+  Mechanics:
+    furniture:
+      properties:
+        left_rotation: 45      # or 0,0.38,0,0.92
+        right_rotation: 0
+```
+
+#### Offset Against Blocks
+
+The `offset_against_blocks`-property decides whether furniture placed against a non-full block, like a slab or carpet, is offset to sit on top of it instead of clipping into it. Defaults to `true`.
+
+```yaml
+myitem:
+  Mechanics:
+    furniture:
+      properties:
+        offset_against_blocks: true
+```
+
+#### Other Properties
+
+`view_range`, `shadow_radius` and `shadow_strength` should be self-explanatory.\
+`glow_color` sets the outline-color used when the furniture glows.\
+`delay` is a duration used by property-sets that animate, like a doors `open_properties`, to time the transition.\
+`cullable`, `display_width` and `display_height` are covered in [furniture-culling.md](furniture-culling.md "mention").
 
 ### Furniture Culling
 
-Display-Entities have a few properties one can use to tweak how the client culls the entities.\
-This is by default in Nexo only set to cull based on distance from entity, not based on if it is "on-screen" or not. If you want to use a lot of furniture in a space, this might be good to optimize.
+Nexo can hide furniture that is fully blocked from a players view, and the client has its own distance-based culling on top of that.\
+Both are configured per-furniture through the properties above, and globally in `mechanics.yml`.
 
-These settings can, as with all other [#furniture-properties](./#furniture-properties "mention")be set per-furniture, either in `mechanics.yml` under `default_properties` for global default, or in the furnitures `properties`.
-
-`display_width` - Defines the width of the entity, which it would cull when outside of. Default is 0\
-`display_height` - Defines the height of the entity, which it would cull when outside of. Default is 0\
-`view_range` - Maximum view range of the entity. When the distance is more than _`view_range`_`×` [_`entityDistanceScaling`_](https://minecraft.wiki/w/Options.txt#Java_Edition)`×64`, the entity is not rendered. Defaults to 1.0.
+See [furniture-culling.md](furniture-culling.md "mention") for the full breakdown.
 
 ### Custom Sounds
 
