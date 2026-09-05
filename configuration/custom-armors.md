@@ -1,20 +1,30 @@
-# Component Based
+---
+cover: >-
+  https://cdn.discordapp.com/attachments/896841738621177896/966823919917080626/unknown.png
+coverY: 0
+---
 
-If using COMPONENT as your custom-armor type, you are not limited in any way, unlike TRIMS\
-It also has the benefit of not needing to be based on an armor-item, use PAPER if you want to.\
-Every downside there has been to earlier methods is now gone, no restrictions.
+# ⛑️ Custom Player Armors
+
+Nexo allows for creating fully custom Armor-sets for Players, using EquipmentModels.&#x20;
+
+{% hint style="info" %}
+As of Nexo 1.28, the TRIMS method has been removed.\
+If you are using an older Nexo release, you can find the old page [here](trims.md)
+{% endhint %}
 
 ## How to configure your armor?
 
 {% hint style="info" %}
-Make sure that the itemID of your NexoItem follows the pattern `armorname_armortype`.\
+Make sure that the ItemID of your NexoItem follows the pattern `armorname_armortype`.\
 For the rest of the above set it would be `forest_chestplate`, `forest_leggings` and `forest_boots`.
 
 Make sure your armor-layer files follow the format of **armorname**\_armor\_layer\_1/2.png.\
 In the example below, we would need a **forest**\_armor\_layer\_1.png & **forest**\_armor\_layer\_2.png
 
 \
-If you are unsure how to reference a TextureFile in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+If you are unsure how to reference a TextureFile in a NexoItem config;\
+[#how-do-i-reference-a-resourcepack-file-in-a-config](../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
 {% endhint %}
 
 ```yaml
@@ -46,4 +56,4 @@ forest_helmet:
 If using a 3D model for your helmet, do not specify Components.equippable.asset\_id
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Forest Armor Sets Nexo comes with (Player, Wolf, Horse &#x26; Llama)</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Forest Armor Sets Nexo comes with (Player, Wolf, Horse &#x26; Llama)</p></figcaption></figure>

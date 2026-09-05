@@ -1,7 +1,7 @@
-# 🐴 Custom Mob Armor (1.21.2+)
+# 🐴 Custom Mob Armor
 
 Nexo allows you to automate the generation of several types of mob-armor.\
-Mainly Wolf-Armor, Horse-Armor & Llama-Armor. These follow the same pattern as [components.md](../custom-armors/components.md "mention") Player Armor, with the ItemID- & Armor-pattern Texture being `armorname_wolf_armor`_,_ `armorname_horse_armor` & `armorname_llama_armor` .
+Mainly Wolf-Armor, Horse-Armor & Llama-Armor. These follow the same pattern as [Broken link](/broken/pages/HYHg9kLcfi9m3kscfcUq "mention") Player Armor, with the ItemID- & Armor-pattern Texture being `armorname_wolf_armor`_,_ `armorname_horse_armor` & `armorname_llama_armor` .
 
 ```yaml
 forest_wolf_armor:

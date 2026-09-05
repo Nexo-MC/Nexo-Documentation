@@ -10,7 +10,7 @@ coverY: 0
 
 As of Minecraft 1.20.6, items now use what is called Components, or DataComponents, to specify specific features. This covers anything from consumable items, tool-properties and death protection.
 
-You can see a complete list here: [#components](components.md "mention")
+You can see a complete list here: [components.md](components.md "mention")
 
 ### ItemTemplate
 
@@ -34,9 +34,9 @@ template_item2:
 ```
 
 You can also use **Template Placeholder** to simplify configs even further\
-&#xNAN;**\<item\_id> -** Can be used to insert the ID of the item into the relevant part\
-&#xNAN;**\<item\_id\_capitalized> -** Insert the ID in a formatted format; `item_id` -> `Item Id`\
-&#xNAN;**\<lore> -** Insert the lore of the item at a point in the lore of the template
+\&#xNAN;**\<item\_id> -** Can be used to insert the ID of the item into the relevant part\
+\&#xNAN;**\<item\_id\_capitalized> -** Insert the ID in a formatted format; `item_id` -> `Item Id`\
+\&#xNAN;**\<lore> -** Insert the lore of the item at a point in the lore of the template
 
 ```yaml
 item:
@@ -57,7 +57,7 @@ template_item:
 
 ### ItemModel Builder
 
-This lets you generate an ItemModel for your NexoItem without needing to provide the ResourcePack file. You can directly reference all you need right in the config. More detailed info can be found at [#itemmodel-builder](items/README.md#itemmodel-builder "mention")
+This lets you generate an ItemModel for your NexoItem without needing to provide the ResourcePack file. You can directly reference all you need right in the config. More detailed info can be found at [https://github.com/Nexo-MC/Nexo-Documentation/blob/master/configuration/items/items/README.md#itemmodel-builder](https://github.com/Nexo-MC/Nexo-Documentation/blob/master/configuration/items/items/README.md#itemmodel-builder "mention")
 
 ### PersistentData
 
@@ -218,7 +218,7 @@ my_item:
 ### ItemFlags
 
 {% hint style="warning" %}
-As of 1.21.5+ this should be switched with `Components.tooltip_display` [#components](items/README.md#components "mention")
+As of 1.21.5+ this should be switched with `Components.tooltip_display` [https://github.com/Nexo-MC/Nexo-Documentation/blob/master/configuration/items/items/README.md#components](https://github.com/Nexo-MC/Nexo-Documentation/blob/master/configuration/items/items/README.md#components "mention")
 {% endhint %}
 
 This allows you to set ItemFlags to an item, get the list of available flags [here](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/ItemFlag.html).
@@ -287,4 +287,4 @@ This part has a dedicated page, you can consult it [here](item-appearance.md).
 
 ## Mechanics options
 
-Mechanics are custom features in Nexo. You can find more under [broken-reference](broken-reference/ "mention") section
+Mechanics are custom features in Nexo. You can find more under [https://github.com/Nexo-MC/Nexo-Documentation/blob/master/configuration/items/broken-reference/README.md](https://github.com/Nexo-MC/Nexo-Documentation/blob/master/configuration/items/broken-reference/README.md "mention") section

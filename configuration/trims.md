@@ -1,7 +1,11 @@
+---
+hidden: true
+---
+
 # Trims Based (1.20+)
 
 {% hint style="warning" %}
-As of Nexo 1.25+, this is deprecated and will be removed in the future. Use [components.md](components.md "mention")
+As of Nexo 1.25+, this is deprecated and will be removed in the future. Use [Broken link](/broken/pages/HYHg9kLcfi9m3kscfcUq "mention")
 {% endhint %}
 
 If using trims as your custom-armor type, most things is handled automatically for you.\
@@ -29,7 +33,7 @@ Make sure your armor-layer files follow the format of **armorname**\_armor\_laye
 In the example below, we would need a **ruby**\_armor\_layer\_1.png & **ruby**\_armor\_layer\_2.png
 
 \
-If you are unsure how to reference a TextureFile in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
+If you are unsure how to reference a TextureFile in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
 {% endhint %}
 
 ```yaml

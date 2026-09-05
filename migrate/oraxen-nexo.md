@@ -1,8 +1,7 @@
 # ☄️ Oraxen → Nexo
 
 This article explains how to migrate your Oraxen config to Nexo.\
-The process will be mostly automatic, but first follow the steps below.\
-
+The process will be mostly automatic, but first follow the steps below.\\
 
 {% stepper %}
 {% step %}
@@ -10,7 +9,7 @@ The process will be mostly automatic, but first follow the steps below.\
 {% endstep %}
 
 {% step %}
-#### Copy the contents of `plugins/Oraxen` into `plugins/Nexo/converter/Oraxen`
+**Copy the contents of `plugins/Oraxen` into `plugins/Nexo/converter/Oraxen`**
 
 The `plugins/Nexo/converter/Oraxen` folder does not exist by default, so create the required folders yourself.\
 Also make sure to keep the folder `plugins/Oraxen`, as this will be used later for the conversion process.\
@@ -21,13 +20,13 @@ This step may be repeated for as many Oraxen packs as you would like to add, eve
 {% step %}
 **Take a backup**
 
-It is recommended to make a backup of your server's world folders before swapping to Nexo, as there might be small oversights leading to minor loss of furniture/custom blocks.\
+It is recommended to make a backup of your server's world folders before swapping to Nexo, as there might be small oversights leading to minor loss of furniture/custom blocks.\\
 {% endstep %}
 
 {% step %}
 **Remove Oraxen .jar file**
 
-Make sure to only delete the jar files - keep the folder `plugins/Oraxen`.\
+Make sure to only delete the jar files - keep the folder `plugins/Oraxen`.\\
 {% endstep %}
 
 {% step %}
@@ -59,7 +58,7 @@ Placed Oraxen furniture will be automatically converted to Nexo furniture when t
 There might be some issues with item frame furniture due to Nexo only supporting ItemDisplay furniture.\
 These can be manually replaced, although an automatic conversion feature may be added in a future Nexo update.\
 \
-Main config changes here are with how seats, lights, and [hitboxes](../mechanics/furniture-mechanic/hitbox) are defined.\
+Main config changes here are with how seats, lights, and [hitboxes](../mechanics/furniture-mechanic/hitbox/) are defined.\
 Nexo allows for multiple interaction hitboxes, seats, and lights. Read [Furniture Mechanic](../mechanics/furniture-mechanic/) for more info.
 
 ### Custom Blocks

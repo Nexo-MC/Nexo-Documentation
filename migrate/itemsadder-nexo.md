@@ -14,7 +14,7 @@ If you are on ItemsAdder v3.x, you must update ItemsAdder before migrating to Ne
 {% endstep %}
 
 {% step %}
-#### Copy the contents of `plugins/ItemsAdder` into `plugins/Nexo/converter/ItemsAdder`
+**Copy the contents of `plugins/ItemsAdder` into `plugins/Nexo/converter/ItemsAdder`**
 
 The `plugins/Nexo/converter/ItemsAdder` folder does not exist by default, so create the required folders yourself.\
 Also make sure to keep the folder `plugins/ItemsAdder`, as this will be used later for the conversion process.\
@@ -25,13 +25,13 @@ This step may be repeated for as many ItemsAdder packs as you would like to add,
 {% step %}
 **Take a backup**
 
-It is recommended to make a backup of your server's world folders before swapping to Nexo, as there might be small oversights leading to minor loss of furniture/custom blocks.\
+It is recommended to make a backup of your server's world folders before swapping to Nexo, as there might be small oversights leading to minor loss of furniture/custom blocks.\\
 {% endstep %}
 
 {% step %}
 **Remove ItemsAdder and LoneLibs .jar files**
 
-Make sure to only delete the jar files - keep the folder `plugins/ItemsAdder`.\
+Make sure to only delete the jar files - keep the folder `plugins/ItemsAdder`.\\
 {% endstep %}
 
 {% step %}
@@ -50,4 +50,4 @@ Make sure to only delete the jar files - keep the folder `plugins/ItemsAdder`.\
 ### <mark style="color:yellow;">Known issues</mark>
 
 Nexo won't be able to migrate everything, as some features are not compatible across both plugins.\
-For example, non-Display Entity furniture placed in your world before conversion will NOT be automatically converted.\
+For example, non-Display Entity furniture placed in your world before conversion will NOT be automatically converted.\\
