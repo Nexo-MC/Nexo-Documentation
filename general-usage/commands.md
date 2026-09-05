@@ -72,7 +72,7 @@ This command allows you to dye the item in your hand, whether it's a dyeable Nex
 
 ## 🔧 Recipe Commands
 
-This command allows you to add new recipes to the configuration directly from the game using recipes builder. For more information on how to use it, see [Recipes](recipes.md).
+This command allows you to add new recipes to the configuration directly from the game using recipes builder. For more information on how to use it, see [Recipes](recipes/).
 
 #### Usage:
 
