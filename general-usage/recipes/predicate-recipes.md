@@ -9,6 +9,23 @@ This allows you to define the amount of a given Ingredient the recipe requires
 
 <div align="left"><figure><img src="../../.gitbook/assets/amount.gif" alt=""><figcaption><p>Recipe showing a specific amount of an Ingredient is required to craft</p></figcaption></figure></div>
 
+```yaml
+amount_test:
+  result:
+    minecraft_type: DIAMOND
+    amount: 3
+  ingredients:
+    A:
+      minecraft_type: IRON_INGOT
+      amount: 2
+    B:
+      minecraft_type: GOLD_INGOT
+      amount: 2
+    C:
+      minecraft_type: COPPER_INGOT
+      amount: 2
+```
+
 #### Replacement-Predicate
 
 This allows you to define an item which should remain after the recipe is crafted\
@@ -18,6 +35,19 @@ _This recipe cannot be made through the in-game builders, only directly in files
 
 <div align="left"><figure><img src="../../.gitbook/assets/replacement.gif" alt=""><figcaption><p>Recipe which leaves behind an empty Bucket after crafted</p></figcaption></figure></div>
 
+```yaml
+replacement_test:
+  result:
+    minecraft_type: POWDER_SNOW_BUCKET
+  ingredients:
+    A:
+      minecraft_type: SNOWBALL
+    B:
+      minecraft_type: WATER_BUCKET
+      replacement:
+        minecraft_type: BUCKET
+```
+
 #### Durability Damage-Predicate
 
 This allows you to define if an item should take durability damage, instead of immediatley being used up when crafting. For example a knife which takes damage when crafting meat
@@ -25,6 +55,19 @@ This allows you to define if an item should take durability damage, instead of i
 _This recipe cannot be made through the in-game builders, only directly in files_
 
 <div align="left"><figure><img src="../../.gitbook/assets/damage.gif" alt=""><figcaption><p>Sword taking damage after "cutting up" Wood when crafting recipe</p></figcaption></figure></div>
+
+```yaml
+damage_test:
+  result:
+    nexo_item: bark
+    amount: 8
+  ingredients:
+    A:
+      tag: swords
+      damage: 1
+    B:
+      tag: logs
+```
 
 #### Transmute Recipes
 
