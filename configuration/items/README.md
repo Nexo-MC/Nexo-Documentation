@@ -153,6 +153,10 @@ my_item:
 
 This allows you to change the color of an item made of a supported material (e.g. leather armor).
 
+{% hint style="warning" %}
+Minecraft 26.3 removed the `map_color`-component, so filled maps can no longer be colored on that version and above
+{% endhint %}
+
 {% columns %}
 {% column %}
 ```yaml

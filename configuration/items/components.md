@@ -6,7 +6,68 @@ Due to the nature of these they are very version-specific, so there are some dif
 Each component below has a hover-click to show an example of how to use it, with additional info.
 
 {% tabs %}
-{% tab title="1.21.11+" %}
+{% tab title="26.3+" %}
+[**Max Stack Size**](#user-content-fn-1)[^1] **-** Sets the maximum slot-size for the NexoItem\
+[**Enchantment Glint Override**](#user-content-fn-2)[^2] - Sets an override-state for the enchantment glint\
+[**Fire Resistant**](#user-content-fn-3)[^3] - Sets whether this NexoItem is immune to fire and lava\
+[**Max Damage**](#user-content-fn-4)[^4] - Sets the maximum amount of damage the NexoItem can take\
+[**Hide Tooltip**](#user-content-fn-5)[^5] - Hides all tooltips from the given NexoItem on hover\
+[**Food**](#user-content-fn-6)[^6] - Makes this item consumable with several different properties\
+[**Tool**](#user-content-fn-7)[^7] **-** Makes your item into a tool with configurable behaviour for blocks its breaking
+
+[**Custom Data**](#user-content-fn-8)[^8] **-** Defines custom properties to add to the item\
+[**Jukebox Playable**](#user-content-fn-9)[^9] - Lets this item be inserted into a Jukebox and play a given song
+
+[**Consumable**](#user-content-fn-10)[^10] - Makes an item consumable, with bunch of sub-properties\
+[**Equippable**](#user-content-fn-11)[^11] **-** Makes an item equippable, like armor\
+[**Damage Resistant**](#user-content-fn-12)[^12] **-** Specify a damage-type this item is invulnerable to\
+[**Enchantable**](#user-content-fn-13)[^13] **-** Set the maximum enchantment-cost for this item\
+[**Glider**](#user-content-fn-14)[^14] **-** Allows the player to glide, like with elytras, when equipped\
+[**Item Model** ](#user-content-fn-15)[^15]- Defines the base model-properties of this item\
+[**Tooltip Style**](#user-content-fn-16)[^16] **-** Used to make custom tooltip-styles for your item\
+[**Use Cooldown**](#user-content-fn-17)[^17] - Applies a cooldown to all matching items when used\
+[**Use Remainder**](#user-content-fn-18)[^18] - Replaces the item with a remainder item if its stack count has decreased after use\
+[**Repairable**](#user-content-fn-19)[^19] - What item(s) should be allowed in anvils to repair durability\
+[**Death Protection**](#user-content-fn-20)[^20] - Protects the player from when equipped on death. Optionally applies effects too\
+[**Player Profile**](#user-content-fn-21)[^21] - Specify profile-properties to show player-skins on item\
+[**Unset Components**](#user-content-fn-22)[^22] - This lets you specify Components Nexo should remove from the item\
+[**Custom Model Data**](#user-content-fn-23)[^23] - Used for all the new formatting for [1.21.4 CMD component](https://minecraft.wiki/w/Data_component_format#custom_model_data)
+
+[**Tooltip Display**](#user-content-fn-24)[^24] - Sets the Components to hide tooltips from. This should be used instead of ItemFlags\
+[**Break Sound**](#user-content-fn-25)[^25] - Set the sound to play when the item loses all its durability\
+[**Weapon**](#user-content-fn-26)[^26] **-** Makes the item act like a weapon\
+[**Blocks Attacks**](#user-content-fn-27)[^27] **-** Makes the item act as a shield & can block attacks\
+[**CanPlaceOn/CanBreak**](#user-content-fn-28)[^28] **-** Defines what this item can break or be placed on in Adventure Mode
+
+[**Painting Variant**](#user-content-fn-29)[^29] **-** Used with the new [custom-paintings.md](../custom-paintings.md "mention") feature to specify which painting to place
+
+[**Kinetic Weapon**](#user-content-fn-30)[^30] **-** Enables charge-type attack when using item\
+[**Piercing Weapon**](#user-content-fn-31)[^31] **-** Actions done when weapon pierces target\
+[**Attack Range**](#user-content-fn-32)[^32] **-** The range and hitbox margin of a weapon\
+[**Use Effects**](#user-content-fn-34)[^34] **-** Vibration & player movement penalties when continuously using item\
+[**Damage Type**](#user-content-fn-35)[^35] **-** The type of damage the item deals\
+[**Minimum Attack Charge**](#user-content-fn-36)[^36] **-** Minimum attack-indicator value required to attack with item
+
+**New properties for 26.3+:**
+
+[**Compostable**](#user-content-fn-39)[^39] **-** Lets the item be put into a composter and how many layers it fills\
+[**Cooking Fuel**](#user-content-fn-40)[^40] **-** Lets the item be used as fuel in furnaces, and how fast it smelts\
+[**Brewing Fuel**](#user-content-fn-41)[^41] **-** Lets the item be used as fuel in brewing stands, and how fast it brews\
+[**Attack Animation**](#user-content-fn-42)[^42] **-** The animation to play when attacking with the item\
+[**Interact Animation**](#user-content-fn-43)[^43] **-** The animation to play when using the item
+
+{% hint style="warning" %}
+Minecraft 26.3 removed the `swing_animation`-component, splitting it into `attack_animation` and `interact_animation`.\
+A `swing_animation`-entry is ignored on 26.3+, so move it over to one or both of the new components
+{% endhint %}
+
+{% hint style="info" %}
+The number-properties of the fuel- and compostable-components, like `burn_time` or `speed_multiplier`, also accept the key of an entry in the vanilla `context_int_provider` or `context_float_provider` registries.\
+This lets the value vary in-game instead of being a fixed number
+{% endhint %}
+{% endtab %}
+
+{% tab title="1.21.11 - 26.2" %}
 [**Max Stack Size**](#user-content-fn-1)[^1] **-** Sets the maximum slot-size for the NexoItem\
 [**Enchantment Glint Override**](#user-content-fn-2)[^2] - Sets an override-state for the enchantment glint\
 [**Fire Resistant**](#user-content-fn-3)[^3] - Sets whether this NexoItem is immune to fire and lava\
@@ -726,3 +787,60 @@ Each component below has a hover-click to show an example of how to use it, with
 
     **can\_always\_eat -** Defaults to false if unspecified\
     **eat\_seconds -** Defaults to 1.6 if unspecified
+
+[^39]: ```yaml
+    my_item:
+      Components:
+        compostable:
+          layers: 1
+    ```
+
+    **layers -** How many of the composters layers the item fills when used, the composter needing 7 to produce bonemeal
+
+    An omitted property keeps the value the base-material already has, or defaults to 1 layer for materials that are not compostable in vanilla
+
+[^40]: ```yaml
+    my_item:
+      Components:
+        cooking_fuel:
+          burn_time: 10s
+          speed_multiplier: 1.0
+    ```
+
+    **burn\_time -** How long the item burns for in a furnace. A plain number is read as seconds, add a suffix like `200t` for other units\
+    **speed\_multiplier -** How fast the furnace cooks while burning this fuel, 1.0 being the normal speed
+
+    An omitted property keeps the value the base-material already has, or defaults to a burn-time of 0 and a multiplier of 1.0 for materials that are no fuel in vanilla
+
+[^41]: ```yaml
+    my_item:
+      Components:
+        brewing_fuel:
+          uses: 1
+          speed_multiplier: 1.0
+    ```
+
+    **uses -** How many brewing-operations the item fuels, blaze powder having 20\
+    **speed\_multiplier -** How fast the brewing stand brews while running on this fuel, 1.0 being the normal speed
+
+    An omitted property keeps the value the base-material already has, or defaults to 1 use and a multiplier of 1.0 for materials that are no brewing-fuel in vanilla
+
+[^42]: ```yaml
+    my_item:
+      Components:
+        attack_animation:
+          type: WHACK
+          duration: 6t
+    ```
+
+    Available animations found [here](https://jd.papermc.io/paper/io/papermc/paper/datacomponent/item/SwingAnimation.html)
+
+[^43]: ```yaml
+    my_item:
+      Components:
+        interact_animation:
+          type: WHACK
+          duration: 6t
+    ```
+
+    Available animations found [here](https://jd.papermc.io/paper/io/papermc/paper/datacomponent/item/SwingAnimation.html)
