@@ -97,16 +97,14 @@ my_item:
 
 This allows you to add minecraft attributes to your item. They are very powerful and allow you to make an item that adds hearts, increases the player's speed, etc.
 
-{% tabs %}
-{% tab title="1.21.6+" %}
 ```yaml
 my_item:
   AttributeModifiers:
     - attribute: MOVEMENT_SPEED
-      amount: 0.1 
+      amount: 0.1
       operation: ADD_NUMBER
       slot: MAINHAND
-      display:
+      display: # 1.21.6+ only
         type: override
         text: "Value: <red>0.1"
 ```
@@ -117,37 +115,6 @@ List of Slots can be found [here](https://jd.papermc.io/paper/1.21.11/org/bukkit
 
 The types of AttributeDisplay are; **default, hidden & override**\
 Of these only **override** has an additional field, text, which is the new text to show
-{% endtab %}
-
-{% tab title="1.21.2+" %}
-```yaml
-my_item:
-  AttributeModifiers:
-    - attribute: MOVEMENT_SPEED
-      amount: 0.1 
-      operation: ADD_NUMBER
-      slot: MAINHAND
-```
-
-List of Attributes can be found [here](https://jd.papermc.io/paper/1.21.11/org/bukkit/attribute/Attribute.html)\
-List of Operations can be found [here](https://jd.papermc.io/paper/1.21.11/org/bukkit/attribute/AttributeModifier.Operation.html)\
-List of Slots can be found [here](https://jd.papermc.io/paper/1.21.11/org/bukkit/inventory/EquipmentSlotGroup.html)
-{% endtab %}
-
-{% tab title="1.21.1" %}
-```yaml
-my_item:
-  AttributeModifiers:
-    # - attribute: Get the list here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html
-    # - operations: 0 for ADD_NUMBER, 1 for ADD_SCALAR, 2 for MULTIPLY_SCALAR_1;
-    # - slot: HAND, OFF_HAND, FEET, LEGS, CHEST or HEAD
-    - attribute: MOVEMENT_SPEED
-      amount: 0.1 
-      operation: 0
-      slot: HAND
-```
-{% endtab %}
-{% endtabs %}
 
 ### Color
 
@@ -244,31 +211,6 @@ my_item:
     - HIDE_DESTROYS
     - HIDE_PLACED_ON
     - HIDE_POTION_EFFECTS
-```
-
-### PotionEffects
-
-{% hint style="warning" %}
-This should be swapped with Consumable Component [components.md](components.md "mention") for 1.21.4+
-{% endhint %}
-
-This allows you to add custom Potion Effects to your potion. Get the list of available effects [here](https://jd.papermc.io/paper/1.21.3/org/bukkit/potion/PotionEffectType.html).
-
-```yaml
-my_item:
-  PotionEffects:
-    # - type: Get the list here: https://jd.papermc.io/paper/1.21.3/org/bukkit/potion/PotionEffectType.html
-    # - duration: duration of effect (2s, 3t, 4m)
-    # - amplifier: potion effects level
-    # - ambient: true/false, makes potion effect produce more, translucent, particles.
-    # - particles: true/false, whether this effect has particles or not
-    # - icon: true/false, whether this effect has an icon or not
-    - type: WITHER
-      duration: 10s
-      amplifier: 2
-      ambient: false
-      particles: true
-      icon: true
 ```
 
 ### Enchantments
