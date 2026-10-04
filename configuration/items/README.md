@@ -191,16 +191,21 @@ my_item:
 
 ### Disable Enchanting
 
-This options allows you to prevent an item from being enchanted via anvils or enchantment tables.\
-This does not prevent enchantments from being applied in the config.\\
+To prevent an item from being enchanted, use the Enchantable-Component with a value of 0.\
+This does not prevent enchantments from being applied in the config.
 
 ```yaml
 my_item:
-  disable_enchanting: true
+  Components:
+    enchantable: 0
 ```
 
-{% hint style="warning" %}
-As of 1.21.2+ you should use Enchantable-Component (`Components.enchantable: 0`)
+Vanilla only blocks the enchanting table this way.\
+With `Misc.extended_enchantable` enabled in `settings.yml` (the default), Nexo also blocks enchanting the item in anvils and disenchanting it in grindstones.
+
+{% hint style="info" %}
+`disable_enchanting` was removed in Nexo 1.29.\
+Items still using it are converted to `Components.enchantable: 0` automatically
 {% endhint %}
 
 ### excludeFromInventory
@@ -218,6 +223,9 @@ my_item:
 my_item:
   unbreakable: true
 ```
+
+Leaving it out keeps whatever the item already has, so items made unbreakable by another plugin stay unbreakable when Nexo updates them.\
+Set it to `false` to always remove it.
 
 ### ItemFlags
 

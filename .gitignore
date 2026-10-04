@@ -1,0 +1,8 @@
+# MkDocs PoC build artifacts
+/site/
+/.venv-poc/
+__pycache__/
+*.pyc
+
+# IDE
+/.idea/

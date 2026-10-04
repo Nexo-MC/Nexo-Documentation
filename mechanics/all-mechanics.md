@@ -61,7 +61,22 @@ myitem:
       piglins_ignore_when_equipped: false
       compostable: false
       allow_in_vanilla_recipes: true
+      prevent_breaking: false
+      prevent_renaming: false
+      prevent_item_frames: false
 ```
+
+`prevent_breaking` cancels any damage that would break the item, so it stays at its last bit of durability.\
+By default the item still works as normal in that state.\
+With `misc.disable_components_on_prevent_breaking` enabled in `mechanics.yml`, the item stops functioning until it is repaired:
+
+* A tool mines at fist-speed and drops nothing
+* A weapon deals base damage
+* Attribute-modifiers and gliding are removed
+* Shields stop blocking, on 1.21.5+ only
+
+Enchantments are left on the item, so their effects still apply.\
+Bows, crossbows, tridents, fishing-rods and similar items are not affected.
 
 ### Commands
 
@@ -102,7 +117,8 @@ myitem:
         icon: true # whether this effect has an icon or not
 ```
 
-You can also make an effect only apply if the entire set it equipped.
+You can also make an effect only apply if the entire set is equipped.\
+A set is every armor-slot holding an item with the same [CustomArmor](../configuration/custom-armors.md) `id`.
 
 ```yaml
 myitem:
@@ -111,6 +127,16 @@ myitem:
       night_vision:
         requires_full_set: true
         ...
+```
+
+Pieces without a CustomArmor-section, like a [3D Helmet](../configuration/custom-armors.md#3d-helmets), can join a set through `set`.\
+It overrides the CustomArmor `id` for full-set checks.
+
+```yaml
+forest_helmet:
+  Mechanics:
+    armor_effects:
+      set: forest
 ```
 
 ### clickAction

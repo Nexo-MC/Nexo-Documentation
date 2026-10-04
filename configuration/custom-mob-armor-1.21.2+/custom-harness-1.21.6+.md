@@ -1,28 +1,21 @@
 # 🪢 Custom Harness (1.21.6+)
 
-With the new Happy Ghast entity, there is a new type of Equipment, the Harness.\
-Nexo allows you to easily register custom harnesses like [custom-saddles-1.21.5+.md](custom-saddles-1.21.5+.md "mention").
+With the Happy Ghast came a new type of equipment, the Harness.\
+Custom harnesses use the same `CustomArmor`-section as [Custom Player Armors](../custom-armors.md), through the `harness` layer.
 
-To do so simply follow the general pattern for all NexoEquipment. Below is an example;
-
-```
+```yaml
 forest_harness:
-  type: PAPER
+  material: PAPER
   itemname: "Forest Harness"
   Pack:
-    parent_model: item/generated
     texture: nexo:items/nexo_armor/forest_harness_icon
-    CustomArmor:
-      harness: nexo:items/nexo_armor/forest_harness
-  Components:
-    equippable:
-      allowed_entity_types: [ HAPPY_GHAST ]
-      slot: BODY
+  CustomArmor:
+    id: forest_harness
+    harness: nexo:items/nexo_armor/forest_harness
 ```
+
+Nexo fills in the Equippable-Component with `slot: BODY` and `allowed_entity_types: [HAPPY_GHAST]`.
 
 {% hint style="info" %}
 If you are unsure how to reference a TextureFile in a NexoItem config; [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
 {% endhint %}
-
-Here `Pack.CustomArmor.harness` points to where we put the texture for the harness itself, with `Pack.texture` the icon.\
-We also have to set the `allowed_entity_types` in our EquippableComponent for Nexo to properly handle the remaining properties

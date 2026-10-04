@@ -275,6 +275,37 @@ myitem:
       restricted_rotation: VERY_STRICT #STRICT is default if unspecified
 ```
 
+### Placement Preview
+
+Lets players see where a furniture will be placed before placing it.\
+While holding the furniture, sneak to show a semi-transparent preview where you are looking.\
+It is tinted green when it can be placed there and red when it cannot.\
+Scroll to rotate the preview, and sneak again to exit.
+
+Enable it for a single furniture with `preview_placement: true`, or use the section to also change the other options:
+
+```yaml
+myitem:
+  Mechanics:
+    furniture:
+      preview_placement:
+        opacity: 0.4               # 1 leaves the preview solid
+        require_permission: false
+```
+
+The defaults for all furniture are set in `mechanics.yml`:
+
+```yaml
+furniture:
+  preview_placement:
+    enabled: false
+    opacity: 0.4
+    require_permission: false
+```
+
+With `require_permission` enabled, players need `nexo.furniture.preview_placement`, or `nexo.furniture.preview_placement.<itemid>` for a single furniture.\
+The action-bar hint shown while previewing is the `mechanics.furniture_preview` message in your language-file.
+
 ### Limited placing
 
 You can customize what blocks a custom block/furniture can be placed on with `limited_placing` subsection. You can use the `roof`, `floor` and `wall` options to dictate where a block can be placed. By default, all are set to `true`.\

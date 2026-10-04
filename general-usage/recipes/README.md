@@ -94,6 +94,34 @@ crafter_only_axe:
       minecraft_type: BLAZE_ROD
 ```
 
+#### Preserving Components
+
+An ingredient can carry data-components over onto the result with `preserve`.\
+This lets a recipe upgrade an item without wiping its durability, enchantments or name.\
+It works for Shaped, Shapeless & Crafter recipes.
+
+```yaml
+forest_axe_upgrade:
+  result:
+    nexo_item: forest_axe
+  shape:
+  - ' D '
+  - 'DAD'
+  - ' D '
+  ingredients:
+    A:
+      minecraft_type: DIAMOND_AXE
+      preserve:
+      - damage
+      - enchantments
+      - custom_name
+    D:
+      minecraft_type: DIAMOND
+```
+
+Components the ingredient does not have are left as the result defines them.\
+If several ingredients preserve the same component, it is taken from the first of them in the grid.
+
 ***
 
 ## Furnace, Blasting, Smoker & Campfire
