@@ -171,6 +171,12 @@ stripped_spruce_log:
     minecraft_type: SPRUCE_LOG
 ```
 
+{% hint style="info" %}
+The stonecutting builder (`/nexo recipes builder stonecutting`) uses a crafting-table layout, but the slots are used the other way around.\
+The **result slot** holds the input, and every item in the 3x3 grid becomes its own output.\
+Saving as `stripped_log` with Spruce Log in the result slot and Stripped Spruce Log plus Spruce Planks in the grid creates `stripped_log_0` and `stripped_log_1`, both with Spruce Log as input
+{% endhint %}
+
 ***
 
 ## Brewing Stand Recipes
