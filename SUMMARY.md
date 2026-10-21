@@ -79,6 +79,7 @@
   * [🪑 Seat Mechanic](mechanics/furniture-mechanic/seat-mechanic.md)
   * [🛏️ Bed Mechanic](mechanics/furniture-mechanic/bed-mechanic.md)
   * [💡 Light Mechanic](mechanics/furniture-mechanic/light-mechanic.md)
+  * [✨ Particle Mechanic](mechanics/furniture-mechanic/particle-mechanic.md)
   * [🧑‍🌾 Farming Mechanic](mechanics/furniture-mechanic/farming-mechanic.md)
   * [🚪 Door Mechanic](mechanics/furniture-mechanic/door-mechanic.md)
 * [📦 Custom Block Mechanics](mechanics/custom-block-mechanics/README.md)
