@@ -58,7 +58,7 @@ menu:
 
 ### Template options
 
-<table><thead><tr><th width="148">Option</th><th width="117">Type</th><th width="108">Default</th><th>Description</th></tr></thead><tbody><tr><td><code>required</code></td><td>boolean</td><td><code>false</code></td><td>Always sent to every player; cannot be toggled off</td></tr><tr><td><code>default</code></td><td>boolean</td><td><code>false</code></td><td>Enabled by default for players who have never toggled it</td></tr><tr><td><code>conflicts_with</code></td><td>string or list</td><td><code>[]</code></td><td>IDs of templates to disable when this one is enabled</td></tr><tr><td><code>path</code></td><td>string</td><td><code>""</code></td><td>Path to the pack. Accepts absolute paths, paths relative to <code>template_packs/</code>, or paths relative to the Nexo data folder. Defaults to <code>template_packs/&#x3C;id></code></td></tr></tbody></table>
+<table><thead><tr><th width="148">Option</th><th width="117">Type</th><th width="108">Default</th><th>Description</th></tr></thead><tbody><tr><td><code>required</code></td><td>boolean</td><td><code>false</code></td><td>Always sent to every player; cannot be toggled off</td></tr><tr><td><code>default</code></td><td>boolean</td><td><code>false</code></td><td>Enabled by default for players who have never toggled it</td></tr><tr><td><code>conflicts_with</code></td><td>string or list</td><td><code>[]</code></td><td>IDs of templates to disable when this one is enabled</td></tr><tr><td><code>path</code></td><td>string</td><td><code>""</code></td><td>Path to the pack. Accepts absolute paths, paths relative to <code>template_packs/</code>, or paths relative to the Nexo data folder. Defaults to <code>template_packs/&#x3C;id></code></td></tr><tr><td><code>empty</code></td><td>boolean</td><td><code>false</code></td><td>The template has no pack and sends nothing. Useful as a "none" option in a cycle, or as a setting read through <code>%nexo_multipack_&#x3C;id>%</code></td></tr></tbody></table>
 
 ## Pack folder structure
 
@@ -90,25 +90,25 @@ Changes made inside the GUI are **batched**, meaning packs are only re-sent once
 
 ```yaml
 menu:
-  title: "<gold>My Resourcepack Menu"
-  rows: 3          # 1–6
+  title: "<gold>My Resourcepack Menu"   # Defaults to "<gold>Multipack"
+  rows: 3          # 1-6, defaults to 6
 
   slots:
     my_slot:
       offset: 5,2      # Column (x: 1–9) and row (y: 1–<rows>) of the top-left cell
-      size: 1,1        # How many cells wide/tall this slot occupies (defaults to 1×1)
-      # Only the top-left cell is interactive, remaining cells show an invisible copy
+      size: 1,1        # How many cells wide/tall this slot occupies (defaults to 1,1)
+      # Only the top-left cell shows the item, the other cells are invisible but still clickable
       all_slots_except_first_empty: false
       base_item:   # Fallback item shown when the action's state has no own item
         material: PAPER
-        display_name: "<gray>My Pack"
+        itemname: "<gray>My Pack"
       action:
         # See action types below
 ```
 
 #### Slot options
 
-<table><thead><tr><th width="220">Option</th><th width="100">Type</th><th width="100">Default</th><th>Description</th></tr></thead><tbody><tr><td><code>offset.x</code> / <code>offset.y</code></td><td>integer</td><td><code>1</code></td><td>Column (1–9) and row (1–rows) of the top-left cell of the slot</td></tr><tr><td><code>size.x</code> / <code>size.y</code></td><td>integer</td><td><code>1</code></td><td>Width and height in cells. Useful for decorative multi-cell slots</td></tr><tr><td><code>all_slots_except_first_empty</code></td><td>boolean</td><td><code>false</code></td><td>When <code>true</code>, only the top-left cell is interactive; all others display an invisible placeholder that copies the base item's data components</td></tr><tr><td><code>base_item</code></td><td>item section</td><td>—</td><td>Fallback item used when a state has no own item defined. Required unless every action state defines its own item</td></tr><tr><td><code>action</code></td><td>section</td><td>—</td><td>Defines what happens when the slot is clicked (see below)</td></tr></tbody></table>
+<table><thead><tr><th width="220">Option</th><th width="100">Type</th><th width="100">Default</th><th>Description</th></tr></thead><tbody><tr><td><code>offset</code></td><td><code>x,y</code></td><td>—</td><td>Column (1-9) and row (1-rows) of the top-left cell of the slot. Required, cells outside the menu are skipped</td></tr><tr><td><code>size</code></td><td><code>x,y</code></td><td><code>1,1</code></td><td>Width and height in cells. Useful for decorative multi-cell slots</td></tr><tr><td><code>all_slots_except_first_empty</code></td><td>boolean</td><td><code>false</code></td><td>When <code>true</code>, only the top-left cell shows the item. The other cells stay clickable but show an invisible placeholder that copies the data components of the item currently shown</td></tr><tr><td><code>base_item</code></td><td>item section</td><td>—</td><td>Fallback item used when a state has no own item defined. Required unless every action state defines its own item</td></tr><tr><td><code>action</code></td><td>section</td><td>—</td><td>Defines what happens when the slot is clicked (see below)</td></tr></tbody></table>
 
 ***
 
@@ -125,16 +125,16 @@ action:
 
   enabled_item:         # Item shown when the template is ON
     material: LIME_DYE
-    display_name: "<green>Music Pack <gray>| <green>Enabled"
+    itemname: "<green>Music Pack <gray>| <green>Enabled"
 
   disabled_item:        # Item shown when the template is OFF
     material: GRAY_DYE
-    display_name: "<red>Music Pack <gray>| <red>Disabled"
+    itemname: "<red>Music Pack <gray>| <red>Disabled"
 ```
 
 `enabled_item` and `disabled_item` are merged on top of `base_item` if one is defined, so shared properties (e.g. lore) can be put in `base_item` and only the differences in each state item.
 
-Required templates cannot be toggled — clicking their slot does nothing.
+Required templates cannot be toggled, clicking their slot does nothing.
 
 #### CYCLING
 
@@ -164,7 +164,8 @@ action:
       itemname: "<gold>3D Tools"
 ```
 
-On click, the currently-enabled entry is disabled and the next one in the list is enabled (wrapping around). All other entries in the cycle are set to `false`.
+On click, the currently-enabled entry is disabled and the next one in the list is enabled (wrapping around). All other entries in the cycle are set to `false`.\
+Required templates in the list are skipped.
 
 ***
 
@@ -172,14 +173,19 @@ On click, the currently-enabled entry is disabled and the next one in the list i
 
 Items in `base_item`, `enabled_item`, `disabled_item`, and cycling entries support three formats:
 
-**Nexo item** | references an existing Nexo item by ID:
+**Nexo item** | references an existing Nexo item by ID.\
+`itemname`, `customname` and `lore` can be set to override those of the item:
 
 ```yaml
 base_item:
   nexo_item: my_item_id
+  itemname: "<gray>My Pack"
+  lore:
+    - "<dark_gray>Click to toggle"
 ```
 
-**Item model** | An ItemModelBuilder, refer to [#itemmodel-builder/README.md](../items/itemmodel-builder/README.md "mention") for details. Can be used to create simple custom items without needing to set up a full Nexo item.
+**Item model** | An ItemModelBuilder, refer to [#itemmodel-builder/README.md](../items/itemmodel-builder/README.md "mention") for details. Can be used to create simple custom items without needing to set up a full Nexo item.\
+The item is always a `PAPER` with only this model, any other keys like `itemname` or `lore` are ignored.
 
 ```yaml
 base_item:
@@ -192,7 +198,7 @@ base_item:
         model: "item/diamond"
 ```
 
-**Inline item** | a standard Nexo `ItemParser` section (material, display\_name, lore, etc.):
+**Inline item** | a standard Nexo item section (material, itemname, lore, etc.):
 
 ```yaml
 base_item:
@@ -317,9 +323,7 @@ menu:
 
   slots:
     music_toggle:
-      offset:
-        x: 3
-        y: 2
+      offset: 3,2
       base_item:
         material: NOTE_BLOCK
         lore:
@@ -333,9 +337,7 @@ menu:
           itemname: "<red>Music Pack <gray>| <red>Disabled"
 
     tool_style:
-      offset:
-        x: 7
-        y: 2
+      offset: 7,2
       base_item:
         material: STICK
         lore:

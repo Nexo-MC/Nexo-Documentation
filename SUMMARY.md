@@ -9,6 +9,7 @@
   * [ItemModels vs. CustomModelData](general-usage/faq/itemmodels-vs.-custommodeldata.md)
 * [📺 Video Tutorials](general-usage/video-tutorials.md)
 * [⌨️ Commands](general-usage/commands.md)
+* [🏷️ Placeholders](general-usage/placeholders.md)
 * [🧑‍🍳 Recipes](general-usage/recipes/README.md)
   * [Predicate Recipes](general-usage/recipes/predicate-recipes.md)
 

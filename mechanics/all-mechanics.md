@@ -91,7 +91,7 @@ myitem:
       one_usage: true # should the amount decrease when used? Default: false
       console:
         # e.g. to kill the player
-        - "kill %p%"
+        - "kill <player>"
       player:
         # e.g. the player performs /spawn
         - "spawn"
