@@ -41,7 +41,7 @@ Rotations are the one rough edge: models generally render correctly, but a few c
 
 ### Resource pack options
 
-With `splitPacks` on, the animated models ship as their own pack in two versions: full and light. Bedrock players pick one, or no animation at all, from a form the extension shows when they first join. Answers are saved per player, and a changed answer applies on their next join, since Bedrock only receives packs while connecting.
+With `pack.split` on, the animated models ship as their own pack in two versions: full and light. Bedrock players pick one, or no animation at all, from a form the extension shows when they first join. Answers are saved per player, and a changed answer applies on their next join, since Bedrock only receives packs while connecting.
 
 The form is set up in `packs.yml` in the extension's folder (`extensions/scaffoldingextension/` in Geyser). Scaffolding creates it for you and keeps it up to date until you edit it. Edits apply with `/<commandRoot> reload`.
 
@@ -75,7 +75,7 @@ questions:
 ```
 
 {% hint style="info" %}
-`pack` is the pack's original Scaffolding name. Keep it as is, even when `packName` in the plugin's config renames the pack. The older `optionalPacks:` layout of `packs.yml` is still read.
+`pack` is the pack's original Scaffolding name. Keep it as is, even when `pack.name` in the plugin's config renames the pack. The older `optionalPacks:` layout of `packs.yml` is still read.
 {% endhint %}
 
 {% hint style="warning" %}
