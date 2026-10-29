@@ -17,7 +17,6 @@ Geyser does not render display entities on Bedrock, so without the extension fur
 * It renders in the world at the correct **position, rotation and scale**.
 * Transform interpolation is kept, so furniture that animates its transform moves smoothly.
 * Each model's display transform is written to a mapping file (`furniture_mappings/*.yml`) that the extension re-applies.
-* Dyeable furniture is the one gap: Bedrock cannot get tint from the item
 
 ### ModelEngine
 

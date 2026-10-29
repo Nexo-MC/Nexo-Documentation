@@ -27,7 +27,7 @@ Scaffolding converts your entire Nexo setup into a Bedrock-compatible pack plus 
 Most content converts: items (2D and 3D), custom blocks, player armor, glyphs and emotes, sounds, custom GUIs and vanilla HUD/GUI reskins.
 
 **Furniture** and **ModelEngine** need the bundled **ScaffoldingExtension** installed in Geyser.\
-A few things do not convert yet, such as dyeable models and furniture, custom mob armor, custom paintings and custom HUD plugins like MythicHUD.\ See the Scaffolding support tables for the full, up-to-date list.
+A few things do not convert yet, such as custom paintings and hopper, dropper and dispenser reskins.\ See the Scaffolding support tables for the full, up-to-date list.
 
 #### Why does something look off for Bedrock players?
 
