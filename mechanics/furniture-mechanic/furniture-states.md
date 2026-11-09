@@ -3,7 +3,7 @@
 Nexo lets a furniture have several states which it cycles between when a player interacts with it.\
 A lightswitch, a TV with different channels, a trashcan that fills up, and so on.
 
-Every state is a named subsection of `states`, and interacting with the furniture cycles to the next one.\
+Every state is a named subsection of `states`, and right-clicking the furniture cycles to the next one.\
 Nexo always adds an empty state, which is the furniture as defined outside of the `states` section.\
 This means a furniture with 2 defined states cycles between 3 states in total, the empty one included.
 
@@ -56,6 +56,10 @@ The type of the value is detected automatically, meaning it can be a string, num
           type: CUSTOM_MODEL_DATA
           value: lamp_on
 ```
+
+When a player breaks the furniture while it is in a `CUSTOM_MODEL_DATA` state, the dropped item keeps that CustomModelData.\
+Placing that item again puts the furniture back in the same state.\
+Other state-types are not kept, and furniture dropped by explosions always drops in its empty state.
 
 ### FURNITURE
 
@@ -129,6 +133,20 @@ Takes all the properties of both types.
           type: MODELENGINE_ANIM
           blueprint: my_broken_tv
           animation: sparks
+```
+
+## On Sneak
+
+`on_sneak` on the `states`-section decides which click cycles the states.\
+By default only a click without sneaking cycles them, and with `on_sneak: true` only a sneaking click does.\
+This lets the furniture use one click for its states and the other for its [light](light-mechanic.md#toggling) or other interactions.
+
+```yaml
+      states:
+        on_sneak: true
+        channel_one:
+          type: ITEM_MODEL
+          item_model: nexo:furniture/tv_channel_one
 ```
 
 ## Automatic State-Changes

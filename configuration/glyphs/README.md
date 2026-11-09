@@ -41,6 +41,8 @@ heart:
 If you are unsure how to reference a ResourcePack-file in a config-file [#how-do-i-reference-a-resourcepack-file-in-a-config](../../general-usage/faq/#how-do-i-reference-a-resourcepack-file-in-a-config "mention")
 {% endhint %}
 
+To share properties like `ascent`, `height` and `font` between many glyphs, see [Glyph Templates](glyph-templates.md).
+
 {% hint style="warning" %}
 If your texture is above 256x256 resolution you need to either downscale it or make a [multi-bitmap-glyph.md](multi-bitmap-glyph.md "mention")
 {% endhint %}

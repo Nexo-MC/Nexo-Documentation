@@ -224,6 +224,31 @@ my_block:
 
 **best\_tool -** Refers to the type of tool this drop requires, if any. This can be _AXE, PICKAXE, SWORD, SHOVEL & HOE._ If unspecified it is null, or no specific tool required.
 
+### Blast Resistance
+
+Furniture is not affected by explosions by default.\
+Setting a `blast_resistance` lets explosions destroy it, using the same scale as vanilla blocks, like 6 for stone or 1200 for obsidian.\
+Whether it survives is decided the same way vanilla decides it for blocks, so the closer and stronger the explosion, the more likely it breaks.
+
+```yaml
+myitem:
+  Mechanics:
+    furniture:
+      blast_resistance: 3.0
+      drop:
+        loots:
+          - nexo_item: myitem
+            in_explosion: true
+```
+
+Only loots with `in_explosion: true` drop when furniture explodes, and like vanilla blocks they only drop by the chance the explosion allows.\
+A `STORAGE` [Storage](./#storage) furniture drops its contents as well.
+
+{% hint style="info" %}
+Furniture is only destroyed when a block next to it is also broken by the explosion.\
+This way regions where protection-plugins stop explosions from breaking blocks also protect the furniture in them
+{% endhint %}
+
 ### Rotatable
 
 To make a furniture rotatable, simply add the following to your item's config.
@@ -278,7 +303,7 @@ myitem:
 ### Placement Preview
 
 Lets players see where a furniture will be placed before placing it.\
-While holding the furniture, sneak to show a semi-transparent preview where you are looking.\
+While holding the furniture, sneak while standing on the ground to show a semi-transparent preview where you are looking.\
 It is tinted green when it can be placed there and red when it cannot.\
 Scroll to rotate the preview, and sneak again to exit.
 
@@ -349,7 +374,7 @@ Essentially a chest, closet or whatever you might want.
 There's a few different types: _STORAGE, PERSONAL, ENDERCHEST & DISPOSAL_.\
 **STORAGE** is similar to a normal chest. Anyone can open it and view the content of it.\
 **PERSONAL** is essentially a custom enderchest, letting you edit the row-count and so on.\
-**ENDERCHEST** is literally just the enderchest inventory, but letting you make a custom block/furniture to access it.\
+**ENDERCHEST** is literally just the enderchest inventory, but letting you make a custom block/furniture to access it. It still plays the configured open & close sounds and animations.\
 **DISPOSAL** is a custom trashcan, letting you throw items in it, and they will be deleted when closed.\\
 
 ```yaml
@@ -360,8 +385,8 @@ myitem:
         type: STORAGE
         rows: 5                             # Default: 6
         title: "<red>My Storage"            # Default: "Storage"
-        open_sound: entity.shulker.open     # Default: entity.chest.open
-        close_sound: entity.shulker.close   # Default: entity.chest.close
+        open_sound: entity.shulker.open     # Default: block.chest.open
+        close_sound: entity.shulker.close   # Default: block.chest.close
 ```
 
 ### Waterloggable

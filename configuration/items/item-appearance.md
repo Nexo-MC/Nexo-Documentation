@@ -107,6 +107,8 @@ myitem:
     #dyeable_texture: example_dyeable
 ```
 
+On 26.2+ servers, any item with a `color`, `dyeable_model` or `dyeable_texture` can also be dyed by combining it with dyes in a crafting grid, like leather armor.
+
 ### Blocking Model (Shields)
 
 ```yaml

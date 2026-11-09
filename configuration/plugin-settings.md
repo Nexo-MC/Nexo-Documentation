@@ -66,6 +66,17 @@ Pack:
              └── 📑02a61ae4-2457-4dfa-91af-9598cd52fd9e.json
 ```
 
+### Texture Compression
+
+Nexo compresses the textures inside the generated pack-zip to make the download smaller.\
+Disabling it makes generating large packs faster, at the cost of the pack being a few percent bigger.
+
+```yaml
+Pack:
+  generation:
+    compress_textures: true
+```
+
 ### PackServer
 
 The ResourcePack Nexo generates needs to be hosted somewhere before it can be sent to players.\
@@ -127,32 +138,67 @@ It lets you change between two types for sorting the inventory, FILE & DIRECTORY
 FILE is the default and organized everything into one main-page where each item-config file is shown on the main menu.\
 DIRECTORY organizes the menu into subpages, following the structure you have inside `plugins/Nexo/items`
 
-You can also specify the menu\_layout to tweak the individual buttons irrespective of the type above.\
-This lets you set the slot a button is in, the icon/item to display with it and the title of the sub-page it opens. By default Nexo sorts slots by a-z of filenames & icon defaults to the first item in the config.\
+You can also specify the layout to tweak the individual buttons irrespective of the type above.\
+This lets you set the slot a button is in, the icon/item to display with it, its name and the title of the sub-page it opens. By default Nexo sorts slots by a-z of filenames & icon defaults to the first item in the config.\
 You specify it like below, with it referencing the path to the item. The path depends on if you use FILE or DIRECTORY.\
 If using FILE, the path is just the `filename`. If using DIRECTORY it is the entire path `folder.filename`&#x20;
 
 ```yaml
-nexo_inventory:
+NexoInventory:
   menu_title: <shift:-37><glyph:menu_items_search>
   search_title: <shift:256>NexoInventory Search<shift:256>
   style_default_names: true
   type: FILE
+  navigation: PAGINATED
   menu_rows: 6
-  menu_layout:
+  layout:
     my_item:
       slot: 1
       icon: itemid
+      itemname: <green>My Items
       title: <main_menu_title>ItemID
 ```
+
+### Navigation
+
+`navigation` decides how players move through menus with more items than fit on one page.\
+**PAGINATED** is the default, and flips between pages using the next & previous page buttons.\
+**SCROLLING** removes the page buttons, and instead moves one row per mouse-wheel notch while hovering an item in the menu.
+
+{% hint style="info" %}
+Players who were already online when switching to SCROLLING need to rejoin before scrolling works for them.\
+It also relies on Nexo's packet handling, so it does not work with `Experimental.packets.disable_netty_injection` enabled
+{% endhint %}
+
+### Buttons
 
 The NexoInventory also has some other features & buttons which can be customized like below.\
 This can reference a NexoItem or an ItemModel directly from the ResourcePack
 
 ```yaml
-next_page_icon: next_page_icon
-previous_page_icon: previous_page_icon
-exit_icon: cancel_icon
-search_icon: nexo:search_icon
-directory_icon: nexo:directory_icon
+NexoInventory:
+  next_page_icon: nexo:next_page_icon
+  previous_page_icon: nexo:previous_page_icon
+  exit_icon: nexo:cancel_icon
+  search_icon: nexo:search_icon
+  directory_icon: nexo:directory_icon
 ```
+
+## Experimental
+
+### Light Data Injection
+
+By default Nexo shows the light of [furniture](../mechanics/furniture-mechanic/light-mechanic.md) and [custom blocks](../mechanics/custom-block-mechanics/custom-block-light.md) by sending fake light blocks to players.\
+With `light_data_injection` enabled, Nexo instead writes the light straight into the chunk light data sent to players.\
+This means furniture lights can also be placed inside barrier hitboxes, and custom blocks use the block itself as the light source.
+
+```yaml
+Experimental:
+  light_data_injection: false
+```
+
+{% hint style="warning" %}
+This relies on Nexo's packet handling, so with `Experimental.packets.disable_netty_injection` enabled it falls back to light blocks.\
+Bedrock players through Geyser will not see these lights.\
+Changing it takes effect on `/nexo reload configs`
+{% endhint %}

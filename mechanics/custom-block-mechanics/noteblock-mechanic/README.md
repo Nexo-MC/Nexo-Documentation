@@ -207,23 +207,33 @@ A beacon will "activate" if any noteblock is in the pyramid, but the effect is o
 This is because it requires a Datapack that adds noteblocks to the given Tag, but it does not support individual blockstates
 {% endhint %}
 
-### Blast-Resistant
+### Blast Resistance
 
-You can make your custom-block blast-resistant by adding the following.\
-If unspecified it defaults to false.\
-You can also make your block drop something when it explodes by adding `in_explosion: true`to your Loot like below
+By default a custom block breaks in an explosion whenever its vanilla base-block would.\
+`blast_resistance` makes it tougher, using the same scale as vanilla blocks, like 6 for stone or 1200 for obsidian.\
+Whether it survives is decided the same way vanilla decides it, so the closer and stronger the explosion, the more likely it breaks.\
+`blast_resistant: true` makes the block never break from explosions at all.
+
+Only loots with `in_explosion: true` drop when the block explodes, and like vanilla blocks they only drop by the chance the explosion allows.\
+Blocks that survive the explosion drop nothing.
 
 ```yaml
 my_block:
   Mechanics:
     custom_block:
       type: NOTEBLOCK
-      blast_resistant: true
+      blast_resistance: 6.0
+      #blast_resistant: true    # Never breaks from explosions
       drop:
         loots:
           - nexo_item: my_block
             in_explosion: true
 ```
+
+{% hint style="info" %}
+`blast_resistance` can only make a block tougher than its vanilla base-block, never weaker.\
+Wind charges never break custom blocks
+{% endhint %}
 
 ### BlockLocker
 
@@ -247,7 +257,7 @@ Essentially a chest, closet or whatever you might want.
 There's a few different types: _STORAGE, PERSONAL, ENDERCHEST & DISPOSAL_.\
 **STORAGE** is similar to a normal chest. Anyone can open it and view the content of it.\
 **PERSONAL** is essentially a custom enderchest, letting you edit the row-count and so on.\
-**ENDERCHEST** is literally just the enderchest inventory, but letting you make a custom block/furniture to access it.\
+**ENDERCHEST** is literally just the enderchest inventory, but letting you make a custom block/furniture to access it. It still plays the configured open & close sounds.\
 **DISPOSAL** is a custom trashcan, letting you throw items in it, and they will be deleted when closed.\\
 
 ```yaml
@@ -259,8 +269,8 @@ my_block:
         type: STORAGE
         rows: 5                             # Default: 6
         title: "<red>My Storage"            # Default: "Storage"
-        open_sound: entity.shulker.open     # Default: entity.chest.open
-        close_sound: entity.shulker.close   # Default: entity.chest.close
+        open_sound: entity.shulker.open     # Default: block.chest.open
+        close_sound: entity.shulker.close   # Default: block.chest.close
 ```
 
 ### Falling Blocks

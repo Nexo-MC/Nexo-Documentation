@@ -12,6 +12,8 @@ The hitbox is not a normal 1x1x1 so it is adviced to only use this for transpare
 STRINGBLOCK type custom blocks are for plants, decoration etc...\
 It uses the vanilla TripWire block and thus disables most of the redstone functionality for it
 
+Every type of custom block can also emit [light](custom-block-light.md) and pick between several [variants](block-variants.md) when placed.
+
 {% hint style="danger" %}
 On all Paper-Servers you are HEAVILY recommended to disable block-updates for the types of custom blocks you plan to use.\
 These can be found in \`MyServerFolder/configs/paper-global.yml\`

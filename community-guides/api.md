@@ -94,6 +94,47 @@ public void onItemsLoaded(NexoItemsLoadedEvent event) {
 {% endtab %}
 {% endtabs %}
 
+#### External Items
+
+Plugins can register their own items with Nexo through code, instead of through a config in the items-folder.\
+The `ConfigurationSection` is parsed like any item-config, with its name as the item-id, and is parsed again on every reload.
+
+Nexo fills in anything the section leaves out, like `custom_variation` or `custom_model_data`, by writing it onto the section.\
+Your plugin has to save these values itself, as otherwise placed custom blocks get a new variation on the next start.\
+The optional `onConfigUpdated` is called with the section whenever Nexo writes to it.
+
+The optional `itemFactory` provides your plugin's own item when a player uses pick-block on its blocks and furniture.\
+`NexoItems.createItem(itemID)` returns that item for external items, and a normally built NexoItem otherwise.
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+NexoItems.registerExternalItem(plugin, section, { updated -> saveSection(updated) }) { buildMyItem() }
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+NexoItems.registerExternalItem(plugin, section, updated -> saveSection(updated), () -> buildMyItem());
+```
+{% endtab %}
+{% endtabs %}
+
+{% hint style="info" %}
+An id already used by an item-config is refused.\
+The `itemFactory` can be called from the player's region thread on Folia
+{% endhint %}
+
+#### Component Projections
+
+`ComponentProjections` lets you rewrite any text Nexo sends to a player, per player.\
+Nexo caches the text of items per player, so call `ComponentProjections.invalidate()` whenever your projection would return something different for the same text.
+
+```java
+ComponentProjections.register("myplugin:projection", player -> true, (player, component) -> component);
+ComponentProjections.invalidate();
+```
+
 ## Custom Blocks
 
 The [NexoBlocks](https://jd.nexomc.com/latest/com/nexomc/nexo/api/NexoBlocks.html)-class contains all the methods available for placing, removing and checking for custom blocks in Nexo.
@@ -107,8 +148,56 @@ NexoBlocks.place(itemID, location)
 The [NexoFurniture](https://jd.nexomc.com/latest/com/nexomc/nexo/api/NexoFurniture.html)-class contains all the methods available for placing, removing and checking for furniture in Nexo. In addition to this you can return the [FurnitureMechanic](https://jd.nexomc.com/latest/com/nexomc/nexo/mechanics/furniture/FurnitureMechanic.html) of the Furniture to get specific properties of it if needed.
 
 ```java
-NexoFurniture.place(itemID, location, @Nullable player)
+NexoFurniture.place(itemID, location, rotation, blockFace)
+NexoFurniture.place(itemID, location, yaw, blockFace)
 ```
+
+#### Text-Entity Overrides
+
+By default every placed copy of a furniture shows the text configured in its [Text-Entities](../mechanics/furniture-mechanic/text-entities.md).\
+A `FurnitureTextOverride` lets your plugin decide the text per placed furniture instead, like a sign showing its owner.\
+Return `null` to keep the configured text.
+
+Overrides are checked in order of plugin name, and the first one returning a text wins.\
+Pass a set of item-ids to only override those furniture.
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+NexoFurniture.registerTextOverride(plugin, { entity ->
+    if (entity.index == 0) Component.text(ownerName(entity.baseEntity)) else null
+}, setOf("my_sign"))
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+NexoFurniture.registerTextOverride(plugin, entity ->
+    entity.getIndex() == 0 ? Component.text(ownerName(entity.getBaseEntity())) : null,
+    Set.of("my_sign"));
+```
+{% endtab %}
+{% endtabs %}
+
+The text is cached per placed furniture and shared by every player viewing it.\
+Call `NexoFurniture.refreshTextEntities(baseEntity)` when the text should change.\
+Overrides are removed automatically when your plugin disables, or manually with `NexoFurniture.unregisterTextOverrides(plugin)`.
+
+{% hint style="info" %}
+`textFor` runs on the furniture's region thread
+{% endhint %}
+
+## Packs merged outside Nexo
+
+Some models Nexo generates are based on models in the pack.\
+If your plugin merges models into the pack after Nexo has generated it, Nexo cannot see them, and these have to be generated on your final pack instead.
+
+```java
+NexoFurniture.generatePreviewModels(resourcePack); // Faded models for furniture placement-previews
+NexoBlocks.generateOffsetModels(resourcePack);     // Shifted models for custom block variants with an offset
+```
+
+`resourcePack` is a [creative](https://github.com/unnamed/creative) `ResourcePack`.
 
 ## Custom Mechanics
 
@@ -122,6 +211,11 @@ MechanicFactory consists of parsing method for global Mechanic properties & link
 \
 **NexoMechanicsRegisteredEvent** - Called when Nexo loads/reloads Mechanics\
 **NexoItemsLoadedEvent** - Called when Nexo finishes loading/reloading NexoItems
+
+#### Toggling lights
+
+**NexoBlockInteractEvent** and **NexoFurnitureInteractEvent** have a `canToggleLight` result, which decides if the interaction toggles a toggleable [block light](../mechanics/custom-block-mechanics/custom-block-light.md) or [furniture light](../mechanics/furniture-mechanic/light-mechanic.md).\
+Set it to `DENY` to stop the light from toggling without cancelling the interaction.
 
 ## Custom PackServer
 

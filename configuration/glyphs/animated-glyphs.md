@@ -31,3 +31,14 @@ Large GIFs might also cause lag if the frame-count is really high, consider opti
 {% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FTAoAxayP9PrBtX9UQ5wa%2Fuploads%2FnciiMhz3TRl476nq82Kp%2F2025-05-26%2015-31-12.mp4?alt=media&token=c563fad9-3620-4285-b3f5-753a9b410d19" %}
 Example of GIFs in Chat & on Text Displays
 {% endembed %}
+
+### Culling Hidden Frames
+
+Shader-based GIFs, the default below 1.21.10, hide every frame except the current one in the core shader.\
+`Glyphs.gif_cull_hidden_frames` in `settings.yml` drops these hidden frames before they are drawn, which helps with large or many GIFs on screen.\
+It is enabled by default.
+
+```yaml
+Glyphs:
+  gif_cull_hidden_frames: true
+```
