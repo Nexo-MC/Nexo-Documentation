@@ -24,6 +24,8 @@
   * [ScaffoldingExtension](addons/scaffolding/scaffoldingextension.md)
   * [🖥️ Custom GUIs & HUDs](addons/scaffolding/custom-guis-and-huds.md)
   * [🙂 Emotes & Glyphs](addons/scaffolding/emotes-and-glyphs.md)
+  * [🎨 Java-style UI on Bedrock](addons/scaffolding/java-style-ui.md)
+  * [🌈 Hex Colors & Color Packs](addons/scaffolding/hex-colors.md)
 * [🚪 Carpentry](addons/carpentry.md)
 * [NexoProxy](addons/nexo-proxy.md)
 * [🧩 Core Shaders](addons/core-shaders/README.md)
